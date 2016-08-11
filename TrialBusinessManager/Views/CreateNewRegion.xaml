@@ -1,0 +1,29 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.CreateNewRegion" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="CreateNewRegion Page">
+    <navigation:Page.Resources>
+        <local:CreateRegionViewModel x:Key="RegionViewModel"/>
+    </navigation:Page.Resources>
+
+    <Grid x:Name="LayoutRoot" DataContext="{Binding Source={StaticResource RegionViewModel}}">
+        <Grid Height="213" HorizontalAlignment="Left" Margin="-59,31,0,0" Name="grid1" VerticalAlignment="Top" Width="699" DataContext="{Binding Path=NewRegion}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="94*" />
+                <RowDefinition Height="119*" />
+            </Grid.RowDefinitions>
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="95,12,0,0" Name="textBlock1" Text="Region Name" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="228,6,0,0" Name="textBox1" VerticalAlignment="Top" Width="120" Text="{Binding Path=RegionName, Mode=TwoWay}" />
+            <TextBlock Height="24" HorizontalAlignment="Left" Margin="95,0,0,90" Name="textBlock2" Text="District" VerticalAlignment="Bottom" Width="75" Grid.Row="1" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="234,3,0,0" Name="textBox2" VerticalAlignment="Top" Width="120" Grid.Row="1" Text="{Binding Path=DistrictName, Mode=TwoWay}" />
+        </Grid>
+        <Button Content="Save" Height="45" HorizontalAlignment="Left" Margin="438,279,0,0" Name="button1" VerticalAlignment="Top" Width="130" Command="{Binding Path=SaveCommand}" />
+        <Button Content="Reset" Height="43" HorizontalAlignment="Left" Margin="253,281,0,0" Name="button2" VerticalAlignment="Top" Width="112" Command="{Binding Path=ResetCommand}" />
+    </Grid>
+</navigation:Page>

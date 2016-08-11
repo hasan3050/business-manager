@@ -1,0 +1,93 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.Histories.ViewBillPayment" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:ref="clr-namespace:TrialBusinessManager.ViewModels.Histories"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:SilverlightContrib_Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           d:DesignWidth="1040" d:DesignHeight="480"
+           Title="BillPayment History"  xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+
+
+    <navigation:Page.Resources>
+        <ref:ViewBillPaymentViewModel x:Key="ViewBillPaymentViewModel"/>
+    </navigation:Page.Resources>
+
+    <Grid x:Name="LayoutRoot" DataContext="{Binding Source={StaticResource ViewBillPaymentViewModel}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="864*" />
+            <ColumnDefinition Width="26*" />
+        </Grid.ColumnDefinitions>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="269" HorizontalAlignment="Left" Margin="8,151,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="999" DataContext="{Binding Source={StaticResource ViewBillPaymentViewModel}}" ItemsSource="{Binding Path=BindBillPayment,Mode=TwoWay}" SelectedIndex="{Binding Path=SelectedIndex, Mode=TwoWay}" d:LayoutOverrides="GridBox" CanUserSortColumns="False">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Bill Payment Code" Binding="{Binding Path=BillPaymentCode, Mode=TwoWay}" IsReadOnly="True" Width="1*"/>
+                <sdk:DataGridTextColumn Header="Region" Binding="{Binding Path=Dealer.Region.RegionName, Mode=TwoWay}" IsReadOnly="True" Width="1*"/>
+                <sdk:DataGridTextColumn Header="Dealer Name" Binding="{Binding Path=Dealer.Name, Mode=TwoWay}" IsReadOnly="True" Width="1*"/>
+                <sdk:DataGridTextColumn Header="RM Name" Binding="{Binding Path=Employee.Person.Name, Mode=TwoWay}" IsReadOnly="True" Width="1*"/>
+                <sdk:DataGridTextColumn Header="Date Of Issue" Binding="{Binding Path=DateOfIssue.Date, Mode=TwoWay, StringFormat=\{0:g\}}" IsReadOnly="True" Width="1*"/>
+                <sdk:DataGridTextColumn Header="Payment Method" Binding="{Binding Path=PaymentMethod, Mode=TwoWay}" IsReadOnly="True" Width="1*"/>
+                <sdk:DataGridTextColumn Header="Status" Binding="{Binding Path=Status, Mode=TwoWay}" IsReadOnly="True" Width="1*"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Grid Height="136" Margin="8,6,128,0" VerticalAlignment="Top">
+        	<SilverlightContrib_Controls:GroupBox HorizontalAlignment="Left" Header="Search By" FontSize="14.667" Width="878" d:LayoutOverrides="GridBox" Margin="0,-3,0,3"/>
+        	<ComboBox Margin="416,55,0,50" x:Name="comboBox2" DataContext="{Binding Source={StaticResource ViewBillPaymentViewModel}}" ItemsSource="{Binding BillPaymentStatus, Source={StaticResource ViewBillPaymentViewModel}}" SelectedItem="{Binding SelectedStatus, Mode=TwoWay}" HorizontalAlignment="Left" Width="120" />
+        	<sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="132,0,0,19" x:Name="datePicker1" VerticalAlignment="Bottom" Width="120" SelectedDate="{Binding StartDate, Mode=TwoWay}"  />
+        	<TextBlock Height="23" HorizontalAlignment="Left" Margin="307,0,0,18" x:Name="textBlock4" Text="End Date" VerticalAlignment="Bottom" />
+        	<sdk:DatePicker Height="23" Margin="385,0,373,19" x:Name="datePicker2" VerticalAlignment="Bottom" SelectedDate="{Binding EndDate, Mode=TwoWay}" />
+        	<sdk:AutoCompleteBox Height="28" HorizontalAlignment="Left" Margin="731,20,0,0" x:Name="autoCompleteBox1" VerticalAlignment="Top" Width="120" ItemsSource="{Binding EmployeeCollection}" ValueMemberPath="Person.Name" IsEnabled="{Binding IsEnabled}" SelectedItem="{Binding SelectedEmployee, Mode=TwoWay, Source={StaticResource ViewBillPaymentViewModel}}" IsTextCompletionEnabled="True" Text="">
+        		<sdk:AutoCompleteBox.ItemTemplate>
+        			<DataTemplate>
+        				<StackPanel>
+        					<TextBlock Text="{Binding Person.Name}" FontSize="14"/>
+        					<TextBlock Text="{Binding Region.RegionName}" FontSize="11"/>
+        				</StackPanel>
+        			</DataTemplate>
+        		</sdk:AutoCompleteBox.ItemTemplate>
+        	</sdk:AutoCompleteBox>
+        	<ComboBox Height="31" HorizontalAlignment="Left" Margin="132,18,0,0" x:Name="comboBox3" VerticalAlignment="Top" Width="120" DataContext="{Binding Source={StaticResource ViewBillPaymentViewModel}}" ItemsSource="{Binding RegionCollection}" SelectedItem="{Binding SelectedRegion, Mode=TwoWay}" IsEnabled="{Binding IsEnabled}">
+        		<ComboBox.ItemTemplate>
+        			<DataTemplate>
+        				<StackPanel>
+        					<TextBlock Text="{Binding RegionName, Mode=TwoWay}"/>
+        				</StackPanel>
+        			</DataTemplate>
+        		</ComboBox.ItemTemplate>
+        	</ComboBox>
+        	<Button Content="Search" Height="28" HorizontalAlignment="Left" Margin="774,0,0,14" x:Name="button1" VerticalAlignment="Bottom" Width="77" Command="{Binding SearchCommand, Mode=TwoWay}" DataContext="{Binding Source={StaticResource ViewBillPaymentViewModel}}" />
+            <sdk:AutoCompleteBox Height="28" HorizontalAlignment="Left" Margin="415,22,0,0" x:Name="autoCompleteBox2" VerticalAlignment="Top" Width="120" ItemsSource="{Binding DealerCollection}" IsTextCompletionEnabled="True" ValueMemberPath="CompanyName" SelectedItem="{Binding SelectedDealer, Mode=TwoWay, Source={StaticResource ViewBillPaymentViewModel}}" Text="">
+        		<sdk:AutoCompleteBox.ItemTemplate>
+        			<DataTemplate>
+        				<StackPanel>
+        					<TextBlock Text="{Binding Name}" FontSize="14"/>
+        					<TextBlock Text="{Binding CompanyName}" FontSize="11"/>
+        				</StackPanel>
+        			</DataTemplate>
+        		</sdk:AutoCompleteBox.ItemTemplate>
+        	</sdk:AutoCompleteBox>
+        	<RadioButton Height="16" HorizontalAlignment="Left" Margin="283,24,0,0" x:Name="radioButton1" VerticalAlignment="Top" Width="102" IsChecked="{Binding SelectedDealerBool, Mode=TwoWay}" Content="Dealer Name" />
+        	<RadioButton Height="16" HorizontalAlignment="Left" Margin="572,23,0,0" x:Name="radioButton2" VerticalAlignment="Top" Width="154" IsChecked="{Binding SelectedRMBool, Mode=TwoWay}" Content="Regional Manager Name" IsEnabled="{Binding IsEnabled}" />
+        	<RadioButton HorizontalAlignment="Left" Margin="283,60,0,60" x:Name="radioButton3" DataContext="{Binding Source={StaticResource ViewBillPaymentViewModel}}" IsChecked="{Binding SelectedStatusBool, Mode=TwoWay}" Width="128" Content="Bill Payment Status" />
+        	<RadioButton Height="16" HorizontalAlignment="Left" Margin="12,0,0,23" x:Name="radioButton4" VerticalAlignment="Bottom" Width="81" IsChecked="{Binding SelectedDateBool, Mode=TwoWay}" Content="Start Date" />
+        	<RadioButton Height="16" HorizontalAlignment="Left" Margin="10,25,0,0" x:Name="radioButton5" VerticalAlignment="Top" DataContext="{Binding Source={StaticResource ViewBillPaymentViewModel}}" IsChecked="{Binding SelectedRegionBool, Mode=TwoWay}" Width="94" Content="Region" IsEnabled="{Binding IsEnabled}" />
+        	<sdk:AutoCompleteBox HorizontalAlignment="Left" Margin="132,54,0,54" x:Name="autoCompleteBox3" Width="120" ItemsSource="{Binding BillPaymentCollection}" IsTextCompletionEnabled="True" ValueMemberPath="BillPaymentCode" SelectedItem="{Binding SelectedCode, Mode=TwoWay, Source={StaticResource ViewBillPaymentViewModel}}" >
+        		<sdk:AutoCompleteBox.ItemTemplate>
+        			<DataTemplate>
+        				<StackPanel>
+        					<TextBlock Text="{Binding BillPaymentCode}" FontSize="14"/>
+        				</StackPanel>
+        			</DataTemplate>
+        		</sdk:AutoCompleteBox.ItemTemplate>
+        	</sdk:AutoCompleteBox>
+        	<RadioButton HorizontalAlignment="Left" Margin="8,58,0,62" x:Name="radioButton6" IsChecked="{Binding SelectedCodeBool, Mode=TwoWay}" DataContext="{Binding Source={StaticResource ViewBillPaymentViewModel}}" Width="122" Content="Bill Payment Code" />
+        	<RadioButton Content="View All" Height="16" HorizontalAlignment="Left" Margin="574,0,0,23" x:Name="radioButton7" VerticalAlignment="Bottom" IsChecked="{Binding SelectedAllBool, Mode=TwoWay}" />
+        	<ComboBox DataContext="{Binding Source={StaticResource ViewBillPaymentViewModel}}" HorizontalAlignment="Left" ItemsSource="{Binding BillPaymentMethod, Source={StaticResource ViewBillPaymentViewModel}}" Margin="731,55,0,50" x:Name="comboBox1" SelectedItem="{Binding SelectedMethod, Mode=TwoWay}" Width="120" />
+        	<RadioButton Content="Bill Payment Method" DataContext="{Binding Source={StaticResource ViewBillPaymentViewModel}}" HorizontalAlignment="Left" IsChecked="{Binding SelectedMethodBool, Mode=TwoWay}" Margin="572,60,0,60" x:Name="radioButton8" Width="137" />
+        </Grid>
+        <Button Command="{Binding Path=ViewBillPaymentCommand,Mode=TwoWay}" Content="View BillPayment" Margin="832,426,0,0" Height="38" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170" />
+        <sdk:DataPager Height="26" HorizontalAlignment="Left" Margin="8,426,0,0" Name="dataPager1" PageSize="10" VerticalAlignment="Top" Width="200" Source="{Binding ElementName=dataGrid1, Path=ItemsSource}" />
+        <Button Command="{Binding LoadMoreCommand,Mode=TwoWay}" Content="Load More Data" Height="24" HorizontalAlignment="Left" Margin="212,428,0,0" Name="button2" VerticalAlignment="Top" Width="144" />
+    </Grid>
+</navigation:Page>

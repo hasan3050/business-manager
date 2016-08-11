@@ -1,0 +1,83 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.Histories.ViewIndent" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:ref="clr-namespace:TrialBusinessManager.ViewModels.Histories"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:SilverlightContrib_Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="Indent History" Height="453" Width="856" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+
+    <navigation:Page.Resources>
+        <ref:ViewIndentViewModel x:Key="ViewIndentViewModel"/>
+    </navigation:Page.Resources>
+
+    <Grid x:Name="LayoutRoot" DataContext="{Binding Source={StaticResource ViewIndentViewModel}}">
+        <sdk:DataGrid AutoGenerateColumns="False" Height="246" HorizontalAlignment="Left" Margin="8,136,0,0" Name="HistoryDataGrid" VerticalAlignment="Top" Width="836" DataContext="{Binding Source={StaticResource ViewIndentViewModel}}" ItemsSource="{Binding Path=BindIndent,Mode=TwoWay}" SelectedIndex="{Binding Path=SelectedIndex,Mode=TwoWay}" CanUserSortColumns="False">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Indent Code" Binding="{Binding Path=IndentCode, Mode=TwoWay}" IsReadOnly="True" Width="1*"/>
+                <sdk:DataGridTextColumn Header="Region" Binding="{Binding Path=Dealer.Region.RegionName, Mode=TwoWay}" IsReadOnly="True" Width="1*"/>
+                <sdk:DataGridTextColumn Header="Dealer Name" Binding="{Binding Path=Dealer.Name, Mode=TwoWay}" IsReadOnly="True" Width="1*"/>
+                <sdk:DataGridTextColumn Header="RM Name" Binding="{Binding Path=Employee1.Person.Name, Mode=TwoWay}" IsReadOnly="True" Width="1*"/>
+                <sdk:DataGridTextColumn Header="Date Of Issue" Binding="{Binding Path=DateOfPlace.Date,Mode=TwoWay}" IsReadOnly="True" Width="1*"/>
+                <sdk:DataGridTextColumn Header="Indent Status" Binding="{Binding Path=IndentStatus,Mode=TwoWay}" IsReadOnly="True" Width="1*"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <SilverlightContrib_Controls:GroupBox HorizontalAlignment="Right" Margin="0,-6,12,0" VerticalAlignment="Top" Header="Search By" FontSize="14.667" Width="840" Height="122"></SilverlightContrib_Controls:GroupBox>
+        <ComboBox Height="31" Margin="379,45,0,0" Name="comboBox2" VerticalAlignment="Top" DataContext="{Binding Source={StaticResource ViewIndentViewModel}}" ItemsSource="{Binding Source={StaticResource ViewIndentViewModel}, Path=IndentStatus}" SelectedItem="{Binding Path=SelectedStatus, Mode=TwoWay}" HorizontalAlignment="Left" Width="120" />
+        <sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="116,84,0,0" Name="datePicker1" VerticalAlignment="Top" Width="120" SelectedDate="{Binding Path=StartDate, Mode=TwoWay}" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="306,85,0,0" Name="textBlock4" Text="End Date" VerticalAlignment="Top" />
+        <sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="379,84,0,0" Name="datePicker2" VerticalAlignment="Top" Width="120" SelectedDate="{Binding Path=EndDate, Mode=TwoWay}" />
+        <sdk:AutoCompleteBox Height="28" HorizontalAlignment="Left" Margin="643,13,0,0" Name="autoCompleteBox1" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=EmployeeCollection}" ValueMemberPath="Person.Name" IsEnabled="True" SelectedItem="{Binding Source={StaticResource ViewIndentViewModel}, Path=SelectedEmployee,Mode=TwoWay}" IsTextCompletionEnabled="True" Text="">
+            <sdk:AutoCompleteBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=Person.Name}" FontSize="14"/>
+                        <TextBlock Text="{Binding Path=Designation}" FontSize="11"/>
+                    </StackPanel>
+                </DataTemplate>
+            </sdk:AutoCompleteBox.ItemTemplate>
+        </sdk:AutoCompleteBox>
+        <ComboBox Height="31" HorizontalAlignment="Left" Margin="116,12,0,0" Name="comboBox3" VerticalAlignment="Top" Width="120" DataContext="{Binding Source={StaticResource ViewIndentViewModel}}" ItemsSource="{Binding Path=RegionCollection}" SelectedItem="{Binding Path=SelectedRegion, Mode=TwoWay}" IsEnabled="{Binding Path=IsEnabled}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=RegionName,Mode=TwoWay}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button Content="Search" Height="27" HorizontalAlignment="Left" Margin="688,78,0,0" Name="button1" VerticalAlignment="Top" Width="75" Command="{Binding Path=SearchCommand,Mode=TwoWay}" DataContext="{Binding Source={StaticResource ViewIndentViewModel}}" />
+        <sdk:AutoCompleteBox Height="28" HorizontalAlignment="Left" Margin="379,13,0,0" Name="autoCompleteBox2" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=DealerCollection}" IsTextCompletionEnabled="True" ValueMemberPath="CompanyName" SelectedItem="{Binding Source={StaticResource ViewIndentViewModel}, Path=SelectedDealer,Mode=TwoWay}" Text="">
+            <sdk:AutoCompleteBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=Name}" FontSize="14"/>
+                        <TextBlock Text="{Binding Path=CompanyName}" FontSize="11"/>
+                    </StackPanel>
+                </DataTemplate>
+            </sdk:AutoCompleteBox.ItemTemplate>
+        </sdk:AutoCompleteBox>
+        <RadioButton Height="16" HorizontalAlignment="Left" Margin="271,15,0,0" Name="radioButton1" VerticalAlignment="Top" Width="102" IsChecked="{Binding Path=SelectedDealerBool, Mode=TwoWay}" Content="Dealer Name" />
+        <RadioButton Height="16" HorizontalAlignment="Left" Margin="535,15,0,0" Name="radioButton2" VerticalAlignment="Top" Width="102" IsChecked="{Binding Path=SelectedRMBool, Mode=TwoWay}" Content="Issued By" />
+        <RadioButton Height="16" HorizontalAlignment="Left" Margin="273,51,0,0" Name="radioButton3" VerticalAlignment="Top" DataContext="{Binding Source={StaticResource ViewIndentViewModel}}" IsChecked="{Binding Path=SelectedStatusBool, Mode=TwoWay}" Width="100" Content="Indent Status" />
+        <RadioButton Height="16" HorizontalAlignment="Left" Margin="12,85,0,0" Name="radioButton4" VerticalAlignment="Top" Width="81" IsChecked="{Binding Path=SelectedDateBool, Mode=TwoWay}" Content="Start Date" />
+        <RadioButton Height="16" HorizontalAlignment="Left" Margin="11,16,0,0" Name="radioButton5" VerticalAlignment="Top" DataContext="{Binding Source={StaticResource ViewIndentViewModel}}" IsChecked="{Binding Path=SelectedRegionBool, Mode=TwoWay}" Width="94" Content="Region" IsEnabled="{Binding Path=IsEnabled}" />
+        <sdk:AutoCompleteBox Height="28" HorizontalAlignment="Left" Margin="116,48,0,0" Name="autoCompleteBox3" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=IndentCollection}" IsTextCompletionEnabled="True" ValueMemberPath="IndentCode" SelectedItem="{Binding Source={StaticResource ViewIndentViewModel}, Path=SelectedCode,Mode=TwoWay}">
+            <sdk:AutoCompleteBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=IndentCode}" FontSize="14"/>
+                    </StackPanel>
+                </DataTemplate>
+            </sdk:AutoCompleteBox.ItemTemplate>
+        </sdk:AutoCompleteBox>
+        <RadioButton Height="16" HorizontalAlignment="Left" Margin="10,48,0,0" Name="radioButton6" VerticalAlignment="Top" IsChecked="{Binding Path=SelectedCodeBool, Mode=TwoWay}" DataContext="{Binding Source={StaticResource ViewIndentViewModel}}" Width="102" Content="Indent Code" />
+        <RadioButton Content="View All" Height="16" HorizontalAlignment="Left" Margin="535,52,0,0" Name="radioButton7" VerticalAlignment="Top" IsChecked="{Binding Path=SelectedAllBool, Mode=TwoWay}" />
+        <Button Command="{Binding Path=ViewIndentCommand,Mode=TwoWay}" Content="View Indent" HorizontalAlignment="Right" Margin="0,388,12,0" Width="143" Height="38" VerticalAlignment="Top" />
+        <sdk:DataPager Height="28" HorizontalAlignment="Left" Margin="11,388,0,0" Name="MyPager" PageSize="10" VerticalAlignment="Top" Width="225" Source="{Binding ElementName=HistoryDataGrid, Path=ItemsSource}" />
+        <Button Command="{Binding LoadMoreCommand,Mode=TwoWay}" Content="Load More Data" Height="23" HorizontalAlignment="Left" Margin="242,393,0,0" Name="button2" VerticalAlignment="Top" Width="158" />
+    </Grid>
+</navigation:Page>

@@ -1,0 +1,27 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.VerifySalesReturns" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="1106" d:DesignHeight="480"
+           Title="VerifySalesReturns Page" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot">
+    	<Viewbox Margin="0">
+    		<Grid Height="472" Width="1106">
+    			<sdk:DataGrid AutoGenerateColumns="False" BorderBrush="#FF2F1818" BorderThickness="1" ColumnWidth="320" GridLinesVisibility="All" Height="429" Margin="0,0,0,43" x:Name="dataGrid1">
+    				<sdk:DataGrid.Columns>
+    					<sdk:DataGridTextColumn Binding="{Binding SalesReturnCode}" Header="Sales Return Code" IsReadOnly="True" Width="1*" />
+    					<sdk:DataGridTextColumn Binding="{Binding Dealer.Name}" Header="Dealer Name" IsReadOnly="True" Width="1*" />
+    					<sdk:DataGridTextColumn Binding="{Binding Dealer.CompanyAddress}" Header="Dealer Address" IsReadOnly="True" Width="1*" />
+
+    					<sdk:DataGridTextColumn Binding="{Binding DateOfIssue}" Header="Date Of Issue" IsReadOnly="True" Width="1*" />
+    					<sdk:DataGridTextColumn Binding="{Binding Status}" Header="Status" IsReadOnly="True" Width="1*" />
+    				</sdk:DataGrid.Columns>
+    			</sdk:DataGrid>
+    			<Button Content="View details for selected item..." HorizontalAlignment="Right" Height="29" Margin="0,0,12,0" VerticalAlignment="Bottom" Width="210"  Command="{Binding ViewDetails}" Click="Button_Click" />
+    		</Grid>
+    	</Viewbox>
+    </Grid>
+</navigation:Page>

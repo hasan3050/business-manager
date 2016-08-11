@@ -1,0 +1,78 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.RM.ForwardIndent" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:ref="clr-namespace:TrialBusinessManager.ViewModels.RM"
+           xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.SL4" 
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="860" d:DesignHeight="568"
+           Title="Indent Forward">
+    
+    <navigation:Page.Resources>
+        <ref:ForwardIndentViewModel x:Key="ForwardIndentViewModel"/>
+    </navigation:Page.Resources>
+    
+    <Grid x:Name="LayoutRoot" DataContext="{Binding Source={StaticResource ForwardIndentViewModel}}">           
+            <ScrollViewer d:LayoutOverrides="VerticalAlignment" Margin="0,0,0,-8">
+            <Grid Height="550" VerticalAlignment="Top" HorizontalAlignment="Left" DataContext="{Binding Source={StaticResource ForwardIndentViewModel}}">
+                <TextBox Height="32" HorizontalAlignment="Right"  Margin="0,85,19,0" x:Name="comboBox2"  VerticalAlignment="Top" Width="187" Text="{Binding Path=SelectedIndent.PaymentMethod, Mode=TwoWay}" />
+                <TextBlock FontSize="14" Height="23" HorizontalAlignment="Right" Margin="0,87,220,0" x:Name="textBlock3" Text="payment type" VerticalAlignment="Top" DataContext="{Binding}" />
+                <sdk:DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="17,145,0,0" x:Name="indentInfoDataGrid"   CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" Width="Auto" ColumnWidth="130" Height="218" VerticalAlignment="Top" ItemsSource="{Binding Path=BindIndentProduct,Mode=TwoWay}" DataContext="{Binding Source={StaticResource ForwardIndentViewModel}}" SelectedIndex="{Binding Path=SelectedIndex, Mode=TwoWay}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="CellEditEnded">
+                            <cmd:EventToCommand Command="{Binding Path=CellEditCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    
+                    <sdk:DataGrid.Columns>
+                        <sdk:DataGridTextColumn x:Name="productCodeColumn" Header="product code" Width="150" IsReadOnly="True" Binding="{Binding Path=Product.ProductCode, Mode=TwoWay}" />
+                        <sdk:DataGridTextColumn x:Name="productNameColumn" Header="product name" Width="150" IsReadOnly="True" Binding="{Binding Path=Product.ProductName, Mode=TwoWay}" />
+                        <sdk:DataGridTextColumn x:Name="packetSizeColumn" Binding="{Binding Path=Product.StockKeepingUnit,Mode=TwoWay}" Header="packet size" Width="135" IsReadOnly="True"/>
+                        <sdk:DataGridTextColumn x:Name="quantityColumn" Binding="{Binding Path=Quantity,Mode=TwoWay}" Header="quantity" Width="120" />
+                        <sdk:DataGridTextColumn x:Name="TotalQuantityColumn" Binding="{Binding Path=TotalQuantity, Mode=TwoWay}" Header="total qty" Width="115" IsReadOnly="True"/>
+                        <sdk:DataGridTextColumn x:Name="unitPriceColumn" Binding="{Binding Path=Price,Mode=TwoWay}" Header="unit price" Width="120" IsReadOnly="True"/>
+                        <sdk:DataGridTextColumn x:Name="totalPriceColumn" Binding="{Binding Mode=TwoWay, Path=TotalPrice}" Header="total price" Width="120" IsReadOnly="True"/>
+                        <sdk:DataGridTextColumn x:Name="commissionColumn" Binding="{Binding Mode=TwoWay, Path=Commission}" Header="commission" Width="140" IsReadOnly="True"/>
+                        <sdk:DataGridTextColumn x:Name="netPriceColumn" Binding="{Binding Mode=TwoWay, Path=NetPrice}" Header="net price" Width="120" IsReadOnly="True"/>
+                    </sdk:DataGrid.Columns>
+                </sdk:DataGrid>
+                <TextBox Height="28" HorizontalAlignment="Right" Margin="0,0,13,135" x:Name="textBox1" VerticalAlignment="Bottom" Width="183" Text="{Binding Path=TotalPrice, Mode=TwoWay}" IsReadOnly="True" d:LayoutOverrides="VerticalAlignment" />
+                <TextBlock HorizontalAlignment="Right" Margin="0,0,206,140" x:Name="textBlock4" Text="total price" Width="88" FontSize="16" Height="23" VerticalAlignment="Bottom" d:LayoutOverrides="VerticalAlignment"  />
+                <TextBlock Height="23" Margin="17,15,0,0" TextWrapping="Wrap" Text="dealer name" VerticalAlignment="Top" HorizontalAlignment="Left" Width="109"/>
+                <TextBlock Height="23" Margin="17,46,0,0" TextWrapping="Wrap" Text="company name" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" />
+                <TextBlock Height="23" Margin="17,77,0,0" TextWrapping="Wrap" Text="company address" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120"  />
+                <TextBlock Height="23" Margin="17,107,0,0" TextWrapping="Wrap" Text="contact no" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120"  />
+                <Grid  x:Name="DealerGrid" HorizontalAlignment="Left" Height="127" Margin="141,12,0,0" VerticalAlignment="Top" Width="219" DataContext="{Binding Source={StaticResource ForwardIndentViewModel}}">
+                    <TextBox Height="29" TextWrapping="Wrap" Text="{Binding Path=SelectedIndent.Dealer.Name, Mode=TwoWay}" VerticalAlignment="Top" FontSize="13.333" IsReadOnly="True" DataContext="{Binding Source={StaticResource ForwardIndentViewModel}}" />
+                    <TextBox Height="29" Margin="0,31,0,0" TextWrapping="Wrap" Text="{Binding Path=SelectedIndent.Dealer.CompanyName, Mode=TwoWay}" VerticalAlignment="Top" FontSize="13.333" IsReadOnly="True" />
+                    <TextBox Height="29"  Margin="0,0,0,36" TextWrapping="Wrap" Text="{Binding Path=SelectedIndent.Dealer.CompanyAddress, Mode=TwoWay}" VerticalAlignment="Bottom" FontSize="13.333" IsReadOnly="True" />
+                    <TextBox Height="29" TextWrapping="Wrap" Text="{Binding Path=SelectedIndent.Dealer.ContactNo, Mode=TwoWay}" VerticalAlignment="Bottom" FontSize="13.333" IsReadOnly="True" Margin="0,0,0,5" />
+                </Grid>
+                <TextBlock HorizontalAlignment="Right" Height="19" Margin="0,53,215,0" TextWrapping="Wrap" Text="      date" VerticalAlignment="Top" Width="63"/>
+                <TextBox HorizontalAlignment="Right" Height="34" Margin="0,47,19,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" IsReadOnly="True" Name="DateTxt" Text="{Binding Path=SelectedIndent.DateOfPlace, Mode=TwoWay, StringFormat=\{0:d\}}" />
+                <TextBox Height="32" HorizontalAlignment="Right" Margin="0,12,19,0" Name="textBox2" VerticalAlignment="Top" Width="187" Text="{Binding Path=SelectedIndent.IndentCode, Mode=TwoWay}" />
+                <TextBlock Height="19" HorizontalAlignment="Right" Margin="0,17,210,0" Text="indent code" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" />
+                <Button Content="Forward" Height="28" Margin="0,0,13,100" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="83" IsEnabled="{Binding Path=ButtonEnableBool}" Command="{Binding Path=ForwardCommand}" />
+                <TextBlock HorizontalAlignment="Left" Margin="29,0,0,143" x:Name="textBlock4_Copy" Text="forward to" Width="88" FontSize="16" Height="23" VerticalAlignment="Bottom" d:LayoutOverrides="VerticalAlignment"  />
+                <ComboBox HorizontalAlignment="Left" Height="26" Margin="133,0,0,140" VerticalAlignment="Bottom" Width="142" ItemsSource="{Binding Path=RegionCollection,Mode=TwoWay}" SelectedItem="{Binding Path=SelectedRegion, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Path=RegionName, Mode=TwoWay}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <TextBox Margin="30,0,19,28" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="45" AcceptsReturn="True" Text="{Binding Path=ErrorMessage, Mode=TwoWay}" IsEnabled="True" IsReadOnly="True"/>
+                <Button Content="reject" Height="28" HorizontalAlignment="Right" Margin="0,0,111,100" VerticalAlignment="Bottom" Width="81" Command="{Binding Path=RejectCommand}" IsEnabled="{Binding Path=ButtonEnableBool}" />
+                <CheckBox Content="has to be checked by NSM" Height="22" HorizontalAlignment="Left" Margin="29,415,0,0" Name="checkBox1" VerticalAlignment="Top" Width="213" IsChecked="{Binding Path=NSMCheckedBool, Mode=TwoWay}" IsEnabled="True" />
+            </Grid>
+        </ScrollViewer>
+                
+        </Grid>
+    
+</navigation:Page>

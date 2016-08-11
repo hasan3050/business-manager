@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<treeitems>
+
+  <treeitem name="Basic" uri="" fontsize="18" icon="Assets/Resources/refresh.png">
+    <treeitem name="View Products" uri="/ViewProduct" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="View Packages" uri="/ViewPackage" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="View Dealers" uri="/ViewDealer" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Update Ledger" uri="/Admin/LedgerEntry" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+  
+
+  </treeitem>
+  <treeitem name="Notifications" uri="" fontsize="18" icon="Assets/Resources/refresh.png">
+  
+    <treeitem name="Bill Payments" uri="/Accountant/VerifyBillPayment" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+
+    <treeitem name="Expenditures" uri="/Accountant/VerifyExpenditures" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+
+  </treeitem >
+  
+  
+  <treeitem name="History" uri="" fontsize="18" icon="Assets/Resources/refresh.png">
+
+    <treeitem name="Indent" uri="/Histories/IndentHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Bill" uri="/Histories/BillHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Bill Payment" uri="/Histories/BillPaymentHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="MRR" uri="/Histories/MRRHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="PLR" uri="/Histories/LRHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Sales Return" uri="/Histories/SalesReturnHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Product Transfer" uri="/Histories/ProductTransferHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+
+
+  </treeitem>
+ 
+</treeitems>

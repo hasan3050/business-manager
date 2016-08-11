@@ -1,0 +1,67 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.ViewProduct" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:ref="clr-namespace:TrialBusinessManager.ViewModels"
+           xmlns:SilverlightContrib_Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"      
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="1040" d:DesignHeight="480"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"      
+           Title="View Product" >
+    
+    <navigation:Page.Resources>
+        <ref:ViewProductViewModel x:Key="ViewProductViewModel"/>
+    </navigation:Page.Resources>
+
+    <Grid x:Name="LayoutRoot" DataContext="{Binding Source={StaticResource ViewProductViewModel}}" Background="White" >
+        <sdk:DataGrid AutoGenerateColumns="False" Height="200" HorizontalAlignment="Left" Margin="6,195,0,0" x:Name="dataGrid1" VerticalAlignment="Top" ColumnWidth="320" Width="982" DataContext="{Binding Source={StaticResource ViewProductViewModel}}" ItemsSource="{Binding BindProduct, Mode=TwoWay}" GridLinesVisibility="All" SelectedIndex="{Binding Path=SelectedIndex, Mode=TwoWay}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Wing" Binding="{Binding Path=ProductWing}" Width="1*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Header="Type" Binding="{Binding Path=ProductType, Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Name" Binding="{Binding Path=ProductName, Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Code"  Width="1*" Binding="{Binding Path=ProductCode, Mode=TwoWay}" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Date Of Introduce" Binding="{Binding Path=IntroducedDate.Date, Mode=TwoWay, StringFormat=\{0:d\}}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Status" Binding="{Binding Path=ProductStatus, Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <SilverlightContrib_Controls:GroupBox HorizontalAlignment="Right" Margin="0,3,359,0" VerticalAlignment="Top" Header="Search By" FontSize="14.667" Width="842" Height="176">
+            <Grid Height="133" Width="825" HorizontalAlignment="Left">
+                <sdk:AutoCompleteBox Height="28" HorizontalAlignment="Left" IsEnabled="True" IsTextCompletionEnabled="True" ItemsSource="{Binding Path=ProductCollection}" Margin="118,83,0,0" Name="autoCompleteBox1" SelectedItem="{Binding Mode=TwoWay, Source={StaticResource ViewProductViewModel}, Path=SelectedName}" ValueMemberPath="ProductName" VerticalAlignment="Top" Width="142" Text="" DataContext="{Binding}" FontSize="11">
+                    <sdk:AutoCompleteBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock FontSize="14" Text="{Binding ProductName}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:AutoCompleteBox.ItemTemplate>
+                </sdk:AutoCompleteBox>
+                <Button Command="{Binding SearchCommand, Mode=TwoWay}" Content="Search" DataContext="{Binding Source={StaticResource ViewProductViewModel}}" Height="33" HorizontalAlignment="Left" Margin="683,0,0,14" Name="button1" VerticalAlignment="Bottom" Width="121" FontSize="11" />
+                <RadioButton DataContext="{Binding Source={StaticResource ViewProductViewModel}}" Height="27" HorizontalAlignment="Left" IsChecked="{Binding Mode=TwoWay, Path=SelectedNameBool}" Margin="6,84,0,0" Name="radioButton2" VerticalAlignment="Top" Width="128" Content="Product Name" FontSize="11" />
+                <sdk:AutoCompleteBox Height="28" HorizontalAlignment="Left" IsTextCompletionEnabled="True" ItemsSource="{Binding ProductCollection}" Margin="418,13,0,0" Name="autoCompleteBox3" SelectedItem="{Binding SelectedCode, Mode=TwoWay, Source={StaticResource ViewProductViewModel}}" ValueMemberPath="ProductCode" VerticalAlignment="Top" Width="131" FontSize="11">
+                    <sdk:AutoCompleteBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock FontSize="14" Text="{Binding ProductCode}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:AutoCompleteBox.ItemTemplate>
+                </sdk:AutoCompleteBox>
+                <RadioButton DataContext="{Binding Source={StaticResource ViewProductViewModel}}" Height="26" HorizontalAlignment="Left" IsChecked="{Binding SelectedCodeBool, Mode=TwoWay}" Margin="283,15,0,0" Name="radioButton6" VerticalAlignment="Top" Width="127" Content="Product Code" FontSize="11" />
+                <sdk:DatePicker DataContext="{Binding Source={StaticResource ViewProductViewModel}}" DisplayDateEnd="12/31/2099" Height="23" HorizontalAlignment="Left" Margin="682,0,0,101" Name="datePicker1" SelectedDate="{Binding StartDate, Mode=TwoWay}" VerticalAlignment="Bottom" Width="120" FontSize="11" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="595,0,0,66" Name="textBlock4" Text="End Date" VerticalAlignment="Bottom" FontSize="11" />
+                <sdk:DatePicker DataContext="{Binding Source={StaticResource ViewProductViewModel}}" DisplayDateEnd="12/31/2099" DisplayDateStart="1/1/2012" Height="23" HorizontalAlignment="Left" Margin="683,0,0,67" Name="datePicker2" SelectedDate="{Binding EndDate, Mode=TwoWay}" VerticalAlignment="Bottom" Width="120" FontSize="11" />
+                <RadioButton Height="28" HorizontalAlignment="Left" IsChecked="{Binding SelectedDateBool, Mode=TwoWay}" Margin="576,13,0,0" Name="radioButton4" VerticalAlignment="Top" Width="100" Content="Start Date" FontSize="11" />
+                <RadioButton DataContext="{Binding Source={StaticResource ViewProductViewModel}}" Height="25" HorizontalAlignment="Left" IsChecked="{Binding Mode=TwoWay, Path=SelectedWingBool}" Margin="6,16,0,0" Name="radioButton5" VerticalAlignment="Top" Width="121" Content="Product Wing" FontSize="11" />
+                <RadioButton DataContext="{Binding Source={StaticResource ViewProductViewModel}}" Height="24" HorizontalAlignment="Left" IsChecked="{Binding Mode=TwoWay, Path=SelectedStatusBool}" Margin="283,0,0,55" Name="radioButton1" VerticalAlignment="Bottom" Width="129" Content="Product Status" FontSize="11" />
+                <ComboBox DataContext="{Binding Source={StaticResource ViewProductViewModel}}" Height="27" HorizontalAlignment="Left" ItemsSource="{Binding Path=ProductStatus}" Margin="418,47,0,0" Name="comboBox1" SelectedItem="{Binding Mode=TwoWay, Path=SelectedStatus}" VerticalAlignment="Top" Width="131" SelectionChanged="comboBox1_SelectionChanged" FontSize="11" />
+                <RadioButton DataContext="{Binding Source={StaticResource ViewProductViewModel}}" Height="27" HorizontalAlignment="Left" IsChecked="{Binding Mode=TwoWay, Path=SelectedTypeBool}" Margin="6,51,0,0" Name="radioButton7" VerticalAlignment="Top" Width="121" Content="Product Type" FontSize="11" />
+                <ComboBox DataContext="{Binding Source={StaticResource ViewProductViewModel}}" Height="29" HorizontalAlignment="Left" ItemsSource="{Binding Path=WingCollection}" Margin="119,12,0,0" Name="comboBox2" SelectedItem="{Binding Mode=TwoWay, Path=SelectedWing}" VerticalAlignment="Top" Width="141" FontSize="11" />
+                <ComboBox DataContext="{Binding Source={StaticResource ViewProductViewModel}}" Height="29" HorizontalAlignment="Left" ItemsSource="{Binding Path=TypeCollection}" Margin="119,47,0,0" Name="comboBox3" SelectedItem="{Binding Mode=TwoWay, Path=SelectedType}" VerticalAlignment="Top" Width="141" FontSize="11" />
+                <RadioButton Content="View All" Height="16" HorizontalAlignment="Left" IsChecked="{Binding Mode=TwoWay, Path=SelectedAllBool}" Margin="283,90,0,0" Name="radioButton3" VerticalAlignment="Top" Width="100" FontSize="11" />
+            </Grid>
+        </SilverlightContrib_Controls:GroupBox>
+        <Button Content="View Details" HorizontalAlignment="Left" Height="38" Margin="817,401,0,0" VerticalAlignment="Top" Width="171" Command="{Binding Path=ViewDetailCommand,Mode=TwoWay}" />
+    </Grid>
+</navigation:Page>

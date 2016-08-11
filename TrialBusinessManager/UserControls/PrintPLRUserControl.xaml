@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="TrialBusinessManager.UserControls.PrintPLRUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="1025" d:DesignWidth="737" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" FontSize="14" xmlns:my="clr-namespace:TrialBusinessManager.UserControls">
+
+    <Grid x:Name="LayoutRoot" Margin="2" Width="732" Height="1023">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sdk:DataGrid AutoGenerateColumns="False" ColumnWidth="148*" Margin="17,0,14,441" Name="dataGrid1"   FontSize="12"  Height="258" VerticalAlignment="Bottom" MinHeight="0"   GridLinesVisibility="All" BorderThickness="1,0,1,1" BorderBrush="#FF706161">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Product.ProductName}" Header="Product name" IsReadOnly="True" FontSize="13"/>
+                <sdk:DataGridTextColumn Binding="{Binding Product.ProductCode}" Header="Product code" IsReadOnly="True" FontSize="13"/>
+                <sdk:DataGridTextColumn Binding="{Binding Product.BrandName}" Header="Brand Name" IsReadOnly="True" FontSize="13"/>
+
+                <sdk:DataGridTextColumn Binding="{Binding Product.StockKeepingUnit}" Header="S.K.U." IsReadOnly="True" FontSize="13"/>
+
+                <sdk:DataGridTextColumn Binding="{Binding LotId}" Header="Lot Id" IsReadOnly="True" FontSize="13" />
+
+                <sdk:DataGridTextColumn Binding="{Binding Quantity, Mode=TwoWay}" Header="Quantity(kg)" FontSize="13" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding State, Mode=TwoWay}" Header="State" FontSize="13" IsReadOnly="True"/>
+             
+
+
+                <sdk:DataGridTextColumn Binding="{Binding Remarks, Mode=TwoWay}" Header="Remarks" FontSize="13"/>
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid  AutoGenerateColumns="False" ColumnWidth="148*" Margin="17,621,13,125" Name="dataGrid2" FontSize="12" MinHeight="0" GridLinesVisibility="All" BorderThickness="1,0,1,1" BorderBrush="#FF706161">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Package.PackageName}" Header="Package name" IsReadOnly="True" FontSize="13"/>
+                <sdk:DataGridTextColumn Binding="{Binding Package.PackageCode}" Header="Package code" IsReadOnly="True" FontSize="13"/>
+
+                <sdk:DataGridTextColumn Binding="{Binding Quantity, Mode=TwoWay}" Header="Quantity(Pc)" FontSize="13" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding State, Mode=TwoWay}" Header="State" FontSize="13" IsReadOnly="True"/>
+              
+                <sdk:DataGridTextColumn Binding="{Binding Remarks, Mode=TwoWay}" Header="Remarks" FontSize="13" IsReadOnly="True"/>
+
+            </sdk:DataGrid.Columns>
+
+        </sdk:DataGrid>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="17,209,0,0" Name="textBlock1" Text="Date of issue:" VerticalAlignment="Top" FontSize="16" />
+        <TextBox Height="35" HorizontalAlignment="Left" Margin="160,205,0,0" Name="IssueDatetextBox" VerticalAlignment="Top" Width="197" FontSize="15" />
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="412,209,0,0" Name="textBlock2" Text="Issued by:" VerticalAlignment="Top" />
+        <TextBox Height="35" HorizontalAlignment="Left" Margin="525,205,0,0" Name="IssuedByTxtBox" VerticalAlignment="Top" Width="193" FontSize="15" />
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="412,250,0,0" Name="textBlock4" Text="Designation:" VerticalAlignment="Top" />
+        <TextBox Height="38" HorizontalAlignment="Left" Margin="526,244,0,0" Name="DesignationtextBox" VerticalAlignment="Top" Width="192" FontSize="15" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="17,295,0,0" Name="textBlock5" Text="Products" VerticalAlignment="Top" FontSize="16" />
+        <TextBlock Height="27" HorizontalAlignment="Left" Margin="17,590,0,0" Name="textBlock6" Text="Packages" VerticalAlignment="Top" Width="106" FontSize="16" />
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="17,250,0,0" Name="textBlock3" Text="Verification date:" VerticalAlignment="Top" />
+        <TextBox FontSize="15" Height="39" HorizontalAlignment="Left" Margin="160,248,0,0" Name="VerifyDateTextBox" VerticalAlignment="Top" Width="197" />
+        <my:PrintHeader HorizontalAlignment="Left" Margin="148,1,0,0" x:Name="printHeader1" VerticalAlignment="Top" Width="485" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="18,166,0,0" Name="textBlock7" Text="PLR Code:" VerticalAlignment="Top" FontSize="16" />
+        <TextBox Height="0" HorizontalAlignment="Left" Margin="272,268,0,0" Name="textBox1" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="42" HorizontalAlignment="Left" Margin="160,157,0,0" Name="PLRCodetextBox" VerticalAlignment="Top" Width="197" FontSize="15" />
+        <sdk:Label Height="28" HorizontalAlignment="Left" Margin="348,125,0,0" Name="label1" VerticalAlignment="Top" Width="86" Content="PLR Form" FontSize="17" />
+        <TextBlock FontSize="13" Height="23" HorizontalAlignment="Left" Margin="59,957,0,0" Name="textBlock8" Text="Issued by" VerticalAlignment="Top" />
+        <TextBlock FontSize="13" Height="23" HorizontalAlignment="Left" Margin="326,959,0,0" Name="textBlock9" Text="Store Officer" VerticalAlignment="Top" />
+        <TextBlock FontSize="13" Height="23" HorizontalAlignment="Left" Margin="597,957,0,0" Name="textBlock10" Text="Approved by" VerticalAlignment="Top" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,104 @@
+﻿<sdk:Page 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels"
+           xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+           xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.SL4"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" xmlns:System_Windows_Controls_DataVisualization_Charting_Compatible="clr-namespace:System.Windows.Controls.DataVisualization.Charting.Compatible;assembly=System.Windows.Controls.DataVisualization.Toolkit" x:Class="TrialBusinessManager.Views.ViewInventoryView"
+           mc:Ignorable="d"
+           d:DesignWidth="1092"
+           Title="ViewInventoryView Page" Height="495">
+    
+    <sdk:Page.Resources>
+        <local:ViewInventoryViewModel x:Key="MyViewModel"/>
+    </sdk:Page.Resources>
+    <Grid x:Name="LayoutRoot" DataContext="{Binding Source={StaticResource MyViewModel}}">
+        <sdk:TabControl x:Name="myTabControl" >
+            <sdk:TabItem x:Name="ProductTabItem" Header="Inventory products" Width="180">
+                
+                <Grid Margin="6,17,7,0">
+                    <sdk:AutoCompleteBox Height="28" HorizontalAlignment="Left" Margin="136,3,0,0" x:Name="autoCompleteBox1" VerticalAlignment="Top" Width="200" ItemsSource="{Binding InventoryProductsCollection}" SelectedItem="{Binding SelectedProduct}" ValueMemberPath="GroupName" SelectionChanged="autoCompleteBox1_SelectionChanged">
+            			<sdk:AutoCompleteBox.ItemTemplate>
+            				<DataTemplate>
+            					<StackPanel>
+            						<TextBlock Text="{Binding GroupName}" FontSize="14" />
+            						<TextBlock Text="{Binding ProductCode}" FontSize="11" />
+            					</StackPanel>
+
+            				</DataTemplate>
+            			</sdk:AutoCompleteBox.ItemTemplate>
+            		</sdk:AutoCompleteBox>
+            		<TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlock1" Text="Search Product" VerticalAlignment="Top" FontSize="17" />
+            		<sdk:DataGrid AutoGenerateColumns="False" Height="179" HorizontalAlignment="Left" Margin="0,39,0,0" x:Name="dataGrid1" VerticalAlignment="Top" Width="1067"  ItemsSource="{Binding InventoryProductsCollection}" SelectedItem="{Binding SelectedProduct}" GridLinesVisibility="All" BorderThickness="1,0,1,1" BorderBrush="#FF706161" SelectionChanged="dataGrid1_SelectionChanged">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Binding="{Binding GroupName}" Header="Group Name" IsReadOnly="True" FontSize="13" Width="30*" />
+            				<sdk:DataGridTextColumn Binding="{Binding ProductCode}" Header="Product code" IsReadOnly="True" FontSize="13" Width="30*"/>
+                            <sdk:DataGridTextColumn Binding="{Binding BrandName}" Header="Brand Name" IsReadOnly="True" FontSize="13" Width="30*"/>
+
+                            <sdk:DataGridTextColumn Binding="{Binding LotId}" Header="Lot Id" IsReadOnly="True" FontSize="13" Width="18*"/>
+                            <sdk:DataGridTextColumn Binding="{Binding PurchasePrice}" Header="Unit Price (BDT)" FontSize="13" Width="30*" IsReadOnly="True"/>
+
+                            <sdk:DataGridTextColumn Binding="{Binding UnfinishedQuantity}" Header="Unfinished (kg)" FontSize="13" Width="30*" IsReadOnly="True"/>
+            				<sdk:DataGridTextColumn Binding="{Binding OnProcessingQuantity}" Header="On Processing (kg)" FontSize="13" Width="37*" IsReadOnly="True" />
+            				<sdk:DataGridTextColumn Binding="{Binding FinishedQuantity}" Header="Finished (kg)" FontSize="13" Width="27*" IsReadOnly="True"/>
+            				<sdk:DataGridTextColumn Binding="{Binding TotalProductQuantity}" Header="Total Quantity(kg)" FontSize="13" Width="35*" IsReadOnly="True" />
+                        </sdk:DataGrid.Columns> 
+                    </sdk:DataGrid>
+                    
+                    <toolkit:Chart Margin="142,0,0,0"  VerticalAlignment="Bottom" Height="219"  Width="336" x:Name="PieChart" BorderBrush="{x:Null}" HorizontalAlignment="Left" d:LayoutOverrides="Width">
+                        <toolkit:PieSeries ItemsSource="{Binding}" IndependentValuePath="Status" DependentValuePath="Amount" Margin="10,0" Background="#FF1D9BFB" BorderBrush="#FFE73636"/>
+                    </toolkit:Chart>
+                    
+                    <toolkit:Chart Margin="0,0,38,0"  VerticalAlignment="Bottom" Height="219"  Width="482" x:Name="BarChart" BorderBrush="{x:Null}" HorizontalAlignment="Right">
+                    
+                        <toolkit:ColumnSeries ItemsSource="{Binding}" IndependentValuePath="Status" DependentValuePath="Amount" Margin="0,0,0,1" Background="#FF1D9BFB" BorderBrush="#FFE73636"/>
+                    </toolkit:Chart>
+            	
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem x:Name="PackageTabItem" Header="Inventory packages" Width="180">
+                <Grid x:Name="Grid2" Margin="0,0,-13,0">
+                    <sdk:AutoCompleteBox Height="28" HorizontalAlignment="Left" Margin="148,19,0,0" x:Name="autoCompleteBox2" VerticalAlignment="Top" Width="200" ItemsSource="{Binding InventoryPackageCollection}" SelectedItem="{Binding SelectedPackage}" ValueMemberPath="PackageName" SelectionChanged="autoCompleteBox2_SelectionChanged">
+                        <sdk:AutoCompleteBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding PackageName}" FontSize="14" />
+                                    <TextBlock Text="{Binding PackageCode}" FontSize="11" />
+                                </StackPanel>
+
+                            </DataTemplate>
+                        </sdk:AutoCompleteBox.ItemTemplate>
+                    </sdk:AutoCompleteBox>
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="6,19,0,0" x:Name="textBlock2" Text="Search Package" VerticalAlignment="Top" FontSize="17" />
+                    <sdk:DataGrid AutoGenerateColumns="False" Height="202" HorizontalAlignment="Left" Margin="6,61,0,0" x:Name="dataGrid2" SelectionChanged="dataGrid2_SelectionChanged" VerticalAlignment="Top" Width="961"  ItemsSource="{Binding InventoryPackageCollection}" SelectedItem="{Binding SelectedPackage}" GridLinesVisibility="All" BorderThickness="1,0,1,1" BorderBrush="#FF706161">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Binding="{Binding PackageName}" Header="Package name" IsReadOnly="True" FontSize="13" Width="30*" />
+                           
+                            <sdk:DataGridTextColumn Binding="{Binding PackageCode}" Header="Package code" IsReadOnly="True" FontSize="13" Width="30*"/>
+                            <sdk:DataGridTextColumn Binding="{Binding PurchasePrice}" Header="Unit Price (BDT)" FontSize="13" Width="30*" IsReadOnly="True"/>
+
+                            <sdk:DataGridTextColumn Binding="{Binding UnfinishedQuantity, Mode=TwoWay}" Header="Unfinished (kg)" FontSize="13" Width="30*" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Binding="{Binding OnProcessingQuantity, Mode=TwoWay}" Header="On Processing (kg)" FontSize="13" Width="37*" IsReadOnly="True" />
+                            <sdk:DataGridTextColumn Binding="{Binding FinishedQuantity, Mode=TwoWay}" Header="Finished (kg)" FontSize="13" Width="27*" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Binding="{Binding TotalPackageQuantity, Mode=TwoWay}" Header="Total Quantity(kg)" FontSize="13" Width="35*" IsReadOnly="True" />
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <toolkit:Chart Margin="142,0,0,0"  VerticalAlignment="Bottom" Height="219"  Width="336" x:Name="PackagePieChart" BorderBrush="{x:Null}" HorizontalAlignment="Left" d:LayoutOverrides="Width">
+                        <toolkit:PieSeries ItemsSource="{Binding}" IndependentValuePath="Status" DependentValuePath="Amount" Margin="10,0" Background="#FF1D9BFB" BorderBrush="#FFE73636"/>
+                    </toolkit:Chart>
+
+                    <toolkit:Chart Margin="0,0,38,0"  VerticalAlignment="Bottom" Height="219"  Width="482" x:Name="PackageBarChart" BorderBrush="{x:Null}" HorizontalAlignment="Right">
+
+                        <toolkit:ColumnSeries ItemsSource="{Binding}" IndependentValuePath="Status" DependentValuePath="Amount" Margin="0,0,0,1" Background="#FF1D9BFB" BorderBrush="#FFE73636"/>
+                    </toolkit:Chart>
+                </Grid>
+
+            </sdk:TabItem>
+        </sdk:TabControl>
+        
+        
+    </Grid>
+</sdk:Page>

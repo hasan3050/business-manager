@@ -1,0 +1,60 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.PLRConfirmationChildWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="865" Height="612" 
+           Title="Confirm PLR"  xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sdk:DataGrid AutoGenerateColumns="False" ColumnWidth="148*" Margin="12,117,12,0" Name="dataGrid1"   FontSize="11"  Height="184" VerticalAlignment="Top" MinHeight="0"   GridLinesVisibility="Horizontal" BorderThickness="1" BorderBrush="#FF706161">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Product.GroupName}" Header="Product name" IsReadOnly="True" FontSize="13"/>
+                <sdk:DataGridTextColumn Binding="{Binding Product.ProductCode}" Header="Product code" IsReadOnly="True" FontSize="13"/>
+                <sdk:DataGridTextColumn Binding="{Binding Product.BrandName}" Header="Brand Name" IsReadOnly="True" FontSize="13"/>
+
+                <sdk:DataGridTextColumn Binding="{Binding Product.StockKeepingUnit}" Header="Packet size" IsReadOnly="True" FontSize="13"/>
+
+                <sdk:DataGridTextColumn Binding="{Binding LotId}" Header="Lot Id" IsReadOnly="True" FontSize="13" />
+
+                <sdk:DataGridTextColumn Binding="{Binding Quantity, Mode=TwoWay}" Header="Quantity(kg)" FontSize="13" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding State, Mode=TwoWay}" Header="State" FontSize="13" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding LostAmount, Mode=TwoWay}" Header="Lost Amount" FontSize="13" IsReadOnly="True"/>
+
+
+
+                <sdk:DataGridTextColumn Binding="{Binding Remarks, Mode=TwoWay}" Header="Remarks" FontSize="13"/>
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid  AutoGenerateColumns="False" ColumnWidth="148*" Margin="12,339,12,0" Name="dataGrid2" FontSize="11" MinHeight="0" GridLinesVisibility="Horizontal" BorderThickness="1" BorderBrush="#FF706161" Height="171" VerticalAlignment="Top">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Package.PackageName}" Header="Package name" IsReadOnly="True" FontSize="13"/>
+                <sdk:DataGridTextColumn Binding="{Binding Package.PackageCode}" Header="Package code" IsReadOnly="True" FontSize="13"/>
+
+                <sdk:DataGridTextColumn Binding="{Binding Quantity, Mode=TwoWay}" Header="Quantity(Pc)" FontSize="13" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding State, Mode=TwoWay}" Header="State" FontSize="13" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding LostAmount, Mode=TwoWay}" Header="Lost Amount" FontSize="13" IsReadOnly="True"/>
+
+                <sdk:DataGridTextColumn Binding="{Binding Remarks, Mode=TwoWay}" Header="Remarks" FontSize="13" IsReadOnly="True"/>
+                
+            </sdk:DataGrid.Columns>
+
+        </sdk:DataGrid>
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="88" Height="35" HorizontalAlignment="Right" Margin="0,515,16,23" />
+        <Button x:Name="OKButton" Content="Accept" Click="OKButton_Click" Width="89" HorizontalAlignment="Right" Margin="0,516,201,23" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="30,16,0,0" Name="textBlock1" Text="Date of issue" VerticalAlignment="Top" FontSize="13" />
+        <TextBox Height="35" HorizontalAlignment="Left" Margin="128,11,0,0" Name="textBox1" VerticalAlignment="Top" Width="261" FontSize="14" IsReadOnly="True" />
+        <TextBlock FontSize="13" Height="23" HorizontalAlignment="Left" Margin="474,21,0,0" Name="textBlock2" Text="Issued by" VerticalAlignment="Top" />
+        <TextBox Height="35" HorizontalAlignment="Left" Margin="572,12,0,0" Name="textBox2" VerticalAlignment="Top" Width="255" FontSize="14" IsReadOnly="True" />
+        <TextBlock FontSize="13" Height="23" HorizontalAlignment="Left" Margin="74,50,0,0" Name="textBlock3" Text="Region" VerticalAlignment="Top" />
+        <TextBox HorizontalAlignment="Left" Margin="128,49,0,0" Name="textBox3" Width="261" FontSize="14" IsReadOnly="True" Height="32" VerticalAlignment="Top" />
+        <TextBlock FontSize="13" Height="23" HorizontalAlignment="Right" Margin="0,54,291,0" Name="textBlock4" Text="Designation" VerticalAlignment="Top" />
+        <TextBox Height="32" HorizontalAlignment="Left" Margin="573,50,0,0" Name="textBox4" VerticalAlignment="Top" Width="255" FontSize="14" IsReadOnly="True" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,88,0,0" Name="textBlock5" Text="Products" VerticalAlignment="Top" FontSize="14" />
+        <TextBlock Height="27" HorizontalAlignment="Left" Margin="12,312,0,0" Name="textBlock6" Text="Packages" VerticalAlignment="Top" Width="201" FontSize="14" />
+        <Button Content="Reject" Height="35" HorizontalAlignment="Right" Margin="0,516,106,22" Name="button1" Width="89" Click="button1_Click" />
+    </Grid>
+</controls:ChildWindow>

@@ -1,0 +1,66 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.SIC.ViewRequisitionHistory" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:ref="clr-namespace:TrialBusinessManager.ViewModels.SIC"
+           xmlns:SilverlightContrib_Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"      
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"      
+           Title="Requisition History" Height="600" Width="1018" FontSize="11">
+
+    <navigation:Page.Resources>
+        <ref:ViewRequisitionViewModel x:Key="ViewRequisitionViewModel"/>
+    </navigation:Page.Resources>
+
+
+    <Grid x:Name="LayoutRoot" DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" Background="White" Height="572" Width="1018">
+        <sdk:DataGrid AutoGenerateColumns="False" Height="305" HorizontalAlignment="Left" Margin="6,168,0,0" x:Name="dataGrid1" VerticalAlignment="Top" ColumnWidth="320" Width="960" DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" ItemsSource="{Binding BindRequisition, Mode=TwoWay}" GridLinesVisibility="All" SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Requisition Code" Binding="{Binding Path=RequisitionCode}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Placed By" Binding="{Binding Path=Employee.Person.Name, Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Requisition Type"  Width="1*" IsReadOnly="True" Binding="{Binding Path=RequisitionType,Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="Date Of Issue" Binding="{Binding Path=DateOfIssue.Date, Mode=TwoWay, StringFormat=\{0:d\}}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Requisition Status" Binding="{Binding Path=Status,Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <SilverlightContrib_Controls:GroupBox HorizontalAlignment="Left" Margin="6,3,0,0" VerticalAlignment="Top" Header="Search By" FontSize="14.667" Width="894" Height="140">
+            <Grid Height="102" Width="881" HorizontalAlignment="Left">
+                <sdk:AutoCompleteBox Height="28" HorizontalAlignment="Left" IsEnabled="True" IsTextCompletionEnabled="True" ItemsSource="{Binding EmployeeCollection}" Margin="430,13,0,0" Name="autoCompleteBox1" SelectedItem="{Binding SelectedEmployee, Mode=TwoWay, Source={StaticResource ViewRequisitionViewModel}}" ValueMemberPath="Person.Name" VerticalAlignment="Top" Width="120" Text="" FontSize="11">
+                    <sdk:AutoCompleteBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock FontSize="14" Text="{Binding Person.Name}" />
+                                <TextBlock FontSize="11" Text="{Binding Designation}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:AutoCompleteBox.ItemTemplate>
+                </sdk:AutoCompleteBox>
+                <Button Command="{Binding SearchCommand, Mode=TwoWay}" Content="Search" DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" Height="33" HorizontalAlignment="Left" Margin="718,47,0,0" Name="button1" VerticalAlignment="Top" Width="120" FontSize="11" />
+                <RadioButton DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" Height="22" HorizontalAlignment="Left" IsChecked="{Binding Mode=TwoWay, Path=SelectedDOBool}" Margin="318,17,0,0" Name="radioButton2" VerticalAlignment="Top" Width="106" Content="Issued By" FontSize="11" />
+                <sdk:AutoCompleteBox Height="28" HorizontalAlignment="Left" IsTextCompletionEnabled="True" ItemsSource="{Binding RequisitionCollection}" Margin="166,16,0,0" Name="autoCompleteBox3" SelectedItem="{Binding SelectedCode, Mode=TwoWay, Source={StaticResource ViewRequisitionViewModel}}" ValueMemberPath="RequisitionCode" VerticalAlignment="Top" Width="120" Text="" FontSize="11">
+                    <sdk:AutoCompleteBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock FontSize="14" Text="{Binding RequisitionCode}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:AutoCompleteBox.ItemTemplate>
+                </sdk:AutoCompleteBox>
+                <RadioButton DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" Height="24" HorizontalAlignment="Left" IsChecked="{Binding SelectedCodeBool, Mode=TwoWay}" Margin="11,17,0,0" Name="radioButton6" VerticalAlignment="Top" Width="152" Content="Requisition Code" FontSize="11" />
+                <sdk:DatePicker DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" DisplayDateEnd="12/31/2099" Height="26" HorizontalAlignment="Left" Margin="166,49,0,0" Name="datePicker1" SelectedDate="{Binding StartDate, Mode=TwoWay}" VerticalAlignment="Top" Width="120" FontSize="11" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="338,52,0,0" Name="textBlock4" Text="End Date" VerticalAlignment="Top" FontSize="11" />
+                <sdk:DatePicker DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" DisplayDateEnd="12/31/2099" DisplayDateStart="1/1/2012" Height="26" HorizontalAlignment="Left" Margin="430,46,0,0" Name="datePicker2" SelectedDate="{Binding EndDate, Mode=TwoWay}" VerticalAlignment="Top" Width="120" FontSize="11" />
+                <RadioButton Height="22" HorizontalAlignment="Left" IsChecked="{Binding SelectedDateBool, Mode=TwoWay}" Margin="11,53,0,0" Name="radioButton4" VerticalAlignment="Top" Width="96" Content="Start Date" FontSize="11" />
+                <RadioButton DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" Height="23" HorizontalAlignment="Left" IsChecked="{Binding Mode=TwoWay, Path=SelectedAllBool}" Margin="569,49,0,0" Name="radioButton1" VerticalAlignment="Top" Width="91" Content="View All" FontSize="11" />
+                <ComboBox DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" Height="24" HorizontalAlignment="Left" ItemsSource="{Binding Path=RequisitionTypeCollection}" Margin="718,13,0,0" Name="comboBox2" SelectedItem="{Binding Mode=TwoWay, Path=SelectedType}" VerticalAlignment="Top" Width="120" FontSize="11" />
+                <RadioButton DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" Height="21" HorizontalAlignment="Left" IsChecked="{Binding Mode=TwoWay, Path=SelectedTypeBool}" Margin="569,14,0,0" Name="radioButton3" VerticalAlignment="Top" Width="143" Content="Requisition Type" FontSize="11" />
+            </Grid>
+        </SilverlightContrib_Controls:GroupBox>
+        <Button Content="View Details" HorizontalAlignment="Right" Height="34" Margin="0,479,52,0" VerticalAlignment="Top" Width="171" Command="{Binding Path=ViewRequisitionCommand}" Click="Button_Click" />
+        <sdk:DataPager Height="26" HorizontalAlignment="Left" Margin="6,479,0,0" Name="dataPager1" PageSize="10" VerticalAlignment="Top" Width="200" Source="{Binding ElementName=dataGrid1, Path=ItemsSource}" />
+        <Button Command="{Binding LoadMoreCommand,Mode=TwoWay}" Content="Load More Data" Height="23" HorizontalAlignment="Left" Margin="212,482,0,0" Name="button2" VerticalAlignment="Top" Width="152" />
+    </Grid>
+</navigation:Page>

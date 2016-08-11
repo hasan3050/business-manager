@@ -1,0 +1,329 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.CreateMRR" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                  xmlns:local="clr-namespace:TrialBusinessManager.ViewModels"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 d:DataContext="{d:DesignInstance Type=local:CreateMRRViewModel,IsDesignTimeCreatable=False}"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="1087"
+           Title="CreateMRR Page" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" FontSize="14">
+   
+    <Grid x:Name="LayoutRoot" d:LayoutOverrides="VerticalMargin">
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition/>
+    	</Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+    	<Viewbox Stretch="Fill">
+    		<sdk:TabControl BorderBrush="{x:Null}" Background="{x:Null}" Height="592" Width="1087">
+    			<sdk:TabItem Header="Product" Width="190">
+    				<Grid x:Name="grid1">
+    					<Grid.ColumnDefinitions>
+    						<ColumnDefinition Width="1075"/>
+    					</Grid.ColumnDefinitions>
+    					<Grid.RowDefinitions>
+    						<RowDefinition />
+    					</Grid.RowDefinitions>
+    					<sdk:DataGrid AutoGenerateColumns="False" ColumnWidth="148*" Margin="3,156,-4,158" x:Name="dataGrid1"  ItemsSource="{Binding MRRProductCollection}"  FontSize="12" SelectedIndex="{Binding SelectedMRRProduct, Mode=TwoWay}" d:LayoutOverrides="HorizontalAlignment" MinHeight="0" GridLinesVisibility="All" BorderThickness="1,1,1,3" BorderBrush="#FF706161" Width="1076">
+    						<sdk:DataGrid.Columns>
+    							<sdk:DataGridTextColumn Binding="{Binding Product.GroupName}" Header="Product name" IsReadOnly="True" FontSize="13"/>
+    							<sdk:DataGridTextColumn Binding="{Binding Product.BrandName}" Header="Brand name" IsReadOnly="True" FontSize="13"/>
+    						
+    							<sdk:DataGridTextColumn Binding="{Binding AcceptedQuantity, Mode=TwoWay}" Header="Quantity(kg)" FontSize="13"/>
+
+    							<sdk:DataGridTextColumn Binding="{Binding LotId, Mode=TwoWay}" Header="LotID" FontSize="13" IsReadOnly="False"/>
+    							<sdk:DataGridTextColumn Binding="{Binding PurchasePrice, Mode=TwoWay}" Header="Purchase price /kg(BDT)" FontSize="13" IsReadOnly="False"/>
+
+    						</sdk:DataGrid.Columns>
+    					</sdk:DataGrid>
+                        <sdk:AutoCompleteBox Margin="167,101,528,0" x:Name="autoCompleteBox1"  ItemsSource="{Binding Products}" ValueMemberPath="GroupName" SelectedItem="{Binding SelectedProduct, Mode=TwoWay}" VerticalAlignment="Top" Height="32" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Left" Width="376">
+    						<sdk:AutoCompleteBox.ItemTemplate>
+    							<DataTemplate>
+    								<StackPanel>
+    									<StackPanel Orientation="Horizontal">
+    										<TextBlock Text="Product Name: " FontSize="14" />
+    										<TextBlock Text="{Binding GroupName}" FontSize="14" />
+    									</StackPanel>
+    									<StackPanel Orientation="Horizontal">
+    										<TextBlock Text="Brand Name: " FontSize="12" />
+    										<TextBlock
+    											Text="{Binding BrandName}" FontSize="11"/>
+    									</StackPanel>
+    									
+    								</StackPanel>
+    							</DataTemplate>
+    						</sdk:AutoCompleteBox.ItemTemplate>
+    					</sdk:AutoCompleteBox>
+    					<TextBlock Margin="0,101,923,0" x:Name="textBlock1" Text="Search Products" FontSize="15" VerticalAlignment="Top" Height="32" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Right" />
+    					<Button Content="+" Margin="556,101,474,0" x:Name="button1" Width="45" FontWeight="Bold" FontSize="15"  Command="{Binding AddProduct}" VerticalAlignment="Top" Height="32" d:LayoutOverrides="VerticalAlignment" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" HorizontalAlignment="Left">
+    						<Button.RenderTransform>
+    							<CompositeTransform Rotation="-0.187"/>
+    						</Button.RenderTransform>
+    					</Button>
+    					<Button Content="X" Margin="608,101,0,0" x:Name="button2" FontWeight="Bold" Command="{Binding DeleteSelectedProduct}" VerticalAlignment="Top" Height="32" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Left" Width="44" />
+    					<Image Margin="-1,101,1047,0" x:Name="image2" Source="/TrialBusinessManager;component/Assets/Resources/search_icon.png" Stretch="Fill" Width="29" VerticalAlignment="Top" Height="32" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Left" />
+                        <TextBlock Height="23" HorizontalAlignment="Left" Margin="4,15,0,0" x:Name="textBlock3" Text="Supplier Name" VerticalAlignment="Top" Width="102" />
+    					<TextBox Height="32" HorizontalAlignment="Left" Margin="116,6,756,0" x:Name="ProductRetailer" VerticalAlignment="Top" Text="{Binding ProductRetailer, Mode=TwoWay}" Width="200"/>
+    					<TextBlock Height="23" HorizontalAlignment="Left" Margin="5,51,0,0" x:Name="textBlock4" Text="Chalan No." VerticalAlignment="Top" Width="102" />
+    					<TextBox Height="34" HorizontalAlignment="Left" Margin="116,44,756,0" x:Name="ProductChalan" VerticalAlignment="Top" Text="{Binding ProductChalan, Mode=TwoWay}" Width="200"/>
+    					<TextBlock Height="23" Margin="338,55,0,0" x:Name="textBlock8" Text="Select Wing" VerticalAlignment="Top" HorizontalAlignment="Left" Width="84" />
+    					<ComboBox Height="33" Margin="481,51,0,0" x:Name="comboBox2" VerticalAlignment="Top" ItemsSource="{Binding Wings, Mode=TwoWay}" SelectedItem="{Binding SelectedProductWing, Mode=TwoWay}" d:LayoutOverrides="HorizontalMargin" HorizontalAlignment="Left" Width="198" />
+    					<TextBlock Height="23" HorizontalAlignment="Left" Margin="338,15,0,0" x:Name="textBlock10" Text="Purchase Order No." VerticalAlignment="Top" Width="141" />
+    					<TextBox Height="34" Margin="481,8,0,0" x:Name="textBox2" Text="{Binding ProductPurchase, Mode=TwoWay}" VerticalAlignment="Top" d:LayoutOverrides="HorizontalMargin" HorizontalAlignment="Left" Width="198" />
+                        <Button x:Name="refreshButton1_Copy" Command="{Binding Path=ResetProductCommand}" Content="Refresh" HorizontalAlignment="Right" Height="28" Margin="0,0,112,118" VerticalAlignment="Bottom" Width="110" Foreground="Black" ToolTipService.ToolTip="Submit..." Background="{x:Null}" d:LayoutOverrides="HorizontalAlignment">
+                            <Button.Resources>
+                                <Style x:Key="CustomImageButton" TargetType="Button">
+                                    <Setter Property="Background" Value="#FF1F3B53" />
+                                    <Setter Property="Foreground" Value="#FF000000" />
+                                    <Setter Property="Padding" Value="3" />
+                                    <Setter Property="BorderThickness" Value="1" />
+                                    <Setter Property="BorderBrush">
+                                        <Setter.Value>
+                                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                <GradientStop Color="#FFA3AEB9" Offset="0" />
+                                                <GradientStop Color="#FF8399A9" Offset="0.375" />
+                                                <GradientStop Color="#FF718597" Offset="0.375" />
+                                                <GradientStop Color="#FF617584" Offset="1" />
+                                            </LinearGradientBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Grid Margin="-2,0,4,0">
+                                                    <VisualStateManager.VisualStateGroups>
+                                                        <VisualStateGroup x:Name="CommonStates">
+                                                            <VisualState x:Name="Normal" />
+                                                            <VisualState x:Name="MouseOver">
+                                                                <Storyboard>
+                                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="BackgroundAnimation" />
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.BorderThickness)" Storyboard.TargetName="BackgroundAnimation">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                                                            <DiscreteObjectKeyFrame.Value>
+                                                                                <Thickness>1</Thickness>
+                                                                            </DiscreteObjectKeyFrame.Value>
+                                                                        </DiscreteObjectKeyFrame>
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                    <ColorAnimation Duration="0" To="#FF56C0E4" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" Storyboard.TargetName="BackgroundAnimation" d:IsOptimized="True" />
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.CornerRadius)" Storyboard.TargetName="BackgroundAnimation">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                                                            <DiscreteObjectKeyFrame.Value>
+                                                                                <CornerRadius>2</CornerRadius>
+                                                                            </DiscreteObjectKeyFrame.Value>
+                                                                        </DiscreteObjectKeyFrame>
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="Pressed">
+                                                                <Storyboard>
+                                                                    <ColorAnimation Duration="0" To="#FF93D2E2" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Storyboard.TargetName="Background" />
+                                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="BackgroundAnimation" />
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="Disabled">
+                                                                <Storyboard>
+                                                                    <DoubleAnimation Duration="0" To=".55" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="DisabledVisualElement" />
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                        </VisualStateGroup>
+                                                        <VisualStateGroup x:Name="FocusStates">
+                                                            <VisualState x:Name="Focused">
+                                                                <Storyboard>
+                                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualElement" />
+                                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="FocusVisualElement" d:IsOptimized="True" />
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="Unfocused" />
+                                                        </VisualStateGroup>
+                                                    </VisualStateManager.VisualStateGroups>
+                                                    <Border x:Name="Background" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="White" CornerRadius="3">
+                                                        <Grid Margin="1">
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="0.472*" />
+                                                                <ColumnDefinition Width="0.528*" />
+                                                            </Grid.ColumnDefinitions>
+                                                            <Border x:Name="BackgroundAnimation" Opacity="0" Background="{x:Null}" BorderBrush="Black" Grid.ColumnSpan="2" />
+                                                            <Image Source="/TrialBusinessManager;component/Assets/Resources/refresh.png" />
+                                                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Margin="0,3,-1,3" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Grid.Column="1" />
+                                                        </Grid>
+                                                    </Border>
+                                                    <Rectangle x:Name="DisabledVisualElement" Fill="#FFFFFFFF" IsHitTestVisible="false" Opacity="0" RadiusY="3" RadiusX="3" />
+                                                    <Rectangle x:Name="FocusVisualElement" IsHitTestVisible="false" Margin="1" Opacity="0" RadiusY="2" RadiusX="2" Stroke="#FF6DBDD1" StrokeThickness="1" />
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Resources>
+                            <Button.Style>
+                                <StaticResource ResourceKey="CustomImageButton" />
+                            </Button.Style>
+                            <Button.BorderBrush>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFA3AEB9" Offset="0" />
+                                    <GradientStop Color="#FF8399A9" Offset="0.375" />
+                                    <GradientStop Color="#FF718597" Offset="0.375" />
+                                    <GradientStop Color="#FF617584" Offset="1" />
+                                </LinearGradientBrush>
+                            </Button.BorderBrush>
+                        </Button>
+                        <Button x:Name="addButton_Copy" Command="{Binding SaveProductCommand}" Content="Submit" HorizontalAlignment="Right" Height="28" Margin="0,0,1,118" VerticalAlignment="Bottom" Width="102" Foreground="Black" ToolTipService.ToolTip="Submit..." d:LayoutOverrides="HorizontalAlignment">
+                            <Button.Resources>
+                                <Style x:Key="CustomImageButton" TargetType="Button">
+                                    <Setter Property="Background" Value="#FF1F3B53" />
+                                    <Setter Property="Foreground" Value="#FF000000" />
+                                    <Setter Property="Padding" Value="3" />
+                                    <Setter Property="BorderThickness" Value="1" />
+                                    <Setter Property="BorderBrush">
+                                        <Setter.Value>
+                                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                <GradientStop Color="#FFA3AEB9" Offset="0" />
+                                                <GradientStop Color="#FF8399A9" Offset="0.375" />
+                                                <GradientStop Color="#FF718597" Offset="0.375" />
+                                                <GradientStop Color="#FF617584" Offset="1" />
+                                            </LinearGradientBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Grid Margin="-2,0,4,0">
+                                                    <VisualStateManager.VisualStateGroups>
+                                                        <VisualStateGroup x:Name="CommonStates">
+                                                            <VisualState x:Name="Normal" />
+                                                            <VisualState x:Name="MouseOver">
+                                                                <Storyboard>
+                                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="BackgroundAnimation" />
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.BorderThickness)" Storyboard.TargetName="BackgroundAnimation">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                                                            <DiscreteObjectKeyFrame.Value>
+                                                                                <Thickness>1</Thickness>
+                                                                            </DiscreteObjectKeyFrame.Value>
+                                                                        </DiscreteObjectKeyFrame>
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                    <ColorAnimation Duration="0" To="#FF56C0E4" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" Storyboard.TargetName="BackgroundAnimation" d:IsOptimized="True" />
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.CornerRadius)" Storyboard.TargetName="BackgroundAnimation">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                                                            <DiscreteObjectKeyFrame.Value>
+                                                                                <CornerRadius>2</CornerRadius>
+                                                                            </DiscreteObjectKeyFrame.Value>
+                                                                        </DiscreteObjectKeyFrame>
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="Pressed">
+                                                                <Storyboard>
+                                                                    <ColorAnimation Duration="0" To="#FF93D2E2" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Storyboard.TargetName="Background" />
+                                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="BackgroundAnimation" />
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="Disabled">
+                                                                <Storyboard>
+                                                                    <DoubleAnimation Duration="0" To=".55" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="DisabledVisualElement" />
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                        </VisualStateGroup>
+                                                        <VisualStateGroup x:Name="FocusStates">
+                                                            <VisualState x:Name="Focused">
+                                                                <Storyboard>
+                                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualElement" />
+                                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="FocusVisualElement" d:IsOptimized="True" />
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="Unfocused" />
+                                                        </VisualStateGroup>
+                                                    </VisualStateManager.VisualStateGroups>
+                                                    <Border x:Name="Background" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="White" CornerRadius="3">
+                                                        <Grid Margin="1">
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="0.472*" />
+                                                                <ColumnDefinition Width="0.528*" />
+                                                            </Grid.ColumnDefinitions>
+                                                            <Border x:Name="BackgroundAnimation" Opacity="0" Background="{x:Null}" BorderBrush="Black" Grid.ColumnSpan="2" />
+                                                            <Image Source="/TrialBusinessManager;component/Assets/Resources/submit.png" />
+                                                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Margin="0,3,-1,3" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Grid.Column="1" />
+                                                        </Grid>
+                                                    </Border>
+                                                    <Rectangle x:Name="DisabledVisualElement" Fill="#FFFFFFFF" IsHitTestVisible="false" Opacity="0" RadiusY="3" RadiusX="3" />
+                                                    <Rectangle x:Name="FocusVisualElement" IsHitTestVisible="false" Margin="1" Opacity="0" RadiusY="2" RadiusX="2" Stroke="#FF6DBDD1" StrokeThickness="1" />
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Resources>
+                            <Button.Background>
+                                <ImageBrush Stretch="Fill" ImageSource="/TrialBusinessManager;component/Assets/Resources/submit.png" />
+                            </Button.Background>
+                            <Button.Style>
+                                <StaticResource ResourceKey="CustomImageButton" />
+                            </Button.Style>
+                            <Button.BorderBrush>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFA3AEB9" Offset="0" />
+                                    <GradientStop Color="#FF8399A9" Offset="0.375" />
+                                    <GradientStop Color="#FF718597" Offset="0.375" />
+                                    <GradientStop Color="#FF617584" Offset="1" />
+                                </LinearGradientBrush>
+                            </Button.BorderBrush>
+                        </Button>
+                    </Grid>
+    			</sdk:TabItem>
+    			<sdk:TabItem Header="Package" Width="190">
+    				<Grid x:Name="grid2">
+    					<Grid.ColumnDefinitions>
+    						<ColumnDefinition Width="1075"/>
+    					</Grid.ColumnDefinitions>
+    					<Grid.RowDefinitions>
+    						<RowDefinition/>
+    					</Grid.RowDefinitions>
+
+    					<sdk:DataGrid  AutoGenerateColumns="False" ColumnWidth="148*" Margin="-6,143,6,182" x:Name="dataGrid2" ItemsSource="{Binding MRRPackageCollection}" FontSize="12" SelectedIndex="{Binding SelectedMRRPackage,Mode=TwoWay}" MinHeight="0" GridLinesVisibility="All" BorderThickness="1,1,1,3" BorderBrush="#FF6C6C6C">
+    						<sdk:DataGrid.Columns>
+    							<sdk:DataGridTextColumn Binding="{Binding Package.PackageName}" Header="Package name"  IsReadOnly="True" FontSize="13" />
+    							<sdk:DataGridTextColumn Binding="{Binding Package.PackageCode}" Header="Package code" IsReadOnly="True" FontSize="13"/>
+    							<sdk:DataGridTextColumn Binding="{Binding AcceptedQuantity, Mode=TwoWay}" Header="Quantity(Pc)" FontSize="13"/>
+    							<sdk:DataGridTextColumn Binding="{Binding PurchasePrice, Mode=TwoWay}" Header="Purchase price /kg(BDT)" FontSize="13" IsReadOnly="False"/>
+
+    						</sdk:DataGrid.Columns>
+    					</sdk:DataGrid>
+    					<sdk:AutoCompleteBox Height="34" Margin="186,97,518,0" x:Name="autoCompleteBox2" VerticalAlignment="Top"  ItemsSource="{Binding Packages}" SelectedItem="{Binding SelectedPackage, Mode=TwoWay}" ValueMemberPath="PackageName" HorizontalAlignment="Left" Width="363">
+    						<sdk:AutoCompleteBox.ItemTemplate>
+    							<DataTemplate>
+    								<StackPanel>
+    									<TextBlock Text="{Binding PackageName}" FontSize="14" />
+    									<TextBlock
+    										Text="{Binding PackageCode}" FontSize="11"/>
+
+    								</StackPanel>
+    							</DataTemplate>
+    						</sdk:AutoCompleteBox.ItemTemplate>
+       
+    					</sdk:AutoCompleteBox>
+    					<TextBlock Height="32" Margin="38,100,896,0" x:Name="textBlock2" Text="Search Packages" VerticalAlignment="Top" FontSize="16" />
+    					<Button Content="+" FontSize="15" FontWeight="Bold" Height="35" Margin="558,95,0,0" x:Name="button5" VerticalAlignment="Top"  Command="{Binding AddPackage}" Width="32" RenderTransformOrigin="0.906,0.406" HorizontalAlignment="Left"/>
+    					<Button Content="X" FontWeight="Bold" Height="35" Margin="597,95,0,0" x:Name="button6" VerticalAlignment="Top" Command="{Binding DeleteSelectedPackage,Mode=TwoWay}" HorizontalAlignment="Left" Width="32" />
+    					<Image Height="32" Margin="0,98,1046,0" x:Name="image1" Stretch="Fill" VerticalAlignment="Top" Source="/TrialBusinessManager;component/Assets/Resources/search_icon.png" />
+    					<TextBlock Height="23" Margin="1,18,973,0" x:Name="textBlock5" Text="Supplier Name" VerticalAlignment="Top" />
+    					<TextBox Height="34" HorizontalAlignment="Stretch" Margin="109,12,769,0" x:Name="PackageRetailer" VerticalAlignment="Top" Text="{Binding PackageRetailer, Mode=TwoWay}" />
+    					<TextBlock Height="23" HorizontalAlignment="Stretch" Margin="2,55,994,0" x:Name="textBlock6" Text="Chalan No." VerticalAlignment="Top" />
+    					<TextBox Height="31" HorizontalAlignment="Stretch" Margin="109,50,769,0" x:Name="PackageChalan" VerticalAlignment="Top" Text="{Binding PackageChalan, Mode=TwoWay}" />
+    					<TextBlock Height="23" Margin="329,52,660,0" x:Name="textBlock7" Text="Select Wing" VerticalAlignment="Top" />
+    					<ComboBox Height="38" Margin="469,46,409,0" x:Name="comboBox1" VerticalAlignment="Top" ItemsSource="{Binding Wings, Mode=TwoWay}" SelectedItem="{Binding SelectedPackageWing, Mode=TwoWay}" d:LayoutOverrides="HorizontalAlignment"/>
+    					<TextBlock Height="23" HorizontalAlignment="Stretch" Margin="329,12,607,0" x:Name="textBlock9" Text="Purchase Order No." VerticalAlignment="Top" />
+    					<TextBox Height="31" HorizontalAlignment="Stretch" Margin="469,8,409,0" x:Name="textBox1" Text="{Binding PackagePurchase, Mode=TwoWay}" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" />
+                        <Button  Command="{Binding ResetCommand}" Content="Refresh" Foreground="Black" Height="28" HorizontalAlignment="Right" Margin="0,0,118,130" Name="button3"  ToolTipService.ToolTip="Submit..." VerticalAlignment="Bottom" Width="110">
+                          
+                        </Button>
+                        <Button Command="{Binding SavePackageCommand}" Content="Submit" Foreground="Black" Height="28" HorizontalAlignment="Right" Margin="0,0,7,130" Name="button4" ToolTipService.ToolTip="Submit..." VerticalAlignment="Bottom" Width="102">
+                           
+                        </Button>
+                    </Grid>
+    			</sdk:TabItem>
+    		</sdk:TabControl>
+    	</Viewbox>
+    </Grid>
+</navigation:Page>

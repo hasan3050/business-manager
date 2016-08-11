@@ -1,0 +1,59 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.CreateSeason"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="356" Height="293" 
+           Title="Create/Edit Season">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <controls:TabControl>
+        	<controls:TabItem Header="Create">
+        		<Grid Background="#FFE5E5E5">
+        			<Grid x:Name="SeasonSetPane" Margin="0,0,0,8">
+        				<controls:DatePicker x:Name="startDatePicker" HorizontalAlignment="Left" Height="23" Margin="107,6,0,0" VerticalAlignment="Top" Width="206" SelectedDateChanged="startDatePicker_SelectedDateChanged"/>
+        				<controls:DatePicker x:Name="endDatePicker" SelectedDateChanged="endDatePicker_SelectedDateChanged" Margin="107,50,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="206"/>
+        				<TextBlock HorizontalAlignment="Left" Height="21" Margin="0,9,0,0" TextWrapping="Wrap" Text="Start of season" VerticalAlignment="Top" Width="95"/>
+        				<TextBlock HorizontalAlignment="Left" Margin="0,50,0,0" TextWrapping="Wrap" Width="95" Height="21" VerticalAlignment="Top"><Run Text="End of season"/><LineBreak/><Run/></TextBlock>
+        				<Border Margin="107,92,0,0" BorderThickness="1" CornerRadius="2" Height="55" VerticalAlignment="Top" HorizontalAlignment="Left" Width="207" >
+        					<Border.BorderBrush>
+        						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        							<GradientStop Color="#FF617584" Offset="1"/>
+        							<GradientStop Color="#FFD2D7DC"/>
+        						</LinearGradientBrush>
+        					</Border.BorderBrush>
+        					<TextBlock x:Name="seasonNameBlock" TextWrapping="Wrap" FontSize="10.667" FontWeight="Bold"/>
+        				</Border>
+        				<TextBlock HorizontalAlignment="Left" Margin="0,94,0,0" TextWrapping="Wrap" Width="95" Height="19" VerticalAlignment="Top" Text="Season Name
+"/>
+        				<Button Content="Cancel" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom" Width="74" Margin="0,0,8,6" Click="CancelButton_Click" />
+        				<Button x:Name="createButton" Content="Create" Height="26" Margin="154,0,86,6" VerticalAlignment="Bottom" Click="createButton_Click"/>
+        			</Grid>
+        		</Grid>
+        	</controls:TabItem>
+        	<controls:TabItem Header="Edit">
+        		<Grid Background="#FFE5E5E5">
+        			<Grid x:Name="SeasonSelectionPane" Height="27" Margin="-2,19,10,0" VerticalAlignment="Top">
+        				<ComboBox x:Name="seasonCombo" Margin="96,0,0,1" SelectionChanged="seasonCombo_SelectionChanged">
+        					<ComboBox.ItemTemplate>
+        						<DataTemplate>
+        							<StackPanel>
+        								<TextBlock Text="{Binding SeasonName}"/>
+        							</StackPanel>
+        						</DataTemplate>
+        					</ComboBox.ItemTemplate>
+        				</ComboBox>
+        				<TextBlock HorizontalAlignment="Left" Margin="2,2,0,2" TextWrapping="Wrap" Text="Select Season" Width="90"/>
+        			</Grid>
+        			<Button Content="Cancel" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom" Width="76" Margin="0,0,10,12" Click="CancelButton_Click" />
+        			<Button x:Name="editButton" Content="Edit" Height="26" Margin="149,0,90,12" VerticalAlignment="Bottom" Click="editButton_Click"/>
+        			<controls:DatePicker x:Name="startDatePicker_edit" HorizontalAlignment="Left" Margin="95,62,0,0" Width="218" SelectedDateChanged="startDatePicker_SelectedDateChanged" Height="23" VerticalAlignment="Top"/>
+        			<controls:DatePicker x:Name="endDatePicker_Edit" SelectedDateChanged="endDatePicker_SelectedDateChanged" Margin="95,104,0,90" HorizontalAlignment="Left" Width="218"/>
+        			<TextBlock HorizontalAlignment="Left" Margin="0,65,0,0" TextWrapping="Wrap" Text="Start of season" Width="95" Height="21" VerticalAlignment="Top"/>
+        			<TextBlock HorizontalAlignment="Left" Margin="0,104,0,92" TextWrapping="Wrap" Width="95"><Run Text="End of season"/><LineBreak/><Run/></TextBlock>
+        		</Grid>
+        	</controls:TabItem>
+        </controls:TabControl>
+    </Grid>
+</controls:ChildWindow>

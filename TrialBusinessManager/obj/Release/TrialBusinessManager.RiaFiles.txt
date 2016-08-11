@@ -1,0 +1,2 @@
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager
+Generated_Code\TrialBusinessManager.Web.g.cs

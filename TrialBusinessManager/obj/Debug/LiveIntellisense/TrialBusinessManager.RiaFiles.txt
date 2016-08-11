@@ -1,0 +1,2 @@
+D:\BusinessManagerVersions\Version1\businessmanager_original\TrialBusinessManager
+Generated_Code\TrialBusinessManager.Web.g.cs

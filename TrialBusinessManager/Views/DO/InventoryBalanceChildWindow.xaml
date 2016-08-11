@@ -1,0 +1,33 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.DO.InventoryBalanceChildWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           Width="744" Height="418" 
+           Title="Balance Transportation Loss" Closed="ChildWindow_Closed">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66*" />
+            <RowDefinition Height="199*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="254" Name="dataGrid1" VerticalAlignment="Top" ItemsSource="{Binding}" DataContext="{Binding Path=Losses}" SelectedItem="{Binding SelectedLoss,Mode=TwoWay}" CellEditEnded="dataGrid1_CellEditEnded" SelectionChanged="dataGrid1_SelectionChanged" Grid.RowSpan="2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn x:Name="productNameColumn"  Header="Product Name" Width="1*" IsReadOnly="True" Binding="{Binding Product.GroupName, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn x:Name="brandNameColumn"  Header="Product Brand" Width="1*" IsReadOnly="True" Binding="{Binding Product.BrandName, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn x:Name="productCodeColumn"  Header="Product Code" Width="1*" IsReadOnly="True" Binding="{Binding Product.ProductCode, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn x:Name="productSKUColumn"  Header="Packet Size" Width="1*" IsReadOnly="True" Binding="{Binding Product.StockKeepingUnit, Mode=TwoWay}" />
+
+                <sdk:DataGridTextColumn x:Name="totalQuantityColumn"  Header="Lot" Width="0.6*" IsReadOnly="True"  Binding="{Binding Mode=TwoWay, Path=LotId}" />
+                <sdk:DataGridTextColumn x:Name="BalanceColumn"  Header="Dispatched Packets" Width="1*" IsReadOnly="True" Binding="{Binding Mode=TwoWay, Path=DispatchedQuantity}" />
+
+                <sdk:DataGridTextColumn x:Name="packetBalanceColumn"  Header="Balance Packets" Width="1*" Binding="{Binding Mode=TwoWay, Path=BalanceQuantity}" />
+                </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,6" Grid.Row="2" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,6,79,6" Grid.Row="2" />
+        <TextBlock HorizontalAlignment="Left" Margin="469,178,0,54" Name="textBlock1" Text="Total Balanced " Width="95" FontSize="13" Grid.Row="1" />
+        <TextBox Height="30" HorizontalAlignment="Left" Margin="568,174,0,0" Name="TotaltextBox" VerticalAlignment="Top" Width="154" Grid.Row="1" FontSize="14" IsReadOnly="True" />
+        <TextBlock Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="497,210,0,0" Name="textBlock2" Text="Total Lost" VerticalAlignment="Top" Width="68" FontSize="13" />
+        <TextBox Grid.Row="1" Height="30" HorizontalAlignment="Left" Margin="568,207,0,0" Name="TotalLosttextBox" VerticalAlignment="Top" Width="154" FontSize="14" IsReadOnly="True" />
+    </Grid>
+</controls:ChildWindow>

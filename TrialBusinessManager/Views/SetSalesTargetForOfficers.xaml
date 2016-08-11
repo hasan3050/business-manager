@@ -1,0 +1,205 @@
+﻿<sdk:ChildWindow x:Class="TrialBusinessManager.Views.SetSalesTargetForOfficers"	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	Title="Set target for sales officers..."
+	Width="631" Height="496">
+    <sdk:ChildWindow.Resources>
+        <Style x:Key="DataGridColumnHeaderStyle" TargetType="sdk:DataGridColumnHeader">
+            <Setter Property="Foreground" Value="#FF000000"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="IsTabStop" Value="False"/>
+            <Setter Property="SeparatorBrush" Value="#FFC9CACA"/>
+            <Setter Property="Padding" Value="4"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="sdk:DataGridColumnHeader">
+                        <Grid x:Name="Root">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0" To="#FF448DCA" Storyboard.TargetProperty="(Fill).Color" Storyboard.TargetName="BackgroundRectangle"/>
+                                            <ColorAnimation Duration="0" To="#7FFFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[3].Color" Storyboard.TargetName="BackgroundGradient"/>
+                                            <ColorAnimation Duration="0" To="#CCFFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[2].Color" Storyboard.TargetName="BackgroundGradient"/>
+                                            <ColorAnimation Duration="0" To="#F2FFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[1].Color" Storyboard.TargetName="BackgroundGradient"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0" To="#FF448DCA" Storyboard.TargetProperty="(Fill).Color" Storyboard.TargetName="BackgroundRectangle"/>
+                                            <ColorAnimation Duration="0" To="#D8FFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[0].Color" Storyboard.TargetName="BackgroundGradient"/>
+                                            <ColorAnimation Duration="0" To="#C6FFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[1].Color" Storyboard.TargetName="BackgroundGradient"/>
+                                            <ColorAnimation Duration="0" To="#8CFFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[2].Color" Storyboard.TargetName="BackgroundGradient"/>
+                                            <ColorAnimation Duration="0" To="#3FFFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[3].Color" Storyboard.TargetName="BackgroundGradient"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="SortStates">
+                                    <VisualState x:Name="Unsorted"/>
+                                    <VisualState x:Name="SortAscending">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="1.0" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="SortIcon"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="SortDescending">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="1.0" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="SortIcon"/>
+                                            <DoubleAnimation Duration="0" To="-.9" Storyboard.TargetProperty="(RenderTransform).ScaleY" Storyboard.TargetName="SortIcon"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="BackgroundRectangle" Grid.ColumnSpan="2" Fill="#FF1F3B53" Stretch="Fill"/>
+                            <Rectangle x:Name="BackgroundGradient" Grid.ColumnSpan="2" Stretch="Fill">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush EndPoint=".7,1" StartPoint=".7,0">
+                                        <GradientStop Color="#FCFFFFFF" Offset="0.015"/>
+                                        <GradientStop Color="#F7FFFFFF" Offset="0.375"/>
+                                        <GradientStop Color="#E5FFFFFF" Offset="0.6"/>
+                                        <GradientStop Color="#D1FFFFFF" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Grid HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <ContentPresenter Content="{TemplateBinding Content}"/>
+                                <Path x:Name="SortIcon" Grid.Column="1" Data="F1 M -5.215,6.099L 5.215,6.099L 0,0L -5.215,6.099 Z " Fill="#FF444444" HorizontalAlignment="Left" Margin="4,0,0,0" Opacity="0" RenderTransformOrigin=".5,.5" Stretch="Uniform" VerticalAlignment="Center" Width="8">
+                                    <Path.RenderTransform>
+                                        <ScaleTransform ScaleY=".9" ScaleX=".9"/>
+                                    </Path.RenderTransform>
+                                </Path>
+                            </Grid>
+                            <Rectangle x:Name="VerticalSeparator" Grid.Column="1" Fill="{TemplateBinding SeparatorBrush}" Visibility="{TemplateBinding SeparatorVisibility}" VerticalAlignment="Stretch" Width="1"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DataGridCellStyle" TargetType="sdk:DataGridCell">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+            <Setter Property="IsTabStop" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="sdk:DataGridCell">
+                        <Grid x:Name="Root" Background="{TemplateBinding Background}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CurrentStates">
+                                    <VisualState x:Name="Regular"/>
+                                    <VisualState x:Name="Current">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisual"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="ValidationStates">
+                                    <VisualState x:Name="Valid"/>
+                                    <VisualState x:Name="Invalid">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="InvalidVisualElement"/>
+                                            <ColorAnimation Duration="0" To="#FFFFFFFF" Storyboard.TargetProperty="(Fill).Color" Storyboard.TargetName="FocusVisual"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="FocusVisual" Fill="#66FFFFFF" HorizontalAlignment="Stretch" IsHitTestVisible="false" Opacity="0" Stroke="#FF6DBDD1" StrokeThickness="1" VerticalAlignment="Stretch"/>
+                            <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <Rectangle x:Name="InvalidVisualElement" HorizontalAlignment="Stretch" IsHitTestVisible="False" Opacity="0" Stroke="#FFDC000C" StrokeThickness="1" VerticalAlignment="Stretch"/>
+                            <Rectangle x:Name="RightGridLine" Grid.Column="1" VerticalAlignment="Stretch" Width="1"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </sdk:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" MinHeight="42" />
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="messagePane" Margin="8,8,253,5" Grid.Row="1" TextWrapping="Wrap" FontSize="12" Text="Operation is in SET mode.Any change will be new entry in database." Visibility="Collapsed"/>
+
+        <Button x:Name="OKButton" Content="Done" Click="OKButton_Click" Width="75" Margin="0,11,8,7" HorizontalAlignment="Right" Grid.Row="1" Height="24" />
+        <ComboBox x:Name="officersCombo" Height="27" Margin="116,7,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="182" SelectionChanged="officersComboSelectionChanged">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding UserName}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="6,11,0,0" TextWrapping="Wrap" Text="Select sales officer" VerticalAlignment="Top" Width="106"/>
+        <TextBlock TextWrapping="Wrap" Text="Select product type" VerticalAlignment="Top" Margin="0,10,195,0" Height="24" HorizontalAlignment="Right" Width="114"/>
+        <ComboBox x:Name="productCombo" HorizontalAlignment="Right" Height="26" Margin="0,7,8,0" VerticalAlignment="Top" Width="185" SelectionChanged="productCombo_SelectionChanged"/>
+       
+        <sdk:DataGrid x:Name="productListGrid" Margin="8,133,8,0" GridLinesVisibility="All" VerticalGridLinesBrush="Gray" HorizontalGridLinesBrush="LightGray" ColumnHeaderStyle="{StaticResource DataGridColumnHeaderStyle}" CellStyle="{StaticResource DataGridCellStyle}"  AutoGenerateColumns="False">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding GroupName}" CanUserSort="True" CanUserReorder="True" CanUserResize="True" Header="Name" IsReadOnly="True" Width="*"/>
+                <sdk:DataGridTextColumn Binding="{Binding TargetQuantity}" CanUserSort="True" CanUserReorder="True" CanUserResize="True" Header="Target Quantity(Kg)" IsReadOnly="True" Width="*"/>
+                <sdk:DataGridTextColumn Binding="{Binding DistributedQuantity,Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Set Target(Kg)" Width="*" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <TextBox x:Name="quickSearchBox" HorizontalAlignment="Right" Height="32" Margin="0,96,8,0" TextWrapping="Wrap" Text="find a product from below..." VerticalAlignment="Top" Width="199" Foreground="#FF605555" GotFocus="quickSearchBox_GotFocus" LostFocus="quickSearchBox_LostFocus" d:LayoutOverrides="HorizontalAlignment" KeyDown="quickSearchBox_KeyDown"/>
+        <ProgressBar x:Name="BusyBar" HorizontalAlignment="Left" Height="Auto" Margin="9,18,0,13" Grid.Row="1" Width="191" IsIndeterminate="True" Visibility="Collapsed"/>
+        <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Right" Margin="0,11,91,7" Grid.Row="1" Width="66" Click="saveButton_Click" Height="24" />
+        <Image HorizontalAlignment="Right" Height="33" Margin="0,95,211,0" VerticalAlignment="Top" Width="33" Source="/TrialBusinessManager;component/Assets/Resources/search_icon.png"/>
+        <ContentControl x:Name="radioGroup" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="8,111,0,0" d:LayoutOverrides="VerticalAlignment">
+        	<StackPanel x:Name="radiopanel" Height="16" Margin="0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Width="151" Grid.Row="1" d:LayoutOverrides="VerticalAlignment">
+        		<TextBlock TextWrapping="Wrap" Text="Mode" Width="37" Margin="0,0,0,-9"/>
+        		<RadioButton x:Name="setRadio" Content="Set" Width="46" IsChecked="True" Click="radioButtonClicked" />
+        		<RadioButton x:Name="editRadio" Content="Edit" Width="48" Click="radioButtonClicked"/>
+        	</StackPanel>
+        </ContentControl>
+        <Grid x:Name="SeasonSetPane" Height="52" Margin="9,41,11,0" VerticalAlignment="Top" Visibility="Collapsed">
+        	<sdk:DatePicker x:Name="startDatePicker" HorizontalAlignment="Left" Height="23" Margin="107,0,0,0" VerticalAlignment="Top" Width="162" SelectedDateChanged="startDatePicker_SelectedDateChanged"/>
+        	<sdk:DatePicker x:Name="endDatePicker" HorizontalAlignment="Right" Height="23" VerticalAlignment="Top" Width="162" SelectedDateChanged="endDatePicker_SelectedDateChanged"/>
+        	<TextBlock HorizontalAlignment="Left" Height="21" Margin="0,3,0,0" TextWrapping="Wrap" Text="Start of season" VerticalAlignment="Top" Width="95"/>
+        	<TextBlock HorizontalAlignment="Right" Height="23" Margin="0,2,175,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109"><Run Text="End of season"/><LineBreak/><Run/></TextBlock>
+        	<Border Height="18" Margin="107,0,0,1" VerticalAlignment="Bottom" BorderThickness="1" CornerRadius="2" >
+        		<Border.BorderBrush>
+        			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        				<GradientStop Color="#FF617584" Offset="1"/>
+        				<GradientStop Color="#FFD2D7DC"/>
+        			</LinearGradientBrush>
+        		</Border.BorderBrush>
+        		<TextBlock x:Name="seasonNameBlock" TextWrapping="Wrap" FontSize="10.667" FontWeight="Bold"/>
+        	</Border>
+        	<TextBlock HorizontalAlignment="Left" Height="19" Margin="44,0,0,0" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="51" TextAlignment="Right"><Run Text="Season"/><LineBreak/><Run/></TextBlock>
+        </Grid>
+        <Grid x:Name="SeasonSelectionPane" Height="27" Margin="22,39,11,0" VerticalAlignment="Top">
+        	<ComboBox x:Name="seasonCombo" Margin="94,0,0,1" SelectionChanged="seasonCombo_selectionChanged" >
+        		<ComboBox.ItemTemplate>
+        			<DataTemplate>
+        				<StackPanel>
+        					<TextBlock Text="{Binding SeasonName}"/>
+        				</StackPanel>
+        			</DataTemplate>
+        		</ComboBox.ItemTemplate>
+        	</ComboBox>
+        	<TextBlock HorizontalAlignment="Left" Margin="0,4,0,0" TextWrapping="Wrap" Text="Select Season" Width="82" TextAlignment="Right"/>
+        </Grid>
+        <Grid x:Name="overlay" Margin="-1,0,0,0" Grid.RowSpan="2" Visibility="Collapsed" Width="614" Height="461">
+        	<Border Margin="0" BorderThickness="1" BorderBrush="#FF020202" CornerRadius="5">
+        		<Grid Background="Black" Opacity="0.645">
+        			<TextBlock Margin="0" TextWrapping="Wrap" Text="Saving data..." Foreground="#FFE4E0E0" HorizontalAlignment="Center" Width="85" VerticalAlignment="Center"/>
+        		</Grid>
+        	</Border>
+        </Grid>
+    </Grid>
+</sdk:ChildWindow>

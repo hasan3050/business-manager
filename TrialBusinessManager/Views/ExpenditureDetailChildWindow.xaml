@@ -1,0 +1,37 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.ExpenditureDetailChildWindow"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels"
+           Width="911" Height="482" 
+           Title="Expenditure Detail"  xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+    
+    <controls:ChildWindow.Resources>
+        <local:ExpenditureDetailViewModel x:Key="ExpenditureDetailViewModel"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2" Height="433" Width="889">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="314*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="249" HorizontalAlignment="Left" Margin="10,113,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="871" GridLinesVisibility="Horizontal" ItemsSource="{Binding Source={StaticResource ExpenditureDetailViewModel}, Path=BindExpenditure}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Employee.Person.Name}" Header="Sales Officer Name" IsReadOnly="True" FontSize="13" Width="7*"/>
+                <sdk:DataGridTextColumn Binding="{Binding PlacedAmount, Mode=TwoWay}" Header="Placed amount(BDT)" IsReadOnly="True" FontSize="13" Width="7*"/>
+                <sdk:DataGridTextColumn Binding="{Binding Mode=TwoWay, Path=NSMAcceptedAmount}" Header="Accepted by NSM(BDT)" IsReadOnly="True" FontSize="13" Width="7*"/>
+                <sdk:DataGridTextColumn Binding="{Binding Mode=TwoWay, Path=AccountAcceptedAmount}" Header="Accepted by Accounts(BDT)" FontSize="13" Width="7*"  />
+                <sdk:DataGridTextColumn Binding="{Binding Remarks}" Header="Remark" IsReadOnly="True" FontSize="13" Width="7*"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button x:Name="CancelButton" Content="OK"  Width="90" HorizontalAlignment="Right" Margin="0,8,13,16" Grid.Row="1" Click="CancelButton_Click_1" />
+        <TextBlock Height="22" HorizontalAlignment="Left" Margin="559,64,0,0" Name="textBlock1" Text="Date Of Issue" VerticalAlignment="Top" Width="93" />
+        <TextBox Height="32" HorizontalAlignment="Left" Margin="119,14,0,0" Name="regiontextBox" VerticalAlignment="Top" Width="196" FontSize="11" IsReadOnly="True" Text="{Binding Path=SelectedExpenditure.Employee.Person.Name, Mode=TwoWay, Source={StaticResource ExpenditureDetailViewModel}}" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,21,0,0" Name="textBlock2" Text="Regional Manager" VerticalAlignment="Top" Width="102" FontWeight="Normal" />
+        <TextBox Height="32" HorizontalAlignment="Left" Margin="657,57,0,0" Name="issueDatetextbox" VerticalAlignment="Top" Width="185" IsReadOnly="True" Text="{Binding Path=SelectedExpenditure.DateOfIssue, Mode=TwoWay, Source={StaticResource ExpenditureDetailViewModel}}" FontSize="11" />
+        <TextBlock Height="17" HorizontalAlignment="Left" Margin="544,23,0,0" Name="textBlock3" Text="Expenditure Code" VerticalAlignment="Top" Width="108" />
+        <TextBox Height="32" HorizontalAlignment="Left" IsReadOnly="True" Margin="658,14,0,0" Name="textBox1" VerticalAlignment="Top" Width="184" Text="{Binding Path=SelectedExpenditure.ExpenditureCode, Mode=TwoWay, Source={StaticResource ExpenditureDetailViewModel}}" FontSize="11" />
+        <TextBox FontSize="11" Height="32" HorizontalAlignment="Left" IsReadOnly="True" Margin="119,57,0,0" Name="textBox2" VerticalAlignment="Top" Width="196" Text="{Binding Path=SelectedExpenditure.Region.RegionName, Mode=TwoWay, Source={StaticResource ExpenditureDetailViewModel}}" />
+        <TextBlock FontWeight="Normal" Height="23" HorizontalAlignment="Left" Margin="12,66,0,0" Name="textBlock4" Text="Region name" VerticalAlignment="Top" Width="83" />
+        <Button Content="Print" Grid.Row="1" Height="35" HorizontalAlignment="Left" Margin="692,8,0,0" Name="button1" VerticalAlignment="Top" Width="88" Command="{Binding Path=Print,Mode=TwoWay,Source={StaticResource ExpenditureDetailViewModel}}"/>
+    </Grid>
+</controls:ChildWindow>

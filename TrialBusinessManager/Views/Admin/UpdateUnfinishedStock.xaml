@@ -1,0 +1,56 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.Admin.UpdateUnfinishedStock" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels.Admin"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="1020" d:DesignHeight="480"
+           Title="Update Unfinished Stock" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    
+    <navigation:Page.Resources>
+        <local:UnfinishedStockUpdateViewModel x:Key="MyViewModel"/>
+    </navigation:Page.Resources>
+    
+    <Grid x:Name="LayoutRoot" DataContext="{Binding Source={StaticResource MyViewModel}}">
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,73,0,0" Name="textBlock1" Text="Select Product" VerticalAlignment="Top" FontSize="13" />
+        <ComboBox Height="28"  HorizontalAlignment="Left" Margin="12,96,0,0" Name="autoCompleteBox1" VerticalAlignment="Top" Width="189" ItemsSource="{Binding Path=Products}" SelectedItem="{Binding Source={StaticResource MyViewModel}, Path=SelectedProduct,Mode=TwoWay}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Product Name : "/>
+                            <TextBlock Text="{Binding GroupName}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBlock FontSize="13" Height="23" HorizontalAlignment="Left" Margin="207,73,0,0" Name="textBlock2" Text="Select Lot" VerticalAlignment="Top" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="207,96,0,0" Name="textBox1" VerticalAlignment="Top" Width="169" Text="{Binding Path=SelectedLot, Mode=TwoWay}" />
+        <TextBlock FontSize="13" Height="23" HorizontalAlignment="Left" Margin="12,43,0,0" Name="textBlock3" Text="Select Inventory" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="127,43,0,0" Name="comboBox1" VerticalAlignment="Top" Width="172" ItemsSource="{Binding Path=Inventories}" SelectedItem="{Binding Path=SelectedInventory, Mode=TwoWay}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding InventoryAddress}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button Content="Add Item" Height="28" HorizontalAlignment="Left" Margin="382,96,0,0" Name="button1" VerticalAlignment="Top" Width="93" Command="{Binding Path=AddCommand}" />
+        <Button Content="Delete Item" Height="28" HorizontalAlignment="Left" Margin="481,96,0,0" Name="button2" VerticalAlignment="Top" Width="93" Command="{Binding Path=DeleteCommand}" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="277" HorizontalAlignment="Left" Margin="12,141,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="996" ItemsSource="{Binding Path=Infos}" SelectedItem="{Binding SelectedInfo,Mode=TwoWay}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Product.GroupName}" Header="Product Name" IsReadOnly="True" FontSize="11" Width="30*" />
+                <sdk:DataGridTextColumn Binding="{Binding Product.ProductCode}" Header="Product code" IsReadOnly="True" FontSize="11" Width="30*"/>
+                <sdk:DataGridTextColumn Binding="{Binding Product.BrandName}" Header="Brand Name" IsReadOnly="True" FontSize="11" Width="30*"/>
+                <sdk:DataGridTextColumn Binding="{Binding LotId}" Header="Lot Id" IsReadOnly="True" FontSize="11" Width="18*" />
+                <sdk:DataGridTextColumn Binding="{Binding UnfinishedQuantity}" Header="Unfinished(kg)" FontSize="11" Width="27*" IsReadOnly="False"/>
+                <sdk:DataGridTextColumn Binding="{Binding UnitLotCost}" Header="Unit Lot Cost(tk/kg)" FontSize="11" Width="27*" IsReadOnly="False"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Submit Changes" Height="32" HorizontalAlignment="Left" Margin="868,424,0,0" Name="button3" VerticalAlignment="Top" Width="140" Command="{Binding Path=SubmitCommand}" />
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="12,8,0,0" TextWrapping="Wrap" Text="Update Unfinished Stock" VerticalAlignment="Top" Width="208" FontSize="16"/>
+    </Grid>
+</navigation:Page>
+

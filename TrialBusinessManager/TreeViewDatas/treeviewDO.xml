@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<treeitems>
+    <treeitem name="Basic" uri="" fontsize="18" icon="Assets/Resources/refresh.png">
+    <treeitem name="View Products" uri="/ViewProduct" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="View Dispatch Inventory" uri="/ViewDOInventory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+      <treeitem name="View Inventory" uri="/ViewInventoryView" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+
+      <treeitem name="Issue Packaging Requisition" uri="/CreateRequisition" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Issue Return Requisition" uri="/ReturnRequisitionView" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Update Finished Good" uri="/UpdateFinishedGoodView" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Issue PLR" uri="/CreatePLR" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    </treeitem>
+  <treeitem name="Notification" uri="" fontsize="18" icon="Assets/Resources/refresh.png">
+    <treeitem name="Bill Generation Request" uri="/ViewIndentsForBill" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Product Transfer Generation Request" uri="/SIC/ApproveTransferIndentWindow" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+     <treeitem name="Balance Transportation Loss" uri="/DO/ViewTransportationLosses" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+
+   </treeitem>
+
+  <treeitem name="History" uri="" fontsize="18" icon="Assets/Resources/refresh.png">
+    <treeitem name="Indent" uri="/Histories/IndentHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Bill" uri="/Histories/BillHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Requisition" uri="/Histories/RequisitionHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="MRR" uri="/Histories/MRRHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="PLR" uri="/Histories/LRHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Sales Return" uri="/Histories/SalesReturnHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Product Transfer" uri="/Histories/ProductTransferHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+
+  </treeitem>
+
+  
+
+</treeitems>

@@ -1,0 +1,15 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.ConnectivityErrorWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="537" Height="150" 
+           Title="No Internet Connection" FontSize="13">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" FontSize="11" />
+        <TextBlock Height="65" HorizontalAlignment="Left" Name="ErrorText" Text="Seems like you have some connectivity problems. Close this window and reload the page, then try again. If you see this window again, please log out, check if internet connection is OK, then log in again to continue." VerticalAlignment="Top" Width="515" TextWrapping="Wrap" Grid.RowSpan="2" />
+    </Grid>
+</controls:ChildWindow>

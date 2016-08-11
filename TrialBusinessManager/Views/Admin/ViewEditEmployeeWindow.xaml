@@ -1,0 +1,52 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.Admin.ViewEditEmployeeWindow"
+            xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:local="clr-namespace:TrialBusinessManager.ViewModels"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 d:DataContext="{d:DesignInstance Type=local:CreateEmployeeViewModel,IsDesignTimeCreatable=False}"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="800"
+           Title="Edit Employee" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Height="376">
+
+    <Grid x:Name="LayoutRoot"  Width="798" Margin="0,0,-16,-4">
+        <Grid HorizontalAlignment="Left" Height="143" Margin="11,12,0,0" VerticalAlignment="Top" Width="740" x:Name="PersonGrid" DataContext="{Binding Person}">
+
+    		<TextBlock Height="23" HorizontalAlignment="Left" Margin="42,6,0,0" x:Name="textBlock1" Text="Name" VerticalAlignment="Top" />
+    		<TextBox Height="32" HorizontalAlignment="Right" Margin="0,33,532,0" x:Name="textBox1" VerticalAlignment="Top" Width="167" Text="{Binding Name, Mode=TwoWay}" IsReadOnly="False"/>
+    		<TextBlock Height="23" HorizontalAlignment="Left" Margin="242,6,0,0" x:Name="textBlock2" Text="Address" VerticalAlignment="Top" />
+    		<TextBox Height="32" HorizontalAlignment="Left" Margin="241,33,0,0" x:Name="textBox2" VerticalAlignment="Top" Width="173" DataContext="{Binding}" Text="{Binding Address, Mode=TwoWay}" />
+    		<TextBlock Height="23" HorizontalAlignment="Left" Margin="451,6,0,0" x:Name="textBlock4" Text="Contact No" VerticalAlignment="Top" />
+    		<TextBox Height="32" HorizontalAlignment="Right" Margin="0,33,120,0" x:Name="textBox3" Text="{Binding ContactNo, Mode=TwoWay}" VerticalAlignment="Top" Width="169" />
+    		<TextBlock Height="23" HorizontalAlignment="Left" Margin="244,78,0,0" x:Name="textBlock5" Text="Email" VerticalAlignment="Top" Width="53" />
+    		<TextBox Height="32" HorizontalAlignment="Right" Margin="0,100,323,0" x:Name="textBox4" Text="{Binding EmailAddress, Mode=TwoWay}" VerticalAlignment="Top" Width="173" />
+    		<sdk:DatePicker Height="35" HorizontalAlignment="Right" Margin="0,100,532,0" x:Name="datePicker1" VerticalAlignment="Top" Width="167" SelectedDate="{Binding DateOfBirth, Mode=TwoWay}" IsEnabled="False" />
+    		<TextBlock Height="23" HorizontalAlignment="Left" Margin="42,77,0,0" x:Name="textBlock6" Text="Date of birth" VerticalAlignment="Top" />
+    	</Grid>
+        <Grid HorizontalAlignment="Left" Height="104" Margin="13,189,0,0" VerticalAlignment="Top" Width="740" x:Name="EmployeeGrid" >
+        	<TextBlock Height="23" HorizontalAlignment="Left" Margin="242,6,0,0" x:Name="textBlock8" Text="Designation" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" />
+        	<TextBlock Height="23" HorizontalAlignment="Left" Margin="41,7,0,0" x:Name="textBlock9" Text="User name" VerticalAlignment="Top" />
+        	<TextBox Height="29" HorizontalAlignment="Left" Margin="42,30,0,0" x:Name="textBox6" VerticalAlignment="Top" Width="154" Text="{Binding UserName, Mode=TwoWay}" IsReadOnly="True" />
+        	<Grid x:Name="grid3" DataContext="{Binding DataContext, ElementName=LayoutRoot}"  Margin="0,0,0,-5">
+        		<ComboBox  Height="29" HorizontalAlignment="Right"  SelectedItem="{Binding Region,Mode=TwoWay}" Margin="0,30,191,0" x:Name="RegionCombo"  VerticalAlignment="Top" Width="147" SelectionChanged="RegionCombo_SelectionChanged">
+        			<ComboBox.ItemTemplate>
+        				<DataTemplate>
+        					<StackPanel>
+        						<TextBlock Text="{Binding RegionName, Mode=TwoWay}" />
+        					</StackPanel>
+        				</DataTemplate>
+        			</ComboBox.ItemTemplate>
+        		</ComboBox>
+
+        		<ComboBox Height="29" HorizontalAlignment="Left" Margin="242,30,0,0" x:Name="DesignationCombo" VerticalAlignment="Top" Width="139"   SelectedItem="{Binding Designation, Mode=TwoWay}" SelectionChanged="DesignationCombo_SelectionChanged" OpacityMask="Black"></ComboBox>
+                <ComboBox Height="29" HorizontalAlignment="Left" Margin="571,30,0,0" Name="ActivityStatusCombo" VerticalAlignment="Top" Width="130" SelectedItem="{Binding ActivityStatus,Mode=TwoWay}" SelectionChanged="ActivityStatusCombo_SelectionChanged" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="571,6,0,0" Name="textBlock3" Text="Activity Status" VerticalAlignment="Top" Width="84" Foreground="Black" />
+                <Button Content="Reset Password" Height="38" HorizontalAlignment="Left" Margin="42,65,0,0" Name="ResetPassBtn" VerticalAlignment="Top" Width="154" Click="ResetPassBtn_Click" />
+            </Grid>
+        	<TextBlock Height="23" HorizontalAlignment="Left" Margin="402,6,0,0" x:Name="textBlock12" Text="Region" VerticalAlignment="Top" />
+        </Grid>
+        <Button Content="Save Changes" Height="34" HorizontalAlignment="Left" Margin="584,304,0,0" x:Name="SaveBtn" VerticalAlignment="Top" Width="167" Command="{Binding SaveCommand}" Click="SaveBtn_Click" />
+    </Grid>
+</controls:ChildWindow>

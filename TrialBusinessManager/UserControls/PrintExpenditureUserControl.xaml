@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="TrialBusinessManager.UserControls.PrintExpenditureUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="834" d:DesignWidth="1005" xmlns:my="clr-namespace:TrialBusinessManager.UserControls" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+
+    <Grid x:Name="LayoutRoot" Margin="2" Height="844" Width="1004">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="314*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="324" HorizontalAlignment="Left" Margin="11,277,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="779" GridLinesVisibility="Horizontal">
+            <sdk:DataGrid.Columns>
+
+                <sdk:DataGridTextColumn Binding="{Binding Employee.Person.Name}" Header="Employee name" IsReadOnly="True" FontSize="13" Width="7*"/>
+                <sdk:DataGridTextColumn Binding="{Binding Remarks}" Header="Remark" IsReadOnly="True" FontSize="13" Width="7*"/>
+
+                <sdk:DataGridTextColumn Binding="{Binding PlacedAmount, Mode=TwoWay}" Header="Placed amount(BDT)" IsReadOnly="True" FontSize="13" Width="7*"/>
+                <sdk:DataGridTextColumn Binding="{Binding AccountAcceptedAmount, Mode=TwoWay}" Header="Accepted amount(BDT)" FontSize="13" Width="7*" IsReadOnly="True" />
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <TextBlock Height="32" HorizontalAlignment="Left" Margin="465,150,0,0" Name="textBlock1" Text="Date of issue" VerticalAlignment="Top" Width="119" FontSize="15" />
+        <TextBox Height="34" HorizontalAlignment="Left" Margin="579,148,0,0" Name="issueDatetextbox" VerticalAlignment="Top" Width="211" IsReadOnly="False" />
+        <my:PrintHeader HorizontalAlignment="Left" Margin="189,12,0,0" x:Name="printHeader1" VerticalAlignment="Top" Width="485" />
+        <TextBox FontSize="16" Height="35" HorizontalAlignment="Left" IsReadOnly="False" Margin="172,150,0,0" Name="RegionNameTxtBox" VerticalAlignment="Top" Width="240" />
+        <TextBlock FontSize="15" FontWeight="Normal" Height="23" HorizontalAlignment="Left" Margin="21,150,0,0" Name="textBlock3" Text="Region Name" VerticalAlignment="Top" Width="121" />
+        <TextBlock FontSize="15" Height="32" HorizontalAlignment="Left" Margin="21,207,0,0" Name="textBlock4" Text="Expenditure Code" VerticalAlignment="Top" Width="145" />
+        <TextBox Height="34" HorizontalAlignment="Left" IsReadOnly="False" Margin="172,207,0,0" Name="ExCodetextBox1" VerticalAlignment="Top" Width="240" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="21,715,0,0" Name="textBlock2" Text="Issued by" VerticalAlignment="Top" FontSize="14" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="324,715,0,0" Name="textBlock5" Text="National Sales Manager" VerticalAlignment="Top" FontSize="14" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="684,715,0,0" Name="textBlock6" Text="Approved by" VerticalAlignment="Top" FontSize="14" />
+    </Grid>
+</UserControl>

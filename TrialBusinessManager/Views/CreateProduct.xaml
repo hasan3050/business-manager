@@ -1,0 +1,114 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.CreateProduct" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+           xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.SL4"      
+           mc:Ignorable="d"
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels.NSM"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="1400" d:DesignHeight="607"
+           Width="1400" 
+           xmlns:SilverlightContrib_Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           Title="Create Product" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Height="606">
+    <navigation:Page.Resources>
+        <local:CreateProductViewModel x:Key="ProductDetailViewModel"/>
+    </navigation:Page.Resources>
+
+
+
+    <Grid x:Name="LayoutRoot" >
+
+        <sdk:DataGrid AutoGenerateColumns="False" SelectedItem="{Binding Source={StaticResource ProductDetailViewModel}, Path=SelectedWing,Mode=TwoWay}" Height="474" HorizontalAlignment="Left" Margin="4,49,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="196" ItemsSource="{Binding Source={StaticResource ProductDetailViewModel}, Path=ProductWings}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <cmd:EventToCommand Command="{Binding Source={StaticResource ProductDetailViewModel}, Path=WingChangedCommand,Mode=TwoWay}"/>
+                </i:EventTrigger>
+
+            </i:Interaction.Triggers>
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Product Wing" Width="1*" Binding="{Binding Path=Value}" IsReadOnly="True"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid AutoGenerateColumns="False" SelectedItem="{Binding Source={StaticResource ProductDetailViewModel}, Path=SelectedType,Mode=TwoWay}" Height="474" HorizontalAlignment="Left" Margin="204,49,0,0" Name="dataGrid2" VerticalAlignment="Top" Width="195" ItemsSource="{Binding Source={StaticResource ProductDetailViewModel}, Path=ProductTypes}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <cmd:EventToCommand Command="{Binding Source={StaticResource ProductDetailViewModel}, Path=TypeChangedCommand,Mode=TwoWay}"/>
+                </i:EventTrigger>
+
+            </i:Interaction.Triggers>
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Product Type" Width="1*" IsReadOnly="True" Binding="{Binding Path=Value}"/>
+                
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="474" SelectedItem="{Binding Source={StaticResource ProductDetailViewModel}, Path=SelectedGroup,Mode=TwoWay}" HorizontalAlignment="Left" Margin="403,49,0,0" Name="dataGrid3" VerticalAlignment="Top" Width="195" ItemsSource="{Binding Source={StaticResource ProductDetailViewModel}, Path=ProductGroups}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Product Name" IsReadOnly="True" Width="1*"  Binding="{Binding Path=Value}" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Grid Margin="631,70,195,83">
+            <Grid DataContext="{Binding Source={StaticResource ProductDetailViewModel}}" HorizontalAlignment="Left" Height="179" VerticalAlignment="Top" Width="281" Margin="-1,1,0,0">
+        		<TextBox Height="23" Margin="103,52,0,0" VerticalAlignment="Top" Text="{Binding Mode=TwoWay, Source={StaticResource ProductDetailViewModel}, Path=NewProduct.ProductCode}" />
+        		<TextBox Height="23" Margin="103,104,0,0" VerticalAlignment="Top" Text="{Binding Mode=TwoWay, Source={StaticResource ProductDetailViewModel}, Path=NewProduct.ProductType}" />
+        		<TextBox Height="23" Margin="103,131,0,0" VerticalAlignment="Top" Text="{Binding Mode=TwoWay, Source={StaticResource ProductDetailViewModel}, Path=NewProduct.ProductWing}" />
+        		<TextBox Height="23" Margin="103,78,112,0" VerticalAlignment="Top" Text="{Binding Mode=TwoWay, Source={StaticResource ProductDetailViewModel}, Path=SelectedSKU}" />
+        		<TextBlock Height="19" HorizontalAlignment="Left" Margin="0,56,0,0" VerticalAlignment="Top" Width="96" Text="Product Code" />
+        		<TextBlock Height="19" HorizontalAlignment="Left" Margin="2,134,0,0" Text="Product Wing" VerticalAlignment="Top" Width="96" />
+        		<TextBlock Height="19" HorizontalAlignment="Left" Margin="2,107,0,0" Text="Product Type" VerticalAlignment="Top" Width="96" />
+        		<TextBlock Height="21" HorizontalAlignment="Left" Margin="2,81,0,0" Text="S.K.U(Kg)" VerticalAlignment="Top" Width="96" />
+        		<TextBlock Height="19" HorizontalAlignment="Left" Margin="2,160,0,0" Text="Op Or Hybrid" VerticalAlignment="Top" Width="96" />
+        		<RadioButton Content="HyBrid" IsEnabled="True" Height="20" Margin="157,160,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="65" GroupName="OH" IsChecked="True"/>
+        		<RadioButton Content="Op" IsEnabled="True" Height="21" HorizontalAlignment="Left" Margin="105,160,0,0" VerticalAlignment="Top" Width="48" GroupName="OH" IsChecked="{Binding Path=NewProduct.IsOpOrHibrid, Mode=TwoWay}" />
+        		<TextBox Height="23" Margin="103,26,0,0" VerticalAlignment="Top" Text="{Binding Mode=TwoWay, Source={StaticResource ProductDetailViewModel}, Path=NewProduct.BrandName}" />
+        		<TextBlock Height="19" HorizontalAlignment="Left" Margin="0,30,0,0" VerticalAlignment="Top" Width="96" Text="Brand Name" />
+        		<Button Content="Add S.K.U" Height="23" HorizontalAlignment="Left" Margin="175,78,0,0" x:Name="button1" VerticalAlignment="Top" Width="104" Command="{Binding Source={StaticResource ProductDetailViewModel}, Path=AddSKUCommand}" IsEnabled="{Binding Source={StaticResource ProductDetailViewModel}, Path=BrandEditable}" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="0,4,0,0" Name="textBlock3" Text="Product Name" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="102,-1,0,0" Name="textBox1" VerticalAlignment="Top" Width="179" Text="{Binding Path=NewProduct.GroupName, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}" />
+            </Grid>
+            <Grid DataContext="{Binding Source={StaticResource ProductDetailViewModel}}" Margin="287,0,0,0" HorizontalAlignment="Left" Width="301" Height="180" VerticalAlignment="Top">
+        		<ComboBox Height="23" HorizontalAlignment="Left" Margin="135,27,0,0" VerticalAlignment="Top" Width="150" ItemsSource="{Binding Source={StaticResource ProductDetailViewModel}, Path=Period}" SelectedItem="{Binding Path=NewProduct.PurchasePeriodStart, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}" />
+        		<ComboBox Height="23" HorizontalAlignment="Left" Margin="136,55,0,0" VerticalAlignment="Top" Width="149" ItemsSource="{Binding Source={StaticResource ProductDetailViewModel}, Path=Period}" SelectedItem="{Binding Path=NewProduct.PurchasePeriodEnd, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}" />
+                <ComboBox HorizontalAlignment="Left" Margin="136,83,0,74" Width="149" ItemsSource="{Binding Source={StaticResource ProductDetailViewModel}, Path=Period}" SelectedItem="{Binding Path=NewProduct.SalesPeriodStart, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="136,111,0,0" VerticalAlignment="Top" Width="149" ItemsSource="{Binding Source={StaticResource ProductDetailViewModel}, Path=Period}" SelectedItem="{Binding Path=NewProduct.SalesPeriodEnd, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}" />
+        		<TextBlock Height="20" HorizontalAlignment="Left" Margin="1,31,0,0" Text="Purchase period start" VerticalAlignment="Top" Width="122" d:LayoutOverrides="HorizontalAlignment" />
+        		<TextBlock Height="20" HorizontalAlignment="Left" Margin="6,58,0,0" Text="Purchase period end" VerticalAlignment="Top" Width="114" d:LayoutOverrides="HorizontalAlignment" />
+        		<TextBlock Height="20" HorizontalAlignment="Left" Margin="21,86,0,0" Text="Sales period start" VerticalAlignment="Top" Width="99" d:LayoutOverrides="HorizontalAlignment" />
+        		<TextBlock Height="21" HorizontalAlignment="Left" Margin="23,114,0,0" Text="Sales period end" VerticalAlignment="Top" Width="97" d:LayoutOverrides="HorizontalAlignment" />
+        		<RadioButton IsEnabled="True" Content="Imported" Height="19" HorizontalAlignment="Left" Margin="127,146,0,0" VerticalAlignment="Top" Width="77" GroupName="IL" IsChecked="{Binding Path=NewProduct.IsImported, Mode=TwoWay}" />
+        		<TextBlock Height="19" HorizontalAlignment="Left" Margin="21,145,0,0" Text="Imported or local" VerticalAlignment="Top" Width="99" d:LayoutOverrides="HorizontalAlignment" />
+        		<RadioButton Content="Local" IsEnabled="True" Height="19" HorizontalAlignment="Left" Margin="209,146,0,0" VerticalAlignment="Top" Width="57" GroupName="IL" IsChecked="True"/>
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="135,0,0,0" x:Name="textBox1_Copy" VerticalAlignment="Top" Width="150"  Text="{Binding Path=NewProduct.SubType, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}" />
+        		<TextBlock Height="20" HorizontalAlignment="Left" Margin="23,5,0,0" Text="Product SubType" VerticalAlignment="Top" Width="96" d:LayoutOverrides="HorizontalAlignment" />
+        	</Grid>
+            <Grid Margin="0,195,0,7">
+            	<sdk:DataGrid AutoGenerateColumns="False" Height="167" Margin="211,52,0,0" x:Name="Polo" VerticalAlignment="Top" ItemsSource="{Binding CommissionCollection, Source={StaticResource ProductDetailViewModel}}" SelectedIndex="{Binding SelectedCommission, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}">
+            		<sdk:DataGrid.Columns>
+            			<sdk:DataGridTextColumn Header="Payment" Width="1*" IsReadOnly="True" Binding="{Binding CommissionName}" />
+            			<sdk:DataGridTextColumn Header="Percentage" Width="1*" IsReadOnly="False" Binding="{Binding Percentage}" />
+            			<sdk:DataGridTextColumn Header="Status" Width="1*" IsReadOnly="True" Binding="{Binding CommissionStatus, Mode=OneWay}" />
+            		</sdk:DataGrid.Columns>
+            	</sdk:DataGrid>
+            	<TextBlock Height="23" HorizontalAlignment="Left" Margin="211,25,0,0" x:Name="textBlock2" Text="Add Commission" VerticalAlignment="Top" FontSize="13" d:LayoutOverrides="VerticalAlignment" />
+          
+            	<ComboBox Height="23" HorizontalAlignment="Left" Margin="326,23,0,0" x:Name="comboBox1" VerticalAlignment="Top" Width="130" d:LayoutOverrides="VerticalAlignment" ItemsSource="{Binding CommissionType, Source={StaticResource ProductDetailViewModel}}" SelectedItem="{Binding SelectedCommissionName, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}" />
+           
+            	<Button Content="Add" Height="23" HorizontalAlignment="Left" Margin="458,23,0,0" x:Name="button2" VerticalAlignment="Top" Width="53" d:LayoutOverrides="VerticalAlignment" Command="{Binding AddCommissionCommand, Source={StaticResource ProductDetailViewModel}}" />
+            	<Button Content="Remove" Height="23" HorizontalAlignment="Left" Margin="515,23,0,0" x:Name="button3" VerticalAlignment="Top" Width="59" d:LayoutOverrides="VerticalAlignment" Command="{Binding RemoveCommissionCommand, Source={StaticResource ProductDetailViewModel}}" />
+            	<TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlock1" Text="Price &amp; S.K.U" VerticalAlignment="Top" FontSize="13" d:LayoutOverrides="VerticalAlignment" Width="105" />
+            	<sdk:DataGrid AutoGenerateColumns="False" Height="167" HorizontalAlignment="Left" Margin="2,53,0,0" x:Name="dataGrid4" VerticalAlignment="Top" Width="203" ItemsSource="{Binding SKUcollection, Source={StaticResource ProductDetailViewModel}}" SelectedIndex="{Binding SKUindex, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}">
+            		<sdk:DataGrid.Columns>
+            			<sdk:DataGridTextColumn Header="Qty(kg.)" Width="1*" IsReadOnly="True" Binding="{Binding SKU}"/>
+            			<sdk:DataGridTextColumn Header="Unit Price" Width="1*" Binding="{Binding Price}"/>
+            			<sdk:DataGridTextColumn Header="Status" Width="1*" IsReadOnly="True" Binding="{Binding Status}"/>
+            		</sdk:DataGrid.Columns>
+            	</sdk:DataGrid>
+            	<Button Content="Update Product" Height="29" HorizontalAlignment="Left" Margin="467,222,0,0" x:Name="button4" VerticalAlignment="Top" Width="101" Command="{Binding UpdateCommand, Source={StaticResource ProductDetailViewModel}}" />
+            	<Button Content="Remove SKU" Height="23" HorizontalAlignment="Left" Margin="2,24,0,0" x:Name="button6" VerticalAlignment="Top" Width="86" Command="{Binding RemoveSKUCommand, Source={StaticResource ProductDetailViewModel}}" d:LayoutOverrides="VerticalAlignment" />
+            	<Button Content="Activate" Height="23" HorizontalAlignment="Left" Margin="91,24,0,0" x:Name="button7" VerticalAlignment="Top" Width="77" Command="{Binding ActivateSKUCommand, Source={StaticResource ProductDetailViewModel}}" d:LayoutOverrides="VerticalAlignment" />
+            </Grid>
+        </Grid>
+        <SilverlightContrib_Controls:GroupBox Content="" Margin="613,49,180,83" Header="Edit Product"/>
+    </Grid>
+</navigation:Page>

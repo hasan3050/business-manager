@@ -1,0 +1,49 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.RequisitionApprovalChildWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="916" Height="710" 
+           Title="RequisitionApprovalChildWindow" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="387*" />
+            <ColumnDefinition Width="500*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="369*" />
+            <RowDefinition Height="59" />
+        </Grid.RowDefinitions>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="200" HorizontalAlignment="Left" Margin="9,174,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="866" GridLinesVisibility="Horizontal" Grid.ColumnSpan="2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Product.ProductName}" Header="product name" IsReadOnly="True" FontSize="13" Width="7*"/>
+                <sdk:DataGridTextColumn Binding="{Binding Product.BrandName}" Header="brand name" IsReadOnly="True" FontSize="13" Width="7*"/>
+                <sdk:DataGridTextColumn Binding="{Binding Product.StockKeepingUnit}" Header="S.K.U." IsReadOnly="True" FontSize="13" Width="7*"/>
+
+                <sdk:DataGridTextColumn Binding="{Binding PlacedQuantity, Mode=TwoWay}" Header="placed quantity(kg)" IsReadOnly="True" FontSize="13" Width="10*"/>
+                <sdk:DataGridTextColumn Binding="{Binding LotId, Mode=TwoWay}" Header="lot ID" FontSize="13" Width="4*" IsReadOnly="True" />
+
+                <sdk:DataGridTextColumn Binding="{Binding LotQuantity, Mode=TwoWay}" Header="accepted quantity(kg)" IsReadOnly="True" FontSize="13" Width="10*"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="200" HorizontalAlignment="Left" Margin="12,412,0,0" Name="dataGrid2" VerticalAlignment="Top" Width="863" GridLinesVisibility="Horizontal" Grid.ColumnSpan="2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Package.PackageName}" Header="package name"  IsReadOnly="True" FontSize="13" Width="10*"/>
+                <sdk:DataGridTextColumn Binding="{Binding Package.PackageCode}" Header="package code" IsReadOnly="True" FontSize="13" Width="10*"/>
+                <sdk:DataGridTextColumn Binding="{Binding PlacedQuantity, Mode=TwoWay}" Header="placed quantity(Pc)" FontSize="13" IsReadOnly="True" Width="10*"/>
+                <sdk:DataGridTextColumn Binding="{Binding AcceptedQuantity, Mode=TwoWay}" Header="accepted quantity(Pc)" IsReadOnly="True" FontSize="13" Width="10*"/>
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button x:Name="OKButton" Content="Close" Click="OKButton_Click" Width="104" HorizontalAlignment="Left" Margin="381,12,0,12" Grid.Row="1" Grid.Column="1" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="29,14,0,0" Name="textBlock1" Text="Requisition Type" VerticalAlignment="Top" FontSize="16" Grid.Column="1" />
+        <TextBox Height="36" HorizontalAlignment="Left" Margin="175,10,0,0" Name="typeTextBox" VerticalAlignment="Top" Width="313" Grid.Column="1" IsReadOnly="True" />
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="12,142,0,0" Name="textBlock2" Text="Products" VerticalAlignment="Top" />
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="12,383,0,0" Name="textBlock3" Text="Packages" VerticalAlignment="Top" />
+        <TextBlock FontSize="20" Height="36" HorizontalAlignment="Left" Margin="10,10,0,0" Name="textBlock4" Text="Requisition Approval" VerticalAlignment="Top" Width="235" />
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="29,58,0,0" Name="textBlock5" Text="Requisition Code" VerticalAlignment="Top" Grid.Column="1" />
+        <TextBox Height="36" HorizontalAlignment="Left" IsReadOnly="True" Margin="175,52,0,0" Name="RCodetextBox" VerticalAlignment="Top" Width="313" Grid.Column="1" />
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="31,99,0,0" Name="textBlock6" Text="Approval Date" VerticalAlignment="Top" Grid.Column="1" />
+        <TextBox Height="36" HorizontalAlignment="Left" IsReadOnly="True" Margin="175,94,0,0" Name="ADateTextBox" VerticalAlignment="Top" Width="313" Grid.Column="1" />
+        <Button Content="Print" Grid.Row="1" Height="35" HorizontalAlignment="Left" Margin="12,12,0,0" Name="button1" VerticalAlignment="Top" Width="99" FontSize="13" Click="button1_Click" />
+    </Grid>
+</controls:ChildWindow>

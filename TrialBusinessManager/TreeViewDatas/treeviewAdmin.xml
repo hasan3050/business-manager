@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<treeitems>
+
+  <treeitem name="Basic" uri="" fontsize="18" icon="Assets/Resources/refresh.png">
+    <treeitem name="Create Employee" uri="/CreateNewEmployee" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="View Employees " uri="/Admin/ViewEmployees" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Create Product" uri="/NSM/CreateProduct" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Edit Product" uri="/CreateProduct" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="View Regions" uri="/ViewRegions" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="View Inventories" uri="/ViewAllInventory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+
+    <treeitem name="View Dealers" uri="/ViewDealer" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="View Products" uri="/ViewProduct" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="View Packages" uri="/ViewPackage" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Update Finished Stock" uri="/Admin/FinishedStockUpdate" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Update Unfinished Stock" uri="/Admin/UpdateUnfinishedStock" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Achievement Dashboard" uri="/Report/AchievementDashboard" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Dealer Warnings" uri="/ViewDealerWarningView" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+
+    >
+
+  </treeitem>
+  
+  <treeitem name="History" uri="" fontsize="18" icon="Assets/Resources/refresh.png">
+
+    <treeitem name="Indent" uri="/Histories/IndentHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Bill" uri="/Histories/BillHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Bill Payment" uri="/Histories/BillPaymentHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="MRR" uri="/Histories/MRRHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="PLR" uri="/Histories/LRHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Sales Return" uri="/Histories/SalesReturnHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+    <treeitem name="Product Transfer" uri="/Histories/ProductTransferHistory" fontsize="16" icon="Assets/Resources/refresh.png"></treeitem>
+
+  </treeitem>
+
+ 
+</treeitems>

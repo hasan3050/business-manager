@@ -1,0 +1,54 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.RM.TransportationLossWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"           
+           xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+           xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.SL4"            
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels.RM"
+           d:DataContext="{d:DesignInstance IsDesignTimeCreatable=False, Type=local:TransportationLossViewModel}"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"           
+           mc:Ignorable="d" 
+           
+           Width="1040" Height="420" 
+           Title="Transportation Loss" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+
+
+
+
+    <Grid x:Name="LayoutRoot" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1020" Height="387">
+        
+            <sdk:DataGrid AutoGenerateColumns="False" Height="207" HorizontalAlignment="Left" Margin="12,101,0,0" x:Name="dataGrid1" VerticalAlignment="Top"  ItemsSource="{Binding LossInfos,Mode=TwoWay}" SelectedItem="{Binding SelectedInfo,Mode=TwoWay}" Width="1002">
+                <sdk:DataGrid.Columns>
+                    <sdk:DataGridTextColumn x:Name="productNameColumn"  Header="product name" Width="1*" IsReadOnly="True" Binding="{Binding Product.ProductName, Mode=TwoWay}" />
+                    <sdk:DataGridTextColumn x:Name="brandNameColumn"  Header="product brand" Width="1*" IsReadOnly="True" Binding="{Binding Product.BrandName, Mode=TwoWay}" />
+                        <sdk:DataGridTextColumn x:Name="quantityColumn"  Header="purchased packets" Width="1*" IsReadOnly="True" Binding="{Binding PurchasedQuantity,Mode=TwoWay}" />
+                    <sdk:DataGridTextColumn x:Name="TotalQuantityColumn"  Header="Lost packets" Width="1*"  Binding="{Binding LostQuantity,Mode=TwoWay}" />
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+        <Button Content="verify bill" Height="28" HorizontalAlignment="Right" Margin="0,322,5,0" Name="button1" VerticalAlignment="Top" Width="152" Command="{Binding SubmitCommand,Mode=TwoWay}"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,5,0,0" Name="textBlock2" Text="Choose Product" VerticalAlignment="Top" FontSize="14" />
+        <ComboBox Height="32" HorizontalAlignment="Left" Margin="12,29,0,0" Name="comboBox1" VerticalAlignment="Top" Width="173" ItemsSource="{Binding Products,Mode=TwoWay}" SelectedItem="{Binding SelectedProduct,Mode=TwoWay}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding ProductName}"/>
+                        <TextBlock Text="{Binding BrandName}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button Content="add item" Height="28" HorizontalAlignment="Left" Margin="12,67,0,0" Name="button2" VerticalAlignment="Top" Width="80" Command="{Binding AddCommand,Mode=TwoWay}"/>
+        <Button Content="delete item" Height="28" HorizontalAlignment="Left" Margin="106,67,0,0" Name="button3" VerticalAlignment="Top" Width="79" Command="{Binding DeleteCommand,Mode=TwoWay}"/>
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,7,5,0" Name="textBox2" VerticalAlignment="Top" Width="162" IsReadOnly="True" Text="{Binding Bill.BillCode,Mode=TwoWay}"/>
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,34,5,0" Name="textBox3" VerticalAlignment="Top" Width="162"  IsReadOnly="True" Text="{Binding Bill.TransportType,Mode=TwoWay}"/>
+        <TextBox IsReadOnly="True" Height="23" HorizontalAlignment="Right" Margin="0,61,5,0" Name="textBox4" VerticalAlignment="Top" Width="162" Text="{Binding Bill.VehicleNo,Mode=TwoWay}"/>
+        <TextBlock Height="16" HorizontalAlignment="Right" Margin="0,12,173,0" Name="textBlock3" Text="Bill code" VerticalAlignment="Top" Width="55" />
+        <TextBlock Height="16" HorizontalAlignment="Right" Margin="0,38,173,0" Name="textBlock4" Text="Transport type" VerticalAlignment="Top" Width="87" />
+        <TextBlock Height="16" HorizontalAlignment="Right" Margin="0,65,173,0" Name="textBlock5" Text="Veichle no" VerticalAlignment="Top" Width="65" />
+        <TextBlock Height="47" HorizontalAlignment="Left" Margin="12,319,0,0" Name="textBlock1" Text="" VerticalAlignment="Top" Width="556" Foreground="#FFF20C0C" />
+    </Grid>
+
+
+</controls:ChildWindow>

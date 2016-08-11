@@ -1,0 +1,1594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1A153D53-8AAD-4AA4-8B10-0476A0174968}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrialBusinessManager</RootNamespace>
+    <AssemblyName>TrialBusinessManager</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>B.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>TrialBusinessManager.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>..\TrialBusinessManager.Web\TrialBusinessManager.Web.csproj</LinkedServerProject>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight.Extras.SL4, Version=3.0.0.19976, Culture=neutral, PublicKeyToken=5d2b2859f4a49b53, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLight.3.1.1\lib\SL4\GalaSoft.MvvmLight.Extras.SL4.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.SL4, Version=3.0.0.19979, Culture=neutral, PublicKeyToken=cd39e69f7fb3ebff, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLight.3.1.1\lib\SL4\GalaSoft.MvvmLight.SL4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Controls, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Effects, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Prototyping.Interactivity, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Prototyping.SketchControls, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib" />
+    <Reference Include="SilverlightContrib">
+      <HintPath>..\..\..\..\..\Desktop\SilverlightContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="SilverlightContrib.Controls">
+      <HintPath>..\..\..\..\..\Desktop\SilverlightContrib.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="SilverlightContrib.Data">
+      <HintPath>..\..\..\..\..\Desktop\SilverlightContrib.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.Client, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.DomainServices.Client.Web, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.Web.Extensions, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls.Data" />
+    <Reference Include="System.Windows.Controls.Data.DataForm.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Data.Input" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.DomainServices, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Input" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit">
+      <HintPath>C:\Users\Irteza\Desktop\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Theming.BubbleCreme, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Theming.BureauBlack, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Theming.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLight.3.1.1\lib\SL4\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Windows.Controls" />
+    <Reference Include="System.Windows.Controls.Navigation" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgroDomainContext.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageButton.xaml.cs">
+      <DependentUpon>ImageButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BalanceInventoryModel.cs" />
+    <Compile Include="Models\BillProductDetail.cs" />
+    <Compile Include="Models\BillRowModel.cs" />
+    <Compile Include="Models\BillViewDataGridModel.cs" />
+    <Compile Include="Models\ChartView.cs" />
+    <Compile Include="Models\ConstantCollections.cs" />
+    <Compile Include="Models\DateConverter.cs" />
+    <Compile Include="Models\ExpenditureInfoModel.cs" />
+    <Compile Include="Models\IndentInfo.cs" />
+    <Compile Include="Models\IndentInfoDetail.cs" />
+    <Compile Include="Models\InventoryMesseging.cs" />
+    <Compile Include="Models\InventoryPackageModel.cs" />
+    <Compile Include="Models\InventoryProductModel.cs" />
+    <Compile Include="Models\LedgerModule.cs" />
+    <Compile Include="Models\LossInfo.cs" />
+    <Compile Include="Models\LotAllocationModel.cs" />
+    <Compile Include="Models\LotInfo.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\PLRPackageInfoModel.cs" />
+    <Compile Include="Models\PLRProductInfoModel.cs" />
+    <Compile Include="Models\PrintBillModel.cs" />
+    <Compile Include="Models\PrintFactory.cs" />
+    <Compile Include="Models\PrintIndentModel.cs" />
+    <Compile Include="Models\ProductMessage.cs" />
+    <Compile Include="Models\RegionsModel.cs" />
+    <Compile Include="Models\RequisitionPackageUpdateModel.cs" />
+    <Compile Include="Models\RequisitionProductUpdateModel.cs" />
+    <Compile Include="Models\NSM\NSMSharedData.cs" />
+    <Compile Include="Models\SalesReturnInfoModel.cs" />
+    <Compile Include="Models\SIC\SICSharedData.cs" />
+    <Compile Include="Models\StaticMessaging.cs" />
+    <Compile Include="Models\TargetModel.cs" />
+    <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="Models\WarningInfo.cs" />
+    <Compile Include="Security\MD5.cs" />
+    <Compile Include="UserControls\BillDueHeaderControl.xaml.cs">
+      <DependentUpon>BillDueHeaderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BillDueItemControl.xaml.cs">
+      <DependentUpon>BillDueItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BillFooterControl.xaml.cs">
+      <DependentUpon>BillFooterControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BillInfoControl.xaml.cs">
+      <DependentUpon>BillInfoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BillItemControl.xaml.cs">
+      <DependentUpon>BillItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BillItemHeader.xaml.cs">
+      <DependentUpon>BillItemHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BillPrintHeader.xaml.cs">
+      <DependentUpon>BillPrintHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BillPrintMiddleControl.xaml.cs">
+      <DependentUpon>BillPrintMiddleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DealerInfoControl.xaml.cs">
+      <DependentUpon>DealerInfoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PrintBillInfoControl.xaml.cs">
+      <DependentUpon>PrintBillInfoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PrintBillUserControl.xaml.cs">
+      <DependentUpon>PrintBillUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PrintExpenditureUserControl.xaml.cs">
+      <DependentUpon>PrintExpenditureUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PrintHeader.xaml.cs">
+      <DependentUpon>PrintHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PrintIndentUserControl.xaml.cs">
+      <DependentUpon>PrintIndentUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PrintMRRPackageUserControl.xaml.cs">
+      <DependentUpon>PrintMRRPackageUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PrintMRRProductUserControl.xaml.cs">
+      <DependentUpon>PrintMRRProductUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PrintPLRUserControl.xaml.cs">
+      <DependentUpon>PrintPLRUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PrintRequisitionUserControl.xaml.cs">
+      <DependentUpon>PrintRequisitionUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PrintSalesReturnUserControl.xaml.cs">
+      <DependentUpon>PrintSalesReturnUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Accountant\VerifyBillPaymentDetailViewModel.cs" />
+    <Compile Include="ViewModels\Accountant\VerifyBillPaymentViewModel.cs" />
+    <Compile Include="ViewModels\Admin\FinishedStockUpdateViewModel.cs" />
+    <Compile Include="ViewModels\Admin\LedgerUpdateViewModel.cs" />
+    <Compile Include="ViewModels\Admin\UnfinishedStockUpdateViewModel.cs" />
+    <Compile Include="ViewModels\ApprovedRequisitionViewModel.cs" />
+    <Compile Include="ViewModels\BillDetailViewModel.cs" />
+    <Compile Include="ViewModels\BillPaymentDetailViewModel.cs" />
+    <Compile Include="ViewModels\ConfirmExpenditureViewModel.cs" />
+    <Compile Include="ViewModels\ConfirmPLRViewModel.cs" />
+    <Compile Include="ViewModels\ConfirmRequisitionViewModel.cs" />
+    <Compile Include="ViewModels\CreateEmployeeViewModel.cs" />
+    <Compile Include="ViewModels\CreateExpenditureViewModel.cs" />
+    <Compile Include="ViewModels\CreateInventoryViewModel.cs" />
+    <Compile Include="ViewModels\CreateMRRViewModel.cs" />
+    <Compile Include="ViewModels\CreatePLRUnfinishedViewModel.cs" />
+    <Compile Include="ViewModels\CreatePLRViewModel.cs" />
+    <Compile Include="ViewModels\Histories\ViewProductTransferViewModel.cs" />
+    <Compile Include="ViewModels\CreateRegionViewModel.cs" />
+    <Compile Include="ViewModels\CreateRequisitionViewModel.cs" />
+    <Compile Include="ViewModels\DO\ProductTransferViewModel.cs" />
+    <Compile Include="ViewModels\DO\ViewTransportationLossesViewModel.cs" />
+    <Compile Include="ViewModels\ExpenditureDetailViewModel.cs" />
+    <Compile Include="ViewModels\GenerateBillViewModel.cs" />
+    <Compile Include="ViewModels\Histories\ViewBillPaymentViewModel.cs" />
+    <Compile Include="ViewModels\Histories\ViewBillViewModel.cs" />
+    <Compile Include="ViewModels\Histories\ViewExpenditureViewModel.cs" />
+    <Compile Include="ViewModels\Histories\ViewIndentViewModel.cs" />
+    <Compile Include="ViewModels\Histories\ViewMRRViewModel.cs" />
+    <Compile Include="ViewModels\Histories\ViewPLRViewModel.cs" />
+    <Compile Include="ViewModels\Histories\ViewRequisitionViewModel.cs" />
+    <Compile Include="ViewModels\Histories\ViewSalesReturnViewModel.cs" />
+    <Compile Include="ViewModels\IndentDetailViewModel.cs" />
+    <Compile Include="ViewModels\IndentsForBillViewModel.cs" />
+    <Compile Include="ViewModels\LotAllocationViewModel.cs" />
+    <Compile Include="ViewModels\MRRDetailViewModel.cs" />
+    <Compile Include="ViewModels\NSM\CreateProductViewModel.cs" />
+    <Compile Include="ViewModels\NSM\ForwardIndentNSMViewModel.cs" />
+    <Compile Include="ViewModels\NSM\SetTargetViewModel.cs" />
+    <Compile Include="ViewModels\NSM\ViewIndentForForwardingByNSMViewModel.cs" />
+    <Compile Include="ViewModels\NSM\ViewRegionsViewModel.cs" />
+    <Compile Include="ViewModels\PlaceIndentViewModel.cs" />
+    <Compile Include="ViewModels\PLRDetailViewModel.cs" />
+    <Compile Include="ViewModels\ProductDetailViewModel.cs" />
+    <Compile Include="ViewModels\ProductTransferDetailViewModel.cs" />
+    <Compile Include="ViewModels\ProductTransferVerificationViewModel.cs" />
+    <Compile Include="ViewModels\Reports\AchievementDashboardViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModels\RequisitionDetailViewModel.cs" />
+    <Compile Include="ViewModels\RM\AdvancePaymentViewModel.cs" />
+    <Compile Include="ViewModels\RM\AssignSalesTargetViewModel.cs" />
+    <Compile Include="ViewModels\RM\BillPaymentViewModel.cs" />
+    <Compile Include="ViewModels\RM\BillsForVerificationViewModel.cs" />
+    <Compile Include="ViewModels\RM\CreateDealerViewModel.cs" />
+    <Compile Include="ViewModels\RM\History\RMIndentHistoryViewModel.cs" />
+    <Compile Include="ViewModels\RM\SetTargetViewModel.cs" />
+    <Compile Include="ViewModels\RM\TransportationLossViewModel.cs" />
+    <Compile Include="ViewModels\RM\VerifyBillViewModel.cs" />
+    <Compile Include="ViewModels\RM\ViewIndentViewModel.cs" />
+    <Compile Include="ViewModels\SalesReturnDetailViewModel.cs" />
+    <Compile Include="ViewModels\SIC\BalanceInventoryViewModel.cs" />
+    <Compile Include="ViewModels\SIC\ProductTransferApprovalViewModel.cs" />
+    <Compile Include="ViewModels\SIC\ProductTransferIndentViewModel.cs" />
+    <Compile Include="ViewModels\SIC\ProductTransferNotificationsViewModel.cs" />
+    <Compile Include="ViewModels\SIC\ViewRequisitionViewModel.cs" />
+    <Compile Include="ViewModels\ViewDealerWarningViewModel.cs" />
+    <Compile Include="ViewModels\ViewPackageViewModel.cs" />
+    <Compile Include="Views\Accountant\IssueCommissionChildWindow.xaml.cs">
+      <DependentUpon>IssueCommissionChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Accountant\VerifyBillPayment.xaml.cs">
+      <DependentUpon>VerifyBillPayment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Accountant\VerifyBillPaymentDetailChildWindow.xaml.cs">
+      <DependentUpon>VerifyBillPaymentDetailChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Accountant\VerifyExpenditures.xaml.cs">
+      <DependentUpon>VerifyExpenditures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\FinishedStockUpdate.xaml.cs">
+      <DependentUpon>FinishedStockUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\LedgerEntry.xaml.cs">
+      <DependentUpon>LedgerEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\PackageEditWindow.xaml.cs">
+      <DependentUpon>PackageEditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\UpdateUnfinishedStock.xaml.cs">
+      <DependentUpon>UpdateUnfinishedStock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\ViewEditEmployeeWindow.xaml.cs">
+      <DependentUpon>ViewEditEmployeeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\ViewEmployees.xaml.cs">
+      <DependentUpon>ViewEmployees.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\ViewUserProfile.xaml.cs">
+      <DependentUpon>ViewUserProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BillDetailChilndWindow.xaml.cs">
+      <DependentUpon>BillDetailChilndWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BillPaymentDetailChildWindow.xaml.cs">
+      <DependentUpon>BillPaymentDetailChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChangePasswordView.xaml.cs">
+      <DependentUpon>ChangePasswordView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Co-ordinator\CODealerEditChildWindow.xaml.cs">
+      <DependentUpon>CODealerEditChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConnectivityErrorWindow.xaml.cs">
+      <DependentUpon>ConnectivityErrorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreatePackageChildWindow.xaml.cs">
+      <DependentUpon>CreatePackageChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreatePLRUnfinished.xaml.cs">
+      <DependentUpon>CreatePLRUnfinished.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateProductView.xaml.cs">
+      <DependentUpon>CreateProductView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateSeason.xaml.cs">
+      <DependentUpon>CreateSeason.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DealerDetailWindow.xaml.cs">
+      <DependentUpon>DealerDetailWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DetailedNoticeView.xaml.cs">
+      <DependentUpon>DetailedNoticeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DO\GenerateProductTransferChildWindow.xaml.cs">
+      <DependentUpon>GenerateProductTransferChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DO\InventoryBalanceChildWindow.xaml.cs">
+      <DependentUpon>InventoryBalanceChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DO\TransferLotAllocationChildWindow.xaml.cs">
+      <DependentUpon>TransferLotAllocationChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DO\ViewTransportationLosses.xaml.cs">
+      <DependentUpon>ViewTransportationLosses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditInventoryInfoChildWindow.xaml.cs">
+      <DependentUpon>EditInventoryInfoChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpenditureDetailChildWindow.xaml.cs">
+      <DependentUpon>ExpenditureDetailChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\BillHistory.xaml.cs">
+      <DependentUpon>BillHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\BillPaymentHistory.xaml.cs">
+      <DependentUpon>BillPaymentHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\IndentHistory.xaml.cs">
+      <DependentUpon>IndentHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\MRRHistory.xaml.cs">
+      <DependentUpon>MRRHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\PLRHistory.xaml.cs">
+      <DependentUpon>PLRHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\ProductTransferHistory.xaml.cs">
+      <DependentUpon>ProductTransferHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\RequisitionHistory.xaml.cs">
+      <DependentUpon>RequisitionHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\SalesReturnHistory.xaml.cs">
+      <DependentUpon>SalesReturnHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\ViewBill.xaml.cs">
+      <DependentUpon>ViewBill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\ViewBillPayment.xaml.cs">
+      <DependentUpon>ViewBillPayment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\ViewExpenditure.xaml.cs">
+      <DependentUpon>ViewExpenditure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\ViewExpenditureDetail.xaml.cs">
+      <DependentUpon>ViewExpenditureDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\ViewIndent.xaml.cs">
+      <DependentUpon>ViewIndent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\ViewPLRDetail.xaml.cs">
+      <DependentUpon>ViewPLRDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\ViewProductTransfer.xaml.cs">
+      <DependentUpon>ViewProductTransfer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\ViewRequisitionDetail.xaml.cs">
+      <DependentUpon>ViewRequisitionDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\ViewSalesReturn.xaml.cs">
+      <DependentUpon>ViewSalesReturn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\ViewSalesReturnDetail.xaml.cs">
+      <DependentUpon>ViewSalesReturnDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IndentDetailChildWindow.xaml.cs">
+      <DependentUpon>IndentDetailChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.xaml.cs">
+      <DependentUpon>LoginForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainViewControl.xaml.cs">
+      <DependentUpon>MainViewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MRRPackageDetailChildWindow.xaml.cs">
+      <DependentUpon>MRRPackageDetailChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MRRProductDetailChildWindow.xaml.cs">
+      <DependentUpon>MRRProductDetailChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NoLinkAdded.xaml.cs">
+      <DependentUpon>NoLinkAdded.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NSM\CreateProduct.xaml.cs">
+      <DependentUpon>CreateProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NSM\DealerRegistrationApprovalView.xaml.cs">
+      <DependentUpon>DealerRegistrationApprovalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NSM\DealerRegistrationChildWindow.xaml.cs">
+      <DependentUpon>DealerRegistrationChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NSM\ForwardIndentNSMChildWindow.xaml.cs">
+      <DependentUpon>ForwardIndentNSMChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NSM\NSMExpenditureApprovalChildWindow.xaml.cs">
+      <DependentUpon>NSMExpenditureApprovalChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NSM\SetEditTarget.xaml.cs">
+      <DependentUpon>SetEditTarget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NSM\TransferIndentVerificationChildWindow.xaml.cs">
+      <DependentUpon>TransferIndentVerificationChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PLRApprovalChildWindow.xaml.cs">
+      <DependentUpon>PLRApprovalChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\RequisitionVerificationViewModel.cs" />
+    <Compile Include="ViewModels\ReturnRequisitionViewModel.cs" />
+    <Compile Include="ViewModels\RM\ForwardIndentViewModel.cs" />
+    <Compile Include="ViewModels\RM\ViewIndentForForwardingByRMViewModel.cs" />
+    <Compile Include="ViewModels\SalesReturnViewModel.cs" />
+    <Compile Include="ViewModels\SIC\ForwardIndentSICViewModel.cs" />
+    <Compile Include="ViewModels\SIC\ViewIndentForForwardingBySICViewModel.cs" />
+    <Compile Include="ViewModels\UpdateFinishedGoodViewModel.cs" />
+    <Compile Include="ViewModels\ViewDealerViewModel.cs" />
+    <Compile Include="ViewModels\ViewInventoryViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ViewProductViewModel.cs" />
+    <Compile Include="ViewModels\ViewRequisitionsViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="Views\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BusyWindow.xaml.cs">
+      <DependentUpon>BusyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConfirmExpenditure.xaml.cs">
+      <DependentUpon>ConfirmExpenditure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConfirmPLRs.xaml.cs">
+      <DependentUpon>ConfirmPLRs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateExpenditure.xaml.cs">
+      <DependentUpon>CreateExpenditure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateInventoryView.xaml.cs">
+      <DependentUpon>CreateInventoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateMRR.xaml.cs">
+      <DependentUpon>CreateMRR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateNewEmployee.xaml.cs">
+      <DependentUpon>CreateNewEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateNewRegion.xaml.cs">
+      <DependentUpon>CreateNewRegion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreatePLR.xaml.cs">
+      <DependentUpon>CreatePLR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateProduct.xaml.cs">
+      <DependentUpon>CreateProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateRegionChildWindow.xaml.cs">
+      <DependentUpon>CreateRegionChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateRequisition.xaml.cs">
+      <DependentUpon>CreateRequisition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DealerIndentPlacement.xaml.cs">
+      <DependentUpon>DealerIndentPlacement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DORequisitionApproval.xaml.cs">
+      <DependentUpon>DORequisitionApproval.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ErrorWindow.xaml.cs">
+      <DependentUpon>ErrorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpenditureApprovalChildWindow.xaml.cs">
+      <DependentUpon>ExpenditureApprovalChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GenerateBillChildWindow.xaml.cs">
+      <DependentUpon>GenerateBillChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\ViewMRRDetail.xaml.cs">
+      <DependentUpon>ViewMRRDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\ViewMRRHistory.xaml.cs">
+      <DependentUpon>ViewMRRHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Histories\ViewPLRHistory.xaml.cs">
+      <DependentUpon>ViewPLRHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LotAllocation.xaml.cs">
+      <DependentUpon>LotAllocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LotSelectionChildWindow.xaml.cs">
+      <DependentUpon>LotSelectionChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NoticeBoard.xaml.cs">
+      <DependentUpon>NoticeBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NSM\ForwardIndentNSM.xaml.cs">
+      <DependentUpon>ForwardIndentNSM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NSM\SalesReturnNSMVerificationChildWindow.xaml.cs">
+      <DependentUpon>SalesReturnNSMVerificationChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NSM\ViewIndentForForwardingByNSM.xaml.cs">
+      <DependentUpon>ViewIndentForForwardingByNSM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PLRConfirmationChildWindow.xaml.cs">
+      <DependentUpon>PLRConfirmationChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PLRDetailChildWindow.xaml.cs">
+      <DependentUpon>PLRDetailChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductDetailWindow.xaml.cs">
+      <DependentUpon>ProductDetailWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductEditWindow.xaml.cs">
+      <DependentUpon>ProductEditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductTransferDetailChildWindow.xaml.cs">
+      <DependentUpon>ProductTransferDetailChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReportsView.xaml.cs">
+      <DependentUpon>ReportsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Report\AchievementDashboard.xaml.cs">
+      <DependentUpon>AchievementDashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequisitionApprovalChildWindow.xaml.cs">
+      <DependentUpon>RequisitionApprovalChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequisitionConfirmation.xaml.cs">
+      <DependentUpon>RequisitionConfirmation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequisitionDetailChildWindow.xaml.cs">
+      <DependentUpon>RequisitionDetailChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReturnRequisitionVerificationChildWindow.xaml.cs">
+      <DependentUpon>ReturnRequisitionVerificationChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReturnRequisitionView.xaml.cs">
+      <DependentUpon>ReturnRequisitionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\AcceptedExpenditureChildWindow.xaml.cs">
+      <DependentUpon>AcceptedExpenditureChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\AcceptedExpenditures.xaml.cs">
+      <DependentUpon>AcceptedExpenditures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\AdvancePaymentChildWindow.xaml.cs">
+      <DependentUpon>AdvancePaymentChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\AssignSalesTarget.xaml.cs">
+      <DependentUpon>AssignSalesTarget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\BillPayment.xaml.cs">
+      <DependentUpon>BillPayment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\BillsForVerification.xaml.cs">
+      <DependentUpon>BillsForVerification.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\CreateDealer.xaml.cs">
+      <DependentUpon>CreateDealer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\EditDealerChildWindow.xaml.cs">
+      <DependentUpon>EditDealerChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\ForwardIndent.xaml.cs">
+      <DependentUpon>ForwardIndent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\ForwardIndentRMChildWindow.xaml.cs">
+      <DependentUpon>ForwardIndentRMChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\History\RMIndentHistory.xaml.cs">
+      <DependentUpon>RMIndentHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\IssueSalesReturn.xaml.cs">
+      <DependentUpon>IssueSalesReturn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\IssueSalesReturnChildWindow.xaml.cs">
+      <DependentUpon>IssueSalesReturnChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\SetEditTarget.xaml.cs">
+      <DependentUpon>SetEditTarget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\TransportationLossWindow.xaml.cs">
+      <DependentUpon>TransportationLossWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\VerifyBillWindow.xaml.cs">
+      <DependentUpon>VerifyBillWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RM\ViewIndentForForwardingByRM.xaml.cs">
+      <DependentUpon>ViewIndentForForwardingByRM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesReturnDetailChildWindow.xaml.cs">
+      <DependentUpon>SalesReturnDetailChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesReturnVerificationChildWindow.xaml.cs">
+      <DependentUpon>SalesReturnVerificationChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SIC\ApproveTransferIndentDetailWindow.xaml.cs">
+      <DependentUpon>ApproveTransferIndentDetailWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SIC\ApproveTransferIndentWindow.xaml.cs">
+      <DependentUpon>ApproveTransferIndentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SIC\BalanceInventory.xaml.cs">
+      <DependentUpon>BalanceInventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SIC\ForwardIndentSIC.xaml.cs">
+      <DependentUpon>ForwardIndentSIC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SIC\ForwardIndentSICChildWindow.xaml.cs">
+      <DependentUpon>ForwardIndentSICChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SIC\IssueInventoryBalance.xaml.cs">
+      <DependentUpon>IssueInventoryBalance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SIC\PlaceTransferIndent.xaml.cs">
+      <DependentUpon>PlaceTransferIndent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SIC\ProductConvertChildWindow.xaml.cs">
+      <DependentUpon>ProductConvertChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SIC\ProductTransferVerification.xaml.cs">
+      <DependentUpon>ProductTransferVerification.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SIC\ProductTransferVerificationChildWindow.xaml.cs">
+      <DependentUpon>ProductTransferVerificationChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SIC\ViewIndentForForwardingBySIC.xaml.cs">
+      <DependentUpon>ViewIndentForForwardingBySIC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SIC\ViewRequisitionHistory.xaml.cs">
+      <DependentUpon>ViewRequisitionHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashExperiment.xaml.cs">
+      <DependentUpon>SplashExperiment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequisitionVerification.xaml.cs">
+      <DependentUpon>RequisitionVerification.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateFinishedGoodView.xaml.cs">
+      <DependentUpon>UpdateFinishedGoodView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VerifySalesReturns.xaml.cs">
+      <DependentUpon>VerifySalesReturns.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\ViewAllInventory.xaml.cs">
+      <DependentUpon>ViewAllInventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewDealer.xaml.cs">
+      <DependentUpon>ViewDealer.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\ViewDealerChildWindow.xaml.cs">
+      <DependentUpon>ViewDealerChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewDealerWarningView.xaml.cs">
+      <DependentUpon>ViewDealerWarningView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewDOInventory.xaml.cs">
+      <DependentUpon>ViewDOInventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewIndentsForBill.xaml.cs">
+      <DependentUpon>ViewIndentsForBill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewInventoryView.xaml.cs">
+      <DependentUpon>ViewInventoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewNoticeDetailsChildWindow.xaml.cs">
+      <DependentUpon>ViewNoticeDetailsChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewPackage.xaml.cs">
+      <DependentUpon>ViewPackage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewProduct.xaml.cs">
+      <DependentUpon>ViewProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewRegions.xaml.cs">
+      <DependentUpon>ViewRegions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WarningDetailWindow.xaml.cs">
+      <DependentUpon>WarningDetailWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WorkList.xaml.cs">
+      <DependentUpon>WorkList.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Resource Include="Assets\Resources\slide_1.png" />
+    <Resource Include="Assets\Resources\slide_2.png" />
+    <Resource Include="Assets\Resources\slide_3.png" />
+    <Content Include="Images\home.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logout.png" />
+    <Content Include="Images\reports.png" />
+    <Content Include="Images\settings.png" />
+    <Content Include="Images\user.png" />
+    <Content Include="TreeViewDatas\treeviewViewer.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="ImageButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LoginForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainViewControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\BillDueHeaderControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\BillDueItemControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\BillFooterControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\BillInfoControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\BillItemControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\BillItemHeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\BillPrintHeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\BillPrintMiddleControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\DealerInfoControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\PrintBillInfoControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\PrintBillUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\PrintExpenditureUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PrintIndentUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Accountant\IssueCommissionChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Admin\FinishedStockUpdate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Admin\LedgerEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Admin\PackageEditWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Admin\UpdateUnfinishedStock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ChangePasswordView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Co-ordinator\CODealerEditChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ConnectivityErrorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CreatePLRUnfinished.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateSeason.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DO\GenerateProductTransferChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DO\TransferLotAllocationChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Histories\BillHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\BillPaymentHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\IndentHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\MRRHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\PLRHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\ProductTransferHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\RequisitionHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\SalesReturnHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\ViewProductTransfer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NoLinkAdded.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NSM\CreateProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NSM\SetEditTarget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NSM\TransferIndentVerificationChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProductEditWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ProductTransferDetailChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ReportsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Report\AchievementDashboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RM\AdvancePaymentChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RM\AssignSalesTarget.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RM\SetEditTarget.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SIC\ApproveTransferIndentDetailWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SIC\ApproveTransferIndentWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SIC\BalanceInventory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SIC\PlaceTransferIndent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SIC\ProductConvertChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SIC\ProductTransferVerification.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SIC\ProductTransferVerificationChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewDealerWarningView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ViewDOInventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewNoticeDetailsChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewRegions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WarningDetailWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WorkList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Assets\Resources\appbar.clipboard.file.png" />
+    <Resource Include="UserControls\IspahaniLogo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\images.jpg" />
+    <Resource Include="Assets\Resources\back.png" />
+    <Resource Include="Assets\Resources\delete.png" />
+    <Resource Include="Assets\Resources\indent.png" />
+    <Resource Include="Assets\Resources\login_bg.png" />
+    <Resource Include="Assets\Resources\logo.png" />
+    <Resource Include="Assets\Resources\menu.png" />
+    <Resource Include="Assets\Resources\menuHovered.png" />
+    <Resource Include="Assets\Resources\menuSelected.png" />
+    <Resource Include="Assets\Resources\menuSelectedBg.png" />
+    <Resource Include="Assets\Resources\refresh.png" />
+    <Resource Include="Assets\Resources\search_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Resources\home_background.png" />
+    <Resource Include="Assets\Resources\ispahaniLogo.png" />
+    <Resource Include="Assets\Resources\appbar.crosshair.png" />
+    <Resource Include="Assets\Resources\appbar.link.png" />
+    <Resource Include="Assets\Resources\under_construction.png" />
+    <Content Include="TreeViewDatas\treeviewAccountant.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="TreeViewDatas\treeviewAdmin.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="TreeViewDatas\treeviewCO.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="TreeViewDatas\treeviewDO.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="TreeViewDatas\treeviewNSM.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="TreeViewDatas\treeviewSIC.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="Assets\Brushes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\CoreStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\CustomTreeViewStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Fonts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\SDKStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <None Include="Assets\ToolkitStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="UserControls\PrintHeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\PrintMRRPackageUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PrintMRRProductUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PrintPLRUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PrintRequisitionUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PrintSalesReturnUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Accountant\VerifyBillPayment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Accountant\VerifyBillPaymentDetailChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Accountant\VerifyExpenditures.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\ViewEditEmployeeWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Admin\ViewEmployees.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Admin\ViewUserProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BillDetailChilndWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BillPaymentDetailChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CreatePackageChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateProductView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DealerDetailWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DetailedNoticeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DO\InventoryBalanceChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DO\ViewTransportationLosses.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EditInventoryInfoChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExpenditureDetailChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\ViewBill.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\ViewBillPayment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\ViewExpenditure.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\ViewExpenditureDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Histories\ViewIndent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\ViewPLRDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Histories\ViewRequisitionDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\ViewSalesReturn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\ViewSalesReturnDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IndentDetailChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MRRPackageDetailChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MRRProductDetailChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NSM\DealerRegistrationApprovalView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NSM\DealerRegistrationChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NSM\ForwardIndentNSMChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NSM\NSMExpenditureApprovalChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PLRApprovalChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BusyWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ConfirmExpenditure.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ConfirmPLRs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateExpenditure.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CreateInventoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateMRR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateNewEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateNewRegion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreatePLR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateProduct.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CreateRegionChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CreateRequisition.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DealerIndentPlacement.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DORequisitionApproval.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ErrorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExpenditureApprovalChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GenerateBillChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\ViewMRRDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\ViewMRRHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Histories\ViewPLRHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LotAllocation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LotSelectionChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NoticeBoard.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NSM\ForwardIndentNSM.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NSM\SalesReturnNSMVerificationChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NSM\ViewIndentForForwardingByNSM.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PLRConfirmationChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PLRDetailChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ProductDetailWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RequisitionApprovalChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RequisitionConfirmation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RequisitionDetailChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ReturnRequisitionVerificationChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ReturnRequisitionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RM\AcceptedExpenditureChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RM\AcceptedExpenditures.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RM\BillPayment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RM\BillsForVerification.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RM\CreateDealer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RM\EditDealerChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RM\ForwardIndent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RM\ForwardIndentRMChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RM\History\RMIndentHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RM\IssueSalesReturn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RM\IssueSalesReturnChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RM\TransportationLossWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RM\VerifyBillWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RM\ViewIndentForForwardingByRM.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SalesReturnDetailChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SalesReturnVerificationChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SIC\ForwardIndentSIC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SIC\ForwardIndentSICChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SIC\IssueInventoryBalance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SIC\ViewIndentForForwardingBySIC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SIC\ViewRequisitionHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SplashExperiment.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RequisitionVerification.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UpdateFinishedGoodView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\VerifySalesReturns.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewAllInventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewDealer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewDealerChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ViewIndentsForBill.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ViewInventoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewPackage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ViewProduct.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Assets\Resources\footer.png" />
+    <Resource Include="Assets\Resources\menubar.png" />
+    <Resource Include="Assets\Resources\selected_menu_bg.png" />
+    <Resource Include="Assets\Resources\settings_icon.png" />
+    <Resource Include="Assets\Resources\sidebar_bg.png" />
+    <Resource Include="Assets\Resources\submit.png" />
+    <Resource Include="Assets\Resources\titlebar.png" />
+    <Resource Include="Assets\Resources\user_icon.png" />
+    <Resource Include="Assets\Resources\view.png" />
+    <Resource Include="Assets\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Content Include="TreeViewDatas\treeviewRM.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <BlendEmbeddedFont Include="Fonts\gothikka.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\gothikka_0.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\MyriadPro-Bold.otf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\MyriadPro-BoldIt.otf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\MyriadPro-It.otf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\MyriadPro-Regular.otf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BlendEmbeddedFont>
+    <Resource Include="TreeViewDatas\home.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fonts\segoeuisl.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Expression\Blend\Silverlight\v4.0\Microsoft.Expression.Blend.Silverlight.targets" />
+</Project>

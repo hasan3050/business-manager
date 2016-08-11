@@ -1,0 +1,106 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.RM.EditDealerChildWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+                      
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+            xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:SilverlightContrib_Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           Width="918" Height="479"
+           Title="DealerRegistrationChildWindow">
+    <Grid x:Name="LayoutRoot" >
+
+
+        <Grid Height="440" Width="980">
+            <SilverlightContrib_Controls:GroupBox Header="Basic info" HorizontalAlignment="Left" Margin="0" Width="248" >
+                <Grid Margin="-3,-4,0,-5">
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Name" Width="68" HorizontalAlignment="Left" Margin="7,2,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="nameBox" Height="26" TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Margin="7,20,9,0" VerticalAlignment="Top" IsReadOnly="False" />
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Father's name" Width="102" HorizontalAlignment="Left" Margin="7,48,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="nameBox_Copy" Height="26" TextWrapping="Wrap" Text="{Binding FatherName, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Margin="7,67,9,0" VerticalAlignment="Top" IsReadOnly="False" />
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Mother's name" Width="102" HorizontalAlignment="Left" Margin="7,95,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="nameBox_Copy1" Height="26" TextWrapping="Wrap" Margin="7,115,9,0" VerticalAlignment="Top" IsReadOnly="True" Text="N/A" />
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Date of birth" Width="99" HorizontalAlignment="Left" Margin="7,143,0,0" VerticalAlignment="Top"/>
+                    <sdk:DatePicker Height="26" SelectedDate="{Binding DateOfBirth, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Margin="7,161,9,0" VerticalAlignment="Top" DisplayDateStart="1/1/1950" DisplayDateEnd="1/1/2045" DisplayDate="2/2/2012" Text="1/1/2012" />
+                    <TextBlock Height="17" TextWrapping="Wrap" Text="Nationality" Width="70" HorizontalAlignment="Left" Margin="8,188,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="nameBox_Copy4" TextWrapping="Wrap" Margin="8,208,9,187" VerticalAlignment="Top" Height="26" IsReadOnly="True" Text="N/A" />
+                    <TextBlock Height="17" TextWrapping="Wrap" Text="Phone" Width="41" HorizontalAlignment="Left" Margin="7,0,0,166" VerticalAlignment="Bottom"/>
+                    <TextBox Height="26"  TextWrapping="Wrap" Text="{Binding ContactNo, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Margin="7,0,10,134" VerticalAlignment="Bottom" IsReadOnly="False" IsEnabled="True" />
+                    <TextBlock Height="17" TextWrapping="Wrap" Text="Email" Width="44" HorizontalAlignment="Left" Margin="7,0,0,115" VerticalAlignment="Bottom"/>
+                    <TextBox x:Name="nameBox_Copy7" Height="26" TextWrapping="Wrap" Margin="7,0,10,86" VerticalAlignment="Bottom" IsReadOnly="True" Text="N/A" />
+                </Grid>
+            </SilverlightContrib_Controls:GroupBox>
+            <SilverlightContrib_Controls:GroupBox Header="Basic info(contd.)" Margin="260,0,354,0" Height="145" VerticalAlignment="Top">
+                <Grid Margin="-2,-6,-2,-3">
+                    <TextBox x:Name="nameBox_Copy2" Height="54" AcceptsReturn="True" TextWrapping="Wrap" Margin="127,3,13,0" VerticalAlignment="Top" IsReadOnly="True" Text="N/A" />
+                    <TextBlock Height="42" TextWrapping="Wrap" Text="Permanent Address" Width="117" HorizontalAlignment="Left" Margin="6,0,0,17" VerticalAlignment="Bottom"/>
+                    <TextBox x:Name="nameBox_Copy3" Height="54" AcceptsReturn="True" TextWrapping="Wrap" Margin="127,0,13,7" VerticalAlignment="Bottom" IsReadOnly="True" Text="N/A" />
+                </Grid>
+            </SilverlightContrib_Controls:GroupBox>
+            <SilverlightContrib_Controls:GroupBox Header="Company info" Margin="260,145,354,0">
+                <Grid Margin="-2,-6,-2,-3">
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Shop Name" Width="99" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="nameBox_Copy6" Height="26" TextWrapping="Wrap" Width="160" Text="{Binding CompanyName, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,20,0,0" d:LayoutOverrides="VerticalAlignment" />
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Lisence No." Width="77" HorizontalAlignment="Left" Margin="5,94,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="nameBox_Copy8" Height="26" TextWrapping="Wrap" Width="160" Text="{Binding LicenseNo, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,114,0,0" d:LayoutOverrides="VerticalAlignment" />
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="License issue date" Width="117" HorizontalAlignment="Left" Margin="5,46,0,0" VerticalAlignment="Top"/>
+                    <sdk:DatePicker Height="26" Width="160" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,66,0,0" d:LayoutOverrides="VerticalAlignment" DisplayDateStart="1/1/1950" DisplayDateEnd="1/1/2045" DisplayDate="2/2/2012" Text="1/1/2012" IsEnabled="False" />
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Business type" Width="117" HorizontalAlignment="Left" Margin="5,0,0,116" VerticalAlignment="Bottom"/>
+                    <ComboBox Height="26" Width="160" HorizontalAlignment="Left" Margin="5,0,0,92" VerticalAlignment="Bottom" Name="BusinessTypeComboBox" IsEnabled="False" />
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Shop Address" Width="159" HorizontalAlignment="Left" Margin="5,0,0,71" VerticalAlignment="Bottom"/>
+                    <TextBox x:Name="nameBox_Copy10" Height="63" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding CompanyAddress, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Margin="5,0,15,8" VerticalAlignment="Bottom" />
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Owner's adress" Width="99" HorizontalAlignment="Right" Margin="0,46,73,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="nameBox_Copy11" Height="26" TextWrapping="Wrap" Width="160" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,66,12,0" d:LayoutOverrides="VerticalAlignment" Text="N/A" IsReadOnly="True" />
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Own office(dealer)" Width="117" HorizontalAlignment="Right" Margin="0,94,55,0" VerticalAlignment="Top"/>
+                    <RadioButton Content="Yes" Height="22" Width="45" HorizontalAlignment="Right" Margin="0,116,126,0" VerticalAlignment="Top" IsEnabled="False" />
+                    <RadioButton Content="No" Height="22" Width="45"  HorizontalAlignment="Right" Margin="0,116,73,0" VerticalAlignment="Top" IsEnabled="False" />
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Owner name" Width="99" HorizontalAlignment="Right" Margin="0,0,73,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="nameBox_Copy9" Height="26" TextWrapping="Wrap" Width="160" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,20,12,0" d:LayoutOverrides="VerticalAlignment" Text="N/A" IsReadOnly="True" />
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Present Address" Width="117" HorizontalAlignment="Left" Margin="5,-144,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </SilverlightContrib_Controls:GroupBox>
+            <SilverlightContrib_Controls:GroupBox Header="Company info(contd.)" Margin="0,0,84,0" HorizontalAlignment="Right" Width="266" Height="117" VerticalAlignment="Top">
+                <Grid Margin="-2,-6,-1,-3">
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Has other dealership?" Margin="1,1,8,0" VerticalAlignment="Top"/>
+                    <RadioButton Content="Yes" Height="22" Width="45" HorizontalAlignment="Left" Margin="1,21,0,0" VerticalAlignment="Top" IsEnabled="False" />
+                    <RadioButton Content="No" Height="22" Width="45" HorizontalAlignment="Left" Margin="54,21,0,0" VerticalAlignment="Top" IsEnabled="False" />
+                    <TextBlock TextWrapping="Wrap" Text="Dealership company name(if applicable)" Margin="1,44,8,34"/>
+                    <TextBox x:Name="nameBox_Copy12" Height="26" TextWrapping="Wrap" Margin="1,0,6,8" VerticalAlignment="Bottom" IsReadOnly="True" />
+                </Grid>
+            </SilverlightContrib_Controls:GroupBox>
+            <SilverlightContrib_Controls:GroupBox Header="Relationship credentials" Margin="0,117,84,0" HorizontalAlignment="Right" Width="266">
+                <Grid Margin="-2,-6,-1,-3">
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Username" Width="68" HorizontalAlignment="Left" Margin="7,0,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="nameBox_Copy13" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Margin="7,18,8,0" d:LayoutOverrides="VerticalAlignment" IsReadOnly="True" Text="N/A" />
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Password(mix up letters and digits)" Margin="7,46,25,0" VerticalAlignment="Top"/>
+                    <PasswordBox x:Name="nameBox_Copy14" Height="26" VerticalAlignment="Top" Margin="7,66,8,0" d:LayoutOverrides="VerticalAlignment" IsEnabled="False" />
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Sales officer in charge" Margin="8,97,25,0" VerticalAlignment="Top"/>
+                    <TextBlock TextWrapping="Wrap" Text="Credit Limit" Width="88" HorizontalAlignment="Left" Margin="8,154,0,130"/>
+                    <TextBox x:Name="nameBox_Copy16" Height="26" TextWrapping="Wrap" IsReadOnly="True" Text="{Binding CreditLimit, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" VerticalAlignment="Top" Margin="99,151,8,0"/>
+                    <Button Content="Close" Height="30"  Command="{Binding ResetCommand}" DataContext="{Binding DataContext, ElementName=LayoutRoot}" Margin="26,0,127,4" VerticalAlignment="Bottom" Click="Button_Click_1" />
+                    <Button Content="Confirm" Height="30" Width="113" Command="{Binding SaveCommand}" DataContext="{Binding DataContext, ElementName=LayoutRoot}" HorizontalAlignment="Right" Margin="0,0,8,4" VerticalAlignment="Bottom" Click="Button_Click" />
+                    <TextBlock Height="20" TextWrapping="Wrap" Text="Payment type" Width="92" HorizontalAlignment="Left" Margin="6,0,0,93" VerticalAlignment="Bottom"/>
+                    <ComboBox Height="26" VerticalAlignment="Top" Margin="99,188,8,0" Name="PaymentTypeComboBox" IsEnabled="False" />
+                    <Grid Height="45" Margin="9,106,8,0" VerticalAlignment="Top">
+                        <ComboBox Height="26" Margin="0,11,-1,8" DataContext="{Binding DataContext, ElementName=LayoutRoot}" VerticalAlignment="Top" Name="SalesOfficersComboBox" SelectedItem="{Binding Path=Employee,Mode=TwoWay}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Person.Name,Mode=TwoWay}" />
+                                       </StackPanel>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </Grid>
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="9,230,0,0" Name="textBlock1" Text="Status" VerticalAlignment="Top" Width="50" />
+                    <!--  <Button Content="Toggle" Height="23" HorizontalAlignment="Left" Margin="100,229,0,0" Name="button1" VerticalAlignment="Top" Width="151" Click="button1_Click" />-->
+                    <ComboBox Height="26" DataContext="{Binding DataContext, ElementName=LayoutRoot}" HorizontalAlignment="Left" Margin="99,227,0,0" Name="statuscomboBox" VerticalAlignment="Top" Width="151"  SelectedItem="{Binding Path=ActivityStatus,Mode=TwoWay}"/>
+                </Grid>
+            </SilverlightContrib_Controls:GroupBox>
+        </Grid>
+
+
+    </Grid>
+</controls:ChildWindow>

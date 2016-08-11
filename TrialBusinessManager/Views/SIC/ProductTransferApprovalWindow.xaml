@@ -1,0 +1,69 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.SIC.ProductTransferApprovalWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="1040" Height="500"
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels.SIC"
+           xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+           xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.SL4"           
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"           
+           Title="Product Transfer Approval">
+    
+    <controls:ChildWindow.Resources>
+        <local:ProductTransferApprovalViewModel x:Key="VM"/>
+    </controls:ChildWindow.Resources>
+    
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="317*" />
+        </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Left" Height="93" Margin="6,0,0,0" VerticalAlignment="Top" Width="296">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="107*" />
+                <RowDefinition Height="15*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="103*" />
+                <ColumnDefinition Width="240*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Height="20" Margin="0,8,0,0" TextWrapping="Wrap" Text="From(Inventory)" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Grid.ColumnSpan="2" />
+            <TextBlock Margin="0,44,0,0" TextWrapping="Wrap" Text="To(Inventory) " HorizontalAlignment="Left" Width="108" Height="17" VerticalAlignment="Top" />
+            <Grid DataContext="{Binding DataContext.MyDealer, ElementName=LayoutRoot}" x:Name="DealerGrid" Margin="21,0,0,0" Grid.Column="1" Grid.RowSpan="2">
+                <TextBox Height="29" TextWrapping="Wrap" Text="{Binding Mode=TwoWay, Source={StaticResource VM}, Path=ProductTransfer.Inventory.InventoryName}" VerticalAlignment="Top" FontSize="13.333" IsReadOnly="True" />
+                <TextBox IsReadOnly="True" Margin="0,38,0,0"  FontSize="13.333"  Height="30" VerticalAlignment="Top" Name="InventoryTxt" />
+            </Grid>
+        </Grid>
+        <Grid HorizontalAlignment="Right" Margin="0,0,5,7" Width="302">
+            <TextBox Height="30" Margin="138,31,0,0" TextWrapping="Wrap" Text="{Binding Mode=TwoWay, Source={StaticResource VM}, Path=ProductTransfer.EmergencyContactNo}" VerticalAlignment="Top" IsReadOnly="True" />
+            <TextBox Margin="138,63,0,0" TextWrapping="Wrap" Text="{Binding Mode=TwoWay, Source={StaticResource VM}, Path=ProductTransfer.VehicleNo}" Height="30" VerticalAlignment="Top" IsReadOnly="True" />
+            <TextBox Height="29" Margin="138,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding Mode=TwoWay, Source={StaticResource VM}, Path=ProductTransfer.TransportCost}" IsReadOnly="True" />
+            <TextBox IsReadOnly="True" Height="28" VerticalAlignment="Top"  Margin="138,0,0,0" Text="{Binding Path=ProductTransfer.TransportType, Mode=TwoWay, Source={StaticResource VM}}" />
+            <TextBlock HorizontalAlignment="Left" Height="21" Margin="30,7,0,0" TextWrapping="Wrap" Text="Transport Type" VerticalAlignment="Top" Width="96"/>
+            <TextBlock HorizontalAlignment="Left" Margin="55,68,0,0" TextWrapping="Wrap" Text="Veichle No" Width="71" Height="18" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" Margin="6,38,0,0" TextWrapping="Wrap" Text="Emergency Contact" Width="118" Height="23" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Transport Cost " Width="92" Margin="32,98,0,0" Height="17" VerticalAlignment="Top" />
+            <TextBox Margin="138,126,0,0" Text="{Binding Mode=TwoWay, Source={StaticResource VM}, Path=ProductTransfer.ProductTransferCode}" TextWrapping="Wrap" Height="29" VerticalAlignment="Top" IsReadOnly="True" />
+            <TextBlock Height="21" Margin="32,129,0,0" Text="Transfer Code " TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="93" />
+        </Grid>
+        <sdk:DataGrid AutoGenerateColumns="False" Grid.Row="1" Height="208" Margin="6,13,11,0" Name="dataGrid1" SelectedItem="{Binding Source={StaticResource VM}, Path=SelectedDetail,Mode=TwoWay}" VerticalAlignment="Top" ItemsSource="{Binding Source={StaticResource VM}, Path=Details,Mode=TwoWay}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="RowEditEnded">
+                    <cmd:EventToCommand Command="{Binding Mode=TwoWay, Source={StaticResource VM}, Path=QuantityEditedCommand}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn x:Name="productNameColumn" Binding="{Binding Product.ProductName,Mode=TwoWay}" Header="Product Name" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="productCodeColumn" Binding="{Binding Product.BrandName,Mode=TwoWay}" Header="Brand Name" Width="1*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn x:Name="productBrandColumn" Binding="{Binding Product.ProductCode,Mode=TwoWay}" Header="Product Code" Width="1*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn x:Name="packetSizeColumn" Binding="{Binding Product.StockKeepingUnit,Mode=OneWay}" Header="S.K.U." Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="unitPriceColumn" Binding="{Binding PurchasePricePerUnit,Mode=TwoWay}" Header="Purchase Price/Unit(BDT)" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="LotColumn" Binding="{Binding LotId,Mode=TwoWay}" Header="Lot Number" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="quantityColumn" Binding="{Binding TransferQuantity,Mode=TwoWay,ValidatesOnExceptions=True}" Header="Placed Quantity(Pc)" Width="1*" />
+                <sdk:DataGridTextColumn x:Name="AcquantityColumn" Binding="{Binding Mode=TwoWay, ValidatesOnExceptions=True, Path=RecievedQuantity}" Header="Accepted Quantity(Pc)" Width="1*" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Accept" Grid.Row="1" Height="29" HorizontalAlignment="Left" Margin="888,227,0,0" Name="button3" VerticalAlignment="Top" Width="122" Command="{Binding Source={StaticResource VM}, Path=AcceptCommand}" />
+        <Button Content="Close" Grid.Row="1" Height="29" HorizontalAlignment="Left" Margin="770,227,0,0" Name="button4" VerticalAlignment="Top" Width="112" Click="button4_Click" />
+    </Grid>
+</controls:ChildWindow>

@@ -1,0 +1,29 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.RM.BillsForVerification" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels.RM"
+           d:DataContext="{d:DesignInstance Type=local:BillsForVerificationViewModel,IsDesignTimeCreatable=False}"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           Title="BillsForVerification Page" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="327" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock1" Text="Bills For Verification" VerticalAlignment="Top" Width="207" FontSize="16" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="234" Margin="12,44,12,0" Name="dataGrid1" VerticalAlignment="Top" ItemsSource="{Binding Bills,Mode=TwoWay}" SelectedItem="{Binding SelectedBill,Mode=TwoWay}" Width="1002">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Bill Code"  IsReadOnly="True" Width="1*" Binding="{Binding BillCode}" />
+                <sdk:DataGridTextColumn Header="Date Of Issue"  IsReadOnly="True" Width="1*" Binding="{Binding DateOfIssue}" />
+                <sdk:DataGridTextColumn Header="Total product Cost"  IsReadOnly="True" Width="1*" Binding="{Binding TotalProductCost}"/>
+                <sdk:DataGridTextColumn Header="Transport Type" IsReadOnly="True" Width="1*" Binding="{Binding TransportType,Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="Bill Status" IsReadOnly="True" Width="1*" Binding="{Binding BillStatus,Mode=TwoWay}" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Verify Bill" Height="37" Margin="0,284,12,0" Name="button1" VerticalAlignment="Top" HorizontalAlignment="Right" Width="176" FontSize="14" Command="{Binding Path=VerifyBillCommand}" />
+    </Grid>
+</navigation:Page>

@@ -1,0 +1,2268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IspahaniAgroLTDModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="IspahaniAgroLTDEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BillPaymentInfoes" EntityType="IspahaniAgroLTDModel.BillPaymentInfo" />
+    <EntitySet Name="BillPayments" EntityType="IspahaniAgroLTDModel.BillPayment" />
+    <EntitySet Name="BillProductInfoes" EntityType="IspahaniAgroLTDModel.BillProductInfo" />
+    <EntitySet Name="Bills" EntityType="IspahaniAgroLTDModel.Bill" />
+    <EntitySet Name="Commissions" EntityType="IspahaniAgroLTDModel.Commission" />
+    <EntitySet Name="Dealers" EntityType="IspahaniAgroLTDModel.Dealer" />
+    <EntitySet Name="DueInfoes" EntityType="IspahaniAgroLTDModel.DueInfo" />
+    <EntitySet Name="Employees" EntityType="IspahaniAgroLTDModel.Employee" />
+    <EntitySet Name="ExpenditureInfoes" EntityType="IspahaniAgroLTDModel.ExpenditureInfo" />
+    <EntitySet Name="Expenditures" EntityType="IspahaniAgroLTDModel.Expenditure" />
+    <EntitySet Name="IndentProductInfoes" EntityType="IspahaniAgroLTDModel.IndentProductInfo" />
+    <EntitySet Name="Indents" EntityType="IspahaniAgroLTDModel.Indent" />
+    <EntitySet Name="Inventories" EntityType="IspahaniAgroLTDModel.Inventory" />
+    <EntitySet Name="InventoryLogs" EntityType="IspahaniAgroLTDModel.InventoryLog" />
+    <EntitySet Name="InventoryPackageInfoes" EntityType="IspahaniAgroLTDModel.InventoryPackageInfo" />
+    <EntitySet Name="InventoryProductInfoes" EntityType="IspahaniAgroLTDModel.InventoryProductInfo" />
+    <EntitySet Name="Ledgers" EntityType="IspahaniAgroLTDModel.Ledger" />
+    <EntitySet Name="MessageDeliveries" EntityType="IspahaniAgroLTDModel.MessageDelivery" />
+    <EntitySet Name="Messages" EntityType="IspahaniAgroLTDModel.Message" />
+    <EntitySet Name="MRRPackageInfoes" EntityType="IspahaniAgroLTDModel.MRRPackageInfo" />
+    <EntitySet Name="MRRProductInfoes" EntityType="IspahaniAgroLTDModel.MRRProductInfo" />
+    <EntitySet Name="MRRs" EntityType="IspahaniAgroLTDModel.MRR" />
+    <EntitySet Name="NoticeBoards" EntityType="IspahaniAgroLTDModel.NoticeBoard" />
+    <EntitySet Name="Packages" EntityType="IspahaniAgroLTDModel.Package" />
+    <EntitySet Name="People" EntityType="IspahaniAgroLTDModel.Person" />
+    <EntitySet Name="PLRPackageInfoes" EntityType="IspahaniAgroLTDModel.PLRPackageInfo" />
+    <EntitySet Name="PLRProductInfoes" EntityType="IspahaniAgroLTDModel.PLRProductInfo" />
+    <EntitySet Name="PLRs" EntityType="IspahaniAgroLTDModel.PLR" />
+    <EntitySet Name="ProductEdits" EntityType="IspahaniAgroLTDModel.ProductEdit" />
+    <EntitySet Name="Products" EntityType="IspahaniAgroLTDModel.Product" />
+    <EntitySet Name="Promotions" EntityType="IspahaniAgroLTDModel.Promotion" />
+    <EntitySet Name="Regions" EntityType="IspahaniAgroLTDModel.Region" />
+    <EntitySet Name="RegionTargets" EntityType="IspahaniAgroLTDModel.RegionTarget" />
+    <EntitySet Name="RequisitionPackageInfoes" EntityType="IspahaniAgroLTDModel.RequisitionPackageInfo" />
+    <EntitySet Name="RequisitionProductInfoes" EntityType="IspahaniAgroLTDModel.RequisitionProductInfo" />
+    <EntitySet Name="Requisitions" EntityType="IspahaniAgroLTDModel.Requisition" />
+    <EntitySet Name="SalesOfficerTargets" EntityType="IspahaniAgroLTDModel.SalesOfficerTarget" />
+    <EntitySet Name="SalesReturnInfoes" EntityType="IspahaniAgroLTDModel.SalesReturnInfo" />
+    <EntitySet Name="SalesReturns" EntityType="IspahaniAgroLTDModel.SalesReturn" />
+    <EntitySet Name="TransportationLosses" EntityType="IspahaniAgroLTDModel.TransportationLoss" />
+    <EntitySet Name="YearSummaryDealers" EntityType="IspahaniAgroLTDModel.YearSummaryDealer" />
+    <EntitySet Name="YearSummaryInventoryPackages" EntityType="IspahaniAgroLTDModel.YearSummaryInventoryPackage" />
+    <EntitySet Name="YearSummaryInventoryProducts" EntityType="IspahaniAgroLTDModel.YearSummaryInventoryProduct" />
+    <EntitySet Name="YearSummarySOExpenditures" EntityType="IspahaniAgroLTDModel.YearSummarySOExpenditure" />
+    <AssociationSet Name="FK_BillBillPaymentInfo" Association="IspahaniAgroLTDModel.FK_BillBillPaymentInfo">
+      <End Role="Bills" EntitySet="Bills" />
+      <End Role="BillPaymentInfoes" EntitySet="BillPaymentInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillPaymentBillPaymentInfo" Association="IspahaniAgroLTDModel.FK_BillPaymentBillPaymentInfo">
+      <End Role="BillPayments" EntitySet="BillPayments" />
+      <End Role="BillPaymentInfoes" EntitySet="BillPaymentInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductBillPaymentInfo" Association="IspahaniAgroLTDModel.FK_ProductBillPaymentInfo">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="BillPaymentInfoes" EntitySet="BillPaymentInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerBillPayment" Association="IspahaniAgroLTDModel.FK_DealerBillPayment">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="BillPayments" EntitySet="BillPayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeBillPayment" Association="IspahaniAgroLTDModel.FK_EmployeeBillPayment">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="BillPayments" EntitySet="BillPayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillBillProductInfo" Association="IspahaniAgroLTDModel.FK_BillBillProductInfo">
+      <End Role="Bills" EntitySet="Bills" />
+      <End Role="BillProductInfoes" EntitySet="BillProductInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductBillProductInfo" Association="IspahaniAgroLTDModel.FK_ProductBillProductInfo">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="BillProductInfoes" EntitySet="BillProductInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillDueInfo" Association="IspahaniAgroLTDModel.FK_BillDueInfo">
+      <End Role="Bills" EntitySet="Bills" />
+      <End Role="DueInfoes" EntitySet="DueInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillTransportationLoss" Association="IspahaniAgroLTDModel.FK_BillTransportationLoss">
+      <End Role="Bills" EntitySet="Bills" />
+      <End Role="TransportationLosses" EntitySet="TransportationLosses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeBill" Association="IspahaniAgroLTDModel.FK_EmployeeBill">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Bills" EntitySet="Bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IndentBill" Association="IspahaniAgroLTDModel.FK_IndentBill">
+      <End Role="Indents" EntitySet="Indents" />
+      <End Role="Bills" EntitySet="Bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductCommission" Association="IspahaniAgroLTDModel.FK_ProductCommission">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Commissions" EntitySet="Commissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerDueInfo" Association="IspahaniAgroLTDModel.FK_DealerDueInfo">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="DueInfoes" EntitySet="DueInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerRegion" Association="IspahaniAgroLTDModel.FK_DealerRegion">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="Dealers" EntitySet="Dealers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerSalesReturn" Association="IspahaniAgroLTDModel.FK_DealerSalesReturn">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="SalesReturns" EntitySet="SalesReturns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeDealer" Association="IspahaniAgroLTDModel.FK_EmployeeDealer">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Dealers" EntitySet="Dealers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_YearSummaryDealerDealer" Association="IspahaniAgroLTDModel.FK_YearSummaryDealerDealer">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="YearSummaryDealers" EntitySet="YearSummaryDealers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductDueInfo" Association="IspahaniAgroLTDModel.FK_ProductDueInfo">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="DueInfoes" EntitySet="DueInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeExpenditure" Association="IspahaniAgroLTDModel.FK_EmployeeExpenditure">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Expenditures" EntitySet="Expenditures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeExpenditure1" Association="IspahaniAgroLTDModel.FK_EmployeeExpenditure1">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Expenditures" EntitySet="Expenditures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeExpenditureInfo" Association="IspahaniAgroLTDModel.FK_EmployeeExpenditureInfo">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="ExpenditureInfoes" EntitySet="ExpenditureInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeInventory" Association="IspahaniAgroLTDModel.FK_EmployeeInventory">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Inventories" EntitySet="Inventories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeInventory1" Association="IspahaniAgroLTDModel.FK_EmployeeInventory1">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Inventories" EntitySet="Inventories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeMessageDelivery" Association="IspahaniAgroLTDModel.FK_EmployeeMessageDelivery">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="MessageDeliveries" EntitySet="MessageDeliveries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeMRR" Association="IspahaniAgroLTDModel.FK_EmployeeMRR">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="MRRs" EntitySet="MRRs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeNoticeBoard" Association="IspahaniAgroLTDModel.FK_EmployeeNoticeBoard">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="NoticeBoards" EntitySet="NoticeBoards" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeePLR" Association="IspahaniAgroLTDModel.FK_EmployeePLR">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="PLRs" EntitySet="PLRs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeePLR1" Association="IspahaniAgroLTDModel.FK_EmployeePLR1">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="PLRs" EntitySet="PLRs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeProductEdit" Association="IspahaniAgroLTDModel.FK_EmployeeProductEdit">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="ProductEdits" EntitySet="ProductEdits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeProductEdit1" Association="IspahaniAgroLTDModel.FK_EmployeeApprovesProductEdits">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="ProductEdits" EntitySet="ProductEdits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeRegion" Association="IspahaniAgroLTDModel.FK_EmployeeRegion">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeRequisition" Association="IspahaniAgroLTDModel.FK_EmployeeRequisition">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Requisitions" EntitySet="Requisitions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeRequisition1" Association="IspahaniAgroLTDModel.FK_EmployeeRequisition1">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Requisitions" EntitySet="Requisitions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeSalesOfficerTarget" Association="IspahaniAgroLTDModel.FK_EmployeeSalesOfficerTarget">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="SalesOfficerTargets" EntitySet="SalesOfficerTargets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeSalesReturn" Association="IspahaniAgroLTDModel.FK_EmployeeSalesReturn">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="SalesReturns" EntitySet="SalesReturns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessageDeliveryEmployee" Association="IspahaniAgroLTDModel.FK_MessageDeliveryEmployee">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="MessageDeliveries" EntitySet="MessageDeliveries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonEmployee" Association="IspahaniAgroLTDModel.FK_PersonEmployee">
+      <End Role="People" EntitySet="People" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_YearSummarySOExpenditureEmployee" Association="IspahaniAgroLTDModel.FK_YearSummarySOExpenditureEmployee">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="YearSummarySOExpenditures" EntitySet="YearSummarySOExpenditures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExpenditureExpenditureInfo" Association="IspahaniAgroLTDModel.FK_ExpenditureExpenditureInfo">
+      <End Role="Expenditures" EntitySet="Expenditures" />
+      <End Role="ExpenditureInfoes" EntitySet="ExpenditureInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegionExpenditure" Association="IspahaniAgroLTDModel.FK_RegionExpenditure">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="Expenditures" EntitySet="Expenditures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IndentProductInfoIndent" Association="IspahaniAgroLTDModel.FK_IndentProductInfoIndent">
+      <End Role="Indents" EntitySet="Indents" />
+      <End Role="IndentProductInfoes" EntitySet="IndentProductInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IndentProductInfoProduct" Association="IspahaniAgroLTDModel.FK_IndentProductInfoProduct">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="IndentProductInfoes" EntitySet="IndentProductInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InventoryInventoryLog" Association="IspahaniAgroLTDModel.FK_InventoryInventoryLog">
+      <End Role="Inventories" EntitySet="Inventories" />
+      <End Role="InventoryLogs" EntitySet="InventoryLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InventoryInventoryPackageInfo" Association="IspahaniAgroLTDModel.FK_InventoryInventoryPackageInfo">
+      <End Role="Inventories" EntitySet="Inventories" />
+      <End Role="InventoryPackageInfoes" EntitySet="InventoryPackageInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InventoryInventoryProductInfo" Association="IspahaniAgroLTDModel.FK_InventoryInventoryProductInfo">
+      <End Role="Inventories" EntitySet="Inventories" />
+      <End Role="InventoryProductInfoes" EntitySet="InventoryProductInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InventoryMRR" Association="IspahaniAgroLTDModel.FK_InventoryMRR">
+      <End Role="Inventories" EntitySet="Inventories" />
+      <End Role="MRRs" EntitySet="MRRs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InventoryPLR" Association="IspahaniAgroLTDModel.FK_InventoryPLR">
+      <End Role="Inventories" EntitySet="Inventories" />
+      <End Role="PLRs" EntitySet="PLRs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InventoryRequisition" Association="IspahaniAgroLTDModel.FK_InventoryRequisition">
+      <End Role="Inventories" EntitySet="Inventories" />
+      <End Role="Requisitions" EntitySet="Requisitions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InventoryYearSummaryInventoryPackage" Association="IspahaniAgroLTDModel.FK_InventoryYearSummaryInventoryPackage">
+      <End Role="Inventories" EntitySet="Inventories" />
+      <End Role="YearSummaryInventoryPackages" EntitySet="YearSummaryInventoryPackages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InventoryYearSummaryInventoryProduct" Association="IspahaniAgroLTDModel.FK_InventoryYearSummaryInventoryProduct">
+      <End Role="Inventories" EntitySet="Inventories" />
+      <End Role="YearSummaryInventoryProducts" EntitySet="YearSummaryInventoryProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegionInventory" Association="IspahaniAgroLTDModel.FK_RegionInventory">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="Inventories" EntitySet="Inventories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductInventoryLog" Association="IspahaniAgroLTDModel.FK_ProductInventoryLog">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="InventoryLogs" EntitySet="InventoryLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PackageInventoryPackageInfo" Association="IspahaniAgroLTDModel.FK_PackageInventoryPackageInfo">
+      <End Role="Packages" EntitySet="Packages" />
+      <End Role="InventoryPackageInfoes" EntitySet="InventoryPackageInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductInventoryProductInfo" Association="IspahaniAgroLTDModel.FK_ProductInventoryProductInfo">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="InventoryProductInfoes" EntitySet="InventoryProductInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductLedger" Association="IspahaniAgroLTDModel.FK_ProductLedger">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Ledgers" EntitySet="Ledgers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessageDeliveryMessage" Association="IspahaniAgroLTDModel.FK_MessageDeliveryMessage">
+      <End Role="Messages" EntitySet="Messages" />
+      <End Role="MessageDeliveries" EntitySet="MessageDeliveries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MRRMRRPackageInfo" Association="IspahaniAgroLTDModel.FK_MRRMRRPackageInfo">
+      <End Role="MRRs" EntitySet="MRRs" />
+      <End Role="MRRPackageInfoes" EntitySet="MRRPackageInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PackageMRRPackageInfo" Association="IspahaniAgroLTDModel.FK_PackageMRRPackageInfo">
+      <End Role="Packages" EntitySet="Packages" />
+      <End Role="MRRPackageInfoes" EntitySet="MRRPackageInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MRRMRRProductInfo" Association="IspahaniAgroLTDModel.FK_MRRMRRProductInfo">
+      <End Role="MRRs" EntitySet="MRRs" />
+      <End Role="MRRProductInfoes" EntitySet="MRRProductInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductMRRProductInfo" Association="IspahaniAgroLTDModel.FK_ProductMRRProductInfo">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="MRRProductInfoes" EntitySet="MRRProductInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PackagePLRPackageInfo" Association="IspahaniAgroLTDModel.FK_PackagePLRPackageInfo">
+      <End Role="Packages" EntitySet="Packages" />
+      <End Role="PLRPackageInfoes" EntitySet="PLRPackageInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PackageRequisitionPackageInfo" Association="IspahaniAgroLTDModel.FK_PackageRequisitionPackageInfo">
+      <End Role="Packages" EntitySet="Packages" />
+      <End Role="RequisitionPackageInfoes" EntitySet="RequisitionPackageInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PackageYearSummaryInventoryPackage" Association="IspahaniAgroLTDModel.FK_PackageYearSummaryInventoryPackage">
+      <End Role="Packages" EntitySet="Packages" />
+      <End Role="YearSummaryInventoryPackages" EntitySet="YearSummaryInventoryPackages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PLRPLRPackageInfo" Association="IspahaniAgroLTDModel.FK_PLRPLRPackageInfo">
+      <End Role="PLRs" EntitySet="PLRs" />
+      <End Role="PLRPackageInfoes" EntitySet="PLRPackageInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PLRPLRProductInfo" Association="IspahaniAgroLTDModel.FK_PLRPLRProductInfo">
+      <End Role="PLRs" EntitySet="PLRs" />
+      <End Role="PLRProductInfoes" EntitySet="PLRProductInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPLRProductInfo" Association="IspahaniAgroLTDModel.FK_ProductPLRProductInfo">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="PLRProductInfoes" EntitySet="PLRProductInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductProductEdit" Association="IspahaniAgroLTDModel.FK_ProductProductEdit">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ProductEdits" EntitySet="ProductEdits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPromotion" Association="IspahaniAgroLTDModel.FK_ProductPromotion">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Promotions" EntitySet="Promotions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductRegionTarget" Association="IspahaniAgroLTDModel.FK_ProductRegionTarget">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="RegionTargets" EntitySet="RegionTargets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductRequisitionProductInfo" Association="IspahaniAgroLTDModel.FK_ProductRequisitionProductInfo">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="RequisitionProductInfoes" EntitySet="RequisitionProductInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductSalesReturnInfo" Association="IspahaniAgroLTDModel.FK_ProductSalesReturnInfo">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="SalesReturnInfoes" EntitySet="SalesReturnInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductTransportationLoss" Association="IspahaniAgroLTDModel.FK_ProductTransportationLoss">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="TransportationLosses" EntitySet="TransportationLosses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductYearSummaryDealer" Association="IspahaniAgroLTDModel.FK_ProductYearSummaryDealer">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="YearSummaryDealers" EntitySet="YearSummaryDealers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductYearSummaryInventoryProduct" Association="IspahaniAgroLTDModel.FK_ProductYearSummaryInventoryProduct">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="YearSummaryInventoryProducts" EntitySet="YearSummaryInventoryProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOfficerTargetProduct" Association="IspahaniAgroLTDModel.FK_SalesOfficerTargetProduct">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="SalesOfficerTargets" EntitySet="SalesOfficerTargets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegionRegionTarget" Association="IspahaniAgroLTDModel.FK_RegionRegionTarget">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="RegionTargets" EntitySet="RegionTargets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequisitionRequisitionPackageInfo" Association="IspahaniAgroLTDModel.FK_RequisitionRequisitionPackageInfo">
+      <End Role="Requisitions" EntitySet="Requisitions" />
+      <End Role="RequisitionPackageInfoes" EntitySet="RequisitionPackageInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequisitionRequisitionProductInfo" Association="IspahaniAgroLTDModel.FK_RequisitionRequisitionProductInfo">
+      <End Role="Requisitions" EntitySet="Requisitions" />
+      <End Role="RequisitionProductInfoes" EntitySet="RequisitionProductInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesReturnSalesReturnInfo" Association="IspahaniAgroLTDModel.FK_SalesReturnSalesReturnInfo">
+      <End Role="SalesReturns" EntitySet="SalesReturns" />
+      <End Role="SalesReturnInfoes" EntitySet="SalesReturnInfoes" />
+    </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="IspahaniAgroLTDModel.sysdiagram" />
+    <AssociationSet Name="FK_EmployeeCreateCommission" Association="IspahaniAgroLTDModel.FK_EmployeeCreateCommission">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Commission" EntitySet="Commissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeApproveCommission" Association="IspahaniAgroLTDModel.FK_EmployeeApproveCommission">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Commission" EntitySet="Commissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeApprovedPackage" Association="IspahaniAgroLTDModel.FK_EmployeeApprovedPackage">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Package" EntitySet="Packages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeCreatedPackage" Association="IspahaniAgroLTDModel.FK_EmployeeCreatedPackage">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Package" EntitySet="Packages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerPlacesIndent" Association="IspahaniAgroLTDModel.FK_DealerPlacesIndent">
+      <End Role="Dealer" EntitySet="Dealers" />
+      <End Role="Indent" EntitySet="Indents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RMVerifiesIndent" Association="IspahaniAgroLTDModel.FK_RMVerifiesIndent">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Indent" EntitySet="Indents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillSalesReturnInfoes" Association="IspahaniAgroLTDModel.FK_BillSalesReturnInfoes">
+      <End Role="Bill" EntitySet="Bills" />
+      <End Role="SalesReturnInfo" EntitySet="SalesReturnInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AccountantBillPayment" Association="IspahaniAgroLTDModel.FK_AccountantBillPayment">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="BillPayment" EntitySet="BillPayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerBill" Association="IspahaniAgroLTDModel.FK_DealerBill">
+      <End Role="Dealer" EntitySet="Dealers" />
+      <End Role="Bill" EntitySet="Bills" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BillPaymentInfo">
+    <Key>
+      <PropertyRef Name="BillPaymentId" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="BillId" />
+    </Key>
+    <Property Name="BillPaymentId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="BillId" Type="Int64" Nullable="false" />
+    <Property Name="Amount" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Bill" Relationship="IspahaniAgroLTDModel.FK_BillBillPaymentInfo" FromRole="BillPaymentInfoes" ToRole="Bills" />
+    <NavigationProperty Name="BillPayment" Relationship="IspahaniAgroLTDModel.FK_BillPaymentBillPaymentInfo" FromRole="BillPaymentInfoes" ToRole="BillPayments" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductBillPaymentInfo" FromRole="BillPaymentInfoes" ToRole="Products" />
+    <Property Type="Boolean" Name="HasRejected" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BillPayment">
+    <Key>
+      <PropertyRef Name="BillPaymentId" />
+    </Key>
+    <Property Name="BillPaymentId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DealerId" Type="Int64" Nullable="false" />
+    <Property Name="RMId" Type="Int64" Nullable="false" />
+    <Property Name="DateOfIssue" Type="DateTime" Nullable="false" />
+    <Property Name="TotalAmount" Type="Double" Nullable="false" />
+    <Property Name="PaymentMethod" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="BankName" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="BranchName" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="DDNumber" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="AccountantId" Type="Int64" Nullable="false" />
+    <Property Name="AccountantFinalizeDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="BillPaymentInfoes" Relationship="IspahaniAgroLTDModel.FK_BillPaymentBillPaymentInfo" FromRole="BillPayments" ToRole="BillPaymentInfoes" />
+    <NavigationProperty Name="Dealer" Relationship="IspahaniAgroLTDModel.FK_DealerBillPayment" FromRole="BillPayments" ToRole="Dealers" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeBillPayment" FromRole="BillPayments" ToRole="Employees" />
+    <NavigationProperty Name="Employee_1" Relationship="IspahaniAgroLTDModel.FK_AccountantBillPayment" FromRole="BillPayment" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="BillProductInfo">
+    <Key>
+      <PropertyRef Name="BillId" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="LotId" />
+    </Key>
+    <Property Name="BillId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="ProductPrice" Type="Double" Nullable="false" />
+    <Property Name="LotId" Type="String" Nullable="false" MaxLength="30" />
+    <Property Name="LotQuantity" Type="Double" Nullable="false" />
+    <Property Name="ComissionPercentage" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Bill" Relationship="IspahaniAgroLTDModel.FK_BillBillProductInfo" FromRole="BillProductInfoes" ToRole="Bills" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductBillProductInfo" FromRole="BillProductInfoes" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Bill">
+    <Key>
+      <PropertyRef Name="BillId" />
+    </Key>
+    <Property Name="BillId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateOfIssue" Type="DateTime" Nullable="false" />
+    <Property Name="IndentId" Type="Int64" Nullable="false" />
+    <Property Name="TransportType" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="TransportCost" Type="Double" Nullable="false" />
+    <Property Name="VehicleNo" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="EmergencyContactNo" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="TotalProductCost" Type="Double" Nullable="false" />
+    <Property Name="TotalPaid" Type="Double" Nullable="false" />
+    <Property Name="PaymentDeadline" Type="DateTime" Nullable="false" />
+    <Property Name="BillStatus" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="HasProductLoss" Type="Boolean" Nullable="false" />
+    <Property Name="ProductLossCost" Type="Double" Nullable="false" />
+    <Property Name="DispatchedById" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="BillPaymentInfoes" Relationship="IspahaniAgroLTDModel.FK_BillBillPaymentInfo" FromRole="Bills" ToRole="BillPaymentInfoes" />
+    <NavigationProperty Name="BillProductInfoes" Relationship="IspahaniAgroLTDModel.FK_BillBillProductInfo" FromRole="Bills" ToRole="BillProductInfoes" />
+    <NavigationProperty Name="DueInfoes" Relationship="IspahaniAgroLTDModel.FK_BillDueInfo" FromRole="Bills" ToRole="DueInfoes" />
+    <NavigationProperty Name="TransportationLosses" Relationship="IspahaniAgroLTDModel.FK_BillTransportationLoss" FromRole="Bills" ToRole="TransportationLosses" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeBill" FromRole="Bills" ToRole="Employees" />
+    <NavigationProperty Name="Indent" Relationship="IspahaniAgroLTDModel.FK_IndentBill" FromRole="Bills" ToRole="Indents" />
+    <Property Type="String" Name="BillCode" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="HasSalesReturn" />
+    <Property Type="Double" Name="SalesReturnCost" />
+    <NavigationProperty Name="SalesReturnInfoes" Relationship="IspahaniAgroLTDModel.FK_BillSalesReturnInfoes" FromRole="Bill" ToRole="SalesReturnInfo" />
+    <Property Type="Int64" Name="DealerId" Nullable="false" />
+    <NavigationProperty Name="Dealer" Relationship="IspahaniAgroLTDModel.FK_DealerBill" FromRole="Bill" ToRole="Dealer" />
+  </EntityType>
+  <EntityType Name="Commission">
+    <Key>
+      <PropertyRef Name="CommissionId" />
+    </Key>
+    <Property Name="CommissionId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="Percentage" Type="Double" Nullable="false" />
+    <Property Name="Duration" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductCommission" FromRole="Commissions" ToRole="Products" />
+    <Property Type="String" Name="CommissionName" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CommissionStatus" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="IntroducedDate" />
+    <Property Type="Int64" Name="NSMId" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeCreateCommission" FromRole="Commission" ToRole="Employee" />
+    <Property Type="Int64" Name="AdminId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Dealer">
+    <Key>
+      <PropertyRef Name="DealerId" />
+    </Key>
+    <Property Name="DealerId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FatherName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MotherName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PresentAddress" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="PermamentAddress" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Nationality" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="ContactNo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EmailAddress" Type="String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PictureLink" Type="String" Nullable="true" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyAddress" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="LicenseNo" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="LicenseIssueDate" Type="DateTime" Nullable="false" />
+    <Property Name="BusinessType" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="OwnerName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="OwnerAddress" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="PreferredTypeOfPayment" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="HasAnotherDealership" Type="Boolean" Nullable="false" />
+    <Property Name="DealershipCompany" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="HasOwnOffice" Type="Boolean" Nullable="false" />
+    <Property Name="DateOfRegistration" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="CreditLimit" Type="Double" Nullable="false" />
+    <Property Name="ExpectedDefaulterDate" Type="DateTime" Nullable="false" />
+    <Property Name="ActivityStatus" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="TotalDue" Type="Double" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="DateOfAdminApproval" Type="DateTime" Nullable="false" />
+    <Property Name="RegionId" Type="Int64" Nullable="false" />
+    <Property Name="SalesOfficerId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="BillPayments" Relationship="IspahaniAgroLTDModel.FK_DealerBillPayment" FromRole="Dealers" ToRole="BillPayments" />
+    <NavigationProperty Name="DueInfoes" Relationship="IspahaniAgroLTDModel.FK_DealerDueInfo" FromRole="Dealers" ToRole="DueInfoes" />
+    <NavigationProperty Name="Region" Relationship="IspahaniAgroLTDModel.FK_DealerRegion" FromRole="Dealers" ToRole="Regions" />
+    <NavigationProperty Name="SalesReturns" Relationship="IspahaniAgroLTDModel.FK_DealerSalesReturn" FromRole="Dealers" ToRole="SalesReturns" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeDealer" FromRole="Dealers" ToRole="Employees" />
+    <NavigationProperty Name="YearSummaryDealers" Relationship="IspahaniAgroLTDModel.FK_YearSummaryDealerDealer" FromRole="Dealers" ToRole="YearSummaryDealers" />
+    <NavigationProperty Name="Indents" Relationship="IspahaniAgroLTDModel.FK_DealerPlacesIndent" FromRole="Dealer" ToRole="Indent" />
+    <NavigationProperty Name="Bills" Relationship="IspahaniAgroLTDModel.FK_DealerBill" FromRole="Dealer" ToRole="Bill" />
+  </EntityType>
+  <EntityType Name="DueInfo">
+    <Key>
+      <PropertyRef Name="BillId" />
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="DealerId" Type="Int64" Nullable="false" />
+    <Property Name="BillId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="Due" Type="Double" Nullable="false" />
+    <Property Name="DueStatus" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Bill" Relationship="IspahaniAgroLTDModel.FK_BillDueInfo" FromRole="DueInfoes" ToRole="Bills" />
+    <NavigationProperty Name="Dealer" Relationship="IspahaniAgroLTDModel.FK_DealerDueInfo" FromRole="DueInfoes" ToRole="Dealers" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductDueInfo" FromRole="DueInfoes" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonId" Type="Int64" Nullable="false" />
+    <Property Name="RegionId" Type="Int64" Nullable="false" />
+    <Property Name="Designation" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ActivityStatus" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="BillPayments" Relationship="IspahaniAgroLTDModel.FK_EmployeeBillPayment" FromRole="Employees" ToRole="BillPayments" />
+    <NavigationProperty Name="Bills" Relationship="IspahaniAgroLTDModel.FK_EmployeeBill" FromRole="Employees" ToRole="Bills" />
+    <NavigationProperty Name="Dealers" Relationship="IspahaniAgroLTDModel.FK_EmployeeDealer" FromRole="Employees" ToRole="Dealers" />
+    <NavigationProperty Name="Expenditures" Relationship="IspahaniAgroLTDModel.FK_EmployeeExpenditure" FromRole="Employees" ToRole="Expenditures" />
+    <NavigationProperty Name="Expenditures1" Relationship="IspahaniAgroLTDModel.FK_EmployeeExpenditure1" FromRole="Employees" ToRole="Expenditures" />
+    <NavigationProperty Name="ExpenditureInfoes" Relationship="IspahaniAgroLTDModel.FK_EmployeeExpenditureInfo" FromRole="Employees" ToRole="ExpenditureInfoes" />
+    <NavigationProperty Name="Inventories" Relationship="IspahaniAgroLTDModel.FK_EmployeeInventory" FromRole="Employees" ToRole="Inventories" />
+    <NavigationProperty Name="Inventories1" Relationship="IspahaniAgroLTDModel.FK_EmployeeInventory1" FromRole="Employees" ToRole="Inventories" />
+    <NavigationProperty Name="MessageDeliveries" Relationship="IspahaniAgroLTDModel.FK_EmployeeMessageDelivery" FromRole="Employees" ToRole="MessageDeliveries" />
+    <NavigationProperty Name="MRRs" Relationship="IspahaniAgroLTDModel.FK_EmployeeMRR" FromRole="Employees" ToRole="MRRs" />
+    <NavigationProperty Name="NoticeBoards" Relationship="IspahaniAgroLTDModel.FK_EmployeeNoticeBoard" FromRole="Employees" ToRole="NoticeBoards" />
+    <NavigationProperty Name="PLRs" Relationship="IspahaniAgroLTDModel.FK_EmployeePLR" FromRole="Employees" ToRole="PLRs" />
+    <NavigationProperty Name="PLRs1" Relationship="IspahaniAgroLTDModel.FK_EmployeePLR1" FromRole="Employees" ToRole="PLRs" />
+    <NavigationProperty Name="ProductEdits" Relationship="IspahaniAgroLTDModel.FK_EmployeeProductEdit" FromRole="Employees" ToRole="ProductEdits" />
+    <NavigationProperty Name="Region" Relationship="IspahaniAgroLTDModel.FK_EmployeeRegion" FromRole="Employees" ToRole="Regions" />
+    <NavigationProperty Name="Requisitions" Relationship="IspahaniAgroLTDModel.FK_EmployeeRequisition" FromRole="Employees" ToRole="Requisitions" />
+    <NavigationProperty Name="Requisitions1" Relationship="IspahaniAgroLTDModel.FK_EmployeeRequisition1" FromRole="Employees" ToRole="Requisitions" />
+    <NavigationProperty Name="SalesOfficerTargets" Relationship="IspahaniAgroLTDModel.FK_EmployeeSalesOfficerTarget" FromRole="Employees" ToRole="SalesOfficerTargets" />
+    <NavigationProperty Name="SalesReturns" Relationship="IspahaniAgroLTDModel.FK_EmployeeSalesReturn" FromRole="Employees" ToRole="SalesReturns" />
+    <NavigationProperty Name="MessageDeliveries1" Relationship="IspahaniAgroLTDModel.FK_MessageDeliveryEmployee" FromRole="Employees" ToRole="MessageDeliveries" />
+    <NavigationProperty Name="Person" Relationship="IspahaniAgroLTDModel.FK_PersonEmployee" FromRole="Employees" ToRole="People" />
+    <NavigationProperty Name="YearSummarySOExpenditures" Relationship="IspahaniAgroLTDModel.FK_YearSummarySOExpenditureEmployee" FromRole="Employees" ToRole="YearSummarySOExpenditures" />
+    <NavigationProperty Name="Packages" Relationship="IspahaniAgroLTDModel.FK_EmployeeApprovedPackage" FromRole="Employee" ToRole="Package" />
+    <NavigationProperty Name="Packages1" Relationship="IspahaniAgroLTDModel.FK_EmployeeCreatedPackage" FromRole="Employee" ToRole="Package" />
+    <NavigationProperty Name="Indents" Relationship="IspahaniAgroLTDModel.FK_RMVerifiesIndent" FromRole="Employee" ToRole="Indent" />
+  </EntityType>
+  <EntityType Name="ExpenditureInfo">
+    <Key>
+      <PropertyRef Name="ExpenditureId" />
+      <PropertyRef Name="SalesOfficerId" />
+    </Key>
+    <Property Name="ExpenditureId" Type="Int64" Nullable="false" />
+    <Property Name="SalesOfficerId" Type="Int64" Nullable="false" />
+    <Property Name="PlacedAmount" Type="Double" Nullable="false" />
+    <Property Name="AcceptedAmount" Type="Double" Nullable="false" />
+    <Property Name="Remarks" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeExpenditureInfo" FromRole="ExpenditureInfoes" ToRole="Employees" />
+    <NavigationProperty Name="Expenditure" Relationship="IspahaniAgroLTDModel.FK_ExpenditureExpenditureInfo" FromRole="ExpenditureInfoes" ToRole="Expenditures" />
+  </EntityType>
+  <EntityType Name="Expenditure">
+    <Key>
+      <PropertyRef Name="ExpenditureId" />
+    </Key>
+    <Property Name="ExpenditureId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateOfIssue" Type="DateTime" Nullable="false" />
+    <Property Name="RegionId" Type="Int64" Nullable="false" />
+    <Property Name="PlacedById" Type="Int64" Nullable="false" />
+    <Property Name="PlacedToId" Type="Int64" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TotalPlacedAmount" Type="Double" Nullable="false" />
+    <Property Name="TotalAcceptedAmount" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeExpenditure" FromRole="Expenditures" ToRole="Employees" />
+    <NavigationProperty Name="Employee1" Relationship="IspahaniAgroLTDModel.FK_EmployeeExpenditure1" FromRole="Expenditures" ToRole="Employees" />
+    <NavigationProperty Name="ExpenditureInfoes" Relationship="IspahaniAgroLTDModel.FK_ExpenditureExpenditureInfo" FromRole="Expenditures" ToRole="ExpenditureInfoes" />
+    <NavigationProperty Name="Region" Relationship="IspahaniAgroLTDModel.FK_RegionExpenditure" FromRole="Expenditures" ToRole="Regions" />
+    <Property Type="String" Name="ExpenditureCode" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="IndentProductInfo">
+    <Key>
+      <PropertyRef Name="IndentId" />
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="IndentId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="ProductPrice" Type="Double" Nullable="false" />
+    <Property Name="ProductQuantity" Type="Double" Nullable="false" />
+    <Property Name="EditTime" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Indent" Relationship="IspahaniAgroLTDModel.FK_IndentProductInfoIndent" FromRole="IndentProductInfoes" ToRole="Indents" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_IndentProductInfoProduct" FromRole="IndentProductInfoes" ToRole="Products" />
+    <Property Type="Double" Name="CommissionPercentage" Nullable="false" />
+    <Property Type="Double" Name="ProductQuantityByRM" />
+    <Property Type="Double" Name="ProductQuantityBySIC" />
+    <Property Type="DateTime" Name="EditTimeRM" />
+    <Property Type="DateTime" Name="EditTimeSIC" />
+  </EntityType>
+  <EntityType Name="Indent">
+    <Key>
+      <PropertyRef Name="IndentId" />
+    </Key>
+    <Property Name="IndentId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateOfPlace" Type="DateTime" Nullable="false" />
+    <Property Name="IndentStatus" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="IssuedById" Type="Int64" Nullable="false" />
+    <Property Name="IssuedToId" Type="Int64" Nullable="false" />
+    <Property Name="ForwardedToId" Type="Int64" Nullable="false" />
+    <Property Name="PaymentMethod" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="IsConsideredByNSM" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Bills" Relationship="IspahaniAgroLTDModel.FK_IndentBill" FromRole="Indents" ToRole="Bills" />
+    <NavigationProperty Name="IndentProductInfoes" Relationship="IspahaniAgroLTDModel.FK_IndentProductInfoIndent" FromRole="Indents" ToRole="IndentProductInfoes" />
+    <Property Type="String" Name="IndentCode" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Dealer" Relationship="IspahaniAgroLTDModel.FK_DealerPlacesIndent" FromRole="Indent" ToRole="Dealer" />
+    <NavigationProperty Name="Employee1" Relationship="IspahaniAgroLTDModel.FK_RMVerifiesIndent" FromRole="Indent" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Inventory">
+    <Key>
+      <PropertyRef Name="InventoryId" />
+    </Key>
+    <Property Name="InventoryId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionId" Type="Int64" Nullable="false" />
+    <Property Name="StoreInChargeId" Type="Int64" Nullable="false" />
+    <Property Name="DispatchOfficerId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeInventory" FromRole="Inventories" ToRole="Employees" />
+    <NavigationProperty Name="Employee1" Relationship="IspahaniAgroLTDModel.FK_EmployeeInventory1" FromRole="Inventories" ToRole="Employees" />
+    <NavigationProperty Name="InventoryLogs" Relationship="IspahaniAgroLTDModel.FK_InventoryInventoryLog" FromRole="Inventories" ToRole="InventoryLogs" />
+    <NavigationProperty Name="InventoryPackageInfoes" Relationship="IspahaniAgroLTDModel.FK_InventoryInventoryPackageInfo" FromRole="Inventories" ToRole="InventoryPackageInfoes" />
+    <NavigationProperty Name="InventoryProductInfoes" Relationship="IspahaniAgroLTDModel.FK_InventoryInventoryProductInfo" FromRole="Inventories" ToRole="InventoryProductInfoes" />
+    <NavigationProperty Name="MRRs" Relationship="IspahaniAgroLTDModel.FK_InventoryMRR" FromRole="Inventories" ToRole="MRRs" />
+    <NavigationProperty Name="PLRs" Relationship="IspahaniAgroLTDModel.FK_InventoryPLR" FromRole="Inventories" ToRole="PLRs" />
+    <NavigationProperty Name="Requisitions" Relationship="IspahaniAgroLTDModel.FK_InventoryRequisition" FromRole="Inventories" ToRole="Requisitions" />
+    <NavigationProperty Name="YearSummaryInventoryPackages" Relationship="IspahaniAgroLTDModel.FK_InventoryYearSummaryInventoryPackage" FromRole="Inventories" ToRole="YearSummaryInventoryPackages" />
+    <NavigationProperty Name="YearSummaryInventoryProducts" Relationship="IspahaniAgroLTDModel.FK_InventoryYearSummaryInventoryProduct" FromRole="Inventories" ToRole="YearSummaryInventoryProducts" />
+    <NavigationProperty Name="Region" Relationship="IspahaniAgroLTDModel.FK_RegionInventory" FromRole="Inventories" ToRole="Regions" />
+  </EntityType>
+  <EntityType Name="InventoryLog">
+    <Key>
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="InventoryId" />
+      <PropertyRef Name="LotId" />
+      <PropertyRef Name="Method" />
+    </Key>
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="InventoryId" Type="Int64" Nullable="false" />
+    <Property Name="LotId" Type="String" Nullable="false" MaxLength="30" />
+    <Property Name="Method" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MemoNo" Type="Int64" Nullable="false" />
+    <Property Name="ProductQuantity" Type="Double" Nullable="false" />
+    <Property Name="OpeningQuantity" Type="Double" Nullable="false" />
+    <Property Name="ClosingQuantity" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Inventory" Relationship="IspahaniAgroLTDModel.FK_InventoryInventoryLog" FromRole="InventoryLogs" ToRole="Inventories" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductInventoryLog" FromRole="InventoryLogs" ToRole="Products" />
+    <Property Type="Double" Name="ProductCost" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InventoryPackageInfo">
+    <Key>
+      <PropertyRef Name="InventoryId" />
+      <PropertyRef Name="PackageId" />
+    </Key>
+    <Property Name="InventoryId" Type="Int64" Nullable="false" />
+    <Property Name="PackageId" Type="Int64" Nullable="false" />
+    <Property Name="UnfinishedQuantity" Type="Double" Nullable="false" />
+    <Property Name="OnProcessingQuantity" Type="Double" Nullable="false" />
+    <Property Name="FinishedQuantity" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Inventory" Relationship="IspahaniAgroLTDModel.FK_InventoryInventoryPackageInfo" FromRole="InventoryPackageInfoes" ToRole="Inventories" />
+    <NavigationProperty Name="Package" Relationship="IspahaniAgroLTDModel.FK_PackageInventoryPackageInfo" FromRole="InventoryPackageInfoes" ToRole="Packages" />
+    <Property Type="Double" Name="UnitCost" />
+  </EntityType>
+  <EntityType Name="InventoryProductInfo">
+    <Key>
+      <PropertyRef Name="InventoryId" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="LotId" />
+    </Key>
+    <Property Name="InventoryId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="LotId" Type="String" Nullable="false" MaxLength="30" />
+    <Property Name="UnfinishedQuantity" Type="Double" Nullable="false" />
+    <Property Name="OnProcessingQuantity" Type="Double" Nullable="false" />
+    <Property Name="FinishedQuantity" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Inventory" Relationship="IspahaniAgroLTDModel.FK_InventoryInventoryProductInfo" FromRole="InventoryProductInfoes" ToRole="Inventories" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductInventoryProductInfo" FromRole="InventoryProductInfoes" ToRole="Products" />
+    <Property Type="Double" Name="UnitLotCost" />
+  </EntityType>
+  <EntityType Name="Ledger">
+    <Key>
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="Method" />
+      <PropertyRef Name="PartyId" />
+      <PropertyRef Name="MemoNo" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="IsDealerOrEmployee" />
+    </Key>
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="Method" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="IsDealerOrEmployee" Type="Boolean" Nullable="false" />
+    <Property Name="IsDebitOrCredit" Type="Boolean" Nullable="false" />
+    <Property Name="PartyId" Type="Int64" Nullable="false" />
+    <Property Name="MemoNo" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="ProductQuantity" Type="Double" Nullable="false" />
+    <Property Name="CreditAmount" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductLedger" FromRole="Ledgers" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="MessageDelivery">
+    <Key>
+      <PropertyRef Name="OfficeCode" />
+    </Key>
+    <Property Name="OfficeCode" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SendFromId" Type="Int64" Nullable="false" />
+    <Property Name="SendToId" Type="Int64" Nullable="false" />
+    <Property Name="DateOfIssue" Type="DateTime" Nullable="false" />
+    <Property Name="MessageId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeMessageDelivery" FromRole="MessageDeliveries" ToRole="Employees" />
+    <NavigationProperty Name="Employee1" Relationship="IspahaniAgroLTDModel.FK_MessageDeliveryEmployee" FromRole="MessageDeliveries" ToRole="Employees" />
+    <NavigationProperty Name="Message" Relationship="IspahaniAgroLTDModel.FK_MessageDeliveryMessage" FromRole="MessageDeliveries" ToRole="Messages" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="MessageId" />
+    </Key>
+    <Property Name="MessageId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MessageType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Subject" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Body" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="MessageDeliveries" Relationship="IspahaniAgroLTDModel.FK_MessageDeliveryMessage" FromRole="Messages" ToRole="MessageDeliveries" />
+  </EntityType>
+  <EntityType Name="MRRPackageInfo">
+    <Key>
+      <PropertyRef Name="MRRId" />
+      <PropertyRef Name="PackageId" />
+    </Key>
+    <Property Name="MRRId" Type="Int64" Nullable="false" />
+    <Property Name="PackageId" Type="Int64" Nullable="false" />
+    <Property Name="PlacedQuantity" Type="Double" Nullable="false" />
+    <Property Name="AcceptedQuantity" Type="Double" Nullable="false" />
+    <NavigationProperty Name="MRR" Relationship="IspahaniAgroLTDModel.FK_MRRMRRPackageInfo" FromRole="MRRPackageInfoes" ToRole="MRRs" />
+    <NavigationProperty Name="Package" Relationship="IspahaniAgroLTDModel.FK_PackageMRRPackageInfo" FromRole="MRRPackageInfoes" ToRole="Packages" />
+    <Property Type="Double" Name="PurchasePrice" />
+  </EntityType>
+  <EntityType Name="MRRProductInfo">
+    <Key>
+      <PropertyRef Name="MRRId" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="LotId" />
+    </Key>
+    <Property Name="MRRId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="LotId" Type="String" Nullable="false" MaxLength="30" />
+    <Property Name="PlacedQuantity" Type="Double" Nullable="false" />
+    <Property Name="AcceptedQuantity" Type="Double" Nullable="false" />
+    <NavigationProperty Name="MRR" Relationship="IspahaniAgroLTDModel.FK_MRRMRRProductInfo" FromRole="MRRProductInfoes" ToRole="MRRs" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductMRRProductInfo" FromRole="MRRProductInfoes" ToRole="Products" />
+    <Property Type="Double" Name="PurchasePrice" />
+  </EntityType>
+  <EntityType Name="MRR">
+    <Key>
+      <PropertyRef Name="MRRId" />
+    </Key>
+    <Property Name="MRRId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateOfIssue" Type="DateTime" Nullable="false" />
+    <Property Name="InventoryId" Type="Int64" Nullable="false" />
+    <Property Name="IssuedById" Type="Int64" Nullable="false" />
+    <Property Name="IssuedToId" Type="Int64" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="DateOfApproval" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeMRR" FromRole="MRRs" ToRole="Employees" />
+    <NavigationProperty Name="Inventory" Relationship="IspahaniAgroLTDModel.FK_InventoryMRR" FromRole="MRRs" ToRole="Inventories" />
+    <NavigationProperty Name="MRRPackageInfoes" Relationship="IspahaniAgroLTDModel.FK_MRRMRRPackageInfo" FromRole="MRRs" ToRole="MRRPackageInfoes" />
+    <NavigationProperty Name="MRRProductInfoes" Relationship="IspahaniAgroLTDModel.FK_MRRMRRProductInfo" FromRole="MRRs" ToRole="MRRProductInfoes" />
+    <Property Type="String" Name="MRRCode" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PurchaseOrderNo" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ChallanNo" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Wing" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RetailerName" MaxLength="80" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NoticeBoard">
+    <Key>
+      <PropertyRef Name="NoticeId" />
+    </Key>
+    <Property Name="NoticeId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NoticeSubject" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="NoticeBody" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IssuedById" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeNoticeBoard" FromRole="NoticeBoards" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Package">
+    <Key>
+      <PropertyRef Name="PackageId" />
+    </Key>
+    <Property Name="PackageId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PackageName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="PackageCode" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="PackageStatus" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="InventoryPackageInfoes" Relationship="IspahaniAgroLTDModel.FK_PackageInventoryPackageInfo" FromRole="Packages" ToRole="InventoryPackageInfoes" />
+    <NavigationProperty Name="MRRPackageInfoes" Relationship="IspahaniAgroLTDModel.FK_PackageMRRPackageInfo" FromRole="Packages" ToRole="MRRPackageInfoes" />
+    <NavigationProperty Name="PLRPackageInfoes" Relationship="IspahaniAgroLTDModel.FK_PackagePLRPackageInfo" FromRole="Packages" ToRole="PLRPackageInfoes" />
+    <NavigationProperty Name="RequisitionPackageInfoes" Relationship="IspahaniAgroLTDModel.FK_PackageRequisitionPackageInfo" FromRole="Packages" ToRole="RequisitionPackageInfoes" />
+    <NavigationProperty Name="YearSummaryInventoryPackages" Relationship="IspahaniAgroLTDModel.FK_PackageYearSummaryInventoryPackage" FromRole="Packages" ToRole="YearSummaryInventoryPackages" />
+    <Property Type="Int64" Name="NSMId" Nullable="false" />
+    <Property Type="Int64" Name="AdminId" Nullable="false" />
+    <Property Type="DateTime" Name="IntroducedDate" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeApprovedPackage" FromRole="Package" ToRole="Employee" />
+    <NavigationProperty Name="Employee1" Relationship="IspahaniAgroLTDModel.FK_EmployeeCreatedPackage" FromRole="Package" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" />
+    <Property Name="DateOfJoin" Type="DateTime" Nullable="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ContactNo" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Employees" Relationship="IspahaniAgroLTDModel.FK_PersonEmployee" FromRole="People" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="PLRPackageInfo">
+    <Key>
+      <PropertyRef Name="PLRId" />
+      <PropertyRef Name="PackageId" />
+    </Key>
+    <Property Name="PLRId" Type="Int64" Nullable="false" />
+    <Property Name="PackageId" Type="Int64" Nullable="false" />
+    <Property Name="Quantity" Type="Double" Nullable="false" />
+    <Property Name="Remarks" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Package" Relationship="IspahaniAgroLTDModel.FK_PackagePLRPackageInfo" FromRole="PLRPackageInfoes" ToRole="Packages" />
+    <NavigationProperty Name="PLR" Relationship="IspahaniAgroLTDModel.FK_PLRPLRPackageInfo" FromRole="PLRPackageInfoes" ToRole="PLRs" />
+    <Property Type="Double" Name="LostAmount" />
+    <Property Type="String" Name="State" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PLRProductInfo">
+    <Key>
+      <PropertyRef Name="PLRId" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="LotId" />
+    </Key>
+    <Property Name="PLRId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="LotId" Type="String" Nullable="false" MaxLength="30" />
+    <Property Name="Quantity" Type="Double" Nullable="false" />
+    <Property Name="Remarks" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PLR" Relationship="IspahaniAgroLTDModel.FK_PLRPLRProductInfo" FromRole="PLRProductInfoes" ToRole="PLRs" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductPLRProductInfo" FromRole="PLRProductInfoes" ToRole="Products" />
+    <Property Type="Double" Name="LostAmount" />
+    <Property Type="String" Name="State" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PLR">
+    <Key>
+      <PropertyRef Name="PLRId" />
+    </Key>
+    <Property Name="PLRId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InventoryId" Type="Int64" Nullable="false" />
+    <Property Name="DateOfIssue" Type="DateTime" Nullable="false" />
+    <Property Name="IssuedById" Type="Int64" Nullable="false" />
+    <Property Name="IssuedToId" Type="Int64" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="DateOfApproval" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeePLR" FromRole="PLRs" ToRole="Employees" />
+    <NavigationProperty Name="Employee1" Relationship="IspahaniAgroLTDModel.FK_EmployeePLR1" FromRole="PLRs" ToRole="Employees" />
+    <NavigationProperty Name="Inventory" Relationship="IspahaniAgroLTDModel.FK_InventoryPLR" FromRole="PLRs" ToRole="Inventories" />
+    <NavigationProperty Name="PLRPackageInfoes" Relationship="IspahaniAgroLTDModel.FK_PLRPLRPackageInfo" FromRole="PLRs" ToRole="PLRPackageInfoes" />
+    <NavigationProperty Name="PLRProductInfoes" Relationship="IspahaniAgroLTDModel.FK_PLRPLRProductInfo" FromRole="PLRs" ToRole="PLRProductInfoes" />
+    <Property Type="String" Name="PLRCode" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductEdit">
+    <Key>
+      <PropertyRef Name="ProductEditId" />
+    </Key>
+    <Property Name="ProductEditId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="EditType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NSMId" Type="Int64" Nullable="false" />
+    <Property Name="AdminId" Type="Int64" Nullable="false" />
+    <Property Name="PreviousValue" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EditedValue" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EditStatus" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ChangeApplicableFrom" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductProductEdit" FromRole="ProductEdits" ToRole="Products" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeProductEdit" FromRole="ProductEdits" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductCode" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ProductType" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ProductWing" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="StockKeepingUnit" Type="Double" Nullable="false" />
+    <Property Name="IsOpOrHibrid" Type="Boolean" Nullable="false" />
+    <Property Name="IsImported" Type="Boolean" Nullable="false" />
+    <Property Name="PurchasePeriodStart" Type="String" Nullable="false" MaxLength="50" />
+    <Property Name="PurchasePeriodEnd" Type="String" Nullable="false" MaxLength="50" />
+    <Property Name="SalesPeriodStart" Type="String" Nullable="false" MaxLength="50" />
+    <Property Name="SalesPeriodEnd" Type="String" Nullable="false" MaxLength="50" />
+    <Property Name="IntroducedDate" Type="DateTime" Nullable="false" />
+    <Property Name="ProductStatus" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="BillPaymentInfoes" Relationship="IspahaniAgroLTDModel.FK_ProductBillPaymentInfo" FromRole="Products" ToRole="BillPaymentInfoes" />
+    <NavigationProperty Name="BillProductInfoes" Relationship="IspahaniAgroLTDModel.FK_ProductBillProductInfo" FromRole="Products" ToRole="BillProductInfoes" />
+    <NavigationProperty Name="Commissions" Relationship="IspahaniAgroLTDModel.FK_ProductCommission" FromRole="Products" ToRole="Commissions" />
+    <NavigationProperty Name="DueInfoes" Relationship="IspahaniAgroLTDModel.FK_ProductDueInfo" FromRole="Products" ToRole="DueInfoes" />
+    <NavigationProperty Name="IndentProductInfoes" Relationship="IspahaniAgroLTDModel.FK_IndentProductInfoProduct" FromRole="Products" ToRole="IndentProductInfoes" />
+    <NavigationProperty Name="InventoryLogs" Relationship="IspahaniAgroLTDModel.FK_ProductInventoryLog" FromRole="Products" ToRole="InventoryLogs" />
+    <NavigationProperty Name="InventoryProductInfoes" Relationship="IspahaniAgroLTDModel.FK_ProductInventoryProductInfo" FromRole="Products" ToRole="InventoryProductInfoes" />
+    <NavigationProperty Name="Ledgers" Relationship="IspahaniAgroLTDModel.FK_ProductLedger" FromRole="Products" ToRole="Ledgers" />
+    <NavigationProperty Name="MRRProductInfoes" Relationship="IspahaniAgroLTDModel.FK_ProductMRRProductInfo" FromRole="Products" ToRole="MRRProductInfoes" />
+    <NavigationProperty Name="PLRProductInfoes" Relationship="IspahaniAgroLTDModel.FK_ProductPLRProductInfo" FromRole="Products" ToRole="PLRProductInfoes" />
+    <NavigationProperty Name="ProductEdits" Relationship="IspahaniAgroLTDModel.FK_ProductProductEdit" FromRole="Products" ToRole="ProductEdits" />
+    <NavigationProperty Name="Promotions" Relationship="IspahaniAgroLTDModel.FK_ProductPromotion" FromRole="Products" ToRole="Promotions" />
+    <NavigationProperty Name="RegionTargets" Relationship="IspahaniAgroLTDModel.FK_ProductRegionTarget" FromRole="Products" ToRole="RegionTargets" />
+    <NavigationProperty Name="RequisitionProductInfoes" Relationship="IspahaniAgroLTDModel.FK_ProductRequisitionProductInfo" FromRole="Products" ToRole="RequisitionProductInfoes" />
+    <NavigationProperty Name="SalesReturnInfoes" Relationship="IspahaniAgroLTDModel.FK_ProductSalesReturnInfo" FromRole="Products" ToRole="SalesReturnInfoes" />
+    <NavigationProperty Name="TransportationLosses" Relationship="IspahaniAgroLTDModel.FK_ProductTransportationLoss" FromRole="Products" ToRole="TransportationLosses" />
+    <NavigationProperty Name="YearSummaryDealers" Relationship="IspahaniAgroLTDModel.FK_ProductYearSummaryDealer" FromRole="Products" ToRole="YearSummaryDealers" />
+    <NavigationProperty Name="YearSummaryInventoryProducts" Relationship="IspahaniAgroLTDModel.FK_ProductYearSummaryInventoryProduct" FromRole="Products" ToRole="YearSummaryInventoryProducts" />
+    <NavigationProperty Name="SalesOfficerTargets" Relationship="IspahaniAgroLTDModel.FK_SalesOfficerTargetProduct" FromRole="Products" ToRole="SalesOfficerTargets" />
+    <Property Type="Double" Name="PricePerUnit" Nullable="false" />
+    <Property Type="String" Name="BrandName" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Promotion">
+    <Key>
+      <PropertyRef Name="PromotionId" />
+    </Key>
+    <Property Name="PromotionId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="StartAt" Type="DateTime" Nullable="false" />
+    <Property Name="EndAt" Type="DateTime" Nullable="false" />
+    <Property Name="PromotionTitle" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PromotionProductName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PromotionProductQuantity" Type="Double" Nullable="false" />
+    <Property Name="ProductPrice" Type="Double" Nullable="false" />
+    <Property Name="ProductQuantity" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductPromotion" FromRole="Promotions" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="RegionId" />
+    </Key>
+    <Property Name="RegionId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="DistrictName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Dealers" Relationship="IspahaniAgroLTDModel.FK_DealerRegion" FromRole="Regions" ToRole="Dealers" />
+    <NavigationProperty Name="Employees" Relationship="IspahaniAgroLTDModel.FK_EmployeeRegion" FromRole="Regions" ToRole="Employees" />
+    <NavigationProperty Name="Expenditures" Relationship="IspahaniAgroLTDModel.FK_RegionExpenditure" FromRole="Regions" ToRole="Expenditures" />
+    <NavigationProperty Name="Inventories" Relationship="IspahaniAgroLTDModel.FK_RegionInventory" FromRole="Regions" ToRole="Inventories" />
+    <NavigationProperty Name="RegionTargets" Relationship="IspahaniAgroLTDModel.FK_RegionRegionTarget" FromRole="Regions" ToRole="RegionTargets" />
+  </EntityType>
+  <EntityType Name="RegionTarget">
+    <Key>
+      <PropertyRef Name="RegionId" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="StartDate" />
+    </Key>
+    <Property Name="RegionId" Type="Int64" Nullable="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" />
+    <Property Name="TargetQuantity" Type="Double" Nullable="false" />
+    <Property Name="AchievedQuantity" Type="Double" Nullable="false" />
+    <Property Name="AchievedAmount" Type="Double" Nullable="false" />
+    <Property Name="Product_ProductId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductRegionTarget" FromRole="RegionTargets" ToRole="Products" />
+    <NavigationProperty Name="Region" Relationship="IspahaniAgroLTDModel.FK_RegionRegionTarget" FromRole="RegionTargets" ToRole="Regions" />
+  </EntityType>
+  <EntityType Name="RequisitionPackageInfo">
+    <Key>
+      <PropertyRef Name="RequisitionId" />
+      <PropertyRef Name="PackageId" />
+    </Key>
+    <Property Name="RequisitionId" Type="Int64" Nullable="false" />
+    <Property Name="PackageId" Type="Int64" Nullable="false" />
+    <Property Name="PlacedQuantity" Type="Double" Nullable="false" />
+    <Property Name="AcceptedQuantity" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Package" Relationship="IspahaniAgroLTDModel.FK_PackageRequisitionPackageInfo" FromRole="RequisitionPackageInfoes" ToRole="Packages" />
+    <NavigationProperty Name="Requisition" Relationship="IspahaniAgroLTDModel.FK_RequisitionRequisitionPackageInfo" FromRole="RequisitionPackageInfoes" ToRole="Requisitions" />
+  </EntityType>
+  <EntityType Name="RequisitionProductInfo">
+    <Key>
+      <PropertyRef Name="RequisitionId" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="LotId" />
+    </Key>
+    <Property Name="RequisitionId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="LotId" Type="String" Nullable="false" MaxLength="30" />
+    <Property Name="PlacedQuantity" Type="Double" Nullable="false" />
+    <Property Name="LotQuantity" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductRequisitionProductInfo" FromRole="RequisitionProductInfoes" ToRole="Products" />
+    <NavigationProperty Name="Requisition" Relationship="IspahaniAgroLTDModel.FK_RequisitionRequisitionProductInfo" FromRole="RequisitionProductInfoes" ToRole="Requisitions" />
+  </EntityType>
+  <EntityType Name="Requisition">
+    <Key>
+      <PropertyRef Name="RequisitionId" />
+    </Key>
+    <Property Name="RequisitionId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InventoryId" Type="Int64" Nullable="false" />
+    <Property Name="DateOfIssue" Type="DateTime" Nullable="false" />
+    <Property Name="IssuedById" Type="Int64" Nullable="false" />
+    <Property Name="IssuedToId" Type="Int64" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DateOfApproval" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeRequisition" FromRole="Requisitions" ToRole="Employees" />
+    <NavigationProperty Name="Inventory" Relationship="IspahaniAgroLTDModel.FK_InventoryRequisition" FromRole="Requisitions" ToRole="Inventories" />
+    <NavigationProperty Name="RequisitionPackageInfoes" Relationship="IspahaniAgroLTDModel.FK_RequisitionRequisitionPackageInfo" FromRole="Requisitions" ToRole="RequisitionPackageInfoes" />
+    <NavigationProperty Name="RequisitionProductInfoes" Relationship="IspahaniAgroLTDModel.FK_RequisitionRequisitionProductInfo" FromRole="Requisitions" ToRole="RequisitionProductInfoes" />
+    <Property Type="String" Name="RequisitionType" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RequisitionCode" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SalesOfficerTarget">
+    <Key>
+      <PropertyRef Name="SalesOfficerId" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="StartDate" />
+    </Key>
+    <Property Name="SalesOfficerId" Type="Int64" Nullable="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" />
+    <Property Name="TargetQuantity" Type="Double" Nullable="false" />
+    <Property Name="AchievedQuantity" Type="Double" Nullable="false" />
+    <Property Name="AchievedAmount" Type="Double" Nullable="false" />
+    <Property Name="Product_ProductId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeSalesOfficerTarget" FromRole="SalesOfficerTargets" ToRole="Employees" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_SalesOfficerTargetProduct" FromRole="SalesOfficerTargets" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="SalesReturnInfo">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="SalesReturnId" />
+      <PropertyRef Name="LotId" />
+      <PropertyRef Name="BillId" />
+    </Key>
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="SalesReturnId" Type="Int64" Nullable="false" />
+    <Property Name="LotId" Type="String" Nullable="false" MaxLength="30" />
+    <Property Name="ProductPrice" Type="Double" Nullable="false" />
+    <Property Name="PlacedQuantity" Type="Int64" Nullable="false" />
+    <Property Name="AcceptedQuantity" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductSalesReturnInfo" FromRole="SalesReturnInfoes" ToRole="Products" />
+    <NavigationProperty Name="SalesReturn" Relationship="IspahaniAgroLTDModel.FK_SalesReturnSalesReturnInfo" FromRole="SalesReturnInfoes" ToRole="SalesReturns" />
+    <Property Type="Int64" Name="BillId" Nullable="false" />
+    <NavigationProperty Name="Bill" Relationship="IspahaniAgroLTDModel.FK_BillSalesReturnInfoes" FromRole="SalesReturnInfo" ToRole="Bill" />
+    <Property Type="Boolean" Name="HasRejected" />
+  </EntityType>
+  <EntityType Name="SalesReturn">
+    <Key>
+      <PropertyRef Name="SalesReturnId" />
+    </Key>
+    <Property Name="SalesReturnId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateOfIssue" Type="DateTime" Nullable="false" />
+    <Property Name="DealerId" Type="Int64" Nullable="false" />
+    <Property Name="RMId" Type="Int64" Nullable="false" />
+    <Property Name="TotalPlacedAmount" Type="Double" Nullable="false" />
+    <Property Name="TotalAcceptedAmount" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Dealer" Relationship="IspahaniAgroLTDModel.FK_DealerSalesReturn" FromRole="SalesReturns" ToRole="Dealers" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_EmployeeSalesReturn" FromRole="SalesReturns" ToRole="Employees" />
+    <NavigationProperty Name="SalesReturnInfoes" Relationship="IspahaniAgroLTDModel.FK_SalesReturnSalesReturnInfo" FromRole="SalesReturns" ToRole="SalesReturnInfoes" />
+    <Property Type="String" Name="SalesReturnCode" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TransportationLoss">
+    <Key>
+      <PropertyRef Name="BillId" />
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="BillId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="Quantity" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Bill" Relationship="IspahaniAgroLTDModel.FK_BillTransportationLoss" FromRole="TransportationLosses" ToRole="Bills" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductTransportationLoss" FromRole="TransportationLosses" ToRole="Products" />
+    <Property Type="String" Name="Remarks" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="HasBalanced" Nullable="false" />
+    <Property Type="Double" Name="TotalPrice" Nullable="false" />
+    <Property Type="Boolean" Name="HasRejected" />
+  </EntityType>
+  <EntityType Name="YearSummaryDealer">
+    <Key>
+      <PropertyRef Name="DealerId" />
+      <PropertyRef Name="SeasonStart" />
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="DealerId" Type="Int64" Nullable="false" />
+    <Property Name="SeasonStart" Type="DateTime" Nullable="false" />
+    <Property Name="SeasonEnd" Type="DateTime" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="OpeningBalance" Type="Double" Nullable="false" />
+    <Property Name="ClosingBalance" Type="Double" Nullable="false" />
+    <Property Name="ProductQuantity" Type="Double" Nullable="false" />
+    <Property Name="DebitAmount" Type="Double" Nullable="false" />
+    <Property Name="CreditAmount" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Dealer" Relationship="IspahaniAgroLTDModel.FK_YearSummaryDealerDealer" FromRole="YearSummaryDealers" ToRole="Dealers" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductYearSummaryDealer" FromRole="YearSummaryDealers" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="YearSummaryInventoryPackage">
+    <Key>
+      <PropertyRef Name="InventoryId" />
+      <PropertyRef Name="PackageId" />
+      <PropertyRef Name="SessionStart" />
+    </Key>
+    <Property Name="InventoryId" Type="Int64" Nullable="false" />
+    <Property Name="PackageId" Type="Int64" Nullable="false" />
+    <Property Name="SessionStart" Type="DateTime" Nullable="false" />
+    <Property Name="SessionEnd" Type="DateTime" Nullable="false" />
+    <Property Name="OpeningPackage" Type="Double" Nullable="false" />
+    <Property Name="MRRInQuantity" Type="Double" Nullable="false" />
+    <Property Name="PLRLostQuantity" Type="Double" Nullable="false" />
+    <Property Name="PackageUsedQuantity" Type="Double" Nullable="false" />
+    <Property Name="ClosingPackage" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Inventory" Relationship="IspahaniAgroLTDModel.FK_InventoryYearSummaryInventoryPackage" FromRole="YearSummaryInventoryPackages" ToRole="Inventories" />
+    <NavigationProperty Name="Package" Relationship="IspahaniAgroLTDModel.FK_PackageYearSummaryInventoryPackage" FromRole="YearSummaryInventoryPackages" ToRole="Packages" />
+    <Property Type="Double" Name="PurchaseAmount" Nullable="false" />
+    <Property Type="Double" Name="LostAmount" Nullable="false" />
+  </EntityType>
+  <EntityType Name="YearSummaryInventoryProduct">
+    <Key>
+      <PropertyRef Name="InventoryId" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="LotId" />
+      <PropertyRef Name="SeasonStart" />
+    </Key>
+    <Property Name="InventoryId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="LotId" Type="String" Nullable="false" MaxLength="30" />
+    <Property Name="SeasonStart" Type="DateTime" Nullable="false" />
+    <Property Name="SeasonEnd" Type="DateTime" Nullable="false" />
+    <Property Name="OpeningProduct" Type="Double" Nullable="false" />
+    <Property Name="MRRInQuantity" Type="Double" Nullable="false" />
+    <Property Name="PLRLostQuantity" Type="Double" Nullable="false" />
+    <Property Name="ProductSellQuantity" Type="Double" Nullable="false" />
+    <Property Name="SellAmount" Type="Double" Nullable="false" />
+    <Property Name="ClosingProduct" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Inventory" Relationship="IspahaniAgroLTDModel.FK_InventoryYearSummaryInventoryProduct" FromRole="YearSummaryInventoryProducts" ToRole="Inventories" />
+    <NavigationProperty Name="Product" Relationship="IspahaniAgroLTDModel.FK_ProductYearSummaryInventoryProduct" FromRole="YearSummaryInventoryProducts" ToRole="Products" />
+    <Property Type="Double" Name="PurchaseAmount" Nullable="false" />
+  </EntityType>
+  <EntityType Name="YearSummarySOExpenditure">
+    <Key>
+      <PropertyRef Name="SalesOfficerId" />
+      <PropertyRef Name="SeasonStart" />
+    </Key>
+    <Property Name="SalesOfficerId" Type="Int64" Nullable="false" />
+    <Property Name="SeasonStart" Type="DateTime" Nullable="false" />
+    <Property Name="SeasonEnd" Type="DateTime" Nullable="false" />
+    <Property Name="TotalExpenditure" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="IspahaniAgroLTDModel.FK_YearSummarySOExpenditureEmployee" FromRole="YearSummarySOExpenditures" ToRole="Employees" />
+  </EntityType>
+  <Association Name="FK_BillBillPaymentInfo">
+    <End Role="Bills" Type="IspahaniAgroLTDModel.Bill" Multiplicity="1" />
+    <End Role="BillPaymentInfoes" Type="IspahaniAgroLTDModel.BillPaymentInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bills">
+        <PropertyRef Name="BillId" />
+      </Principal>
+      <Dependent Role="BillPaymentInfoes">
+        <PropertyRef Name="BillId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillPaymentBillPaymentInfo">
+    <End Role="BillPayments" Type="IspahaniAgroLTDModel.BillPayment" Multiplicity="1" />
+    <End Role="BillPaymentInfoes" Type="IspahaniAgroLTDModel.BillPaymentInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BillPayments">
+        <PropertyRef Name="BillPaymentId" />
+      </Principal>
+      <Dependent Role="BillPaymentInfoes">
+        <PropertyRef Name="BillPaymentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductBillPaymentInfo">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="BillPaymentInfoes" Type="IspahaniAgroLTDModel.BillPaymentInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="BillPaymentInfoes">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerBillPayment">
+    <End Role="Dealers" Type="IspahaniAgroLTDModel.Dealer" Multiplicity="1" />
+    <End Role="BillPayments" Type="IspahaniAgroLTDModel.BillPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="DealerId" />
+      </Principal>
+      <Dependent Role="BillPayments">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeBillPayment">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="BillPayments" Type="IspahaniAgroLTDModel.BillPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="BillPayments">
+        <PropertyRef Name="RMId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillBillProductInfo">
+    <End Role="Bills" Type="IspahaniAgroLTDModel.Bill" Multiplicity="1" />
+    <End Role="BillProductInfoes" Type="IspahaniAgroLTDModel.BillProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bills">
+        <PropertyRef Name="BillId" />
+      </Principal>
+      <Dependent Role="BillProductInfoes">
+        <PropertyRef Name="BillId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductBillProductInfo">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="BillProductInfoes" Type="IspahaniAgroLTDModel.BillProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="BillProductInfoes">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillDueInfo">
+    <End Role="Bills" Type="IspahaniAgroLTDModel.Bill" Multiplicity="1" />
+    <End Role="DueInfoes" Type="IspahaniAgroLTDModel.DueInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bills">
+        <PropertyRef Name="BillId" />
+      </Principal>
+      <Dependent Role="DueInfoes">
+        <PropertyRef Name="BillId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillTransportationLoss">
+    <End Role="Bills" Type="IspahaniAgroLTDModel.Bill" Multiplicity="1" />
+    <End Role="TransportationLosses" Type="IspahaniAgroLTDModel.TransportationLoss" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bills">
+        <PropertyRef Name="BillId" />
+      </Principal>
+      <Dependent Role="TransportationLosses">
+        <PropertyRef Name="BillId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeBill">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="Bills" Type="IspahaniAgroLTDModel.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="Bills">
+        <PropertyRef Name="DispatchedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IndentBill">
+    <End Role="Indents" Type="IspahaniAgroLTDModel.Indent" Multiplicity="1" />
+    <End Role="Bills" Type="IspahaniAgroLTDModel.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Indents">
+        <PropertyRef Name="IndentId" />
+      </Principal>
+      <Dependent Role="Bills">
+        <PropertyRef Name="IndentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductCommission">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="Commissions" Type="IspahaniAgroLTDModel.Commission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="Commissions">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerDueInfo">
+    <End Role="Dealers" Type="IspahaniAgroLTDModel.Dealer" Multiplicity="1" />
+    <End Role="DueInfoes" Type="IspahaniAgroLTDModel.DueInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="DealerId" />
+      </Principal>
+      <Dependent Role="DueInfoes">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerRegion">
+    <End Role="Regions" Type="IspahaniAgroLTDModel.Region" Multiplicity="1" />
+    <End Role="Dealers" Type="IspahaniAgroLTDModel.Dealer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="RegionId" />
+      </Principal>
+      <Dependent Role="Dealers">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerSalesReturn">
+    <End Role="Dealers" Type="IspahaniAgroLTDModel.Dealer" Multiplicity="1" />
+    <End Role="SalesReturns" Type="IspahaniAgroLTDModel.SalesReturn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="DealerId" />
+      </Principal>
+      <Dependent Role="SalesReturns">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeDealer">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="Dealers" Type="IspahaniAgroLTDModel.Dealer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="Dealers">
+        <PropertyRef Name="SalesOfficerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_YearSummaryDealerDealer">
+    <End Role="Dealers" Type="IspahaniAgroLTDModel.Dealer" Multiplicity="1" />
+    <End Role="YearSummaryDealers" Type="IspahaniAgroLTDModel.YearSummaryDealer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="DealerId" />
+      </Principal>
+      <Dependent Role="YearSummaryDealers">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductDueInfo">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="DueInfoes" Type="IspahaniAgroLTDModel.DueInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="DueInfoes">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeExpenditure">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="Expenditures" Type="IspahaniAgroLTDModel.Expenditure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="Expenditures">
+        <PropertyRef Name="PlacedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeExpenditure1">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="Expenditures" Type="IspahaniAgroLTDModel.Expenditure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="Expenditures">
+        <PropertyRef Name="PlacedToId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeExpenditureInfo">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="ExpenditureInfoes" Type="IspahaniAgroLTDModel.ExpenditureInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="ExpenditureInfoes">
+        <PropertyRef Name="SalesOfficerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeInventory">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="Inventories" Type="IspahaniAgroLTDModel.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="Inventories">
+        <PropertyRef Name="StoreInChargeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeInventory1">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="Inventories" Type="IspahaniAgroLTDModel.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="Inventories">
+        <PropertyRef Name="DispatchOfficerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeMessageDelivery">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="MessageDeliveries" Type="IspahaniAgroLTDModel.MessageDelivery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="MessageDeliveries">
+        <PropertyRef Name="SendFromId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeMRR">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="MRRs" Type="IspahaniAgroLTDModel.MRR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="MRRs">
+        <PropertyRef Name="IssuedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeNoticeBoard">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="NoticeBoards" Type="IspahaniAgroLTDModel.NoticeBoard" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="NoticeBoards">
+        <PropertyRef Name="IssuedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeePLR">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="PLRs" Type="IspahaniAgroLTDModel.PLR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="PLRs">
+        <PropertyRef Name="IssuedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeePLR1">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="PLRs" Type="IspahaniAgroLTDModel.PLR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="PLRs">
+        <PropertyRef Name="IssuedToId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeProductEdit">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="ProductEdits" Type="IspahaniAgroLTDModel.ProductEdit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="ProductEdits">
+        <PropertyRef Name="NSMId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeApprovesProductEdits">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="ProductEdits" Type="IspahaniAgroLTDModel.ProductEdit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="ProductEdits">
+        <PropertyRef Name="AdminId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeRegion">
+    <End Role="Regions" Type="IspahaniAgroLTDModel.Region" Multiplicity="1" />
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="RegionId" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeRequisition">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="Requisitions" Type="IspahaniAgroLTDModel.Requisition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="Requisitions">
+        <PropertyRef Name="IssuedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeRequisition1">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="Requisitions" Type="IspahaniAgroLTDModel.Requisition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="Requisitions">
+        <PropertyRef Name="IssuedToId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeSalesOfficerTarget">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="SalesOfficerTargets" Type="IspahaniAgroLTDModel.SalesOfficerTarget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="SalesOfficerTargets">
+        <PropertyRef Name="SalesOfficerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeSalesReturn">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="SalesReturns" Type="IspahaniAgroLTDModel.SalesReturn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="SalesReturns">
+        <PropertyRef Name="RMId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessageDeliveryEmployee">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="MessageDeliveries" Type="IspahaniAgroLTDModel.MessageDelivery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="MessageDeliveries">
+        <PropertyRef Name="SendToId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonEmployee">
+    <End Role="People" Type="IspahaniAgroLTDModel.Person" Multiplicity="1" />
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_YearSummarySOExpenditureEmployee">
+    <End Role="Employees" Type="IspahaniAgroLTDModel.Employee" Multiplicity="1" />
+    <End Role="YearSummarySOExpenditures" Type="IspahaniAgroLTDModel.YearSummarySOExpenditure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="YearSummarySOExpenditures">
+        <PropertyRef Name="SalesOfficerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExpenditureExpenditureInfo">
+    <End Role="Expenditures" Type="IspahaniAgroLTDModel.Expenditure" Multiplicity="1" />
+    <End Role="ExpenditureInfoes" Type="IspahaniAgroLTDModel.ExpenditureInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Expenditures">
+        <PropertyRef Name="ExpenditureId" />
+      </Principal>
+      <Dependent Role="ExpenditureInfoes">
+        <PropertyRef Name="ExpenditureId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegionExpenditure">
+    <End Role="Regions" Type="IspahaniAgroLTDModel.Region" Multiplicity="1" />
+    <End Role="Expenditures" Type="IspahaniAgroLTDModel.Expenditure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="RegionId" />
+      </Principal>
+      <Dependent Role="Expenditures">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IndentProductInfoIndent">
+    <End Role="Indents" Type="IspahaniAgroLTDModel.Indent" Multiplicity="1" />
+    <End Role="IndentProductInfoes" Type="IspahaniAgroLTDModel.IndentProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Indents">
+        <PropertyRef Name="IndentId" />
+      </Principal>
+      <Dependent Role="IndentProductInfoes">
+        <PropertyRef Name="IndentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IndentProductInfoProduct">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="IndentProductInfoes" Type="IspahaniAgroLTDModel.IndentProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="IndentProductInfoes">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InventoryInventoryLog">
+    <End Role="Inventories" Type="IspahaniAgroLTDModel.Inventory" Multiplicity="1" />
+    <End Role="InventoryLogs" Type="IspahaniAgroLTDModel.InventoryLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventories">
+        <PropertyRef Name="InventoryId" />
+      </Principal>
+      <Dependent Role="InventoryLogs">
+        <PropertyRef Name="InventoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InventoryInventoryPackageInfo">
+    <End Role="Inventories" Type="IspahaniAgroLTDModel.Inventory" Multiplicity="1" />
+    <End Role="InventoryPackageInfoes" Type="IspahaniAgroLTDModel.InventoryPackageInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventories">
+        <PropertyRef Name="InventoryId" />
+      </Principal>
+      <Dependent Role="InventoryPackageInfoes">
+        <PropertyRef Name="InventoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InventoryInventoryProductInfo">
+    <End Role="Inventories" Type="IspahaniAgroLTDModel.Inventory" Multiplicity="1" />
+    <End Role="InventoryProductInfoes" Type="IspahaniAgroLTDModel.InventoryProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventories">
+        <PropertyRef Name="InventoryId" />
+      </Principal>
+      <Dependent Role="InventoryProductInfoes">
+        <PropertyRef Name="InventoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InventoryMRR">
+    <End Role="Inventories" Type="IspahaniAgroLTDModel.Inventory" Multiplicity="1" />
+    <End Role="MRRs" Type="IspahaniAgroLTDModel.MRR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventories">
+        <PropertyRef Name="InventoryId" />
+      </Principal>
+      <Dependent Role="MRRs">
+        <PropertyRef Name="InventoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InventoryPLR">
+    <End Role="Inventories" Type="IspahaniAgroLTDModel.Inventory" Multiplicity="1" />
+    <End Role="PLRs" Type="IspahaniAgroLTDModel.PLR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventories">
+        <PropertyRef Name="InventoryId" />
+      </Principal>
+      <Dependent Role="PLRs">
+        <PropertyRef Name="InventoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InventoryRequisition">
+    <End Role="Inventories" Type="IspahaniAgroLTDModel.Inventory" Multiplicity="1" />
+    <End Role="Requisitions" Type="IspahaniAgroLTDModel.Requisition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventories">
+        <PropertyRef Name="InventoryId" />
+      </Principal>
+      <Dependent Role="Requisitions">
+        <PropertyRef Name="InventoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InventoryYearSummaryInventoryPackage">
+    <End Role="Inventories" Type="IspahaniAgroLTDModel.Inventory" Multiplicity="1" />
+    <End Role="YearSummaryInventoryPackages" Type="IspahaniAgroLTDModel.YearSummaryInventoryPackage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventories">
+        <PropertyRef Name="InventoryId" />
+      </Principal>
+      <Dependent Role="YearSummaryInventoryPackages">
+        <PropertyRef Name="InventoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InventoryYearSummaryInventoryProduct">
+    <End Role="Inventories" Type="IspahaniAgroLTDModel.Inventory" Multiplicity="1" />
+    <End Role="YearSummaryInventoryProducts" Type="IspahaniAgroLTDModel.YearSummaryInventoryProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventories">
+        <PropertyRef Name="InventoryId" />
+      </Principal>
+      <Dependent Role="YearSummaryInventoryProducts">
+        <PropertyRef Name="InventoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegionInventory">
+    <End Role="Regions" Type="IspahaniAgroLTDModel.Region" Multiplicity="1" />
+    <End Role="Inventories" Type="IspahaniAgroLTDModel.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="RegionId" />
+      </Principal>
+      <Dependent Role="Inventories">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductInventoryLog">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="InventoryLogs" Type="IspahaniAgroLTDModel.InventoryLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="InventoryLogs">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PackageInventoryPackageInfo">
+    <End Role="Packages" Type="IspahaniAgroLTDModel.Package" Multiplicity="1" />
+    <End Role="InventoryPackageInfoes" Type="IspahaniAgroLTDModel.InventoryPackageInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Packages">
+        <PropertyRef Name="PackageId" />
+      </Principal>
+      <Dependent Role="InventoryPackageInfoes">
+        <PropertyRef Name="PackageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductInventoryProductInfo">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="InventoryProductInfoes" Type="IspahaniAgroLTDModel.InventoryProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="InventoryProductInfoes">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductLedger">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="Ledgers" Type="IspahaniAgroLTDModel.Ledger" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="Ledgers">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessageDeliveryMessage">
+    <End Role="Messages" Type="IspahaniAgroLTDModel.Message" Multiplicity="1" />
+    <End Role="MessageDeliveries" Type="IspahaniAgroLTDModel.MessageDelivery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Messages">
+        <PropertyRef Name="MessageId" />
+      </Principal>
+      <Dependent Role="MessageDeliveries">
+        <PropertyRef Name="MessageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MRRMRRPackageInfo">
+    <End Role="MRRs" Type="IspahaniAgroLTDModel.MRR" Multiplicity="1" />
+    <End Role="MRRPackageInfoes" Type="IspahaniAgroLTDModel.MRRPackageInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MRRs">
+        <PropertyRef Name="MRRId" />
+      </Principal>
+      <Dependent Role="MRRPackageInfoes">
+        <PropertyRef Name="MRRId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PackageMRRPackageInfo">
+    <End Role="Packages" Type="IspahaniAgroLTDModel.Package" Multiplicity="1" />
+    <End Role="MRRPackageInfoes" Type="IspahaniAgroLTDModel.MRRPackageInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Packages">
+        <PropertyRef Name="PackageId" />
+      </Principal>
+      <Dependent Role="MRRPackageInfoes">
+        <PropertyRef Name="PackageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MRRMRRProductInfo">
+    <End Role="MRRs" Type="IspahaniAgroLTDModel.MRR" Multiplicity="1" />
+    <End Role="MRRProductInfoes" Type="IspahaniAgroLTDModel.MRRProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MRRs">
+        <PropertyRef Name="MRRId" />
+      </Principal>
+      <Dependent Role="MRRProductInfoes">
+        <PropertyRef Name="MRRId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductMRRProductInfo">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="MRRProductInfoes" Type="IspahaniAgroLTDModel.MRRProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="MRRProductInfoes">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PackagePLRPackageInfo">
+    <End Role="Packages" Type="IspahaniAgroLTDModel.Package" Multiplicity="1" />
+    <End Role="PLRPackageInfoes" Type="IspahaniAgroLTDModel.PLRPackageInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Packages">
+        <PropertyRef Name="PackageId" />
+      </Principal>
+      <Dependent Role="PLRPackageInfoes">
+        <PropertyRef Name="PackageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PackageRequisitionPackageInfo">
+    <End Role="Packages" Type="IspahaniAgroLTDModel.Package" Multiplicity="1" />
+    <End Role="RequisitionPackageInfoes" Type="IspahaniAgroLTDModel.RequisitionPackageInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Packages">
+        <PropertyRef Name="PackageId" />
+      </Principal>
+      <Dependent Role="RequisitionPackageInfoes">
+        <PropertyRef Name="PackageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PackageYearSummaryInventoryPackage">
+    <End Role="Packages" Type="IspahaniAgroLTDModel.Package" Multiplicity="1" />
+    <End Role="YearSummaryInventoryPackages" Type="IspahaniAgroLTDModel.YearSummaryInventoryPackage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Packages">
+        <PropertyRef Name="PackageId" />
+      </Principal>
+      <Dependent Role="YearSummaryInventoryPackages">
+        <PropertyRef Name="PackageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PLRPLRPackageInfo">
+    <End Role="PLRs" Type="IspahaniAgroLTDModel.PLR" Multiplicity="1" />
+    <End Role="PLRPackageInfoes" Type="IspahaniAgroLTDModel.PLRPackageInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLRs">
+        <PropertyRef Name="PLRId" />
+      </Principal>
+      <Dependent Role="PLRPackageInfoes">
+        <PropertyRef Name="PLRId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PLRPLRProductInfo">
+    <End Role="PLRs" Type="IspahaniAgroLTDModel.PLR" Multiplicity="1" />
+    <End Role="PLRProductInfoes" Type="IspahaniAgroLTDModel.PLRProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLRs">
+        <PropertyRef Name="PLRId" />
+      </Principal>
+      <Dependent Role="PLRProductInfoes">
+        <PropertyRef Name="PLRId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPLRProductInfo">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="PLRProductInfoes" Type="IspahaniAgroLTDModel.PLRProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="PLRProductInfoes">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductProductEdit">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="ProductEdits" Type="IspahaniAgroLTDModel.ProductEdit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ProductEdits">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPromotion">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="Promotions" Type="IspahaniAgroLTDModel.Promotion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="Promotions">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductRegionTarget">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="RegionTargets" Type="IspahaniAgroLTDModel.RegionTarget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="RegionTargets">
+        <PropertyRef Name="Product_ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductRequisitionProductInfo">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="RequisitionProductInfoes" Type="IspahaniAgroLTDModel.RequisitionProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="RequisitionProductInfoes">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductSalesReturnInfo">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="SalesReturnInfoes" Type="IspahaniAgroLTDModel.SalesReturnInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="SalesReturnInfoes">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductTransportationLoss">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="TransportationLosses" Type="IspahaniAgroLTDModel.TransportationLoss" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="TransportationLosses">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductYearSummaryDealer">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="YearSummaryDealers" Type="IspahaniAgroLTDModel.YearSummaryDealer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="YearSummaryDealers">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductYearSummaryInventoryProduct">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="YearSummaryInventoryProducts" Type="IspahaniAgroLTDModel.YearSummaryInventoryProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="YearSummaryInventoryProducts">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOfficerTargetProduct">
+    <End Role="Products" Type="IspahaniAgroLTDModel.Product" Multiplicity="1" />
+    <End Role="SalesOfficerTargets" Type="IspahaniAgroLTDModel.SalesOfficerTarget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="SalesOfficerTargets">
+        <PropertyRef Name="Product_ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegionRegionTarget">
+    <End Role="Regions" Type="IspahaniAgroLTDModel.Region" Multiplicity="1" />
+    <End Role="RegionTargets" Type="IspahaniAgroLTDModel.RegionTarget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="RegionId" />
+      </Principal>
+      <Dependent Role="RegionTargets">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequisitionRequisitionPackageInfo">
+    <End Role="Requisitions" Type="IspahaniAgroLTDModel.Requisition" Multiplicity="1" />
+    <End Role="RequisitionPackageInfoes" Type="IspahaniAgroLTDModel.RequisitionPackageInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Requisitions">
+        <PropertyRef Name="RequisitionId" />
+      </Principal>
+      <Dependent Role="RequisitionPackageInfoes">
+        <PropertyRef Name="RequisitionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequisitionRequisitionProductInfo">
+    <End Role="Requisitions" Type="IspahaniAgroLTDModel.Requisition" Multiplicity="1" />
+    <End Role="RequisitionProductInfoes" Type="IspahaniAgroLTDModel.RequisitionProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Requisitions">
+        <PropertyRef Name="RequisitionId" />
+      </Principal>
+      <Dependent Role="RequisitionProductInfoes">
+        <PropertyRef Name="RequisitionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesReturnSalesReturnInfo">
+    <End Role="SalesReturns" Type="IspahaniAgroLTDModel.SalesReturn" Multiplicity="1" />
+    <End Role="SalesReturnInfoes" Type="IspahaniAgroLTDModel.SalesReturnInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesReturns">
+        <PropertyRef Name="SalesReturnId" />
+      </Principal>
+      <Dependent Role="SalesReturnInfoes">
+        <PropertyRef Name="SalesReturnId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_EmployeeCreateCommission">
+    <End Type="IspahaniAgroLTDModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="IspahaniAgroLTDModel.Commission" Role="Commission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="Commission">
+        <PropertyRef Name="NSMId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeApproveCommission">
+    <End Type="IspahaniAgroLTDModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="IspahaniAgroLTDModel.Commission" Role="Commission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="Commission">
+        <PropertyRef Name="AdminId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeApprovedPackage">
+    <End Type="IspahaniAgroLTDModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="IspahaniAgroLTDModel.Package" Role="Package" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="Package">
+        <PropertyRef Name="AdminId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeCreatedPackage">
+    <End Type="IspahaniAgroLTDModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="IspahaniAgroLTDModel.Package" Role="Package" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="Package">
+        <PropertyRef Name="NSMId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerPlacesIndent">
+    <End Type="IspahaniAgroLTDModel.Dealer" Role="Dealer" Multiplicity="1" />
+    <End Type="IspahaniAgroLTDModel.Indent" Role="Indent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealer">
+        <PropertyRef Name="DealerId" />
+      </Principal>
+      <Dependent Role="Indent">
+        <PropertyRef Name="IssuedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RMVerifiesIndent">
+    <End Type="IspahaniAgroLTDModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="IspahaniAgroLTDModel.Indent" Role="Indent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="Indent">
+        <PropertyRef Name="IssuedToId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillSalesReturnInfoes">
+    <End Type="IspahaniAgroLTDModel.Bill" Role="Bill" Multiplicity="1" />
+    <End Type="IspahaniAgroLTDModel.SalesReturnInfo" Role="SalesReturnInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bill">
+        <PropertyRef Name="BillId" />
+      </Principal>
+      <Dependent Role="SalesReturnInfo">
+        <PropertyRef Name="BillId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AccountantBillPayment">
+    <End Type="IspahaniAgroLTDModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="IspahaniAgroLTDModel.BillPayment" Role="BillPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="BillPayment">
+        <PropertyRef Name="AccountantId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerBill">
+    <End Type="IspahaniAgroLTDModel.Dealer" Role="Dealer" Multiplicity="1" />
+    <End Type="IspahaniAgroLTDModel.Bill" Role="Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealer">
+        <PropertyRef Name="DealerId" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

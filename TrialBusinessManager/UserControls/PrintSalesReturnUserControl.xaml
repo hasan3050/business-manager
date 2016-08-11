@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="TrialBusinessManager.UserControls.PrintSalesReturnUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="794" d:DesignWidth="857" xmlns:my="clr-namespace:TrialBusinessManager.UserControls" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    
+    <Grid x:Name="LayoutRoot" Background="White" Width="857" Height="940">
+        <my:PrintHeader HorizontalAlignment="Left" Margin="212,0,0,0" x:Name="printHeader1" VerticalAlignment="Top" Width="452" />
+        <sdk:Label Height="28" Margin="348,128,323,0" Name="label1" VerticalAlignment="Top" FontSize="16" Content="SALES RETURN FORM" />
+        <sdk:DataGrid AutoGenerateColumns="False" BorderBrush="#FF706161" BorderThickness="1,0,1,1" ColumnWidth="148*" FontSize="12" GridLinesVisibility="All" Height="301" Margin="12,331,78,0" MinHeight="0" Name="dataGrid1" VerticalAlignment="Top">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Product.ProductName, Mode=TwoWay}" FontSize="13" Header="Product name" Width="2*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Product.BrandName, Mode=TwoWay}" FontSize="13" Header="Brand name" Width="2*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Product.StockKeepingUnit, Mode=TwoWay}" FontSize="13" Header="S.K.U." Width="1*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding BillId, Mode=TwoWay}" FontSize="13" Header="Bill Id" IsReadOnly="True" Width="1*" />
+                <sdk:DataGridTextColumn Binding="{Binding Bill.DateOfIssue, Mode=TwoWay}" FontSize="13" Header="Date of Issue" IsReadOnly="True" Width="2*" />
+                <sdk:DataGridTextColumn Binding="{Binding PlacedQuantity, Mode=TwoWay}" FontSize="13" Header="Placed Quantity(Pc)" IsReadOnly="True" Width="3*"/>
+                 <sdk:DataGridTextColumn Binding="{Binding AcceptedQuantity, Mode=TwoWay}" FontSize="13" Header="Accepted Quantity (Pc)" IsReadOnly="False" Width="3*"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:Label Height="28" HorizontalAlignment="Left" Margin="16,204,0,0" Name="label2" VerticalAlignment="Top" Width="165" FontSize="16" Content="Sales Return From:" />
+        <sdk:Label Height="28" HorizontalAlignment="Left" Margin="411,202,0,0" Name="label3" VerticalAlignment="Top" Width="155" FontSize="16" Content="Sales Return To:" />
+        <TextBlock Height="27" HorizontalAlignment="Left" Margin="16,167,0,0" Name="textBlock1" Text="Sales Return Code:" VerticalAlignment="Top" Width="158" FontSize="16" />
+        <TextBox Height="35" HorizontalAlignment="Left" Margin="180,167,0,0" Name="SRCodetextBox" VerticalAlignment="Top" Width="195" FontSize="15" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="16,240,0,0" Name="textBlock2" Text="Dealer Name:" VerticalAlignment="Top" Width="126" FontSize="16" />
+        <TextBox Height="35" HorizontalAlignment="Left" Margin="180,234,0,0" Name="DealerNametextBox" VerticalAlignment="Top" Width="195" FontSize="15" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="16,278,0,0" Name="textBlock3" Text="Dealer Address:" VerticalAlignment="Top" FontSize="16" />
+        <TextBox Height="35" HorizontalAlignment="Left" Margin="180,275,0,0" Name="DealerAddtextBox" VerticalAlignment="Top" Width="195" FontSize="15" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="411,240,0,0" Name="textBlock4" Text="Godown Name:" VerticalAlignment="Top" Width="138" FontSize="16" />
+        <TextBox Height="35" HorizontalAlignment="Left" Margin="555,234,0,0" Name="RegionNametextBox" VerticalAlignment="Top" Width="224" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="16,761,0,0" Name="textBlock5" Text="Prepared by" VerticalAlignment="Top" FontSize="14" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="233,761,0,0" Name="textBlock6" Text="Store InCharge" VerticalAlignment="Top" FontSize="14" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="450,761,0,0" Name="textBlock7" Text="Sales &amp; Marketing" VerticalAlignment="Top" FontSize="14" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="669,761,0,0" Name="textBlock8" Text="Approved by" VerticalAlignment="Top" FontSize="14" />
+    </Grid>
+</UserControl>

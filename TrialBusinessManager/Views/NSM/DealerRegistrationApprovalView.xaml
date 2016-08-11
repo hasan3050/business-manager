@@ -1,0 +1,25 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.NSM.DealerRegistrationApprovalView" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="1048" d:DesignHeight="480"
+           Title="DealerRegistrationApprovalView Page" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Width="1042">
+      
+            <sdk:DataGrid AutoGenerateColumns="False" Height="272" Margin="12,45,12,0" Name="dataGrid1" VerticalAlignment="Top" Width="1020">
+                <sdk:DataGrid.Columns>
+                    <sdk:DataGridTextColumn Header="Region" Binding="{Binding Path=Region.RegionName, Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+
+                    <sdk:DataGridTextColumn Header="Dealer Name" Binding="{Binding Path=Name,Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+                    <sdk:DataGridTextColumn Header="Shop Name" Binding="{Binding Path=CompanyName,Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+                     <sdk:DataGridTextColumn Header="Status" Binding="{Binding Path=ActivityStatus, Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,17,0,0" Name="textBlock1" Text="Dealer Registration Approval" VerticalAlignment="Top" Width="221" FontSize="14" />
+            <Button Content="View Details" Height="33" HorizontalAlignment="Left" Margin="947,323,0,0" Name="button1" VerticalAlignment="Top" Width="85" Click="button1_Click" />
+       
+    </Grid>
+</navigation:Page>

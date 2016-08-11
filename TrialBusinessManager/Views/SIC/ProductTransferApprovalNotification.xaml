@@ -1,0 +1,36 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.SIC.ProductTransferApprovalNotification" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Width="1192" Height="500"
+           Title="ProductTransferApprovalNotification Page" xmlns:riaControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.DomainServices" xmlns:my="clr-namespace:TrialBusinessManager.Web" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot">
+        
+        <sdk:DataGrid AutoGenerateColumns="False" Height="200" HorizontalAlignment="Left"  Margin="12,111,0,0" Name="productTransferDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" VerticalAlignment="Top" Width="1168">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn x:Name="dateOfIssueColumn" Header="Date Of Issue" Width="1*">
+                    <sdk:DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <sdk:DatePicker SelectedDate="{Binding Path=DateOfIssue, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellEditingTemplate>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=DateOfIssue, StringFormat=\{0:d\}}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                
+                <sdk:DataGridTextColumn x:Name="productTransferCodeColumn" Binding="{Binding Path=ProductTransferCode}" Header="Product Transfer Code" Width="1*" />
+                <sdk:DataGridTextColumn x:Name="productTransferStatusColumn" Binding="{Binding Path=ProductTransferStatus}" Header="Product Transfer Status" Width="1*" />
+                <sdk:DataGridTextColumn x:Name="sendFromInventoryIdColumn" Binding="{Binding Path=Inventory.InventoryName}" Header="FromInventory" Width="1*" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <TextBlock Height="27" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock1" Text="Product Transfers" VerticalAlignment="Top" Width="134" FontSize="14" />
+        <Button Content="Approve product Transfer" Height="41" HorizontalAlignment="Left" Margin="959,317,0,0" Name="button1" VerticalAlignment="Top" Width="221" FontSize="13" Click="button1_Click" />
+    </Grid>
+</navigation:Page>

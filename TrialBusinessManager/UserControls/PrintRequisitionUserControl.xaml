@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="TrialBusinessManager.UserControls.PrintRequisitionUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="1007" d:DesignWidth="849" xmlns:my="clr-namespace:TrialBusinessManager.UserControls" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    
+    <Grid x:Name="LayoutRoot" Background="White" Width="935" Height="1007">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="586*" />
+            <ColumnDefinition Width="349*" />
+        </Grid.ColumnDefinitions>
+        <my:PrintHeader HorizontalAlignment="Left" Margin="173,1,0,879" x:Name="printHeader1" Width="485" Grid.ColumnSpan="2" />
+        <sdk:DataGrid AutoGenerateColumns="False" GridLinesVisibility="Horizontal" Height="294" HorizontalAlignment="Left" Margin="12,264,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="764" Grid.ColumnSpan="2" FontSize="14">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Product.ProductName}" FontSize="13" Header="product name" IsReadOnly="True" Width="7*" />
+                <sdk:DataGridTextColumn Binding="{Binding Product.BrandName}" FontSize="13" Header="brand name" IsReadOnly="True" Width="7*" />
+                <sdk:DataGridTextColumn Binding="{Binding Product.StockKeepingUnit}" FontSize="13" Header="S.K.U." IsReadOnly="True" Width="7*" />
+                <sdk:DataGridTextColumn Binding="{Binding PlacedQuantity, Mode=TwoWay}" FontSize="13" Header="placed quantity(kg)" IsReadOnly="True" Width="10*" />
+                <sdk:DataGridTextColumn Binding="{Binding LotId, Mode=TwoWay}" FontSize="13" Header="lot ID" IsReadOnly="True" Width="4*" />
+                <sdk:DataGridTextColumn Binding="{Binding LotQuantity, Mode=TwoWay}" FontSize="13" Header="accepted quantity(kg)" IsReadOnly="True" Width="10*" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid AutoGenerateColumns="False" GridLinesVisibility="Horizontal" Height="286" HorizontalAlignment="Left" Margin="13,594,0,0" Name="dataGrid2" VerticalAlignment="Top" Width="763" Grid.ColumnSpan="2" FontSize="14">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Package.PackageName}" FontSize="13" Header="package name" IsReadOnly="True" Width="10*" />
+                <sdk:DataGridTextColumn Binding="{Binding Package.PackageCode}" FontSize="13" Header="package code" IsReadOnly="True" Width="10*" />
+                <sdk:DataGridTextColumn Binding="{Binding PlacedQuantity, Mode=TwoWay}" FontSize="13" Header="placed quantity(Pc)" IsReadOnly="True" Width="10*" />
+                <sdk:DataGridTextColumn Binding="{Binding AcceptedQuantity, Mode=TwoWay}" FontSize="13" Header="accepted quantity(Pc)" IsReadOnly="True" Width="10*" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <TextBlock FontSize="18" Height="23" HorizontalAlignment="Left" Margin="13,226,0,0" Name="textBlock2" Text="Products" VerticalAlignment="Top" />
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="14,564,0,0" Name="textBlock3" Text="Packages" VerticalAlignment="Top" />
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="402,162,0,0" Name="textBlock1" Text="Requisition Type:" VerticalAlignment="Top" />
+        <TextBox Height="36" HorizontalAlignment="Left" IsReadOnly="False" Margin="559,160,0,0" Name="typeTextBox" VerticalAlignment="Top" Width="208" FontSize="15" BorderThickness="0" FontWeight="Normal" Grid.ColumnSpan="2" />
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="402,206,0,0" Name="textBlock5" Text="Requisition Code:" VerticalAlignment="Top" Width="148" />
+        <TextBox Height="36" HorizontalAlignment="Left" IsReadOnly="False" Margin="559,193,0,0" Name="RCodetextBox" VerticalAlignment="Top" Width="208" FontSize="15" BorderThickness="0" FontWeight="Normal" Grid.ColumnSpan="2" />
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="14,164,0,0" Name="textBlock6" Text="Approval Date:" VerticalAlignment="Top" />
+        <TextBox Height="36" HorizontalAlignment="Left" IsReadOnly="False" Margin="135,161,0,0" Name="ADateTextBox" VerticalAlignment="Top" Width="214" FontSize="15" BorderThickness="0" FontWeight="Normal" />
+        <sdk:Label Height="28" HorizontalAlignment="Left" Margin="299,124,0,0" Name="label1" VerticalAlignment="Top" Width="272" FontSize="18" Content="Requisition Approval Form" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="46,968,0,0" Name="textBlock4" Text="Issued by" VerticalAlignment="Top" FontSize="14" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="354,966,0,0" Name="textBlock7" Text="Store Officer" VerticalAlignment="Top" FontSize="14" />
+        <TextBlock Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="66,965,0,0" Name="textBlock8" Text="Approved by" VerticalAlignment="Top" FontSize="14" />
+    </Grid>
+</UserControl>

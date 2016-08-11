@@ -1,0 +1,722 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IspahaniAgroLTDModelStoreContainer" CdmEntityContainer="IspahaniAgroLTDEntities">
+    <EntitySetMapping Name="BillPaymentInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.BillPaymentInfo)">
+        <MappingFragment StoreEntitySet="BillPaymentInfoes">
+          <ScalarProperty Name="BillPaymentId" ColumnName="BillPaymentId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="BillId" ColumnName="BillId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="HasRejected" ColumnName="HasRejected" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BillPayments">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.BillPayment)">
+        <MappingFragment StoreEntitySet="BillPayments">
+          <ScalarProperty Name="BillPaymentId" ColumnName="BillPaymentId" />
+          <ScalarProperty Name="DealerId" ColumnName="DealerId" />
+          <ScalarProperty Name="RMId" ColumnName="RMId" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="DDNumber" ColumnName="DDNumber" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AccountantId" ColumnName="AccountantId" />
+          <ScalarProperty Name="AccountantFinalizeDate" ColumnName="AccountantFinalizeDate" />
+          <ScalarProperty Name="BillPaymentCode" ColumnName="BillPaymentCode" />
+          <ScalarProperty Name="MoneyReciept" ColumnName="MoneyReciept" />
+          <ScalarProperty Name="DateOfDeposit" ColumnName="DateOfDeposit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BillProductInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.BillProductInfo)">
+        <MappingFragment StoreEntitySet="BillProductInfoes">
+          <ScalarProperty Name="BillId" ColumnName="BillId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="LotId" ColumnName="LotId" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="LotQuantity" ColumnName="LotQuantity" />
+          <ScalarProperty Name="ComissionPercentage" ColumnName="ComissionPercentage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bills">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Bill)">
+        <MappingFragment StoreEntitySet="Bills">
+          <ScalarProperty Name="BillId" ColumnName="BillId" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="IndentId" ColumnName="IndentId" />
+          <ScalarProperty Name="TransportType" ColumnName="TransportType" />
+          <ScalarProperty Name="TransportCost" ColumnName="TransportCost" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="EmergencyContactNo" ColumnName="EmergencyContactNo" />
+          <ScalarProperty Name="TotalProductCost" ColumnName="TotalProductCost" />
+          <ScalarProperty Name="TotalPaid" ColumnName="TotalPaid" />
+          <ScalarProperty Name="PaymentDeadline" ColumnName="PaymentDeadline" />
+          <ScalarProperty Name="BillStatus" ColumnName="BillStatus" />
+          <ScalarProperty Name="HasProductLoss" ColumnName="HasProductLoss" />
+          <ScalarProperty Name="ProductLossCost" ColumnName="ProductLossCost" />
+          <ScalarProperty Name="DispatchedById" ColumnName="DispatchedById" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="HasSalesReturn" ColumnName="HasSalesReturn" />
+          <ScalarProperty Name="SalesReturnCost" ColumnName="SalesReturnCost" />
+          <ScalarProperty Name="DealerId" ColumnName="DealerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Commissions">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Commission)">
+        <MappingFragment StoreEntitySet="Commissions">
+          <ScalarProperty Name="CommissionId" ColumnName="CommissionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="CommissionName" ColumnName="CommissionName" />
+          <ScalarProperty Name="CommissionStatus" ColumnName="CommissionStatus" />
+          <ScalarProperty Name="IntroducedDate" ColumnName="IntroducedDate" />
+          <ScalarProperty Name="NSMId" ColumnName="NSMId" />
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Employee)">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="ActivityStatus" ColumnName="ActivityStatus" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpenditureInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.ExpenditureInfo)">
+        <MappingFragment StoreEntitySet="ExpenditureInfoes">
+          <ScalarProperty Name="ExpenditureId" ColumnName="ExpenditureId" />
+          <ScalarProperty Name="SalesOfficerId" ColumnName="SalesOfficerId" />
+          <ScalarProperty Name="PlacedAmount" ColumnName="PlacedAmount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="NSMAcceptedAmount" ColumnName="NSMAcceptedAmount" />
+          <ScalarProperty Name="AccountAcceptedAmount" ColumnName="AccountAcceptedAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expenditures">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Expenditure)">
+        <MappingFragment StoreEntitySet="Expenditures">
+          <ScalarProperty Name="ExpenditureId" ColumnName="ExpenditureId" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="PlacedById" ColumnName="PlacedById" />
+          <ScalarProperty Name="PlacedToId" ColumnName="PlacedToId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TotalPlacedAmount" ColumnName="TotalPlacedAmount" />
+          <ScalarProperty Name="TotalAcceptedAmount" ColumnName="TotalAcceptedAmount" />
+          <ScalarProperty Name="ExpenditureCode" ColumnName="ExpenditureCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndentProductInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.IndentProductInfo)">
+        <MappingFragment StoreEntitySet="IndentProductInfoes">
+          <ScalarProperty Name="IndentId" ColumnName="IndentId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+          <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+          <ScalarProperty Name="CommissionPercentage" ColumnName="CommissionPercentage" />
+          <ScalarProperty Name="ProductQuantityByRM" ColumnName="ProductQuantityByRM" />
+          <ScalarProperty Name="ProductQuantityBySIC" ColumnName="ProductQuantityBySIC" />
+          <ScalarProperty Name="EditTimeRM" ColumnName="EditTimeRM" />
+          <ScalarProperty Name="EditTimeSIC" ColumnName="EditTimeSIC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Indents">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Indent)">
+        <MappingFragment StoreEntitySet="Indents">
+          <ScalarProperty Name="IndentId" ColumnName="IndentId" />
+          <ScalarProperty Name="DateOfPlace" ColumnName="DateOfPlace" />
+          <ScalarProperty Name="IndentStatus" ColumnName="IndentStatus" />
+          <ScalarProperty Name="IssuedById" ColumnName="IssuedById" />
+          <ScalarProperty Name="IssuedToId" ColumnName="IssuedToId" />
+          <ScalarProperty Name="ForwardedToId" ColumnName="ForwardedToId" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="IsConsideredByNSM" ColumnName="IsConsideredByNSM" />
+          <ScalarProperty Name="IndentCode" ColumnName="IndentCode" />
+          <ScalarProperty Name="ForwardedToInventoryId" ColumnName="ForwardedToInventoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inventories">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Inventory)">
+        <MappingFragment StoreEntitySet="Inventories">
+          <ScalarProperty Name="InventoryId" ColumnName="InventoryId" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="StoreInChargeId" ColumnName="StoreInChargeId" />
+          <ScalarProperty Name="DispatchOfficerId" ColumnName="DispatchOfficerId" />
+          <ScalarProperty Name="InventoryName" ColumnName="InventoryName" />
+          <ScalarProperty Name="InventoryAddress" ColumnName="InventoryAddress" />
+          <ScalarProperty Name="DateOfEstablished" ColumnName="DateOfEstablished" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventoryLogs">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.InventoryLog)">
+        <MappingFragment StoreEntitySet="InventoryLogs">
+          <ScalarProperty Name="InventoryLogId" ColumnName="InventoryLogId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="InventoryId" ColumnName="InventoryId" />
+          <ScalarProperty Name="LotId" ColumnName="LotId" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="MemoNo" ColumnName="MemoNo" />
+          <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+          <ScalarProperty Name="ProductCost" ColumnName="ProductCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventoryPackageInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.InventoryPackageInfo)">
+        <MappingFragment StoreEntitySet="InventoryPackageInfoes">
+          <ScalarProperty Name="InventoryId" ColumnName="InventoryId" />
+          <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+          <ScalarProperty Name="UnfinishedQuantity" ColumnName="UnfinishedQuantity" />
+          <ScalarProperty Name="OnProcessingQuantity" ColumnName="OnProcessingQuantity" />
+          <ScalarProperty Name="FinishedQuantity" ColumnName="FinishedQuantity" />
+          <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventoryProductInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.InventoryProductInfo)">
+        <MappingFragment StoreEntitySet="InventoryProductInfoes">
+          <ScalarProperty Name="InventoryId" ColumnName="InventoryId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="LotId" ColumnName="LotId" />
+          <ScalarProperty Name="UnfinishedQuantity" ColumnName="UnfinishedQuantity" />
+          <ScalarProperty Name="OnProcessingQuantity" ColumnName="OnProcessingQuantity" />
+          <ScalarProperty Name="FinishedQuantity" ColumnName="FinishedQuantity" />
+          <ScalarProperty Name="UnitLotCost" ColumnName="UnitLotCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ledgers">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Ledger)">
+        <MappingFragment StoreEntitySet="Ledgers">
+          <ScalarProperty Name="LedgerId" ColumnName="LedgerId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="IsDealerOrEmployee" ColumnName="IsDealerOrEmployee" />
+          <ScalarProperty Name="IsDebitOrCredit" ColumnName="IsDebitOrCredit" />
+          <ScalarProperty Name="PartyId" ColumnName="PartyId" />
+          <ScalarProperty Name="MemoNo" ColumnName="MemoNo" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+          <ScalarProperty Name="CreditAmount" ColumnName="CreditAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageDeliveries">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.MessageDelivery)">
+        <MappingFragment StoreEntitySet="MessageDeliveries">
+          <ScalarProperty Name="OfficeCode" ColumnName="OfficeCode" />
+          <ScalarProperty Name="SendFromId" ColumnName="SendFromId" />
+          <ScalarProperty Name="SendToId" ColumnName="SendToId" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Message)">
+        <MappingFragment StoreEntitySet="Messages">
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MRRPackageInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.MRRPackageInfo)">
+        <MappingFragment StoreEntitySet="MRRPackageInfoes">
+          <ScalarProperty Name="MRRId" ColumnName="MRRId" />
+          <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+          <ScalarProperty Name="PlacedQuantity" ColumnName="PlacedQuantity" />
+          <ScalarProperty Name="AcceptedQuantity" ColumnName="AcceptedQuantity" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MRRProductInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.MRRProductInfo)">
+        <MappingFragment StoreEntitySet="MRRProductInfoes">
+          <ScalarProperty Name="MRRId" ColumnName="MRRId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="LotId" ColumnName="LotId" />
+          <ScalarProperty Name="PlacedQuantity" ColumnName="PlacedQuantity" />
+          <ScalarProperty Name="AcceptedQuantity" ColumnName="AcceptedQuantity" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MRRs">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.MRR)">
+        <MappingFragment StoreEntitySet="MRRs">
+          <ScalarProperty Name="MRRId" ColumnName="MRRId" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="InventoryId" ColumnName="InventoryId" />
+          <ScalarProperty Name="IssuedById" ColumnName="IssuedById" />
+          <ScalarProperty Name="IssuedToId" ColumnName="IssuedToId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateOfApproval" ColumnName="DateOfApproval" />
+          <ScalarProperty Name="MRRCode" ColumnName="MRRCode" />
+          <ScalarProperty Name="PurchaseOrderNo" ColumnName="PurchaseOrderNo" />
+          <ScalarProperty Name="ChallanNo" ColumnName="ChallanNo" />
+          <ScalarProperty Name="Wing" ColumnName="Wing" />
+          <ScalarProperty Name="RetailerName" ColumnName="RetailerName" />
+          <ScalarProperty Name="MRRType" ColumnName="MRRType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NoticeBoards">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.NoticeBoard)">
+        <MappingFragment StoreEntitySet="NoticeBoards">
+          <ScalarProperty Name="NoticeId" ColumnName="NoticeId" />
+          <ScalarProperty Name="NoticeSubject" ColumnName="NoticeSubject" />
+          <ScalarProperty Name="NoticeBody" ColumnName="NoticeBody" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IssuedById" ColumnName="IssuedById" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Packages">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Package)">
+        <MappingFragment StoreEntitySet="Packages">
+          <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+          <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+          <ScalarProperty Name="PackageCode" ColumnName="PackageCode" />
+          <ScalarProperty Name="PackageStatus" ColumnName="PackageStatus" />
+          <ScalarProperty Name="NSMId" ColumnName="NSMId" />
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+          <ScalarProperty Name="IntroducedDate" ColumnName="IntroducedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Person)">
+        <MappingFragment StoreEntitySet="People">
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="DateOfJoin" ColumnName="DateOfJoin" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLRPackageInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.PLRPackageInfo)">
+        <MappingFragment StoreEntitySet="PLRPackageInfoes">
+          <ScalarProperty Name="PLRId" ColumnName="PLRId" />
+          <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="LostAmount" ColumnName="LostAmount" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLRProductInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.PLRProductInfo)">
+        <MappingFragment StoreEntitySet="PLRProductInfoes">
+          <ScalarProperty Name="PLRId" ColumnName="PLRId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="LotId" ColumnName="LotId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="LostAmount" ColumnName="LostAmount" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLRs">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.PLR)">
+        <MappingFragment StoreEntitySet="PLRs">
+          <ScalarProperty Name="PLRId" ColumnName="PLRId" />
+          <ScalarProperty Name="InventoryId" ColumnName="InventoryId" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="IssuedById" ColumnName="IssuedById" />
+          <ScalarProperty Name="IssuedToId" ColumnName="IssuedToId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateOfApproval" ColumnName="DateOfApproval" />
+          <ScalarProperty Name="PLRCode" ColumnName="PLRCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductEdits">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.ProductEdit)">
+        <MappingFragment StoreEntitySet="ProductEdits">
+          <ScalarProperty Name="ProductEditId" ColumnName="ProductEditId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="EditType" ColumnName="EditType" />
+          <ScalarProperty Name="NSMId" ColumnName="NSMId" />
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+          <ScalarProperty Name="PreviousValue" ColumnName="PreviousValue" />
+          <ScalarProperty Name="EditedValue" ColumnName="EditedValue" />
+          <ScalarProperty Name="EditStatus" ColumnName="EditStatus" />
+          <ScalarProperty Name="ChangeApplicableFrom" ColumnName="ChangeApplicableFrom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Product)">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="ProductWing" ColumnName="ProductWing" />
+          <ScalarProperty Name="StockKeepingUnit" ColumnName="StockKeepingUnit" />
+          <ScalarProperty Name="IsOpOrHibrid" ColumnName="IsOpOrHibrid" />
+          <ScalarProperty Name="IsImported" ColumnName="IsImported" />
+          <ScalarProperty Name="PurchasePeriodStart" ColumnName="PurchasePeriodStart" />
+          <ScalarProperty Name="PurchasePeriodEnd" ColumnName="PurchasePeriodEnd" />
+          <ScalarProperty Name="SalesPeriodStart" ColumnName="SalesPeriodStart" />
+          <ScalarProperty Name="SalesPeriodEnd" ColumnName="SalesPeriodEnd" />
+          <ScalarProperty Name="IntroducedDate" ColumnName="IntroducedDate" />
+          <ScalarProperty Name="ProductStatus" ColumnName="ProductStatus" />
+          <ScalarProperty Name="PricePerUnit" ColumnName="PricePerUnit" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="SubType" ColumnName="SubType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Promotions">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Promotion)">
+        <MappingFragment StoreEntitySet="Promotions">
+          <ScalarProperty Name="PromotionId" ColumnName="PromotionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="StartAt" ColumnName="StartAt" />
+          <ScalarProperty Name="EndAt" ColumnName="EndAt" />
+          <ScalarProperty Name="PromotionTitle" ColumnName="PromotionTitle" />
+          <ScalarProperty Name="PromotionProductName" ColumnName="PromotionProductName" />
+          <ScalarProperty Name="PromotionProductQuantity" ColumnName="PromotionProductQuantity" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Regions">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Region)">
+        <MappingFragment StoreEntitySet="Regions">
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegionTargets">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.RegionTarget)">
+        <MappingFragment StoreEntitySet="RegionTargets">
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+          <ScalarProperty Name="Product_ProductId" ColumnName="Product_ProductId" />
+          <ScalarProperty Name="TargetQuantity" ColumnName="TargetQuantity" />
+          <ScalarProperty Name="AchievedAmount" ColumnName="AchievedAmount" />
+          <ScalarProperty Name="DistributedQuantity" ColumnName="DistributedQuantity" />
+          <ScalarProperty Name="SalesReturnQuantity" ColumnName="SalesReturnQuantity" />
+          <ScalarProperty Name="TransportationLossQuantity" ColumnName="TransportationLossQuantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequisitionPackageInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.RequisitionPackageInfo)">
+        <MappingFragment StoreEntitySet="RequisitionPackageInfoes">
+          <ScalarProperty Name="RequisitionId" ColumnName="RequisitionId" />
+          <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+          <ScalarProperty Name="PlacedQuantity" ColumnName="PlacedQuantity" />
+          <ScalarProperty Name="AcceptedQuantity" ColumnName="AcceptedQuantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequisitionProductInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.RequisitionProductInfo)">
+        <MappingFragment StoreEntitySet="RequisitionProductInfoes">
+          <ScalarProperty Name="RequisitionId" ColumnName="RequisitionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="LotId" ColumnName="LotId" />
+          <ScalarProperty Name="PlacedQuantity" ColumnName="PlacedQuantity" />
+          <ScalarProperty Name="LotQuantity" ColumnName="LotQuantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Requisitions">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Requisition)">
+        <MappingFragment StoreEntitySet="Requisitions">
+          <ScalarProperty Name="RequisitionId" ColumnName="RequisitionId" />
+          <ScalarProperty Name="InventoryId" ColumnName="InventoryId" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="IssuedById" ColumnName="IssuedById" />
+          <ScalarProperty Name="IssuedToId" ColumnName="IssuedToId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateOfApproval" ColumnName="DateOfApproval" />
+          <ScalarProperty Name="RequisitionType" ColumnName="RequisitionType" />
+          <ScalarProperty Name="RequisitionCode" ColumnName="RequisitionCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesOfficerTargets">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.SalesOfficerTarget)">
+        <MappingFragment StoreEntitySet="SalesOfficerTargets">
+          <ScalarProperty Name="SalesOfficerId" ColumnName="SalesOfficerId" />
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="TargetQuantity" ColumnName="TargetQuantity" />
+          <ScalarProperty Name="AchievedAmount" ColumnName="AchievedAmount" />
+          <ScalarProperty Name="DistributedQuantity" ColumnName="DistributedQuantity" />
+          <ScalarProperty Name="TransportationLossQuantity" ColumnName="TransportationLossQuantity" />
+          <ScalarProperty Name="SalesReturnQuantity" ColumnName="SalesReturnQuantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesReturnInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.SalesReturnInfo)">
+        <MappingFragment StoreEntitySet="SalesReturnInfoes">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="SalesReturnId" ColumnName="SalesReturnId" />
+          <ScalarProperty Name="LotId" ColumnName="LotId" />
+          <ScalarProperty Name="BillId" ColumnName="BillId" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="PlacedQuantity" ColumnName="PlacedQuantity" />
+          <ScalarProperty Name="AcceptedQuantity" ColumnName="AcceptedQuantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesReturns">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.SalesReturn)">
+        <MappingFragment StoreEntitySet="SalesReturns">
+          <ScalarProperty Name="SalesReturnId" ColumnName="SalesReturnId" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="DealerId" ColumnName="DealerId" />
+          <ScalarProperty Name="RMId" ColumnName="RMId" />
+          <ScalarProperty Name="TotalPlacedAmount" ColumnName="TotalPlacedAmount" />
+          <ScalarProperty Name="TotalAcceptedAmount" ColumnName="TotalAcceptedAmount" />
+          <ScalarProperty Name="SalesReturnCode" ColumnName="SalesReturnCode" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SendToInventoryId" ColumnName="SendToInventoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransportationLosses">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.TransportationLoss)">
+        <MappingFragment StoreEntitySet="TransportationLosses">
+          <ScalarProperty Name="BillId" ColumnName="BillId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="HasBalanced" ColumnName="HasBalanced" />
+          <ScalarProperty Name="LossQuantity" ColumnName="LossQuantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="BalancedQuantity" ColumnName="BalancedQuantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YearSummaryDealers">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.YearSummaryDealer)">
+        <MappingFragment StoreEntitySet="YearSummaryDealers">
+          <ScalarProperty Name="DealerId" ColumnName="DealerId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+          <ScalarProperty Name="OpeningBalance" ColumnName="OpeningBalance" />
+          <ScalarProperty Name="ClosingBalance" ColumnName="ClosingBalance" />
+          <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+          <ScalarProperty Name="DebitAmount" ColumnName="DebitAmount" />
+          <ScalarProperty Name="CreditAmount" ColumnName="CreditAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YearSummaryInventoryPackages">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.YearSummaryInventoryPackage)">
+        <MappingFragment StoreEntitySet="YearSummaryInventoryPackages">
+          <ScalarProperty Name="InventoryId" ColumnName="InventoryId" />
+          <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+          <ScalarProperty Name="OpeningPackage" ColumnName="OpeningPackage" />
+          <ScalarProperty Name="MRRInQuantity" ColumnName="MRRInQuantity" />
+          <ScalarProperty Name="PLRLostQuantity" ColumnName="PLRLostQuantity" />
+          <ScalarProperty Name="PackageUsedQuantity" ColumnName="PackageUsedQuantity" />
+          <ScalarProperty Name="ClosingPackage" ColumnName="ClosingPackage" />
+          <ScalarProperty Name="PurchaseAmount" ColumnName="PurchaseAmount" />
+          <ScalarProperty Name="LostAmount" ColumnName="LostAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YearSummaryInventoryProducts">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.YearSummaryInventoryProduct)">
+        <MappingFragment StoreEntitySet="YearSummaryInventoryProducts">
+          <ScalarProperty Name="InventoryId" ColumnName="InventoryId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="LotId" ColumnName="LotId" />
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+          <ScalarProperty Name="OpeningProduct" ColumnName="OpeningProduct" />
+          <ScalarProperty Name="MRRInQuantity" ColumnName="MRRInQuantity" />
+          <ScalarProperty Name="PLRLostQuantity" ColumnName="PLRLostQuantity" />
+          <ScalarProperty Name="ProductSellQuantity" ColumnName="ProductSellQuantity" />
+          <ScalarProperty Name="SellAmount" ColumnName="SellAmount" />
+          <ScalarProperty Name="ClosingProduct" ColumnName="ClosingProduct" />
+          <ScalarProperty Name="PurchaseAmount" ColumnName="PurchaseAmount" />
+          <ScalarProperty Name="ProductReturnQuantity" ColumnName="ProductReturnQuantity" />
+          <ScalarProperty Name="LostAmount" ColumnName="LostAmount" />
+          <ScalarProperty Name="ReturnAmount" ColumnName="ReturnAmount" />
+          <ScalarProperty Name="ProductTransferFromQuantity" ColumnName="ProductTransferFromQuantity" />
+          <ScalarProperty Name="ProductTransferToQuantity" ColumnName="ProductTransferToQuantity" />
+          <ScalarProperty Name="TransferFromAmount" ColumnName="TransferFromAmount" />
+          <ScalarProperty Name="TransferToAmount" ColumnName="TransferToAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YearSummarySOExpenditures">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.YearSummarySOExpenditure)">
+        <MappingFragment StoreEntitySet="YearSummarySOExpenditures">
+          <ScalarProperty Name="SalesOfficerId" ColumnName="SalesOfficerId" />
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+          <ScalarProperty Name="TotalExpenditure" ColumnName="TotalExpenditure" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.sysdiagram)">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Seasons">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.Season)">
+        <MappingFragment StoreEntitySet="Seasons">
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+          <ScalarProperty Name="SeasonStartDate" ColumnName="SeasonStartDate" />
+          <ScalarProperty Name="SeasonEndDate" ColumnName="SeasonEndDate" />
+          <ScalarProperty Name="SeasonName" ColumnName="SeasonName" />
+          <ScalarProperty Name="IsCurrentSeason" ColumnName="IsCurrentSeason" />
+          <ScalarProperty Name="HasClosed" ColumnName="HasClosed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransferIndentDetails">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.TransferIndentDetail)">
+        <MappingFragment StoreEntitySet="TransferIndentDetails">
+          <ScalarProperty Name="TransferIndentId" ColumnName="TransferIndentId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="PlacedProductQuantity" ColumnName="PlacedProductQuantity" />
+          <ScalarProperty Name="ApprovedProductQuantity" ColumnName="ApprovedProductQuantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransferIndents">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.TransferIndent)">
+        <MappingFragment StoreEntitySet="TransferIndents">
+          <ScalarProperty Name="TransferIndentId" ColumnName="TransferIndentId" />
+          <ScalarProperty Name="TransferIndentCode" ColumnName="TransferIndentCode" />
+          <ScalarProperty Name="IssuedFromInventoryId" ColumnName="IssuedFromInventoryId" />
+          <ScalarProperty Name="IssuedById" ColumnName="IssuedById" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IssuedToInventoryId" ColumnName="IssuedToInventoryId" />
+          <ScalarProperty Name="IssuedToSICId" ColumnName="IssuedToSICId" />
+          <ScalarProperty Name="ApprovedByNSMId" ColumnName="ApprovedByNSMId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductTransferDetails">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.ProductTransferDetail)">
+        <MappingFragment StoreEntitySet="ProductTransferDetails">
+          <ScalarProperty Name="ProductTransferId" ColumnName="ProductTransferId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="LotId" ColumnName="LotId" />
+          <ScalarProperty Name="PurchasePricePerUnit" ColumnName="PurchasePricePerUnit" />
+          <ScalarProperty Name="TransferQuantity" ColumnName="TransferQuantity" />
+          <ScalarProperty Name="RecievedQuantity" ColumnName="RecievedQuantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductTransfers">
+      <EntityTypeMapping TypeName="IsTypeOf(IspahaniAgroLTDModel.ProductTransfer)">
+        <MappingFragment StoreEntitySet="ProductTransfers">
+          <ScalarProperty Name="ProductTransferID" ColumnName="ProductTransferID" />
+          <ScalarProperty Name="ProductTransferCode" ColumnName="ProductTransferCode" />
+          <ScalarProperty Name="TransferIndentId" ColumnName="TransferIndentId" />
+          <ScalarProperty Name="SendFromInventoryId" ColumnName="SendFromInventoryId" />
+          <ScalarProperty Name="IssuedByDOId" ColumnName="IssuedByDOId" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="RecievedToInventoryId" ColumnName="RecievedToInventoryId" />
+          <ScalarProperty Name="RecievedBySICId" ColumnName="RecievedBySICId" />
+          <ScalarProperty Name="DateOfRecieve" ColumnName="DateOfRecieve" />
+          <ScalarProperty Name="TransportType" ColumnName="TransportType" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="TransportCost" ColumnName="TransportCost" />
+          <ScalarProperty Name="EmergencyContactNo" ColumnName="EmergencyContactNo" />
+          <ScalarProperty Name="HasProductLoss" ColumnName="HasProductLoss" />
+          <ScalarProperty Name="ProductLossCost" ColumnName="ProductLossCost" />
+          <ScalarProperty Name="ProductTransferStatus" ColumnName="ProductTransferStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dealers">
+      <EntityTypeMapping TypeName="IspahaniAgroLTDModel.Dealer">
+        <MappingFragment StoreEntitySet="Dealers">
+          <ScalarProperty Name="TotalCollection" ColumnName="TotalCollection" />
+          <ScalarProperty Name="SalesOfficerId" ColumnName="SalesOfficerId" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="DateOfAdminApproval" ColumnName="DateOfAdminApproval" />
+          <ScalarProperty Name="TotalDue" ColumnName="TotalDue" />
+          <ScalarProperty Name="ActivityStatus" ColumnName="ActivityStatus" />
+          <ScalarProperty Name="ExpectedDefaulterDate" ColumnName="ExpectedDefaulterDate" />
+          <ScalarProperty Name="CreditLimit" ColumnName="CreditLimit" />
+          <ScalarProperty Name="LicenseNo" ColumnName="LicenseNo" />
+          <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DealerId" ColumnName="DealerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DueInfoes">
+      <EntityTypeMapping TypeName="IspahaniAgroLTDModel.DueInfo">
+        <MappingFragment StoreEntitySet="DueInfoes">
+          <ScalarProperty Name="PaymentDeadLine" ColumnName="PaymentDeadLine" />
+          <ScalarProperty Name="CommissionOnBenefit" ColumnName="CommissionOnBenefit" />
+          <ScalarProperty Name="CommissionOnSell" ColumnName="CommissionOnSell" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="SalesReturn" ColumnName="SalesReturn" />
+          <ScalarProperty Name="TransportationLoss" ColumnName="TransportationLoss" />
+          <ScalarProperty Name="ProductCost" ColumnName="ProductCost" />
+          <ScalarProperty Name="DueStatus" ColumnName="DueStatus" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="BillId" ColumnName="BillId" />
+          <ScalarProperty Name="DealerId" ColumnName="DealerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

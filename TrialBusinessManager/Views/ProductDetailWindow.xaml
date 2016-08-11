@@ -1,0 +1,62 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.ProductDetailWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels"
+           mc:Ignorable="d" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:SilverlightContrib_Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"           
+           Width="800" Height="492" 
+           Title="Product Detail">
+    
+    <controls:ChildWindow.Resources>
+        <local:ProductDetailViewModel x:Key="ProductDetailViewModel"/>
+    </controls:ChildWindow.Resources>
+
+
+    <Grid x:Name="LayoutRoot" >
+        <SilverlightContrib_Controls:GroupBox Header="Basic info" Margin="6,6,10,0" VerticalAlignment="Top" Height="227" FontSize="14"></SilverlightContrib_Controls:GroupBox>
+        <Grid Margin="12,27,16,230" DataContext="{Binding Path=Product}">
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="107,6,0,0" VerticalAlignment="Top" Width="213" Text="{Binding Path=Product.ProductName, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}" IsReadOnly="True" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="107,62,0,0" VerticalAlignment="Top" Width="213" Text="{Binding Path=Product.ProductCode, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}" IsReadOnly="True" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="107,119,0,0" VerticalAlignment="Top" Width="213" Text="{Binding Path=Product.ProductType, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}" IsReadOnly="True" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="107,148,0,0" VerticalAlignment="Top" Width="213" Text="{Binding Path=Product.ProductWing, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}" IsReadOnly="True" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="107,90,0,0" VerticalAlignment="Top" Width="213" Text="{Binding Path=Product.StockKeepingUnit, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}" IsReadOnly="True" />
+            <TextBlock Height="16" HorizontalAlignment="Left" Margin="4,11,0,0" VerticalAlignment="Top" Width="96" Text="Product Name" />
+            <TextBlock Height="19" HorizontalAlignment="Left" Margin="4,65,0,0" VerticalAlignment="Top" Width="96" Text="Product Code" />
+            <TextBlock Height="19" HorizontalAlignment="Left" Margin="6,153,0,0" Text="Product Wing" VerticalAlignment="Top" Width="96" />
+            <TextBlock Height="19" HorizontalAlignment="Left" Margin="6,123,0,0" Text="Product Type" VerticalAlignment="Top" Width="96" />
+            <TextBlock Height="20" HorizontalAlignment="Left" Margin="6,92,0,0" Text="S.K.U(Kg)" VerticalAlignment="Top" Width="96" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="545,8,0,0" VerticalAlignment="Top" Width="203" Text="{Binding Path=Product.PurchasePeriodStart, Source={StaticResource ProductDetailViewModel}}" IsReadOnly="True" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="545,38,0,0" VerticalAlignment="Top" Width="203" Text="{Binding Path=Product.PurchasePeriodEnd, Source={StaticResource ProductDetailViewModel}}" IsReadOnly="True" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="545,67,0,0" VerticalAlignment="Top" Width="203" d:LayoutOverrides="VerticalAlignment" Text="{Binding Path=Product.SalesPeriodStart, Source={StaticResource ProductDetailViewModel}}" IsReadOnly="True" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="545,98,0,0" VerticalAlignment="Top" Width="203" Text="{Binding Path=Product.SalesPeriodEnd, Source={StaticResource ProductDetailViewModel}}" IsReadOnly="True" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="545,128,0,0" VerticalAlignment="Top" Width="203" Text="{Binding Path=Product.PricePerUnit, Mode=TwoWay, Source={StaticResource ProductDetailViewModel}}" IsReadOnly="True" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="403,11,0,0" Text="Purchase period start" VerticalAlignment="Top" Width="136" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="411,41,0,0" Text="Purchase period end" VerticalAlignment="Top" Width="114" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="426,70,0,0" Text="Sales period start" VerticalAlignment="Top" Width="109" d:LayoutOverrides="VerticalAlignment" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="428,100,0,0" Text="Sales period end" VerticalAlignment="Top" Width="107" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="426,130,0,0" Text="Price per unit(kg)" VerticalAlignment="Top" Width="107" />
+            <RadioButton IsEnabled="False" IsChecked="True" GroupName="LocalOrImported" Content="Imported" Height="19" HorizontalAlignment="Left" Margin="549,160,0,0" VerticalAlignment="Top" Width="77" />
+            <TextBlock Height="19" HorizontalAlignment="Left" Margin="426,161,0,0" Text="Imported or local" VerticalAlignment="Top" Width="107" />
+            <TextBlock Height="19" HorizontalAlignment="Left" Margin="6,180,0,0" Text="Op Or Hybrid" VerticalAlignment="Top" Width="96" />
+            <RadioButton Content="Local" IsChecked="{Binding Path=Product.IsImported, Source={StaticResource ProductDetailViewModel}}" GroupName="LocalOrImported" IsEnabled="False" Height="19" HorizontalAlignment="Left" Margin="647,160,0,0" VerticalAlignment="Top" Width="77" />
+            <RadioButton Content="HyBrid" IsChecked="{Binding Path=Product.IsOpOrHibrid, Source={StaticResource ProductDetailViewModel}}" GroupName="OpOrHybrid" IsEnabled="False" Height="23" HorizontalAlignment="Left" Margin="161,179,0,0" VerticalAlignment="Top" Width="63" />
+            <RadioButton Content="Op" IsChecked="True" GroupName="OpOrHybrid" IsEnabled="False" Height="23" HorizontalAlignment="Left" Margin="109,179,0,0" VerticalAlignment="Top" Width="48" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="107,34,0,0" VerticalAlignment="Top" Width="213" Text="{Binding Mode=TwoWay, Path=Product.BrandName, Source={StaticResource ProductDetailViewModel}}" IsReadOnly="True" />
+            <TextBlock Height="19" HorizontalAlignment="Left" Margin="4,38,0,0" VerticalAlignment="Top" Width="96" Text="Brand Name" />
+        </Grid>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,241,0,0" Name="textBlock1" Text="Commission Info" VerticalAlignment="Top" FontSize="14" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="143" Margin="12,268,12,0" Name="dataGrid1" VerticalAlignment="Top" ItemsSource="{Binding Path=CommissionCollection, Source={StaticResource ProductDetailViewModel}}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Payment method" Width="1*" IsReadOnly="True" Binding="{Binding Path=CommissionName}" />
+                <sdk:DataGridTextColumn Header="Percentage" Width="1*" IsReadOnly="True" Binding="{Binding Path=Percentage}" />
+                <sdk:DataGridTextColumn Header="Duration" Width="1*" IsReadOnly="True" Binding="{Binding Path=Duration, Mode=OneWay}" />
+                <sdk:DataGridTextColumn Header="Status" Width="1*" IsReadOnly="True" Binding="{Binding Path=CommissionStatus, Mode=OneWay}" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="OK" Height="23" HorizontalAlignment="Left" Margin="659,422,0,0" Name="OKBtn" VerticalAlignment="Top" Width="111" Click="OKBtn_Click" />
+    </Grid>
+</controls:ChildWindow>

@@ -1,0 +1,55 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.CreateExpenditure" 
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 d:DataContext="{d:DesignInstance Type=local:CreateExpenditureViewModel,IsDesignTimeCreatable=False}"
+                  xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           mc:Ignorable="d"
+          
+            d:DesignWidth="1062" d:DesignHeight="558"
+           Title="CreateExpenditure Page"  xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+    <Grid x:Name="LayoutRoot" Margin="2,0" d:LayoutOverrides="VerticalMargin">
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="49,58,0,0" Name="textBlock1" Text="Sales Officers" VerticalAlignment="Top" Width="117" />
+        <sdk:DataGrid AutoGenerateColumns="False" ColumnWidth="148*" Margin="1,92,0,61" Name="dataGrid1"   FontSize="12" d:LayoutOverrides="HorizontalAlignment" MinHeight="0"  ItemsSource="{Binding Path=ExpenditureInfoCollection }"  SelectedIndex="{Binding Path=SelectedEx, Mode=TwoWay}" GridLinesVisibility="All" BorderThickness="1" BorderBrush="#FF706161" Width="1050">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Name}" Header="Employee name" IsReadOnly="True" FontSize="13"/>
+                <sdk:DataGridTemplateColumn Header="Remarks">
+                    <sdk:DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding Path= Remarks}" SelectedItem="{Binding SelectedRemark,Mode=TwoWay}" >
+                            </ComboBox>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                    
+                </sdk:DataGridTemplateColumn>
+
+                <sdk:DataGridTextColumn Binding="{Binding ExpenditureInfo.PlacedAmount,Mode=TwoWay}" Header="Amount (tk)"  FontSize="13"/>
+
+            
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <ComboBox Height="31" HorizontalAlignment="Left" Margin="166,55,0,0" Name="autoCompleteBox1" VerticalAlignment="Top" Width="218"  ItemsSource="{Binding Path=Employees}" SelectedItem="{Binding Path=SelectedEmployee, Mode=TwoWay}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=Person.Name}" FontSize="14" />
+                      
+                     </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Border BorderBrush="#FF466889" BorderThickness="1" Height="326" HorizontalAlignment="Left" Margin="440,37,0,0" Name="border1" VerticalAlignment="Top" Width="0" />
+         <Button Command="{Binding Path=Add}" Content="Add" Height="31" HorizontalAlignment="Left" Margin="393,55,0,0" Name="button6" VerticalAlignment="Top" Width="57" FontSize="11" />
+        <TextBlock FontSize="22" Height="36" HorizontalAlignment="Left" Margin="1,2,0,0" Name="textBlock4" Text="Issue Expenditure" VerticalAlignment="Top" Width="172" Foreground="#FF6A7483" FontFamily="Segoe UI, Lucida Sans Unicode, Verdana" />
+        <Image Height="31" HorizontalAlignment="Left" Margin="6,55,0,0" Name="image1" Source="/TrialBusinessManager;component/Assets/Resources/search_icon.png" Stretch="Fill" VerticalAlignment="Top" Width="29" />
+        <Button x:Name="refreshButton" Command="{Binding ResetCommand}" Content="Reset" HorizontalAlignment="Right" Height="31" Margin="0,0,83,8" VerticalAlignment="Bottom" Width="69" Foreground="Black" ToolTipService.ToolTip="Reset..." d:LayoutOverrides="VerticalAlignment">
+        	
+        </Button>
+        <Button x:Name="listItemDeleteButton_Copy" Command="{Binding SaveCommand}" Content="Submit" HorizontalAlignment="Right" Height="31" Margin="0,0,5,8" VerticalAlignment="Bottom" Width="72" Foreground="Black" ToolTipService.ToolTip="Submit..." d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
+        	
+        </Button>
+        <Button Content="Remove" Height="31" HorizontalAlignment="Left" Margin="456,55,0,0" Name="button1" VerticalAlignment="Top" Width="67" Command="{Binding Path=DeleteSelected}" FontSize="11" />
+    </Grid>
+</navigation:Page>

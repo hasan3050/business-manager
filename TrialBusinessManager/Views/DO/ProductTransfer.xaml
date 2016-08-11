@@ -1,0 +1,108 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.DO.ProductTransfer" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels.DO"
+           xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+           xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.SL4"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="1040" d:DesignHeight="480"
+           Height="500" Width="1092"
+           Title="ProductTransfer Page" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    
+    <navigation:Page.Resources>
+        <local:ProductTransferViewModel x:Key="MyViewModel"/>
+    </navigation:Page.Resources>
+    
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="166" />
+            <RowDefinition Height="334*" />
+        </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Left" Height="115" Margin="6,0,0,0" VerticalAlignment="Top" Width="358">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="107*" />
+                <RowDefinition Height="15*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="103*" />
+                <ColumnDefinition Width="240*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Height="20" Margin="0,8,0,0" TextWrapping="Wrap" Text="From(Inventory)" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Grid.ColumnSpan="2" />
+            <TextBlock Margin="6,44,0,0" TextWrapping="Wrap" Text="To(Inventory) " HorizontalAlignment="Left" Width="108" Height="17" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+            <Grid  x:Name="DealerGrid" Margin="21,0,0,24" Grid.Column="1">
+                <TextBox Height="29" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="13.333" IsReadOnly="True" Name="InventoryTxt"/>
+                <ComboBox Margin="0,38,0,0"  FontSize="13.333"  Height="30" VerticalAlignment="Top" ItemsSource="{Binding Source={StaticResource MyViewModel}, Path=Inventories}" SelectedItem="{Binding Source={StaticResource MyViewModel}, Path=SelectedInventory,Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding InventoryName,Mode=TwoWay}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </Grid>
+        </Grid>
+        <Grid HorizontalAlignment="Right" Margin="0,0,5,7" Width="302">
+            <TextBox Height="30" Margin="138,31,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="{Binding Path=ProductTransfer.EmergencyContactNo, Mode=TwoWay, Source={StaticResource MyViewModel}}" />
+            <TextBox Margin="138,63,0,0" TextWrapping="Wrap"  Height="30" VerticalAlignment="Top" Text="{Binding Path=ProductTransfer.VehicleNo, Mode=TwoWay, Source={StaticResource MyViewModel}}" />
+            <TextBox Height="29" Margin="138,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding Mode=TwoWay, Source={StaticResource MyViewModel}, Path=ProductTransfer.TransportCost}" />
+            <ComboBox Height="28" VerticalAlignment="Top" SelectedItem="{Binding Mode=TwoWay, Source={StaticResource MyViewModel}, Path=ProductTransfer.TransportType}" DataContext="{Binding DataContext, ElementName=LayoutRoot}" ItemsSource="{Binding Source={StaticResource MyViewModel}, Path=Transports}" Margin="138,0,0,0" />
+            <TextBlock HorizontalAlignment="Left" Height="21" Margin="30,7,0,0" TextWrapping="Wrap" Text="Transport Type" VerticalAlignment="Top" Width="96"/>
+            <TextBlock HorizontalAlignment="Left" Margin="55,68,0,0" TextWrapping="Wrap" Text="Veichle No" Width="71" Height="18" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" Margin="6,38,0,0" TextWrapping="Wrap" Text="Emergency Contact" Width="118" Height="23" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Transport Cost " Width="92" Margin="32,98,0,0" Height="17" VerticalAlignment="Top" />
+            <TextBox Margin="138,126,0,0" Text="{Binding Mode=TwoWay, Source={StaticResource MyViewModel}, Path=ProductTransfer.ProductTransferCode}" TextWrapping="Wrap" Height="29" VerticalAlignment="Top" />
+            <TextBlock Height="21" Margin="32,129,0,0" Text="Transfer Code " TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="93" />
+        </Grid>
+        <TextBlock Grid.Row="1" Height="17" HorizontalAlignment="Left" Margin="12,11,0,0" Name="textBlock1" Text="Choose Product" VerticalAlignment="Top" FontSize="14" Width="114" />
+        <ComboBox Grid.Row="1" Height="31" HorizontalAlignment="Left" Margin="12,32,0,0" Name="autoCompleteBox1" VerticalAlignment="Top" Width="286" SelectedItem="{Binding Path=SelectedProduct, Mode=TwoWay, Source={StaticResource MyViewModel}}" ItemsSource="{Binding Source={StaticResource MyViewModel}, Path=Products,Mode=TwoWay}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <cmd:EventToCommand Command="{Binding Mode=TwoWay, Source={StaticResource MyViewModel}, Path=ProductChangedCommand}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        
+                            <TextBlock Text="{Binding ProductName,Mode=TwoWay}"/>
+                        
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text=" Brand : "/>
+                            <TextBlock Text="{Binding BrandName,Mode=TwoWay}"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text=" Packet Size : "/>
+                            <TextBlock Text="{Binding StockKeepingUnit,Mode=TwoWay}"/>
+                        </StackPanel>
+                        
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button Content="Add" Grid.Row="1" Height="32" HorizontalAlignment="Left" Margin="446,32,0,0" Name="button1" VerticalAlignment="Top" Width="75" Command="{Binding Source={StaticResource MyViewModel}, Path=AddCommand}" />
+        <Button Content="Delete" Grid.Row="1" Height="32" HorizontalAlignment="Left" Margin="527,32,0,0" Name="button2" VerticalAlignment="Top" Width="75" Command="{Binding Source={StaticResource MyViewModel}, Path=DeleteCommand}" />
+        <sdk:DataGrid AutoGenerateColumns="False" SelectedItem="{Binding Source={StaticResource MyViewModel}, Path=SelectedDataGridInfo,Mode=TwoWay}" Grid.Row="1" Height="208" Margin="12,80,5,0" Name="dataGrid1" VerticalAlignment="Top" ItemsSource="{Binding Source={StaticResource MyViewModel}, Path=ProductTransferInfoes}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="RowEditEnded">
+                    <cmd:EventToCommand Command="{Binding Mode=TwoWay, Source={StaticResource MyViewModel}, Path=QuantityEditedCommand}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn x:Name="productNameColumn" Binding="{Binding Path=Info.Product.ProductName,Mode=TwoWay}" Header="Product Name" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="productCodeColumn" Binding="{Binding Path=Info.Product.ProductCode,Mode=TwoWay}" Header="Brand Name" Width="1*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn x:Name="productBrandColumn" Binding="{Binding Path=Info.Product.BrandName,Mode=TwoWay}" Header="Product Code" Width="1*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn x:Name="packetSizeColumn" Binding="{Binding Path=Info.Product.StockKeepingUnit,Mode=TwoWay}" Header="Packet Size" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="unitPriceColumn" Binding="{Binding Info.UnitLotCost}" Header="Purchase Price/Unit(BDT)" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="LotColumn" Binding="{Binding Path=Info.LotId}" Header="Lot Number" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="AvailableQuantityColumn" Binding="{Binding Path=AvailableQuantity}" Header="Available Quantity" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="quantityColumn" Binding="{Binding Path=Quantity,Mode=TwoWay,ValidatesOnExceptions=True}" Header="Transfer Quantity(Pc)" Width="1*" />
+           </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Forward" Grid.Row="1" Height="29" HorizontalAlignment="Right" Margin="0,294,5,0" Name="button3" VerticalAlignment="Top" Width="138" Command="{Binding Source={StaticResource MyViewModel}, Path=SubmitCommand}" />
+        <Button Content="Reset" Grid.Row="1" Height="29" HorizontalAlignment="Left" Margin="831,294,0,0" Name="button4" VerticalAlignment="Top" Width="112" Command="{Binding Source={StaticResource MyViewModel}, Path=ResetCommand}" />
+        <TextBlock FontSize="14" Height="17" HorizontalAlignment="Left" Margin="307,11,0,0" Name="textBlock2" Text="Choose Lot" VerticalAlignment="Top" Width="86" Grid.Row="1" />
+        <ComboBox Grid.Row="1" Height="31" HorizontalAlignment="Left" Margin="307,32,0,0" Name="comboBox1" VerticalAlignment="Top" Width="133" ItemsSource="{Binding Source={StaticResource MyViewModel}, Path=Lots}" SelectedItem="{Binding Path=SelectedLot, Mode=TwoWay, Source={StaticResource MyViewModel}}" />
+    </Grid>
+</navigation:Page>

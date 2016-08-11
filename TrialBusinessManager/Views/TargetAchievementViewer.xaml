@@ -1,0 +1,116 @@
+﻿<sdk:Page	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"	xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+	mc:Ignorable="d"
+	x:Class="TrialBusinessManager.TargetAchievementViewer" 
+	Title="TargetAchievementViewer Page" Height="527">
+	
+	<Grid x:Name="LayoutRoot" MinHeight="0">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1005"/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="225"/>
+			<RowDefinition Height="255"/>
+            <RowDefinition Height="47*" />
+        </Grid.RowDefinitions>
+		<toolkit:Chart x:Name="barChart" Margin="4,28,276,-39" Grid.Row="1" d:LayoutOverrides="VerticalAlignment" Width="725">
+			<toolkit:BarSeries Title="Achievement"
+				IndependentValueBinding="{Binding Key}"
+				DependentValueBinding="{Binding Value}"/>
+		</toolkit:Chart>
+		<sdk:DataGrid AutoGenerateColumns="False" Margin="11,31,8,6" x:Name="dataList" ColumnWidth="120*" d:LayoutOverrides="VerticalAlignment">
+			<sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Product Name" IsReadOnly="True" MinWidth="128" Width="*" Binding="{Binding ProductName}" Foreground="Black" FontFamily="/TrialBusinessManager;component/Fonts/Fonts.zip#Segoe UI"/>
+				<sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Target Quantity(Kg)" IsReadOnly="True" MinWidth="128" Width="*" Binding="{Binding TargetQuantity}" Foreground="Black" FontFamily="/TrialBusinessManager;component/Fonts/Fonts.zip#Segoe UI"/>
+				<sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Achieved Quantity(Kg)" MinWidth="128" Width="*" Binding="{Binding AchievedQuantity}" Foreground="Black" FontFamily="/TrialBusinessManager;component/Fonts/Fonts.zip#Segoe UI"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Achieved Amount(BDT)" MinWidth="128" Width="*" Binding="{Binding AchievedAmount}" Foreground="Black" FontFamily="/TrialBusinessManager;component/Fonts/Fonts.zip#Segoe UI"/>
+
+             
+            </sdk:DataGrid.Columns>
+		</sdk:DataGrid>
+		<sdk:DataPager x:Name="datagridPager" PageSize="5" HorizontalContentAlignment="Center" DisplayMode="PreviousNext" PageIndexChanged="pagerIndexChanged" HorizontalAlignment="Center" Width="204" Height="26" VerticalAlignment="Top" Margin="12,222,789,0" Grid.RowSpan="2" />
+		<ComboBox Height="23" HorizontalAlignment="Left" x:Name="regionCombo" VerticalAlignment="Top" Width="120" SelectionChanged="newRegionSelected" Margin="117,2,0,0">
+			<ComboBox.ItemTemplate>
+				<DataTemplate>
+					<TextBlock Text="{Binding RegionName}" FontSize="10"/>
+				</DataTemplate>           	
+			</ComboBox.ItemTemplate>
+		</ComboBox>
+		<TextBlock FontFamily="/TrialBusinessManager;component/Fonts/Fonts.zip#Segoe UI" FontSize="12" Height="20" HorizontalAlignment="Left" Margin="11,4,0,0" Text="Select Region" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" />
+		<Grid x:Name="BottomRightPane" Margin="739,30,1,-39" Grid.Row="1" Width="265" d:LayoutOverrides="GridBox">
+			<Grid x:Name="TargetTotalPane" VerticalAlignment="Top" Height="75" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Left" Width="114" Margin="0,1,0,0">
+				<Rectangle>
+					<Rectangle.Fill>
+						<SolidColorBrush Color="{StaticResource OKButtonIconColor1}"/>
+					</Rectangle.Fill>
+				</Rectangle>
+				<StackPanel>
+					<TextBlock TextWrapping="Wrap" Text="Total Target Qty." Foreground="#FFF7F2F2" FontSize="12" Height="19" Margin="8,7,0,0"/>
+					<TextBlock x:Name="totalTargetField" TextWrapping="Wrap" Foreground="#FFFDFAFA" TextAlignment="Right" FontSize="14.667" Height="28" d:LayoutOverrides="HorizontalAlignment" Margin="4,18,4,2"/>
+				</StackPanel>
+			</Grid>
+			<Grid x:Name="AchievementsPane" Margin="118,1,8,0" VerticalAlignment="Top" Height="75" d:LayoutOverrides="VerticalAlignment">
+				<Rectangle>
+					<Rectangle.Fill>
+						<SolidColorBrush Color="{StaticResource AccentColor}"/>
+					</Rectangle.Fill>
+				</Rectangle>
+				<StackPanel>
+					<TextBlock TextWrapping="Wrap" Text="Total Achieved Qty." Foreground="#FFF7F2F2" FontSize="12" Height="19" Margin="8,7,4,0"/>
+					<TextBlock x:Name="totalAchievementField" TextWrapping="Wrap" Foreground="#FFFDFAFA" TextAlignment="Right" FontSize="14.667" Height="28" d:LayoutOverrides="HorizontalAlignment" Margin="4,18,4,2"/>
+				</StackPanel>
+			</Grid>
+			<Grid x:Name="AchievedAmountPane" Margin="0,80,8,0" VerticalAlignment="Top" Height="35">
+				<Rectangle>
+					<Rectangle.Fill>
+						<SolidColorBrush Color="#FF065070"/>
+					</Rectangle.Fill>
+				</Rectangle>
+				<StackPanel Orientation="Horizontal">
+					<TextBlock TextWrapping="Wrap" Text="Total Achieved Amount" Foreground="#FFF7F2F2" FontSize="12" Height="19" Margin="8,8,4,8"/>
+					<TextBlock x:Name="totalAchievedAmountField" TextWrapping="Wrap" Foreground="#FFFDFAFA" TextAlignment="Right" FontSize="14.667" d:LayoutOverrides="HorizontalAlignment" Margin="4,4,0,4" Width="96"/>
+				</StackPanel>
+			</Grid>
+			<Grid x:Name="RegionSpecificPane" Margin="0,119,8,0">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="31.333"/>
+					<RowDefinition Height="26"/>
+					<RowDefinition Height="74.834"/>
+				</Grid.RowDefinitions>
+				<Rectangle Grid.RowSpan="3" Margin="0,0,0,-12.667">
+					<Rectangle.Fill>
+						<SolidColorBrush Color="{StaticResource ChartBrush7}"/>
+					</Rectangle.Fill>
+				</Rectangle>
+				<StackPanel Orientation="Horizontal" Margin="0,4,0,0.333">
+					<TextBlock TextWrapping="Wrap" Text="Region Name" Foreground="#FFF7F2F2" FontSize="12" Height="26" Margin="8,0,0,0" HorizontalAlignment="Left" Width="95" VerticalAlignment="Top"/>
+					<TextBlock x:Name="regionNameBlock" TextWrapping="Wrap" Foreground="#FFFDFAFA" TextAlignment="Right" FontSize="14.667" Height="28" d:LayoutOverrides="HorizontalAlignment" Margin="4,0,-147,0" VerticalAlignment="Top" Width="144"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Margin="0,0.667,0,0.333" Grid.Row="1">
+					<TextBlock TextWrapping="Wrap" Text="Achieved Qty." Foreground="#FFF7F2F2" FontSize="12" Height="26" Margin="8,0,0,0" HorizontalAlignment="Left" Width="95" VerticalAlignment="Top"/>
+					<TextBlock x:Name="regionQuantityAchievmentBlock" TextWrapping="Wrap" Foreground="#FFFDFAFA" TextAlignment="Right" FontSize="14.667" Height="25" d:LayoutOverrides="HorizontalAlignment" Margin="4,0,-147,0" VerticalAlignment="Top"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Margin="0,3.667,0,0" Grid.Row="2" Height="28" VerticalAlignment="Top">
+					<TextBlock TextWrapping="Wrap" Text="Contribution in total" Foreground="#FFF7F2F2" FontSize="12" Height="26" Margin="8,0,0,0" HorizontalAlignment="Left" Width="139" VerticalAlignment="Top"/>
+					<TextBlock x:Name="regionQuantityPercentageBlock" TextWrapping="Wrap" Foreground="#FFFDFDFD" TextAlignment="Right" FontSize="18.667" Height="28" Margin="-13,0,0,0" VerticalAlignment="Top" Width="96" Text="0"/>
+					<TextBlock TextWrapping="Wrap" Text="%" Width="25" FontSize="18.667" Foreground="White" Margin="4,0,0,0"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Margin="0,29.667,0,20.333" Grid.Row="2">
+					<TextBlock TextWrapping="Wrap" Text="Achieved Amount" Foreground="#FFF7F2F2" FontSize="12" Height="26" Margin="8,0,0,0" HorizontalAlignment="Left" Width="116" VerticalAlignment="Top"/>
+					<TextBlock x:Name="regionAmountAchievementBlock" TextWrapping="Wrap" Foreground="#FFFDFAFA" TextAlignment="Right" FontSize="14.667" Height="25" Margin="4,0,-116,0" VerticalAlignment="Top" Width="123"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Margin="0,0,0,-11.667" Grid.Row="2" Height="28" VerticalAlignment="Bottom">
+					<TextBlock TextWrapping="Wrap" Text="Contribution in total" Foreground="#FFF7F2F2" FontSize="12" Height="26" Margin="8,0,0,0" HorizontalAlignment="Left" Width="139" VerticalAlignment="Top"/>
+					<TextBlock x:Name="regionAmountPercentageBlock" TextWrapping="Wrap" Foreground="#FFFDFDFD" TextAlignment="Right" FontSize="18.667" Height="28" Margin="-12,0,0,0" VerticalAlignment="Top" Width="96" Text="0"/>
+					<TextBlock TextWrapping="Wrap" Text="%" Width="25" FontSize="18.667" Foreground="White" Margin="4,0,0,0"/>
+				</StackPanel>
+			</Grid>
+		</Grid>
+        <Button Content="Set/Edit Region Targets" Height="23" HorizontalAlignment="Left" Margin="846,2,0,0" Name="button1" VerticalAlignment="Top" Width="151" Click="button1_Click" />
+    </Grid>
+		
+</sdk:Page>

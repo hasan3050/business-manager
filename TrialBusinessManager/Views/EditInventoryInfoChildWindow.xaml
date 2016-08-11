@@ -1,0 +1,44 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.EditInventoryInfoChildWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+                      xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           Width="507" Height="245" 
+           Title="Edit Inventory">
+    <Grid x:Name="LayoutRoot" Margin="2" >
+        
+
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="98" Height="31" HorizontalAlignment="Left" Margin="361,166,0,0" FontSize="11" VerticalAlignment="Top" />
+        <TextBlock Height="23" Margin="41,92,279,0" Name="textBlock2" Text="Select Store In Charge" VerticalAlignment="Top" FontSize="13" />
+        <TextBlock Height="23" Margin="41,130,289,0" Name="textBlock3" Text="Select Dispatch Officer" VerticalAlignment="Top" FontSize="13" />
+        <ComboBox  Height="34" HorizontalAlignment="Left" Margin="209,84,0,0" Name="ComboBox1" VerticalAlignment="Top" Width="189" ItemsSource="{Binding Path=Employees}" SelectedItem="{Binding Path=SelectedSIC, Mode=TwoWay}" SelectionChanged="ComboBox1_SelectionChanged" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding 
+                            Path=Person.Name}" FontSize="14" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <ComboBox Height="34" HorizontalAlignment="Left" Margin="209,124,0,0" Name="ComboBox2" VerticalAlignment="Top" Width="189" ItemsSource="{Binding Path=Employees}" SelectedItem="{Binding Path=SelectedDO, Mode=TwoWay}" SelectionChanged="ComboBox2_SelectionChanged" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding 
+                            Path=Person.Name}" FontSize="14" />
+                       
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button Content="Submit" Height="31" HorizontalAlignment="Left" Margin="260,166,0,0" Name="button1" VerticalAlignment="Top" Width="95" FontSize="11" Click="button1_Click" />
+        <TextBox Height="32" HorizontalAlignment="Left" Margin="209,46,0,0" Name="InventoryAddressTxtBox" VerticalAlignment="Top" Width="250" />
+        <TextBlock Height="23" Margin="41,54,0,0" Name="textBlock1" Text="Inventory Address" VerticalAlignment="Top" FontSize="13" HorizontalAlignment="Left" Width="135" />
+        <TextBox Height="32" HorizontalAlignment="Left" Margin="209,8,0,0" Name="InventoryNameTxtBox" VerticalAlignment="Top" Width="250" />
+        <TextBlock FontSize="13" Height="23" HorizontalAlignment="Left" Margin="41,17,0,0" Name="textBlock4" Text="Inventory Name" VerticalAlignment="Top" Width="124" />
+        <Button Content="Reset" Height="23" HorizontalAlignment="Left" Margin="404,89,0,0" Name="button2" VerticalAlignment="Top" Width="55" Click="button2_Click" />
+        <Button Content="Reset" Height="23" HorizontalAlignment="Left" Margin="404,130,0,0" Name="button3" VerticalAlignment="Top" Width="55" Click="button3_Click" />
+    </Grid>
+</controls:ChildWindow>

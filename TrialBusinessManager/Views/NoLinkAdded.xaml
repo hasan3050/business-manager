@@ -1,0 +1,16 @@
+﻿<sdk:Page	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"	x:Class="TrialBusinessManager.NoLinkAdded" 
+	Title="NoLinkAdded Page"
+	d:DesignWidth="640" d:DesignHeight="480">
+	
+	<Grid x:Name="LayoutRoot" >
+		<TextBlock Margin="0" TextWrapping="Wrap" Text="Sorry! Construction going on!" Height="27" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" FontSize="14.667" FontWeight="Bold"/>
+		<TextBlock Height="38" Margin="92,0,92,188" TextWrapping="Wrap" Text="The page you are looking for might not have been added yet.You should contact the system administrator." VerticalAlignment="Bottom" TextAlignment="Center" FontSize="12"/>
+		<TextBlock Height="37" Margin="0,75,0,0" TextWrapping="Wrap" Text="Page not found!" VerticalAlignment="Top" HorizontalAlignment="Center" Width="193" Foreground="#FFBE0A0A" FontSize="24"/>
+		<Image Height="115" Margin="8,112,8,0" VerticalAlignment="Top" Source="/TrialBusinessManager;component/Assets/Resources/under_construction.png"/>
+	</Grid>
+</sdk:Page>

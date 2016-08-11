@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="TrialBusinessManager.UserControls.PrintHeader"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="122" Width="485">
+    
+    <Grid x:Name="LayoutRoot" Background="White" HorizontalAlignment="Center" Width="440">
+        <TextBlock Margin="57,46,61,51" TextWrapping="Wrap" Text="ISPAHANI AGRO LIMITED" FontSize="20" HorizontalAlignment="Center" />
+    	<TextBlock Height="18" Margin="71,0,72,29" TextWrapping="Wrap" Text="Seed Wing/Biotech Wing/Fertilizer Wing" VerticalAlignment="Bottom" FontSize="13.333" HorizontalAlignment="Center" />
+    	<Grid Height="17" Margin="0,0,0,7" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+    		<TextBlock TextWrapping="Wrap" Text="Dhaka office : " FontSize="10.667" FontWeight="Bold" HorizontalAlignment="Left" Width="85" Margin="6,0,0,0" />
+    		<TextBlock Margin="95,0,0,0" TextWrapping="Wrap" Text="Ispahani Building(7th Floor),14-15,Motijheel C/A,Dhaka-1000" FontSize="10.667"/>
+
+    	</Grid>
+
+    </Grid>
+</UserControl>

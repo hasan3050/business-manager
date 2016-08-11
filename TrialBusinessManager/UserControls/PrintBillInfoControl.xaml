@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="TrialBusinessManager.UserControls.PrintBillInfoControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Width="331" Height="150">
+
+    <Grid  Width="331" Height="218" VerticalAlignment="Top"  Name="LayoutRoot" Margin="0,0,0,-64" >
+        <TextBox Height="20" Margin="132,24,0,0" TextWrapping="Wrap" Text="{Binding EmergencyContactNo, Mode=TwoWay}" VerticalAlignment="Top" BorderThickness="0,0,0,1" />
+        <TextBox Margin="132,48,0,0" TextWrapping="Wrap" Text="{Binding VehicleNo, Mode=TwoWay}" Height="20" BorderThickness="0,0,0,1" VerticalAlignment="Top" />
+        <TextBox Height="20" Margin="132,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding TransportCost, Mode=TwoWay}" BorderThickness="0,0,0,1" />
+        <TextBox Height="20" VerticalAlignment="Top"  Text="{Binding TransportType}" Margin="132,0,0,0" BorderThickness="0,0,0,1" />
+        <TextBlock HorizontalAlignment="Left" Height="13" Margin="1,3,0,0" TextWrapping="Wrap" Text="Transport Type :" VerticalAlignment="Top" Width="102"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1,53,0,0" TextWrapping="Wrap" Text="Vehicle No :" Width="76" Height="13" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="0,27,0,0" TextWrapping="Wrap" Text="Emergency Contact :" Width="128" Height="13" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Height="13" TextWrapping="Wrap" Text="Transport Cost :" VerticalAlignment="Top" Width="103" Margin="0,76,0,0"/>
+        <TextBox Height="20" Margin="132,98,1,0" Text="{Binding BillCode, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" BorderThickness="0,0,0,1" />
+        <TextBlock Height="13" Margin="1,101,0,0" Text="Bill Code :" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" />
+        <TextBlock Height="13" Margin="0,126,0,0" Text="Issue Date :" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" />
+        <TextBox Height="20" Margin="132,123,1,0" Text="{Binding DateOfIssue, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" BorderThickness="0,0,0,1" />
+
+    </Grid>
+</UserControl>

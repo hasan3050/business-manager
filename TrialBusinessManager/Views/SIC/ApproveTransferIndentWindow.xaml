@@ -1,0 +1,26 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.SIC.ApproveTransferIndentWindow" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels.SIC"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="1000" d:DesignHeight="480"
+           Title="ApproveTransferIndentWindow Page" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <navigation:Page.Resources>
+        <local:ProductTransferNotificationsViewModel x:Key="ProductTransferNotificationsViewModel"/>
+    </navigation:Page.Resources>
+    <Grid x:Name="LayoutRoot" DataContext="{Binding Source={StaticResource ProductTransferNotificationsViewModel}}">
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock1" Text="Transfer Indents" VerticalAlignment="Top" FontSize="14" Width="127" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="269" HorizontalAlignment="Left" Margin="12,41,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="976" ItemsSource="{Binding Path=Indents}" SelectedItem="{Binding Source={StaticResource ProductTransferNotificationsViewModel},Path=SelectedIndent,Mode=TwoWay}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Path=TransferIndentCode}"  Width="1*" CanUserReorder="True" IsReadOnly="True" CanUserResize="True" CanUserSort="True" Header="Indent Code"  />
+                <sdk:DataGridTextColumn Binding="{Binding Path=DateOfIssue}"  Width="1*" CanUserReorder="True" CanUserResize="True" IsReadOnly="True"  CanUserSort="True" Header="Issue Date"  />
+                <sdk:DataGridTextColumn Binding="{Binding Path=Inventory.InventoryName, Mode=OneWay}"  Width="1*" CanUserReorder="True" IsReadOnly="True"  CanUserResize="True" CanUserSort="True" Header="From Inventory" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True"  Width="1*"  Binding="{Binding Path=Status}" IsReadOnly="True"  Header="Status" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>    
+        <Button Content="Approve Indent" Height="33" HorizontalAlignment="Left" Margin="823,316,0,0" Name="button1" VerticalAlignment="Top" Width="165" Command="{Binding Path=ApproveTransferCommand}" />
+    </Grid>
+</navigation:Page>

@@ -1,0 +1,101 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.CreatePLRUnfinished" 
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 d:DataContext="{d:DesignInstance Type=local:CreatePLRUnfinishedViewModel,IsDesignTimeCreatable=False}"
+                  xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           mc:Ignorable="d"
+          
+            d:DesignWidth="1062" d:DesignHeight="558"
+           Title="CreatePLR Page" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" BorderThickness="1">
+
+    <Grid x:Name="LayoutRoot" Margin="2,0">
+        <TextBlock FontSize="16" Height="25" HorizontalAlignment="Left" Margin="52,24,0,0" Name="textBlock1" Text="Product" VerticalAlignment="Top" Width="72" />
+        <sdk:DataGrid AutoGenerateColumns="False" ColumnWidth="148*" Margin="0,61,-2,0" Name="dataGrid1"   FontSize="12" d:LayoutOverrides="HorizontalAlignment" Height="198" MinHeight="0"  ItemsSource="{Binding Path=PLRProductCollection}"  SelectedIndex="{Binding Path=SelectedPLRProduct, Mode=TwoWay}" GridLinesVisibility="All" BorderThickness="1" BorderBrush="#FF706161" Width="1060" VerticalAlignment="Top">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding PLRProductInfo.Product.GroupName}" Header="Product name" IsReadOnly="True" FontSize="13"/>
+                <sdk:DataGridTextColumn Binding="{Binding PLRProductInfo.Product.BrandName}" Header="Brand name" IsReadOnly="True" FontSize="13"/>
+              
+                <sdk:DataGridTextColumn Binding="{Binding PLRProductInfo.LotId}" Header="Lot Id" IsReadOnly="True" FontSize="13"/>
+
+                <sdk:DataGridTextColumn Binding="{Binding PLRProductInfo.Quantity, Mode=TwoWay}" Header="Quantity(kg)" FontSize="13"/>
+                <sdk:DataGridTextColumn Binding="{Binding SelectedType, Mode=TwoWay}" Header="Product Status" IsReadOnly="True" FontSize="13"/>
+
+               
+
+                <sdk:DataGridTextColumn Binding="{Binding PLRProductInfo.Remarks, Mode=TwoWay}" Header="Remarks" FontSize="13"/>
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid  AutoGenerateColumns="False" ColumnWidth="148*" Margin="-2,323,0,0" Name="dataGrid2" FontSize="12" MinHeight="0" ItemsSource="{Binding Path=PLRPackageCollection}" SelectedIndex="{Binding Path=SelectedPLRPackageInfo}" GridLinesVisibility="All" BorderThickness="1" BorderBrush="#FF706161" Height="187" Width="1060" VerticalAlignment="Top">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding PLRPackageInfo.Package.PackageName}" Header="Package name" IsReadOnly="True" FontSize="13"/>
+                <sdk:DataGridTextColumn Binding="{Binding PLRPackageInfo.Package.PackageCode}" Header="Package code" IsReadOnly="True" FontSize="13"/>
+
+                <sdk:DataGridTextColumn Binding="{Binding PLRPackageInfo.Quantity, Mode=TwoWay}" Header="Quantity(Pc)" FontSize="13" />
+                <sdk:DataGridTextColumn Binding="{Binding SelectedType, Mode=TwoWay}" Header="Package Status" FontSize="13"/>
+
+                <sdk:DataGridTextColumn Binding="{Binding PLRPackageInfo.Remarks, Mode=TwoWay}" Header="Remarks" FontSize="13" />
+
+            </sdk:DataGrid.Columns>
+
+        </sdk:DataGrid>
+        <TextBlock FontSize="16" Height="29" HorizontalAlignment="Left" Margin="49,279,0,0" Name="textBlock3" Text="Package" VerticalAlignment="Top" Width="66" />
+        <sdk:AutoCompleteBox Height="31" HorizontalAlignment="Left" Margin="124,19,0,0" Name="autoCompleteBox1" VerticalAlignment="Top" Width="208"  ItemsSource="{Binding Path=Products,Mode=TwoWay,BindsDirectlyToSource=True}" ValueMemberPath="Product.GroupName" SelectedItem="{Binding Path=SelectedProduct, Mode=TwoWay,BindsDirectlyToSource=True}">
+            <sdk:AutoCompleteBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Product Name: " FontSize="14"/>
+                            <TextBlock Text="{Binding 
+                            Path=Product.GroupName}" FontSize="14" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Brand Name: " FontSize="11"/>
+                            <TextBlock
+                            Text="{Binding Path=Product.BrandName}" FontSize="11"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Product Code: " FontSize="11"/>
+                            <TextBlock
+                            Text="{Binding Path=Product.ProductCode}" FontSize="11"/>
+                        </StackPanel>
+
+
+                    </StackPanel>
+                </DataTemplate>
+            </sdk:AutoCompleteBox.ItemTemplate>
+        </sdk:AutoCompleteBox>
+        <sdk:AutoCompleteBox Height="33" HorizontalAlignment="Left" Margin="119,277,0,0" Name="autoCompleteBox2" VerticalAlignment="Top" Width="213" ItemsSource="{Binding Path=Packages}" SelectedItem="{Binding Path=SelectedPackage, Mode=TwoWay}" ValueMemberPath="Package.PackageName">
+            <sdk:AutoCompleteBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding 
+                            Path=Package.PackageName}" FontSize="14" />
+                        <TextBlock
+                            Text="{Binding Path=Package.PackageCode}" FontSize="11"/>
+
+                    </StackPanel>
+                </DataTemplate>
+            </sdk:AutoCompleteBox.ItemTemplate>
+        </sdk:AutoCompleteBox>
+        <Border BorderBrush="#FF466889" BorderThickness="1" Height="326" HorizontalAlignment="Left" Margin="440,37,0,0" Name="border1" VerticalAlignment="Top" Width="0" />
+        <Button Content="Remove" Height="32" Margin="636,18,0,0" Name="button3" VerticalAlignment="Top" Command="{Binding Path=DeleteSelectedProduct}" FontSize="11" Width="63" HorizontalAlignment="Left" d:LayoutOverrides="Width" />
+        <Button Content="Remove" Height="33" HorizontalAlignment="Left" Margin="406,277,0,0" Name="button4" VerticalAlignment="Top" Width="67" Command="{Binding Path=DeleteSelectedPackage}" FontSize="11" />
+        <Button Command="{Binding Path=AddProduct}" Content="Add" Height="31" HorizontalAlignment="Left" Margin="579,19,0,0" Name="button6" VerticalAlignment="Top" Width="51" FontSize="11" />
+        <Button Command="{Binding Path=AddPackage}" Content="Add" Height="33" HorizontalAlignment="Left" Margin="350,277,0,0" Name="button5" VerticalAlignment="Top" Width="50" FontSize="11" />
+        <Image Height="31" HorizontalAlignment="Left" Margin="16,24,0,0" Name="image1" Source="/TrialBusinessManager;component/Assets/Resources/search_icon.png" Stretch="Fill" VerticalAlignment="Top" Width="29" />
+        <Image Height="31" HorizontalAlignment="Left" Margin="12,277,0,0" Name="image2" Source="/TrialBusinessManager;component/Assets/Resources/search_icon.png" Stretch="Fill" VerticalAlignment="Top" Width="29" />
+        <ComboBox Height="31" Margin="426,19,476,0" Name="comboBox1" VerticalAlignment="Top" ItemsSource="{Binding Path=Lots,Mode=TwoWay}" SelectedItem="{Binding Path=SelectedLot, Mode=TwoWay}" HorizontalAlignment="Left" Width="136" />
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="387,24,0,0" Name="textBlock5" Text="Lot" VerticalAlignment="Top" Width="42" />
+        <Image Height="31" HorizontalAlignment="Left" Margin="351,20,0,0" Name="image3" Source="/TrialBusinessManager;component/Assets/Resources/search_icon.png" Stretch="Fill" VerticalAlignment="Top" Width="29" />
+        <Button x:Name="refreshButton_Copy" Command="{Binding ResetCommand}" Content="Reset" Margin="0,516,90,0" Foreground="Black" ToolTipService.ToolTip="Reset..." d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Right" Width="81" Height="31" VerticalAlignment="Top">
+          
+        </Button>
+        <Button x:Name="listItemDeleteButton_Copy1" Command="{Binding SaveCommand}" Content="Submit" HorizontalAlignment="Right" Margin="0,517,8,0" Width="76" Foreground="Black" ToolTipService.ToolTip="Submit..." d:LayoutOverrides="HorizontalAlignment, VerticalAlignment" Height="31" VerticalAlignment="Top">
+           
+        </Button>
+    </Grid>
+</navigation:Page>

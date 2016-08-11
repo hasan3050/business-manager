@@ -1,0 +1,19 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:TrialBusinessManager.UserControls" x:Class="TrialBusinessManager.UserControls.BillPrintHeader"
+    mc:Ignorable="d"
+    Height="290" d:DesignWidth="1000">
+
+    <StackPanel x:Name="LayoutRoot" Background="White">
+        <local:PrintHeader HorizontalAlignment="Center"/>
+        <Grid>
+            <local:DealerInfoControl Name="DealerControl" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="313" />
+            <local:PrintBillInfoControl Name="BillControl" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top"/>
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="11,115,0,0" Name="textBlock1" Text="Payment Method :" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="112,110,0,0" Name="PaymentMethodTxt" VerticalAlignment="Top" Width="211" BorderThickness="0,0,0,1"/>
+        </Grid>
+    </StackPanel>
+</UserControl>

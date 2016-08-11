@@ -1,0 +1,81 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.Admin.LedgerEntry" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:Local="clr-namespace:TrialBusinessManager.ViewModels.Admin"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="1040" d:DesignHeight="480"
+           Title="LedgerEntry Page" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    
+    <navigation:Page.Resources>
+        <Local:LedgerUpdateViewModel x:Key="MyVM"/>
+    </navigation:Page.Resources>
+    
+    <Grid x:Name="LayoutRoot" DataContext="{Binding Source={StaticResource MyVM}}">
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock1" Text="Select Region" VerticalAlignment="Top" Width="103" FontSize="14" />
+        <ComboBox Height="31" HorizontalAlignment="Left" Margin="12,33,0,0" Name="comboBox1" VerticalAlignment="Top" Width="170" ItemsSource="{Binding Path=RegionCollection}" SelectedItem="{Binding Path=SelectedRegion, Mode=TwoWay}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding RegionName}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>    
+        <TextBlock FontSize="14" Height="23" HorizontalAlignment="Left" Margin="200,12,0,0" Name="textBlock2" Text="Select Dealer" VerticalAlignment="Top" Width="103" />
+        <sdk:AutoCompleteBox Height="29" HorizontalAlignment="Left" ValueMemberPath="CompanyName" Margin="200,35,0,0" Name="autoCompleteBox1" VerticalAlignment="Top" Width="170" ItemsSource="{Binding Path=BindDealer,Mode=TwoWay}" SelectedItem="{Binding Source={StaticResource MyVM}, Path=SelectedDealer,Mode=TwoWay}" >
+            <sdk:AutoCompleteBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="{Binding Name,Mode=TwoWay}"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Shop Name : "/>
+                            <TextBlock Text="{Binding CompanyName,Mode=TwoWay}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </sdk:AutoCompleteBox.ItemTemplate>
+        </sdk:AutoCompleteBox>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="279" HorizontalAlignment="Left" Margin="12,78,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="976" ItemsSource="{Binding Path=BindLedger}" SelectedIndex="{Binding Path=SelectedLedgerIndex, Mode=TwoWay}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Header="Method" Width="1*">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding Path=Method}" SelectedItem="{Binding Mode=TwoWay, Path=SelectedMethod}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn Header="Memo No." Width="1*" Binding="{Binding Mode=TwoWay, Path=Ledger.MemoNo}" IsReadOnly="True" />
+                <sdk:DataGridTemplateColumn Header="Product Name" Width="1*">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding Path=ProductCollection}" SelectedItem="{Binding SelectedProduct,Mode=TwoWay}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="{Binding ProductName,Mode=TwoWay}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                                </ComboBox>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn Header="Quantity(Pc)" Width="1*" Binding="{Binding Path=Ledger.ProductQuantity, Mode=OneWay}" />
+                <sdk:DataGridTextColumn Header="Amount(BDT)" Width="1*" Binding="{Binding Path=Ledger.CreditAmount, Mode=OneWay}" />
+                <sdk:DataGridTemplateColumn Header="Date" Width="1*">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:DatePicker SelectedDate="{Binding Mode=TwoWay, Path=Ledger.Date}"></sdk:DatePicker>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Submit" Height="29" HorizontalAlignment="Left" Margin="901,363,0,0" Name="button1" VerticalAlignment="Top" Width="87" FontSize="13" Command="{Binding Path=SubmitCommand}" IsEnabled="{Binding Path=SubmitButtonEnableBool}" />
+        <Button Content="Add" Height="29" HorizontalAlignment="Left" Margin="386,35,0,0" Name="button2" VerticalAlignment="Top" Width="61" Command="{Binding Path=AddCommand}" />
+        <Button Content="Delete" Height="29" HorizontalAlignment="Left" Margin="453,35,0,0" Name="button3" VerticalAlignment="Top" Width="61" Command="{Binding Path=DeleteCommand}" />
+        <Button Content="Reset" FontSize="13" Height="29" HorizontalAlignment="Left" Margin="815,363,0,0" Name="button4" VerticalAlignment="Top" Width="80" Command="{Binding Path=ResetCommand}" />
+    </Grid>
+</navigation:Page>

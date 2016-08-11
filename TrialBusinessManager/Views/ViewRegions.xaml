@@ -1,0 +1,39 @@
+﻿<navigation:Page  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:SilverlightContrib_Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" x:Class="TrialBusinessManager.Views.ViewRegions"
+           mc:Ignorable="d"
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels.NSM"       
+           d:DesignWidth="1060" d:DesignHeight="480"
+           Title="ViewRegions Page">
+    
+   
+    <navigation:Page.Resources>
+        <local:ViewRegionsViewModel x:Key="MyViewModel"/>
+    </navigation:Page.Resources>
+    <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37*" />
+                <RowDefinition Height="443*" />
+            </Grid.RowDefinitions>
+        
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" x:Name="textBlock1" Text="Regions" VerticalAlignment="Top" FontSize="15" />
+        
+        <Button Content="Create Region" Height="31" Margin="0,7,270,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="116" Grid.RowSpan="2" Name="createRegionbtn" Command="{Binding Source={StaticResource MyViewModel}, Path=CreateRegionCommand}" />
+        <Button Content="Create Inventory" Height="30" Margin="0,7,156,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="108" Name="createinvbtn" Command="{Binding Source={StaticResource MyViewModel}, Path=CreateInventoryCommand}" />
+        <Button Content="Edit Inventory" Height="30" Margin="0,7,48,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="102" Name="editbtn" Command="{Binding Source={StaticResource MyViewModel}, Path=EditInventoryCommand}" />
+        <sdk:DataGrid SelectedItem="{Binding Source={StaticResource MyViewModel}, Path=SelectedRegion,Mode=TwoWay}" AutoGenerateColumns="False" Grid.Row="1" Height="374" HorizontalAlignment="Left" Margin="12,7,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="1001" ItemsSource="{Binding Source={StaticResource MyViewModel}, Path=Regions}">
+            <sdk:DataGrid.Columns>
+
+                <sdk:DataGridTextColumn Width="1*" Header="Region Name" IsReadOnly="True" Binding="{Binding Mode=TwoWay, Path=Region.RegionName}"/>
+                <sdk:DataGridTextColumn Width="1*" Header="District" IsReadOnly="True" Binding="{Binding Mode=TwoWay, Path=Region.DistrictName}"/>
+                <sdk:DataGridTextColumn Width="1*" Header="Inventory Address" IsReadOnly="True" Binding="{Binding InventoryAddress, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Width="1*" Header="Store In Charge" IsReadOnly="True" Binding="{Binding Mode=TwoWay, Path=SIC}"/>
+                <sdk:DataGridTextColumn Width="1*" Header="Dispatch Officer" IsReadOnly="True" Binding="{Binding Mode=TwoWay, Path=DO}"/>
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+    </Grid>
+</navigation:Page>

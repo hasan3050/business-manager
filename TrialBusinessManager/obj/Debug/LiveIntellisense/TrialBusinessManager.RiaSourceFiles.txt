@@ -1,0 +1,1 @@
+D:\BusinessManagerVersions\Version1\businessmanager_original\TrialBusinessManager.Web\TrialBusinessManager.Web.csproj,634770772575582700,AgroDomainService.cs,AgroDomainService.metadata.cs,AgroModel.Designer.cs,AuthenticationService.cs.cs,CustomMembershipProvider.cs,CustomRoleProvider.cs,Properties\AssemblyInfo.cs,

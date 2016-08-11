@@ -1,0 +1,71 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.Accountant.VerifyBillPaymentDetailChildWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:local="clr-namespace:TrialBusinessManager.ViewModels.Accountant" 
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           Width="900" Height="597" 
+           Title="Bill Payment Detail" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:my="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.SL4" DataContext="{Binding ElementName=DealerGrid, Path=Width}">
+
+    <controls:ChildWindow.Resources>
+        <local:VerifyBillPaymentDetailViewModel x:Key="BillPaymentDetail"/>
+    </controls:ChildWindow.Resources>
+
+
+
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="AcceptButton" IsEnabled="{Binding Source={StaticResource BillPaymentDetail}, Path=ButtonEnableBool,Mode=TwoWay}" Content="Accept" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,9,0" Grid.Row="1" Command="{Binding Source={StaticResource BillPaymentDetail}, Path=AcceptCommand}" />
+        <Button x:Name="RejectButton" IsEnabled="{Binding Source={StaticResource BillPaymentDetail}, Path=ButtonEnableBool,Mode=TwoWay}" Content="Reject" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,99,0" Grid.Row="1" Command="{Binding Source={StaticResource BillPaymentDetail}, Path=RejectCommand}" />
+
+        <Grid Grid.RowSpan="2" Height="550" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" DataContext="{Binding}">
+            <Grid HorizontalAlignment="Right" Height="153" Margin="0,12,16,0" VerticalAlignment="Top" Width="301" d:IsLocked="True">
+        		<TextBox Margin="114,62,0,62" x:Name="comboBox2" Text="{Binding SelectedBillPayment.PaymentMethod, Mode=TwoWay}" IsEnabled="True" IsReadOnly="True" DataContext="{Binding Source={StaticResource BillPaymentDetail}}" />
+        		<TextBlock HorizontalAlignment="Left" Margin="21,70,0,67" x:Name="textBlock3" Text="Payment Type" />
+        		<TextBlock HorizontalAlignment="Left" Margin="21,38,0,0" Text="Date of Issue" TextWrapping="Wrap" Width="84" Height="19" VerticalAlignment="Top" />
+        		<TextBox IsReadOnly="True" Margin="114,31,0,0" x:Name="DateTxt" Text="{Binding SelectedBillPayment.DateOfIssue, Mode=TwoWay, StringFormat=\{0:g\}}" TextWrapping="Wrap" DataContext="{Binding Source={StaticResource BillPaymentDetail}}" Height="29" VerticalAlignment="Top" d:LayoutOverrides="Height" />
+        		<TextBox Height="29" Margin="114,0,0,0" x:Name="textBox2" Text="{Binding SelectedBillPayment.BillPaymentCode, Mode=TwoWay}" VerticalAlignment="Top" IsReadOnly="True" DataContext="{Binding Source={StaticResource BillPaymentDetail}}" />
+        		<TextBlock Height="19" HorizontalAlignment="Left" Margin="0,6,0,0" Text="Bill Payment Code" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" />
+        		<TextBox Height="29" Margin="114,0,0,31" x:Name="comboBox2_Copy" Text="{Binding SelectedBillPayment.MoneyReciept, Mode=TwoWay}" VerticalAlignment="Bottom" IsEnabled="True" IsReadOnly="True" DataContext="{Binding Source={StaticResource BillPaymentDetail}}" />
+        		<TextBlock  Height="16" HorizontalAlignment="Left" Margin="40,0,0,36" x:Name="textBlock3_Copy" VerticalAlignment="Bottom" Width="60" ><Run Text="Receipt No."/><LineBreak/><Run/></TextBlock>
+        		<TextBox Height="29" Margin="114,0,0,0" x:Name="comboBox2_Copy1" Text="{Binding SelectedBillPayment.DateOfDeposit, Mode=TwoWay}" VerticalAlignment="Bottom" IsEnabled="True" IsReadOnly="True" DataContext="{Binding Source={StaticResource BillPaymentDetail}}" />
+        		<TextBlock  Height="16" HorizontalAlignment="Left" Margin="21,0,0,5" x:Name="textBlock3_Copy1" VerticalAlignment="Bottom" ><Run Text="Date Of Deposit"/><LineBreak/><Run/></TextBlock>
+        	</Grid>
+            <sdk:DataGrid AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" ColumnWidth="130" DataContext="{Binding BindBillPaymentInfo, Source={StaticResource BillPaymentDetail}}" Height="201" HorizontalAlignment="Left" Margin="17,243,0,0" x:Name="indentInfoDataGrid" VerticalAlignment="Top" Width="Auto" ItemsSource="{Binding BindBillPaymentInfo, Source={StaticResource BillPaymentDetail}}">
+                <sdk:DataGrid.Columns>
+                	<sdk:DataGridTextColumn x:Name="billCodeColumn" Header="Bill Code" IsReadOnly="True" Width="1*" Binding="{Binding Bill.BillCode, Mode=OneWay}" />
+                	<sdk:DataGridTextColumn x:Name="productNameColumn" Binding="{Binding Product.ProductName, Mode=TwoWay}" Header="Product Name" IsReadOnly="True" Width="1*" />
+                	<sdk:DataGridTextColumn x:Name="productBrandColumn" Binding="{Binding Product.BrandName, Mode=TwoWay}" Header="Brand Name" IsReadOnly="True" Width="1*" />
+                	<sdk:DataGridTextColumn x:Name="productCodeColumn" Binding="{Binding Product.ProductCode, Mode=TwoWay}" Header="Product Code" IsReadOnly="True" Width="1*" />
+                	<sdk:DataGridTextColumn x:Name="packetSizeColumn" Binding="{Binding Product.StockKeepingUnit, Mode=TwoWay}" Header="S.K.U." IsReadOnly="True" Width="1*" />
+                	<sdk:DataGridTextColumn x:Name="amountColumn" Binding="{Binding Amount, Mode=TwoWay}" Header="Amount(BDT)" IsReadOnly="True" Width="1*" />
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+            <TextBox Height="28" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,0,8,59" x:Name="textBox1" Text="{Binding TotalAmount, Mode=TwoWay}" VerticalAlignment="Bottom" Width="183" DataContext="{Binding Source={StaticResource BillPaymentDetail}}" />
+            <TextBlock  Height="23" HorizontalAlignment="Right" Margin="0,0,195,60" x:Name="textBlock4" Text="Total Amount" VerticalAlignment="Bottom" Width="88" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="17,15,0,0" Text="Dealer Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="17,46,0,0" Text="Shop Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="17,77,0,0" Text="Shop Address" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="17,107,0,0" Text="Contact No" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Grid DataContext="" Height="127" HorizontalAlignment="Left" Margin="108,12,0,0" x:Name="DealerGrid" VerticalAlignment="Top" Width="219">
+                <TextBox FontSize="13.333" Height="29" IsReadOnly="True" Text="{Binding SelectedBillPayment.Dealer.Name, Mode=TwoWay, Source={StaticResource BillPaymentDetail}}" TextWrapping="Wrap" VerticalAlignment="Top" />
+                <TextBox FontSize="13.333" Height="29" IsReadOnly="True" Margin="0,31,0,0" Text="{Binding SelectedBillPayment.Dealer.CompanyName, Mode=TwoWay, Source={StaticResource BillPaymentDetail}}" TextWrapping="Wrap" VerticalAlignment="Top" />
+                <TextBox FontSize="13.333" Height="29" IsReadOnly="True" Margin="0,0,0,36" Text="{Binding SelectedBillPayment.Dealer.CompanyAddress, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Bottom" DataContext="{Binding Source={StaticResource BillPaymentDetail}}" />
+                <TextBox FontSize="13.333" Height="29" IsReadOnly="True" Margin="0,0,0,5" Text="{Binding SelectedBillPayment.Dealer.ContactNo, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Bottom" DataContext="{Binding Source={StaticResource BillPaymentDetail}}" />
+            </Grid>
+            <sdk:Label Height="43" HorizontalAlignment="Left" Margin="17,448,0,0" x:Name="label1" VerticalAlignment="Top" Width="755" Content="{Binding ErrorMessage, Source={StaticResource BillPaymentDetail}}" FontWeight="Bold" FontSize="14" FontStretch="Normal" Foreground="#FFA72020" />
+            <TextBox DataContext="{Binding Source={StaticResource BillPaymentDetail}}" Height="29" HorizontalAlignment="Right" IsEnabled="True" IsReadOnly="True" Margin="0,205,595,0" x:Name="textBox3" Text="{Binding SelectedBillPayment.BankName, Mode=TwoWay}" VerticalAlignment="Top" Width="188" />
+            <TextBlock Height="20" HorizontalAlignment="Right" Margin="0,213,788,0" x:Name="textBlock1" Text="Bank Name" VerticalAlignment="Top" Width="63" />
+            <TextBox DataContext="{Binding Source={StaticResource BillPaymentDetail}}" Height="29" HorizontalAlignment="Right" IsEnabled="True" IsReadOnly="True" Margin="0,205,35,0" x:Name="textBox4" Text="{Binding SelectedBillPayment.DDNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="187" />
+            <TextBlock Height="19" HorizontalAlignment="Right" Margin="0,212,229,0" x:Name="textBlock2" Text="DD No" VerticalAlignment="Top" />
+            <TextBox DataContext="{Binding Source={StaticResource BillPaymentDetail}}" Height="29" HorizontalAlignment="Right" IsEnabled="True" IsReadOnly="True" Margin="0,205,280,0" x:Name="textBox5" Text="{Binding SelectedBillPayment.BranchName, Mode=TwoWay}" VerticalAlignment="Top" Width="211" />
+            <TextBlock Height="20" HorizontalAlignment="Right" Margin="0,212,497,0" x:Name="textBlock5" Text="Branch Name" VerticalAlignment="Top" />
+        </Grid>
+    </Grid>
+</controls:ChildWindow>

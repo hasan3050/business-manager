@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="TrialBusinessManager.UserControls.BillDueItemControl"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    HorizontalAlignment="Left"
+    Height="20" Width="600">
+
+    <Grid Margin="3"  x:Name="LayoutRoot" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock VerticalAlignment="Center" Name="BillCodeText"  FontSize="10"  HorizontalAlignment="Center" Grid.Column="0" TextWrapping="Wrap"   Text="Bill gode"  />
+        <TextBlock VerticalAlignment="Center" Name="IssueDateText"   FontSize="10"  HorizontalAlignment="Center" Grid.Column="1" TextWrapping="Wrap"  Text="Issue Date"  />
+        <TextBlock VerticalAlignment="Center" Name="AmountText"  HorizontalAlignment="Center"  FontSize="10"  Grid.Column="2" TextWrapping="Wrap" Text="Amount" />
+
+    </Grid>
+
+</UserControl>
+

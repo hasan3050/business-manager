@@ -1,0 +1,61 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.RM.ViewIndentForForwardingByRM" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+           xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.SL4"      
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:ref="clr-namespace:TrialBusinessManager.ViewModels.RM"
+           xmlns:SilverlightContrib_Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"      
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" d:DesignHeight="480"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"      
+           Title="View Indent History" Height="490" Width="1052">
+  
+
+    <navigation:Page.Resources>
+        <ref:ViewIndentForForwardingByRMViewModel x:Key="ViewIndentForForwardingByRMViewModel"/>
+    </navigation:Page.Resources>
+    <Grid x:Name="LayoutRoot" DataContext="{Binding Source={StaticResource ViewIndentForForwardingByRMViewModel}}" Width="1052" d:LayoutOverrides="VerticalMargin">
+        <sdk:DataGrid AutoGenerateColumns="False" Height="325" Margin="0,106,0,59" x:Name="dataGrid1" ColumnWidth="320" Width="1052" DataContext="{Binding Source={StaticResource ViewIndentForForwardingByRMViewModel}}" ItemsSource="{Binding Path=BindIndent, Mode=TwoWay}" GridLinesVisibility="All" SelectedIndex="{Binding Path=SelectedIndex, Mode=TwoWay}" CanUserSortColumns="False">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Indent Code" Binding="{Binding Path=IndentCode}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Placed By" Binding="{Binding Path=Dealer.Name, Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Date Of Issue" Binding="{Binding Path=DateOfPlace, Mode=TwoWay, StringFormat=\{0:d\}}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Indent Status" Binding="{Binding Path=IndentStatus, Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <SilverlightContrib_Controls:GroupBox HorizontalAlignment="Right" Margin="0,-2,0,0" VerticalAlignment="Top" Header="Search By" FontSize="14.667" Width="1052" Height="104">
+        	<Grid Margin="0,-15,-4,2" d:LayoutOverrides="VerticalAlignment">
+        		<sdk:AutoCompleteBox Height="26" HorizontalAlignment="Left" IsEnabled="True" IsTextCompletionEnabled="True" ItemsSource="{Binding DealerCollection}" Margin="132,8,0,0" x:Name="autoCompleteBox1" SelectedItem="{Binding SelectedDealer, Mode=TwoWay, Source={StaticResource ViewIndentForForwardingByRMViewModel}}" ValueMemberPath="Name" VerticalAlignment="Top" Width="120" Text="" FontSize="12">
+        			<sdk:AutoCompleteBox.ItemTemplate>
+        				<DataTemplate>
+        					<StackPanel>
+        						<TextBlock FontSize="14" Text="{Binding Name}" />
+        						<TextBlock FontSize="11" Text="{Binding CompanyName}" />
+        					</StackPanel>
+        				</DataTemplate>
+        			</sdk:AutoCompleteBox.ItemTemplate>
+        		</sdk:AutoCompleteBox>
+                <Button Command="{Binding SearchCommand, Mode=TwoWay}" Content="Search" DataContext="{Binding Source={StaticResource ViewIndentForForwardingByRMViewModel}}" Height="31" HorizontalAlignment="Left" Margin="663,44,0,0" x:Name="button1" VerticalAlignment="Top" Width="92" FontSize="13" />
+        		<RadioButton DataContext="{Binding Source={StaticResource ViewIndentForForwardingByRMViewModel}}" Height="24" HorizontalAlignment="Left" IsChecked="{Binding SelectedDealerBool, Mode=TwoWay}" Margin="15,12,0,0" x:Name="radioButton2" VerticalAlignment="Top" Width="122" Content="Dealer Name" FontSize="11" />
+        		<sdk:AutoCompleteBox Height="24" IsTextCompletionEnabled="True" ItemsSource="{Binding IndentCollection}" Margin="403,10,521,0" x:Name="autoCompleteBox3" SelectedItem="{Binding SelectedCode, Mode=TwoWay, Source={StaticResource ViewIndentForForwardingByRMViewModel}}" ValueMemberPath="IndentCode" VerticalAlignment="Top" FontSize="12">
+        			<sdk:AutoCompleteBox.ItemTemplate>
+        				<DataTemplate>
+        					<StackPanel>
+        						<TextBlock FontSize="14" Text="{Binding IndentCode}" />
+        					</StackPanel>
+        				</DataTemplate>
+        			</sdk:AutoCompleteBox.ItemTemplate>
+        		</sdk:AutoCompleteBox>
+                <RadioButton DataContext="{Binding Source={StaticResource ViewIndentForForwardingByRMViewModel}}" Height="31" HorizontalAlignment="Left" IsChecked="{Binding SelectedCodeBool, Mode=TwoWay}" Margin="286,10,0,0" x:Name="radioButton6" VerticalAlignment="Top" Width="113" Content="Indent Code" FontSize="11" />
+                <sdk:DatePicker DataContext="{Binding Source={StaticResource ViewIndentForForwardingByRMViewModel}}" DisplayDateEnd="12/31/2099" Height="26" HorizontalAlignment="Left" Margin="132,43,0,0" x:Name="datePicker1" SelectedDate="{Binding StartDate, Mode=TwoWay}" VerticalAlignment="Top" Width="120" FontSize="12" />
+        		<TextBlock Height="23" HorizontalAlignment="Left" Margin="327,47,0,0" x:Name="textBlock4" Text="End Date" VerticalAlignment="Top" FontSize="11" />
+        		<sdk:DatePicker DataContext="{Binding Source={StaticResource ViewIndentForForwardingByRMViewModel}}" DisplayDateEnd="12/31/2099" DisplayDateStart="1/1/2012" Height="26" Margin="403,43,521,0" x:Name="datePicker2" SelectedDate="{Binding EndDate, Mode=TwoWay}" VerticalAlignment="Top" FontSize="12" />
+        		<RadioButton Height="28" HorizontalAlignment="Left" IsChecked="{Binding SelectedDateBool, Mode=TwoWay}" Margin="15,44,0,0" x:Name="radioButton4" VerticalAlignment="Top" Width="114" Content="Start Date" FontSize="11" />
+                <RadioButton Height="29.872" HorizontalAlignment="Left" IsChecked="{Binding SelectedAllBool, Mode=TwoWay}" Margin="565,0,0,8" x:Name="radioButton1" VerticalAlignment="Bottom" Width="72.275" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Content="View All" FontSize="11" />
+        		
+        	</Grid></SilverlightContrib_Controls:GroupBox>
+        <Button Content="View Indent" HorizontalAlignment="Right" Height="26" Margin="0,0,8,8" VerticalAlignment="Bottom" Width="143" Command="{Binding Path=ViewIndentCommand}" />
+    </Grid>
+</navigation:Page>

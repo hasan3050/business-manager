@@ -1,0 +1,52 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.Histories.RequisitionHistory" 
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:ref="clr-namespace:TrialBusinessManager.ViewModels.Histories"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:SilverlightContrib_Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           Height="auto"
+           d:DesignWidth="1040" d:DesignHeight="2000"
+           Title="Requisition History"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Normal" Width="1041">
+
+    <navigation:Page.Resources>
+        <ref:ViewRequisitionViewModel x:Key="ViewRequisitionViewModel"/>
+    </navigation:Page.Resources>
+
+    <Grid x:Name="LayoutRoot" DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" >
+        <sdk:DataGrid AutoGenerateColumns="False" Height="271" HorizontalAlignment="Left" Margin="8,199,0,0" x:Name="dataGrid1" VerticalAlignment="Top" ColumnWidth="320" Width="1023" DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" ItemsSource="{Binding BindRequisition, Mode=TwoWay}" GridLinesVisibility="All" SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Requisition Code" Binding="{Binding Path=RequisitionCode}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Placed By" Binding="{Binding Path=Employee.Person.Name, Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Requisition Type"  Width="1*" IsReadOnly="True" Binding="{Binding Path=RequisitionType,Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="Date Of Issue" Binding="{Binding Path=DateOfIssue.Date, Mode=TwoWay, StringFormat=\{0:d\}}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Requisition Status" Binding="{Binding Path=Status,Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Grid Height="155" Margin="8,10,0,0" VerticalAlignment="Top" Width="922" HorizontalAlignment="Left" >
+            <CheckBox DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" HorizontalAlignment="Left" IsChecked="{Binding SelectedStatusBool, Mode=TwoWay}" Margin="293,71,0,64" x:Name="radioButton1" Width="60" Content="Status" />
+            <ComboBox DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" Height="24" HorizontalAlignment="Left" ItemsSource="{Binding RequisitionStatus}" x:Name="comboBox1" SelectedItem="{Binding SelectedStatus, Mode=TwoWay}" VerticalAlignment="Top" Width="172" Margin="362,67,0,0" />
+            <CheckBox DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" Height="17" HorizontalAlignment="Left" IsChecked="{Binding Mode=TwoWay, Path=SelectedTypeBool}" Margin="17,41,0,0" Name="radioButton3" VerticalAlignment="Top" Width="71" Content="Type" FontSize="11" />
+            <sdk:DatePicker IsEnabled="{Binding SelectedDateBool, Mode=TwoWay}" Height="25" HorizontalAlignment="Left" Margin="97,97,0,0" x:Name="datePicker1" VerticalAlignment="Top" Width="184" SelectedDate="{Binding StartDate, Mode=TwoWay}"  />
+            <TextBlock HorizontalAlignment="Left" Margin="302,101,0,0" x:Name="textBlock4" Text="End Date" Height="20" VerticalAlignment="Top" />
+            <sdk:DatePicker IsEnabled="{Binding SelectedDateBool, Mode=TwoWay}" Height="25" Margin="359,97,0,0" x:Name="datePicker2" VerticalAlignment="Top" SelectedDate="{Binding EndDate, Mode=TwoWay}" Width="175" HorizontalAlignment="Left" />
+            <ComboBox DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" Height="25" HorizontalAlignment="Left" ItemsSource="{Binding Path=RequisitionTypeCollection}" Margin="94,37,0,0" Name="comboBox2" SelectedItem="{Binding Mode=TwoWay, Path=SelectedType}" VerticalAlignment="Top" Width="163" FontSize="11" />
+            <CheckBox Height="16" HorizontalAlignment="Left" Margin="14,101,0,0" x:Name="radioButton4" VerticalAlignment="Top" Width="81" IsChecked="{Binding SelectedDateBool, Mode=TwoWay}" Content="Start Date" />
+            
+            <TextBox IsEnabled="{Binding SelectedCodeBool, Mode=TwoWay}" HorizontalAlignment="Left" Margin="94,67,0,0" x:Name="autoCompleteBox3" Width="163"   Text="{Binding SelectedCode, Mode=TwoWay, Source={StaticResource ViewRequisitionViewModel}}" Height="25" VerticalAlignment="Top">
+
+            </TextBox>
+            <CheckBox HorizontalAlignment="Left" Margin="17,71,0,0" x:Name="radioButton6" IsChecked="{Binding SelectedCodeBool, Mode=TwoWay}" DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" Width="71" Content="Code" VerticalAlignment="Top" />
+            <SilverlightContrib_Controls:GroupBox Header="Filter Requisitions By" Height="121" HorizontalAlignment="Left" Margin="0,14,0,0" Name="groupBox2" VerticalAlignment="Top" Width="560" FontWeight="Bold" BorderThickness="0.7" BorderBrush="{StaticResource CheckBoxBrush}"></SilverlightContrib_Controls:GroupBox>
+            <Button Content="Search" Height="28" HorizontalAlignment="Left" Margin="427,34,0,0" x:Name="button1" VerticalAlignment="Top" Width="107" Command="{Binding SearchCommand, Mode=TwoWay}" DataContext="{Binding Source={StaticResource ViewRequisitionViewModel}}" FontWeight="Bold" />
+        </Grid>
+        <Button Command="{Binding Path=ViewRequisitionCommand,Mode=TwoWay,Source={StaticResource ViewRequisitionViewModel}}" Content="Requisition Details" Height="28" Margin="883,492,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="148" FontWeight="Bold" />
+        <sdk:DataPager Height="25" HorizontalAlignment="Left" Margin="8,492,0,0" Name="dataPager1" PageSize="10" VerticalAlignment="Top" Width="287" Source="{Binding ElementName=dataGrid1, Path=ItemsSource}" HorizontalContentAlignment="Center" FontSize="11" FontWeight="Bold" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="8,167,0,0" Name="textBlock1" Text="Requisition History" VerticalAlignment="Top" FontSize="14" FontWeight="Black" />
+    </Grid>
+</navigation:Page>
+
+

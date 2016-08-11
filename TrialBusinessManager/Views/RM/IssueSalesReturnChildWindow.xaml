@@ -1,0 +1,73 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.RM.IssueSalesReturnChildWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="1012" Height="507" 
+           Title="Issue Sales Return" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Submit" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:DataGrid AutoGenerateColumns="False" BorderBrush="#FF706161" BorderThickness="1" ColumnWidth="148*" FontSize="12" GridLinesVisibility="All" Height="293" Margin="12,0,14,0" MinHeight="0" Name="dataGrid1" VerticalAlignment="Bottom">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Product.ProductName, Mode=TwoWay}" FontSize="13" Header="Product name" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Product.BrandName, Mode=TwoWay}" FontSize="13" Header="Brand name" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Product.StockKeepingUnit, Mode=TwoWay}" FontSize="13" Header="S.K.U." IsReadOnly="True" />
+
+                 <sdk:DataGridTextColumn Binding="{Binding BillId, Mode=TwoWay}" FontSize="13" Header="Bill Id" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Bill.DateOfIssue, Mode=TwoWay}" FontSize="13" Header="Date of Issue" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding LotId, Mode=TwoWay}" FontSize="13" Header="Lot" IsReadOnly="True" />
+
+                <sdk:DataGridTextColumn Binding="{Binding ProductPrice, Mode=TwoWay}" FontSize="13" Header="Return Price" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding PlacedQuantity, Mode=TwoWay}" FontSize="13" Header="Quantity(Pc)" IsReadOnly="False" />
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:AutoCompleteBox Height="33" HorizontalAlignment="Right" Margin="0,99,754,0" Name="autoCompleteBox1" ValueMemberPath="Product.ProductName" VerticalAlignment="Top" Width="224" SelectionChanged="autoCompleteBox1_SelectionChanged" FontSize="12">
+            <sdk:AutoCompleteBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock FontSize="14" Text="{Binding Path=Product.ProductName}" />
+                        <TextBlock FontSize="11" Text="{Binding Path=Product.BrandName}" />
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="13" Text="Packet Size: " />
+                            <TextBlock FontSize="13" Text="{Binding Path=Product.StockKeepingUnit}" />
+                        </StackPanel>
+                       
+                        
+                       
+                    </StackPanel>
+                </DataTemplate>
+            </sdk:AutoCompleteBox.ItemTemplate>
+        </sdk:AutoCompleteBox>
+        <TextBlock Height="22" HorizontalAlignment="Left" Margin="13,70,0,0" Name="textBlock1" Text="Search Product" VerticalAlignment="Top" Width="124" FontSize="16" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="646,12,0,0" Name="textBlock2" Text="Dealer Name" VerticalAlignment="Top" FontSize="14" />
+        <TextBox Height="36" HorizontalAlignment="Left" Margin="749,6,0,0" Name="DealerNameTxtBox" VerticalAlignment="Top" Width="227" FontSize="14" IsReadOnly="True" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="646,52,0,0" Name="textBlock3" Text="Shop Name" VerticalAlignment="Top" FontSize="14" />
+        <TextBox Height="33" HorizontalAlignment="Left" Margin="749,48,0,0" Name="DealerShopTextBox" VerticalAlignment="Top" Width="227" FontSize="14" IsReadOnly="True" />
+        <ComboBox Height="33" HorizontalAlignment="Left" Margin="242,98,0,0" Name="BillcomboBox" VerticalAlignment="Top" Width="136" FontSize="14" SelectionChanged="BillcomboBox_SelectionChanged">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Path=BillCode,Mode=TwoWay}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBlock FontSize="16" Height="22" HorizontalAlignment="Left" Margin="246,68,0,0" Name="textBlock5" Text="Bill" VerticalAlignment="Top" Width="59" />
+        <TextBlock FontSize="16" Height="22" HorizontalAlignment="Left" Margin="389,69,0,0" Name="textBlock4" Text="Lot" VerticalAlignment="Top" Width="59" />
+        <ComboBox Height="34" HorizontalAlignment="Left" Margin="384,98,0,0" Name="LotcomboBox" VerticalAlignment="Top" Width="137" SelectionChanged="LotcomboBox_SelectionChanged"/>
+        <Button Content="Add Item" Height="33" HorizontalAlignment="Left" Margin="528,99,0,0" Name="button1" VerticalAlignment="Top" Width="62" Click="button1_Click_1" />
+        <Button Content="Remove Item" Height="32" HorizontalAlignment="Left" Margin="596,99,0,0" Name="button2" VerticalAlignment="Top" Width="84" Click="button2_Click" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,13,0,0" Name="textBlock6" Text="Forward To (Inventory)" VerticalAlignment="Top" FontSize="14" />
+        <ComboBox Height="29" HorizontalAlignment="Left" Margin="183,10,0,0" Name="InventorycomboBox" VerticalAlignment="Top" Width="181" SelectionChanged="InventorycomboBox_SelectionChanged" FontSize="12">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Path=InventoryName,Mode=TwoWay}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+    </Grid>
+</controls:ChildWindow>

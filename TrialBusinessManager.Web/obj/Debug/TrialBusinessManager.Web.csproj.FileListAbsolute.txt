@@ -1,0 +1,578 @@
+c:\users\slash\documents\visual studio 2010\Projects\TrialBusinessManager\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+c:\users\slash\documents\visual studio 2010\Projects\TrialBusinessManager\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+c:\users\slash\documents\visual studio 2010\Projects\TrialBusinessManager\TrialBusinessManager.Web\obj\Debug\ResolveAssemblyReference.cache
+c:\users\slash\documents\visual studio 2010\Projects\TrialBusinessManager\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+c:\users\slash\documents\visual studio 2010\Projects\TrialBusinessManager\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+C:\Users\irteza\Desktop\TrialBusinessManager\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+C:\Users\irteza\Desktop\TrialBusinessManager\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+C:\Users\irteza\Desktop\TrialBusinessManager\TrialBusinessManager.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\irteza\Desktop\TrialBusinessManager\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+C:\Users\irteza\Desktop\TrialBusinessManager\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+C:\Users\abdul_munim\Desktop\businessmanager\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+C:\Users\abdul_munim\Desktop\businessmanager\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+C:\Users\abdul_munim\Desktop\businessmanager\TrialBusinessManager.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\abdul_munim\Desktop\businessmanager\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+C:\Users\abdul_munim\Desktop\businessmanager\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+C:\Users\abdul_munim\Desktop\Works\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+C:\Users\abdul_munim\Desktop\Works\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+C:\Users\abdul_munim\Desktop\Works\businessmanager_original\TrialBusinessManager.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\abdul_munim\Desktop\Works\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+C:\Users\abdul_munim\Desktop\Works\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+C:\Users\irteza\Desktop\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+C:\Users\irteza\Desktop\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+C:\Users\irteza\Desktop\businessmanager_original\TrialBusinessManager.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\irteza\Desktop\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+C:\Users\irteza\Desktop\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Works\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Works\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Works\businessmanager_original\TrialBusinessManager.Web\obj\Debug\ResolveAssemblyReference.cache
+D:\Works\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Works\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+E:\MY WORKZ\Anvil Lab\Ispahani\ForDibosh\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+E:\MY WORKZ\Anvil Lab\Ispahani\ForDibosh\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+E:\MY WORKZ\Anvil Lab\Ispahani\ForDibosh\businessmanager_original\TrialBusinessManager.Web\obj\Debug\ResolveAssemblyReference.cache
+E:\MY WORKZ\Anvil Lab\Ispahani\ForDibosh\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+E:\MY WORKZ\Anvil Lab\Ispahani\ForDibosh\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Works\Ispahani\ForDibosh\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Works\Ispahani\ForDibosh\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Works\Ispahani\ForDibosh\businessmanager_original\TrialBusinessManager.Web\obj\Debug\ResolveAssemblyReference.cache
+D:\Works\Ispahani\ForDibosh\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Works\Ispahani\ForDibosh\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Works\Ispahani\Final Ispahani\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Works\Ispahani\Final Ispahani\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Works\Ispahani\Final Ispahani\businessmanager_original\TrialBusinessManager.Web\obj\Debug\ResolveAssemblyReference.cache
+D:\Works\Ispahani\Final Ispahani\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Works\Ispahani\Final Ispahani\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\AjaxControlToolkit.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.xml
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.xml
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.xml
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\obj\Debug\ResolveAssemblyReference.cache
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.cache
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.compiled
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Works\BusinessManagerVersions\Version3\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\AjaxControlToolkit.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.xml
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.xml
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.xml
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\obj\Debug\ResolveAssemblyReference.cache
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.cache
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.compiled
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Works\BusinessManagerVersions\Version4\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.xml
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.xml
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.xml
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.cache
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.compiled
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.csprojResolveAssemblyReference.cache
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.xml
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.xml
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.xml
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.cache
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.compiled
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Works\BusinessManagerVersions\Backup\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.xml
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.xml
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.xml
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.csprojResolveAssemblyReference.cache
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.cache
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.compiled
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Works\BusinessManagerVersions\Version4(Local)\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\InventoryLogReportDesign.rdlc
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\LedgerReportDesign.rdlc
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\ProductLedgerReportDesign.rdlc
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.Common.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WebForms.xml
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WinForms.xml
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.xml
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.xml
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.xml
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.csprojResolveAssemblyReference.cache
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.cache
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.compiled
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Works\BusinessManagerVersions\Deploy\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\InventoryLogReportDesign.rdlc
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\LedgerReportDesign.rdlc
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\ProductLedgerReportDesign.rdlc
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.Common.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WebForms.xml
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WinForms.xml
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.xml
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.xml
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.xml
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.cache
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.compiled
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Works\BusinessManagerVersions\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\ResolveAssemblyReference.cache
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\InventoryLogReportDesign.rdlc
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\LedgerReportDesign.rdlc
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\ProductLedgerReportDesign.rdlc
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.Common.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WebForms.xml
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WinForms.xml
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.xml
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.xml
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.xml
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.csprojResolveAssemblyReference.cache
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.cache
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.compiled
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Works\Old Project Back-ups\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.Common.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WebForms.xml
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WinForms.xml
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.xml
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.xml
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.xml
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.csprojResolveAssemblyReference.cache
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.cache
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.compiled
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\RevisedProductLedgerReportDesign.rdlc
+D:\Somee Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\StockSummaryReportDesign.rdlc
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\RevisedProductLedgerReportDesign.rdlc
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\StockSummaryReportDesign.rdlc
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.Common.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WebForms.xml
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WinForms.xml
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.xml
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.xml
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.xml
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.cache
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.compiled
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Final Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.csprojResolveAssemblyReference.cache
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\RevisedProductLedgerReportDesign.rdlc
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\StockSummaryReportDesign.rdlc
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.Common.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WebForms.xml
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WinForms.xml
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.xml
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.xml
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.xml
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.cache
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.compiled
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb
+D:\Test Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.csprojResolveAssemblyReference.cache
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\RevisedProductLedgerReportDesign.rdlc
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\StockSummaryReportDesign.rdlc
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Report\Designs\DealerCollectionReportDesign.rdlc
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\TrialBusinessManager.Web.pdb
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.Common.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WebForms.xml
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\Microsoft.ReportViewer.WinForms.xml
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.EntityFramework.xml
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Hosting.xml
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\System.ServiceModel.DomainServices.Server.xml
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.EntityFramework.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\de\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\es\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\fr\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\it\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ja\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ko\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\ru\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Server.resources.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.cache
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\RdlCompile.compiled
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.dll
+D:\Latest Version\Version5\businessmanager_original\TrialBusinessManager.Web\obj\Debug\TrialBusinessManager.Web.pdb

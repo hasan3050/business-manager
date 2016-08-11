@@ -1,0 +1,35 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.Admin.ViewEmployees" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="840" d:DesignHeight="480"
+           Title="ViewEmployees Page" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot">
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock1" Text="Employees" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" FontStyle="Normal" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,49,0,0" Name="textBlock2" Text="Filter By :" VerticalAlignment="Top" FontSize="12" Width="65" />
+        <TextBlock Height="15" HorizontalAlignment="Left" Margin="83,49,0,0" Name="textBlock3" Text="Region" VerticalAlignment="Top" Width="43" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="132,45,0,0" Name="RegionCombo" VerticalAlignment="Top" Width="120" SelectionChanged="RegionCombo_SelectionChanged">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding RegionName,Mode=TwoWay}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBlock Height="15" HorizontalAlignment="Left" Margin="259,49,0,0" Name="textBlock4" Text="Designation" VerticalAlignment="Top" Width="69" />
+        <ComboBox Height="23" Margin="327,45,0,0" Name="DesignationCombo" VerticalAlignment="Top" HorizontalAlignment="Left" Width="139" SelectionChanged="DesignationCombo_SelectionChanged" />
+        <Button Content="No Filter" Height="27" HorizontalAlignment="Left" Margin="481,43,0,0" Name="NoFilterBtn" VerticalAlignment="Top" Width="91" Click="NoFilterBtn_Click" FontSize="12" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="257" Margin="12,88,0,0" Name="dataGrid1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1020">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Width="1*" Header="Employee Name" Binding="{Binding Person.Name,Mode=TwoWay}" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Width="1*" Header="Region Name" Binding="{Binding Region.RegionName,Mode=TwoWay}" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Width="1*" Header="Designation" Binding="{Binding Designation,Mode=TwoWay}" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Width="1*" Header="Activity Status" Binding="{Binding ActivityStatus,Mode=TwoWay}" IsReadOnly="True"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Edit Profile" FontSize="12" Height="35" Margin="0,351,12,0" Name="EditBtn" VerticalAlignment="Top" HorizontalAlignment="Right" Width="147" Click="EditBtn_Click" />
+        <sdk:DataPager Height="26" HorizontalAlignment="Left" Margin="12,351,0,0" Name="MyPager" PageSize="9" VerticalAlignment="Top" Width="259" HorizontalContentAlignment="Center" DisplayMode="FirstLastPreviousNext" />
+    </Grid>
+</navigation:Page>

@@ -1,0 +1,32 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.SIC.ApproveTransferIndentDetailWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="730" Height="356" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"           
+           Title="Approve Transfer Indent">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sdk:DataGrid Name="DetailDataGrid"  AutoGenerateColumns="False" Height="223" HorizontalAlignment="Left" Margin="0,60,0,0" VerticalAlignment="Top" Width="708" IsReadOnly="False" Grid.RowSpan="2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn x:Name="productNameColumn" Binding="{Binding Product.GroupName}"  Header="Product Name" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="productBrandColumn" Binding="{Binding Product.BrandName}"  Header="Product Brand" Width="1*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn x:Name="productCodeColumn" Binding="{Binding Product.ProductCode}" Header="Product Code" Width="1*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn  Binding="{Binding Product.StockKeepingUnit}" Header="Packet Size" Width="1*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn x:Name="PlacedQuantityColumn" Binding="{Binding PlacedProductQuantity}" Header="PlacedQuantity" Width="1*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn x:Name="ApprovedQuantityColumn" Binding="{Binding ApprovedProductQuantity}" Header="ApprovedQuantity" Width="1*" IsReadOnly="False" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button x:Name="ForwardBtn" Content="Forward to Dispatch" Width="144" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" Click="Forward_BtnCLick" />
+        <Button x:Name="OKButton" Content="Close" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,150,0" Grid.Row="1" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Name="CodeTxt" Text="Indent Code" VerticalAlignment="Top" Margin="0,6,0,0" FontSize="11" />
+        <TextBlock HorizontalAlignment="Left" Margin="475,8,0,0" Name="textBlock2" Text="Issue Date" FontSize="11" Height="23" VerticalAlignment="Top" />
+        <TextBlock FontSize="11" Height="23" HorizontalAlignment="Left" Margin="445,33,0,0" Name="textBlock1" Text="From Inventory" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="81,3,0,0" Name="CodeText" VerticalAlignment="Top" Width="162" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="546,6,0,0" Name="DateText" VerticalAlignment="Top" Width="162" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="546,31,0,0" Name="InventoryText" VerticalAlignment="Top" Width="162" IsReadOnly="True" />
+    </Grid>
+</controls:ChildWindow>

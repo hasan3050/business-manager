@@ -1,0 +1,33 @@
+﻿<controls:ChildWindow x:Class="TrialBusinessManager.Views.Histories.ViewMRRDetail"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           Width="654" Height="585" 
+           Title="m.r.r detail">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="200" HorizontalAlignment="Left" Margin="12,42,0,0" x:Name="dataGrid1" VerticalAlignment="Top" ColumnWidth="130" Width="620" DataContext="{Binding Source={StaticResource ViewIndentViewModel}}" ItemsSource="{Binding BindIndent, Mode=TwoWay}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="product name" Width="170"  Binding="{Binding IndentCode, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="product code" Width="170" Binding="{Binding Dealer.Name, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="s.k.u" Width="100" Binding="{Binding Dealer.Name, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="quantity" Width="120" Binding="{Binding DateOfPlace.Date, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="lot" Binding="{Binding IndentStatus, Mode=TwoWay}" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid AutoGenerateColumns="False" ColumnWidth="250" DataContext="{Binding Source={StaticResource ViewIndentViewModel}}" Height="200" HorizontalAlignment="Left" ItemsSource="{Binding BindIndent, Mode=TwoWay}" Margin="12,293,0,0" Name="dataGrid2" VerticalAlignment="Top" Width="620">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding IndentCode, Mode=TwoWay}" Header="package name" Width="250" />
+                <sdk:DataGridTextColumn Binding="{Binding Dealer.Name, Mode=TwoWay}" Header="package code" />
+                <sdk:DataGridTextColumn Binding="{Binding DateOfPlace.Date, Mode=TwoWay}" Header="quantity" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,11,0,0" Name="textBlock1" Text="products" VerticalAlignment="Top" FontSize="16" />
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="12,258,0,0" Name="textBlock2" Text="packages" VerticalAlignment="Top" />
+        <Button Content="ok" Height="31" HorizontalAlignment="Left" Margin="496,507,0,0" Name="button1" VerticalAlignment="Top" Width="136" />
+    </Grid>
+</controls:ChildWindow>

@@ -1,0 +1,63 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.RM.History.RMIndentHistory" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+           xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.SL4"      
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:ref="clr-namespace:TrialBusinessManager.ViewModels.RM.History"
+           xmlns:SilverlightContrib_Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"      
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"      
+           Title="Indent History" Height="490" Width="1234">
+
+    <navigation:Page.Resources>
+        <ref:RMIndentHistoryViewModel x:Key="RMIndentHistoryViewModel"/>
+    </navigation:Page.Resources>
+
+    <Grid x:Name="LayoutRoot" DataContext="{Binding Source={StaticResource RMIndentHistoryViewModel}}" Background="White" Height="500" Width="1208">
+        <sdk:DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="0,115,0,90" x:Name="dataGrid1" ColumnWidth="320" Width="1071" DataContext="{Binding Source={StaticResource RMIndentHistoryViewModel}}" ItemsSource="{Binding Path=BindIndent, Mode=TwoWay}" GridLinesVisibility="All" SelectedIndex="{Binding Path=SelectedIndex, Mode=TwoWay}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Indent Code" Binding="{Binding Path=IndentCode}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Placed By" Binding="{Binding Path=Dealer.Name, Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Date Of Issue" Binding="{Binding Path=DateOfPlace, Mode=TwoWay, StringFormat=\{0:d\}}" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Indent Status" Binding="{Binding Path=IndentStatus, Mode=TwoWay}" Width="1*" IsReadOnly="True"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <SilverlightContrib_Controls:GroupBox HorizontalAlignment="Right" Margin="0,-2,429,0" VerticalAlignment="Top" Header="Search By" FontSize="14.667" Width="777" Height="104"></SilverlightContrib_Controls:GroupBox>
+        <Button Content="View Indent" HorizontalAlignment="Right" Height="38" Margin="0,0,137,29" VerticalAlignment="Bottom" Width="143" Command="{Binding Path=ViewIndentCommand}" />
+        <Grid Width="759" HorizontalAlignment="Left" Margin="16,19,0,0" Height="78" VerticalAlignment="Top">
+            <sdk:AutoCompleteBox Height="28" HorizontalAlignment="Left" IsEnabled="True" IsTextCompletionEnabled="True" ItemsSource="{Binding Path=DealerCollection,Mode=TwoWay}" Margin="132,8,0,0" Name="autoCompleteBox1" SelectedItem="{Binding Mode=TwoWay, Source={StaticResource RMIndentHistoryViewModel}, Path=SelectedDealer}" ValueMemberPath="Name" VerticalAlignment="Top" Width="120" Text="">
+                <sdk:AutoCompleteBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock FontSize="14" Text="{Binding Name,Mode=TwoWay}" />
+                            <TextBlock FontSize="11" Text="{Binding CompanyName,Mode=TwoWay}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </sdk:AutoCompleteBox.ItemTemplate>
+            </sdk:AutoCompleteBox>
+            <Button Command="{Binding SearchCommand, Mode=TwoWay}" Content="Search" DataContext="{Binding Source={StaticResource RMIndentHistoryViewModel}}" Height="26" HorizontalAlignment="Left" Margin="683,44,0,0" Name="button1" VerticalAlignment="Top" Width="70" />
+            <RadioButton DataContext="{Binding Source={StaticResource RMIndentHistoryViewModel}}" Height="16" HorizontalAlignment="Left" IsChecked="{Binding Mode=TwoWay, Path=SelectedDealerBool}" Margin="15,12,0,0" Name="radioButton2" VerticalAlignment="Top" Width="100" Content="Dealer Name" />
+            <sdk:AutoCompleteBox Height="28" HorizontalAlignment="Left" IsTextCompletionEnabled="True" ItemsSource="{Binding IndentCollection}" Margin="388,6,0,0" Name="autoCompleteBox3" SelectedItem="{Binding SelectedCode, Mode=TwoWay, Source={StaticResource RMIndentHistoryViewModel}}" ValueMemberPath="IndentCode" VerticalAlignment="Top" Width="120">
+                <sdk:AutoCompleteBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock FontSize="14" Text="{Binding IndentCode}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </sdk:AutoCompleteBox.ItemTemplate>
+            </sdk:AutoCompleteBox>
+            <RadioButton DataContext="{Binding Source={StaticResource RMIndentHistoryViewModel}}" Height="16" HorizontalAlignment="Left" IsChecked="{Binding SelectedCodeBool, Mode=TwoWay}" Margin="286,10,0,0" Name="radioButton6" VerticalAlignment="Top" Width="96" Content="Indent Code" />
+            <sdk:DatePicker DataContext="{Binding Source={StaticResource RMIndentHistoryViewModel}}" DisplayDateEnd="12/31/2099" Height="23" HorizontalAlignment="Left" Margin="132,43,0,0" Name="datePicker1" SelectedDate="{Binding StartDate, Mode=TwoWay}" VerticalAlignment="Top" Width="120" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="274,43,0,0" Name="textBlock4" Text="End Date" VerticalAlignment="Top" />
+            <sdk:DatePicker DataContext="{Binding Source={StaticResource RMIndentHistoryViewModel}}" DisplayDateEnd="12/31/2099" DisplayDateStart="1/1/2012" Height="23" HorizontalAlignment="Left" Margin="331,44,0,0" Name="datePicker2" SelectedDate="{Binding EndDate, Mode=TwoWay}" VerticalAlignment="Top" Width="120" />
+            <RadioButton Height="16" HorizontalAlignment="Left" IsChecked="{Binding SelectedDateBool, Mode=TwoWay}" Margin="15,44,0,0" Name="radioButton4" VerticalAlignment="Top" Width="87" Content="Start Date" />
+            <RadioButton Height="16" HorizontalAlignment="Left" IsChecked="{Binding SelectedAllBool, Mode=TwoWay}" Margin="515,46,0,0" Name="radioButton1" VerticalAlignment="Top" Width="70" Content="All" />
+            <RadioButton Content="Indent Status" DataContext="{Binding Source={StaticResource RMIndentHistoryViewModel}}" Height="16" HorizontalAlignment="Left" IsChecked="{Binding Mode=TwoWay, Path=SelectedStatusBool}" Margin="515,12,0,0" Name="radioButton3" VerticalAlignment="Top" Width="96" />
+            <ComboBox Height="27" HorizontalAlignment="Left" Margin="618,6,0,0" Name="comboBox1" VerticalAlignment="Top" Width="135" SelectedItem="{Binding Path=SelectedStatus, Mode=TwoWay}" ItemsSource="{Binding Path=IndentStatus,Mode=TwoWay}" />
+        </Grid>
+    </Grid>
+</navigation:Page>

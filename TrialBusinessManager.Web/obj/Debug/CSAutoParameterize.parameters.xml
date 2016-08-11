@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IspahaniAgroLTDEntities-Web.config Connection String" description="IspahaniAgroLTDEntities Connection String used in web.config by the application to access the database." defaultvalue="metadata=res://*/AgroModel.csdl|res://*/AgroModel.ssdl|res://*/AgroModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=e1gu9vecwd.database.windows.net,1433;initial catalog=IspahaniAgro;persist security info=True;user id=hasan3050;password=meMilu3050;multipleactiveresultsets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Latest\ Version\\Version5\\businessmanager_original\\TrialBusinessManager\.Web\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='IspahaniAgroLTDEntities']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="TrialBusinessManager.UserControls.PrintMRRPackageUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+     d:DesignHeight="785" d:DesignWidth="933" xmlns:my="clr-namespace:TrialBusinessManager.UserControls" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+
+    <Grid x:Name="LayoutRoot" Background="White" Width="933" Height="781">
+        <my:PrintHeader HorizontalAlignment="Left" Margin="239,4,0,0" x:Name="printHeader1" VerticalAlignment="Top" Width="485" />
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="188,247,0,0" Name="MRRCodeTxtBox" VerticalAlignment="Top" Width="200" FontSize="14" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="32,251,0,0" Name="textBlock1" Text="MRR Code:" VerticalAlignment="Top" FontSize="14" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="32,282,0,0" Name="textBlock2" Text="Purchase Order NO.:" VerticalAlignment="Top" Width="153" FontSize="14" />
+        <TextBox Height="28" HorizontalAlignment="Right" Margin="0,282,545,0" Name="PurchaseOrdertextBox" VerticalAlignment="Top" Width="200" FontSize="14" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="514,248,0,0" Name="textBlock3" Text="Supplier Name:" VerticalAlignment="Top" FontSize="14" />
+        <TextBox Height="27" HorizontalAlignment="Right" Margin="0,246,86,0" Name="RetailerNametextBox" VerticalAlignment="Top" Width="204" FontSize="14" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="514,282,0,0" Name="textBlock4" Text="Chalan NO.:" VerticalAlignment="Top" FontSize="14" Width="98" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="643,279,0,0" Name="ChalanNOtextBox" VerticalAlignment="Top" Width="204" FontSize="14" />
+        <sdk:Label Height="28" HorizontalAlignment="Left" Margin="336,131,0,0" Name="label1" VerticalAlignment="Top" Width="303" Content="MATERIALS RECEIVING REPORT (MRR)" FontSize="14" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="514,216,0,0" Name="textBlock5" Text="Dated:" VerticalAlignment="Top" Width="49" FontSize="14" />
+        <TextBox Height="26" HorizontalAlignment="Left" Margin="643,214,0,0" Name="DatetextBox" VerticalAlignment="Top" Width="204" FontSize="14" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="32,157,0,0" Name="textBlock6" Text="Q.C. NO.:" VerticalAlignment="Top" FontSize="14" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="32,186,0,0" Name="textBlock7" Text="Bin Card Posted By:" VerticalAlignment="Top" FontSize="14" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="32,217,0,0" Name="textBlock8" Text="Ledger Posted By:" VerticalAlignment="Top" FontSize="14" />
+        <sdk:DataGrid AutoGenerateColumns="False" BorderBrush="#FF6C6C6C" BorderThickness="1,1,1,3" ColumnWidth="148*" FontSize="12" GridLinesVisibility="All" ItemsSource="{Binding MRRPackageCollection}" Margin="32,328,85,136" MinHeight="0" Name="dataGrid2" SelectedIndex="{Binding SelectedMRRPackage}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Package.PackageName}" FontSize="13" Header="Package name" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Package.PackageCode}" FontSize="13" Header="Package code" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding AcceptedQuantity, Mode=TwoWay}" FontSize="13" Header="Quantity(Pc)" />
+                <sdk:DataGridTextColumn Binding="{Binding PurchasePrice, Mode=TwoWay}" FontSize="13" Header="Purchase price /kg(BDT)" IsReadOnly="False" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <TextBlock FontSize="13" Height="23" HorizontalAlignment="Left" Margin="32,696,0,0" Name="textBlock9" Text="Received and Checked by" VerticalAlignment="Top" />
+        <TextBlock FontSize="13" Height="23" HorizontalAlignment="Left" Margin="409,696,0,0" Name="textBlock10" Text="Store Officer" VerticalAlignment="Top" />
+        <TextBlock FontSize="13" Height="23" HorizontalAlignment="Left" Margin="698,696,0,0" Name="textBlock11" Text="Approved By" VerticalAlignment="Top" />
+    </Grid>
+</UserControl>

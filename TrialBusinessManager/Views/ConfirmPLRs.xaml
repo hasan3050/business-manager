@@ -1,0 +1,40 @@
+﻿<navigation:Page x:Class="TrialBusinessManager.Views.ConfirmPLRs" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:local="clr-namespace:TrialBusinessManager.ViewModels"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           d:DataContext="{d:DesignInstance Type=local:ConfirmPLRViewModel,IsDesignTimeCreatable=False}"
+        
+        
+           mc:Ignorable="d"
+           xmlns:ref="clr-namespace:TrialBusinessManager.ViewModels"
+           xmlns:SilverlightContrib_Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"      
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" d:DesignHeight="480"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"      
+           Title="View PLRs" Height="Auto">
+
+
+
+    <Grid x:Name="LayoutRoot" Margin="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+    	<Viewbox Margin="0">
+    		<Grid Height="532" Width="1052">
+    			<sdk:DataGrid AutoGenerateColumns="False" Margin="0,40,0,42" x:Name="dataGrid1" ColumnWidth="320"  GridLinesVisibility="All" ItemsSource="{Binding PLRs}" SelectedItem="{Binding SelectedPLR, Mode=TwoWay}" BorderThickness="1" BorderBrush="#FF2F1818" Width="1052">
+    				<sdk:DataGrid.Columns>
+    					<sdk:DataGridTextColumn Header="PLR Code" Binding="{Binding PLRCode}" Width="1*" IsReadOnly="True"/>
+    					<sdk:DataGridTextColumn Header="Issued by"  Width="1*" IsReadOnly="True" Binding="{Binding Employee.Person.Name}"/>
+    					<sdk:DataGridTextColumn Header="Region"  Width="1*" IsReadOnly="True" Binding="{Binding Employee.Region.RegionName}"/>
+    					<sdk:DataGridTextColumn Header="Date Of Issue"  Width="1*" IsReadOnly="True" Binding="{Binding DateOfIssue}"/>
+
+    					<sdk:DataGridTextColumn Header="Status" Width="1*" IsReadOnly="True" Binding="{Binding Status}"/>
+    				</sdk:DataGrid.Columns>
+    			</sdk:DataGrid>
+    			<TextBlock FontFamily="Segoe UI, Lucida Sans Unicode, Verdana" FontSize="22" Foreground="#FF6A7483" Height="36" x:Name="textBlock4" Text="These are the issued Product Loss Reports(PLR)..." VerticalAlignment="Top" HorizontalAlignment="Left" Width="490" />
+    			<Button Content="View details for selected item..." HorizontalAlignment="Right" Height="29" Margin="0,0,8,0" VerticalAlignment="Bottom" Width="210"  Command="{Binding ViewDetails}"  />
+    		</Grid>
+    	</Viewbox>
+    </Grid>
+</navigation:Page>

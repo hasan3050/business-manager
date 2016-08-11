@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="TrialBusinessManager.UserControls.DealerInfoControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="100" Width="291" FontSize="12" BorderThickness="1">
+
+    <Grid>
+		<TextBlock Height="21" Margin="0,4,0,0" TextWrapping="Wrap" Text="Dealer Name :" VerticalAlignment="Top" HorizontalAlignment="Left" Width="91" d:LayoutOverrides="HorizontalAlignment, GridBox" FontSize="11" />
+		<TextBlock Height="18" Margin="0,28,0,0" TextWrapping="Wrap" Text="Shop Name :" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85" FontSize="11" />
+		<TextBlock Height="21" Margin="0,54,0,0" TextWrapping="Wrap" Text="Shop Address :" VerticalAlignment="Top" HorizontalAlignment="Left" Width="95" FontSize="11" />
+		<TextBlock Height="23" TextWrapping="Wrap" Text="Contact No :" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" FontSize="11" Margin="0,79,0,0" />
+		<TextBox Height="20" TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay}" VerticalAlignment="Top" FontSize="11" Margin="100,0,0,0" BorderThickness="0,0,0,1" />
+		<TextBox Margin="100,25,0,0" TextWrapping="Wrap" Text="{Binding CompanyName, Mode=TwoWay}" FontSize="11" Height="20" VerticalAlignment="Top" BorderThickness="0,0,0,1" />
+		<TextBox Height="20"  Margin="100,51,0,0" TextWrapping="Wrap" Text="{Binding CompanyAddress, Mode=TwoWay}" VerticalAlignment="Top" FontSize="11" BorderThickness="0,0,0,1" />
+		<TextBox TextWrapping="Wrap" Text="{Binding ContactNo, Mode=TwoWay}" FontSize="11" Margin="100,76,0,0" Height="20" VerticalAlignment="Top" BorderThickness="0,0,0,1" />
+
+
+	</Grid>
+</UserControl>

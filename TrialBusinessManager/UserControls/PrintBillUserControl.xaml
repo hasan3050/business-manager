@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="TrialBusinessManager.UserControls.PrintBillUserControl"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:TrialBusinessManager.Models"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"         
+    d:DesignHeight="892" d:DesignWidth="1080" xmlns:my="clr-namespace:TrialBusinessManager.UserControls">
+
+    <UserControl.Resources>
+        <local:DateConverter x:Key="DateConverter"/>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White" Height="868" Width="1080">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="333"/>
+            <RowDefinition Height="390*" />
+            <RowDefinition Height="95*" />
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <sdk:DataGrid AutoGenerateColumns="False" VerticalAlignment="Top"   x:Name="BillInfoDataGrid"   CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" ColumnWidth="130" FontSize="11"   IsReadOnly="True" Margin="12,239,275,0" Height="468" Grid.RowSpan="2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn  x:Name="productNameColumn"  Header="Product" Width="1*" IsReadOnly="True">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Product.ProductName}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn  x:Name="productBrandColumn"  Header="Code" Width=".7*" IsReadOnly="True">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Product.BrandName}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn x:Name="packetSizeColumn" Binding="{Binding Product.StockKeepingUnit}" Header="S.K.U" Width=".6*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="paSizeColumn" Binding="{Binding PriceKg}" Header="Price/KG" Width="1*" IsReadOnly="True"/>
+
+                <sdk:DataGridTextColumn x:Name="LotColumn" Binding="{Binding Info.LotId}" Header="Lot Id" Width=".7*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="quantityColumn" Binding="{Binding Info.LotQuantity,Mode=TwoWay,ValidatesOnExceptions=True}" Header="Qty(pcs)" Width=".8*" />
+                <sdk:DataGridTextColumn x:Name="unitPriceColumn" Binding="{Binding TotalKg}" Header="Qty(Kg)" Width=".7*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="netPriceColumn" Binding="{Binding TotalPrice}" Header="Total(tk.)" Width=".7*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="commissionColumn" Binding="{Binding Info.ComissionPercentage}" Header="Commission(%)" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn x:Name="totalPriceColumn" Binding="{Binding NetPrice}" Header="Net Price" Width=".7*" IsReadOnly="True"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Grid HorizontalAlignment="Right" Width="331" Height="184" VerticalAlignment="Top" Margin="0,77,258,0" Name="BillInfoGrid" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="44*" />
+                <RowDefinition Height="140*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="176*" />
+                <ColumnDefinition Width="135*" />
+            </Grid.ColumnDefinitions>
+            <TextBox Height="23" Margin="112,32,0,0" TextWrapping="Wrap" Text="{Binding EmergencyContactNo, Mode=TwoWay}" VerticalAlignment="Top" FontSize="12" BorderThickness="0,0,0,1" Grid.ColumnSpan="2" Grid.Column="1" Grid.RowSpan="2" />
+            <TextBox Margin="112,20,0,0" TextWrapping="Wrap" Text="{Binding VehicleNo, Mode=TwoWay}" FontSize="12" Height="23" BorderThickness="0,0,0,1" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" />
+            <TextBox Height="23" Margin="112,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding TransportCost, Mode=TwoWay}" FontSize="12" BorderThickness="0,0,0,1" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" />
+            <TextBox Height="23" VerticalAlignment="Top"  Text="{Binding TransportType}" Margin="112,0,0,0" FontSize="12" BorderThickness="0,0,0,1" Grid.ColumnSpan="2" Grid.Column="1" />
+            <TextBlock HorizontalAlignment="Left" Height="16" Margin="1,3,0,0" TextWrapping="Wrap" Text="Transport Type :" VerticalAlignment="Top" Width="102" FontSize="12" Grid.ColumnSpan="2" />
+            <TextBlock HorizontalAlignment="Left" Margin="1,29,0,0" TextWrapping="Wrap" Text="Vehicle No :" Width="76" FontSize="12" Height="16" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Row="1" />
+            <TextBlock HorizontalAlignment="Left" Margin="0,35,0,0" TextWrapping="Wrap" Text="Emergency Contact :" Width="128" Height="19" VerticalAlignment="Top" FontSize="12" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+            <TextBlock HorizontalAlignment="Left" Height="17" TextWrapping="Wrap" Text="Transport Cost :" VerticalAlignment="Top" Width="103" Margin="0,58,0,0" FontSize="12" Grid.ColumnSpan="2" Grid.Row="1" />
+            <TextBox Height="23" Margin="112,87,1,0" Text="{Binding BillCode, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="12" BorderThickness="0,0,0,1" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" />
+            <TextBlock Height="16" Margin="1,90,0,0" Text="Bill Code :" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" FontSize="12" Grid.ColumnSpan="2" Grid.Row="1" />
+        </Grid>
+        <my:PrintHeader HorizontalAlignment="Center" Margin="224,-41,326,0" x:Name="printHeader1" VerticalAlignment="Top" Width="530" Height="122" FontSize="9" />
+        <my:DealerInfoControl HorizontalAlignment="Left" Margin="10,81,0,0" x:Name="DealerControl" VerticalAlignment="Top" Height="101" Width="378" />
+        <TextBox BorderThickness="0,0,0,1" FontSize="12" Height="23" Margin="110,189,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Name="InventoryTxtBox" HorizontalAlignment="Left" Width="278" />
+        <TextBlock FontSize="12" Height="16" HorizontalAlignment="Left" Margin="11,194,0,0" Text="Inventory :" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" />
+        <TextBlock FontSize="12" Height="16" HorizontalAlignment="Left" Margin="42,18,0,0" Text="Dispatch Officer" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" Grid.Row="3" />
+        <TextBlock FontSize="12" Height="16" HorizontalAlignment="Left" Margin="248,20,0,0" Text="Store In Charge" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Grid.Row="3" />
+        <TextBlock FontSize="12" Height="16" HorizontalAlignment="Left" Margin="496,18,0,0" Text="Posted By" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" Grid.Row="3" />
+        <TextBlock FontSize="12" Height="16" HorizontalAlignment="Left" Margin="42,58,0,0" Text="Total Quantity (Kg) :" TextWrapping="Wrap" VerticalAlignment="Top" Width="93" Grid.Row="2" />
+        <TextBox BorderThickness="0,0,0,1" FontSize="12" Height="23" HorizontalAlignment="Left" Margin="145,58,0,0" Name="QuantityKgTxtBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" Grid.Row="2" />
+        <TextBlock FontSize="12" Height="16" HorizontalAlignment="Left" Margin="42,0,0,0" Text="Total Price (With Commission) :" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Grid.Row="2" />
+        <TextBox BorderThickness="0,0,0,1" FontSize="12" Height="23" HorizontalAlignment="Left" Margin="259,0,0,0" Name="PriceWCtextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" Grid.Row="2" />
+        <TextBlock FontSize="12" Height="16" HorizontalAlignment="Left" Margin="42,26,0,0" Text="Total Price (Without Commission) :" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Grid.Row="2" />
+        <TextBox BorderThickness="0,0,0,1" FontSize="12" Height="23" HorizontalAlignment="Left" Margin="257,26,0,0" Name="PriceWOCTextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" Grid.Row="2" />
+    </Grid>
+</UserControl>
